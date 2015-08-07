@@ -5,8 +5,7 @@
 sudo shutdown -h now
 
 
-
-# Setting up to work with X11 forwarding on Mobaxterm
+## Setting up to work with X11 forwarding on Mobaxterm
 
 <http://blogspot.tenettech.com/?p=2850>
 
@@ -23,7 +22,7 @@ Download and install Mobaxterm <http://mobaxterm.mobatek.net/download.html>
 
 
 
-# Setting up to work with VNC server
+## Setting up to work with VNC server
 
 <http://www.instructables.com/id/Setting-up-a-VNC-Server-on-your-Raspberry-Pi>
 <https://learn.adafruit.com/adafruit-raspberry-pi-lesson-7-remote-control-with-vnc/installing-vnc>

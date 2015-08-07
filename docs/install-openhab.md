@@ -1,6 +1,8 @@
 #Start and stop openHAB
 
 	sudo /etc/init.d/openhab start
+	sudo /etc/init.d/openhab status
+	sudo /etc/init.d/openhab restart
 	sudo /etc/init.d/openhab stop
 
 
@@ -265,9 +267,9 @@ Then you have an indentation problem. Sometimes upon pasting into your editor th
 
 #HABmin
 
-There is and admin console called HABmin, see here  
 <http://www.instructables.com/id/openHAB-Admin-Console-HABmin-on-Raspberry-Pi/>
 
+HABmin is a GUI interface for performing openHAB administrative tasks.
 It can do all of this
 
 • General configuration (openHAB.cfg)
@@ -281,15 +283,49 @@ It can do all of this
 • View OSGi binding status
 • View log files
 
+
+Stop openHab, download and unzip HABmin
+
+	sudo /etc/init.d/openhab stop
+	cd /opt/openhab
+	sudo wget https://github.com/cdjackson/HABmin/archive/master.zip
+	sudo unzip master.zip
+	sudo rm master.zip
+
+You will need to make a file called habmin. This file should be located inside the "webapps" folder. If you are already in the openhab folder it should look like this:
+
+	sudo mkdir webapps/habmin
+	
+relocate the contents of the HABmin-master folder to the webapps folder. Assuming you are in the openhab folder...
+
+	sudo mv HABmin-master/* webapps/habmin/
+	sudo rm -rf HABmin-master
+	cd webapps/habmin	
+	
+move the addons older in its proper location which should be /opt/openhab/addons		
+
+	sudo mv addons/* ../../addons/
+	sudo rm -rf addons
+
+Start openHab
+
+	sudo /etc/init.d/openhab start
+
+Access the admin tool locally on the same machine running openHAB at 
+
+	http://localhost:8080/habmin/index.html
+	
+
+
 #my.openHAB
 
 https://my.openhab.org/docs
 
+register on my.openHAB
 
-go to http://randomkeygen.com/ and generate a random key. You can select between a wide selection of encryption keys. I would recommend going with at least a 128-bit wep key. 
-128-bit encryption will provide a sufficient security for our server (unless someone else can chime in).  Go to your /etc/openhab/webapps/static folder and create a new file called "secret". 
-Paste your secret key into the "secret" file. Viola! 
-You should now have 3 files in that directory (secret, uuid, version).
+For this purpose you will need your local openHAB UUID and secret key.
+These two numbers are located in the named files in
 
+	/opt/openhab/webapps/static
 
 
