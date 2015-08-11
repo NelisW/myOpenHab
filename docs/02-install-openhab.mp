@@ -270,3 +270,7 @@ Then you have an indentation problem. Sometimes upon pasting into your editor th
 It seems that the /opt/openhab files must be in the pi group and owned by pi to load at boot. Do the following:
 
 	sudo chown -hR pi:pi /opt/openhab
+	
+openhab should now load at boot.
+
+

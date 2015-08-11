@@ -1,5 +1,53 @@
+#Install mosquitto on RPi
 
+<http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>
 
-#mosquitto
+##Installing the broker and clients
 
+Install the mosquitto lib on RPi, **But do not use JPM's commands**. mosquitto is now in the debian distribution (<http://mosquitto.org/download/>). Just do this:
+
+	sudo apt-get install mosquitto
+	sudo apt-get install mosquitto-clients
+	sudo apt-get install python-mosquitto
+
+to install the broker (first line), clients (second line) and the python bindings (third line).
+
+the broker is immediately started; stop it in order to configure it:
+
+	sudo /etc/init.d/mosquitto stop
+
+Test the installation as follows:
+<http://stackoverflow.com/questions/26716279/how-to-test-the-mosquitto-server>
+
+1. Start the broker:
+
+	sudo /etc/init.d/mosquitto start
+
+2. Start the command line subscriber:
+
+	mosquitto_sub -v -t 'test/topic'
+
+3. Publish test message with the command line publisher:
+
+	mosquitto_pub -t 'test/topic' -m 'helloWorld'
+	
+As well as seeing both the subscriber and publisher connection messages in the broker terminal the following should be printed in the subscriber terminal:
+
+	test/topic helloWorld	
+	
+##Setting the security 	
+
+<https://github.com/owntracks/tools/blob/master/TLS/generate-CA.sh>
+
+http://stackoverflow.com/questions/27534953/how-do-i-set-up-my-own-mqtt-server-with-mosquitto
+
+http://mosquitto.org/man/mosquitto-tls-7.html
+
+http://mosquitto.org/man/mosquitto-conf-5.html
+
+http://stackoverflow.com/questions/18896087/mosquitto-mqtt-broker-and-java-client-with-ssl-tls
+
+http://stackoverflow.com/questions/29576230/arduino-with-mosquitto-mqtt
+
+http://stackoverflow.com/questions/26657319/how-do-you-set-up-encrypted-mosquitto-broker-like-a-webpage-which-has-https
 
