@@ -1,13 +1,30 @@
-#Shutting down RPi
+#Setting up the Raspberry Pi
+
+This document describes how to set up and manage the RPi environment.
+
+
+##Shutting down RPi
 
 <http://raspi.tv/2012/how-to-safely-shutdown-or-reboot-your-raspberry-pi>  
 
-sudo shutdown -h now
+	sudo shutdown -h now
+
+##Remote Access
+If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
+
+###Terminal access
+
+To follow
 
 
-## Setting up to work with X11 forwarding on Mobaxterm
+### Setting up to work with X11 forwarding using SSH on Mobaxterm
 
-<http://blogspot.tenettech.com/?p=2850>
+<http://blogspot.tenettech.com/?p=2850>  
+<http://en.tldp.org/HOWTO/XDMCP-HOWTO/ssh.html>  
+
+The X windowing system comprises a server and a client with messages travelling between the two.  In this case the server is running on the RPi and the client is run on a remote PC.  The client understands the X11 commands and renders these on the screen.  The user interaction is then captured on the PC and sent back to the server on the RPi.
+
+X11 server-client communication is insecure - SSH forwarding can be used to secure the channel. This is called 'X11 Forwarding using SSH'.  
 
 Download and install Mobaxterm <http://mobaxterm.mobatek.net/download.html>
 
@@ -20,19 +37,19 @@ Download and install Mobaxterm <http://mobaxterm.mobatek.net/download.html>
 5. It will prompt you to enter the RPi username and password.
 6. If the login is successful you should see the X11 screen.
 
+### Setting up to work with VNC server
 
+VNC is virtual network computing, where the server transmits the pre-rendered screen contents to the client, and the client responds back by sending keyboard and mouse events. VNC differs from X11 in the sense that X11 sends low level commands to the client to render the screen in the client.  VNC sends the pre-rendered image.
 
-## Setting up to work with VNC server
-
-<http://www.instructables.com/id/Setting-up-a-VNC-Server-on-your-Raspberry-Pi>
-<https://learn.adafruit.com/adafruit-raspberry-pi-lesson-7-remote-control-with-vnc/installing-vnc>
+<http://searchnetworking.techtarget.com/definition/virtual-network-computing>  
+<http://www.instructables.com/id/Setting-up-a-VNC-Server-on-your-Raspberry-Pi>  
+<https://learn.adafruit.com/adafruit-raspberry-pi-lesson-7-remote-control-with-vnc/installing-vnc>  
+<https://learn.adafruit.com/adafruit-raspberry-pi-lesson-7-remote-control-with-vnc/using-a-vnc-client>
 
 Installing a VNC Server on your Raspberry Pi
 
     sudo apt-get update
-
     sudo apt-get install tightvncserver
-
 	vncserver :1
 
 or to set the resolution use
@@ -59,9 +76,17 @@ Then you can run it at any time with:
 
 	./vnc.sh
 
-<hr>
 
-Set up the RPi to start the VNC server on boot-up:
+Set up the client by determining the IP address of the Raspberry Pi
+
+	sudo ifconfig
+
+Look for the IP address on the wlanx line next to inet addr: something like `10.0.0.16` or similar.
+
+When you enter the ip address on a vncviewer, you have to enter the server and screen number. 
+For example 192.xxx.x.x and then enter :1 or :2 etc. to indicate the screen number. 
+
+###Set up the RPi to start the VNC server on boot-up
 
 	sudo raspi-config
 
@@ -151,22 +176,6 @@ then try the following command:
 	update-rc.d vncboot defaults
 
 Reboot your Raspberry Pi and you should find a VNC server already started.
-
-
-<hr>
-
-Use a VNC client on your PC to access the RPi via VNC.
-
-<https://learn.adafruit.com/adafruit-raspberry-pi-lesson-7-remote-control-with-vnc/using-a-vnc-client>
-
-
-Determine the IP address of the Raspberry Pi
-
-	sudo ifconfig
-
-Determine the IP address on the wlanx line next to inet addr: 10.0.0.16
-
-When you enter the ip address on a vncviewer, you have to enter the server also. example 192.xxx.x.x and then enter :1 or :2 etc.
 
 
 
