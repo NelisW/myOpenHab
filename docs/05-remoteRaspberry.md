@@ -1,23 +1,13 @@
-#Setting up the Raspberry Pi
+#Setting up the Raspberry Pi Remote Access
 
-This document describes how to set up and manage the RPi environment.
-
-
-##Shutting down RPi
-
-<http://raspi.tv/2012/how-to-safely-shutdown-or-reboot-your-raspberry-pi>  
-
-	sudo shutdown -h now
-
-##Remote Access
 If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
 
-###Terminal access
+##Terminal access
 
 To follow
 
 
-### Setting up to work with X11 forwarding using SSH on Mobaxterm
+## Setting up to work with X11 forwarding using SSH on Mobaxterm
 
 <http://blogspot.tenettech.com/?p=2850>  
 <http://en.tldp.org/HOWTO/XDMCP-HOWTO/ssh.html>  
@@ -37,7 +27,7 @@ Download and install Mobaxterm <http://mobaxterm.mobatek.net/download.html>
 5. It will prompt you to enter the RPi username and password.
 6. If the login is successful you should see the X11 screen.
 
-### Setting up to work with VNC server
+## Setting up to work with VNC server
 
 VNC is virtual network computing, where the server transmits the pre-rendered screen contents to the client, and the client responds back by sending keyboard and mouse events. VNC differs from X11 in the sense that X11 sends low level commands to the client to render the screen in the client.  VNC sends the pre-rendered image.
 
@@ -86,7 +76,7 @@ Look for the IP address on the wlanx line next to inet addr: something like `10.
 When you enter the ip address on a vncviewer, you have to enter the server and screen number. 
 For example 192.xxx.x.x and then enter :1 or :2 etc. to indicate the screen number. 
 
-###Set up the RPi to start the VNC server on boot-up
+##Set up the RPi to start the VNC server on boot-up
 
 	sudo raspi-config
 
