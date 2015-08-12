@@ -1,7 +1,4 @@
 
-#Prepare the RPi
-
-
-##Installing the operating system
+#Introduction to RPi
 
 To follow

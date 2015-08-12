@@ -1,4 +1,6 @@
-oud: <http://forums.connectedly.com/guides-how-articles-f10/how-set-up-raspberry-pi-2626/>
+details to follow
+
+<http://forums.connectedly.com/guides-how-articles-f10/how-set-up-raspberry-pi-2626/>
 
 Go to the setup page for your router. Everyone is a little different, but somewhere you can set the DHCP server to always assign the same IP address to a device based on its MAC address. 
 

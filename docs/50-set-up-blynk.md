@@ -6,28 +6,30 @@ http://www.blynk.cc/getting-started
 
 <http://wiringpi.com/download-and-install/>
 
-git clone git://git.drogon.net/wiringPi
-cd wiringPi
-git pull origin
-cd wiringPi
-./build
+	git clone git://git.drogon.net/wiringPi
+	cd wiringPi
+	git pull origin
+	cd wiringPi
+	./build
 
 run the gpio command to check the installation:
-cd gpio
-gpio -v
-gpio readall
+
+	cd gpio
+	gpio -v
+	gpio readall
 
 
 ##install blynk library
 
 <https://github.com/blynkkk/blynk-library/blob/master/docs/Platforms.md#linux-raspberry-pi>
 
-git clone https://github.com/blynkkk/blynk-library.git
-cd blynk-library/linux
-./build.sh raspberry
+	git clone https://github.com/blynkkk/blynk-library.git
+	cd blynk-library/linux
+	./build.sh raspberry
 
-to run:
-sudo ./blynk --token=YourAuthToken
+to run:  
+
+	sudo ./blynk --token=YourAuthToken
 
 ##blynk on github
 

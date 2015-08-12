@@ -1,5 +1,6 @@
 #Install mosquitto on RPi
 
+<http://mosquitto.org/download/>  
 <http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>
 
 ##Installing the broker and clients
@@ -12,9 +13,11 @@ Install the mosquitto lib on RPi, **But do not use JPM's commands**. mosquitto i
 
 to install the broker (first line), clients (second line) and the python bindings (third line).
 
-the broker is immediately started; stop it in order to configure it:
+The broker is immediately started; stop it in order to configure it:
 
 	sudo /etc/init.d/mosquitto stop
+
+##Testing
 
 Test the installation as follows:
 <http://stackoverflow.com/questions/26716279/how-to-test-the-mosquitto-server>
@@ -35,7 +38,14 @@ As well as seeing both the subscriber and publisher connection messages in the b
 
 	test/topic helloWorld	
 	
-##Setting the security 	
+##Authentication and security 	
+
+By default mosquitto has no security protection.  Two methods of secure operation are possible:
+
+1. Username/password:  this option sends the open password over the network and is fine for authentication and not safe on open networks.
+
+2. Certificates: a symmetric key pair is used to authenticate the messages.
+3. 
 
 <https://github.com/owntracks/tools/blob/master/TLS/generate-CA.sh>
 

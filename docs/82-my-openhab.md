@@ -1,8 +1,6 @@
-
-
 #my.openHAB
 
-https://my.openhab.org/docs
+<https://my.openhab.org/docs>
 
 register on my.openHAB
 

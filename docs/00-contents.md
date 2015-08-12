@@ -14,7 +14,7 @@ The files in this folder describes various aspects of our openhab installation. 
 
 - 6x describe the lua language and its use in the ESP8266
 
-- 8x describe the installation, setup and use of openHAB.
+- 8x describe the installation, set up and use of openHAB.
 
 
 
