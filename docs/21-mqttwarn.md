@@ -92,7 +92,7 @@ or from your openHab or any other application.
 For this to work, you have to have the following installed:
 
 1. MQTT broker, such as mosquitto must be installed and running in the background.
-2. warnmqtt must be installed and running in the background.
+2. warnmqtt must be installed and running in the background (use supervisord for that purpose (see 03-diverseSoftwareRPi.md).
 3. you must have an account on pushover with known User Key
 4. the warnmqtt plugin application must be registered against your pushover user account.
 5. you must have installed and set up smtp with an active email account, e.g., a gmail account.

@@ -200,3 +200,75 @@ http://www.cyberciti.biz/tips/linux-use-gmail-as-a-smarthost.html
 https://www.raspberrypi.org/forums/viewtopic.php?t=27937&p=288233
 
 
+##Install supervisord to control mqttwarn
+
+Supervisor is a client/server system that allows its users to monitor and control a number of processes on UNIX-like operating systems. Supervisor launches programs, monitors them for failure, logs their output, and restarts them. 
+
+<http://jpmens.net/2014/02/13/in-my-toolbox-supervisord/>  
+<http://supervisord.org/>
+
+###Installing supervisor
+
+<https://serversforhackers.com/monitoring-processes-with-supervisord>
+
+To install Supervisord, we can simply run the following:
+
+	sudo apt-get install -y supervisor
+
+Installing it as a package gives us the ability to treat it as a service:
+
+	sudo service supervisor start
+	
+The configuration file is here
+
+	sudo nano /etc/supervisor/supervisord.conf
+
+In order to control supervisor as a regular user, at the top of the file add the chown line underneath the chmod line:
+
+	chmod=0700                  ; socket file mode (default 0700)
+	chown=pi:pi                 ; socket file uid:gid owner
+	
+Towards the bottom of this file is written
+
+	[include]
+	files = /etc/supervisor/conf.d/*.conf
+
+which implies that process configuration files can be placed in `/etc/supervisor/conf.d/`, because these file will be included in the main config file.
+
+Save the following file as `/etc/supervisor/conf.d/mqttwarn.conf`
+
+
+The first line points to the directory where mqttwarn is installed, change to suit your installation.  The same holds for the second line. In the third and fourth line enter your user home directory (if different from pi).
+
+After changing the file reload and update
+
+	sudo supervisorctl reread
+	sudo supervisorctl update
+
+check that mqttwarn is running:
+
+	sudo supervisorctl
+	-> type exit to leave the tool
+
+When in supervisor you can type `help` to get a list of commands.
+
+Starting/stopping mqttwarn:
+
+	sudo supervisorctl stop mqttwarn
+	sudo supervisorctl start mqttwarn
+
+see the status:
+
+	sudo supervisorctl status
+		
+		
+		
+		
+		
+		
+	
+	
+	
+
+
+	
