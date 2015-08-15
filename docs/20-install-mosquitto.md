@@ -11,7 +11,7 @@ Install the mosquitto lib on RPi, **But do not use JPM's commands**. mosquitto i
 	sudo apt-get install mosquitto-clients
 	sudo apt-get install python-mosquitto
 
-to install the broker (first line), clients (second line) and the python bindings (third line).
+To install the broker (first line), clients (second line) and the python bindings (third line).
 
 The broker is immediately started; stop it in order to configure it:
 
@@ -45,7 +45,8 @@ By default mosquitto has no security protection.  Two methods of secure operatio
 1. Username/password:  this option sends the open password over the network and is fine for authentication and not safe on open networks.
 
 2. Certificates: a symmetric key pair is used to authenticate the messages.
-3. 
+
+Todo: complete the security section
 
 <https://github.com/owntracks/tools/blob/master/TLS/generate-CA.sh>
 
