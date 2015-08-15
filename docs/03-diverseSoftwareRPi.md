@@ -150,7 +150,7 @@ The `change finger` command will setup a new linux finger name (this is like a n
 Test from the command line with one of these commands: 
 
 
-	mail -s "test the mail thing" eldowillemhab@gmail.com
+	mail -s "test the mail thing" youremail@gmail.com
 
 	echo "Test" | sudo sendmail -v youremail@gmail.com
 

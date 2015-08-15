@@ -88,7 +88,11 @@ Set up the RPi to boot to the graphical user interface:
 	cd .config
 	sudo mkdir autostart
 	cd autostart
-	sudo geany tightvnc.desktop (or sudo nano tightvnc.desktop)
+	sudo geany tightvnc.desktop
+
+or 
+	
+	sudo nano /home/pi/.config/autostart/tightvnc.desktop
 
 enter the following into the file
 

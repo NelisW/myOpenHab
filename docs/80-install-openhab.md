@@ -72,7 +72,7 @@ http://10.0.0.16:8080/openhab.app?sitemap=demo
 
 Create a new file in the /etc/init.d folder called "openhab" using your favourite editor
 
-	sudo geany /etc/init.d/openhab
+	sudo nano /etc/init.d/openhab
 
 See the contents of the file here:   
 <https://github.com/openhab/openhab/wiki/Samples-Tricks#how-to-configure-openhab-to-start-automatically-on-linux>

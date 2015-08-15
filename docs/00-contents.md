@@ -6,7 +6,7 @@ The files in this folder describes various aspects of our openhab installation. 
 
 - 1x describe various aspects of the Raspberry Pi hardware interfaces
 
-- 2x describe the mosquitto MQTT installation and operation
+- 2x describe the mosquitto MQTT and related tools installation and operation
 
 - 3x describe hardware and software aspects of the ESP8266
 
