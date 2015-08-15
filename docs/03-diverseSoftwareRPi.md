@@ -235,8 +235,18 @@ Towards the bottom of this file is written
 
 which implies that process configuration files can be placed in `/etc/supervisor/conf.d/`, because these file will be included in the main config file.
 
-Save the following file as `/etc/supervisor/conf.d/mqttwarn.conf`
+Save the following lines to a file as `/etc/supervisor/conf.d/mqttwarn.conf`
 
+	[program:mqttwarn]
+	directory = /home/pi/mqttwarn
+	command = /home/pi//mqttwarn/mqttwarn.py
+	autostart=true
+	autorestart=true
+	;startretries=1000
+	stderr_logfile=/home/pi/log/mqttwarn.err.log
+	stdout_logfile=/home/pi/log/mqttwarn.out.log
+	user = pi
+	environment= MQTTWARNINI="/home/pi/mqttwarn/mqttwarn.ini"
 
 The first line points to the directory where mqttwarn is installed, change to suit your installation.  The same holds for the second line. In the third and fourth line enter your user home directory (if different from pi).
 
