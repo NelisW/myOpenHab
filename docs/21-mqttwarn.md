@@ -83,11 +83,18 @@ The following `mqttwarn.ini` file reports all MQTT messages on the `test\+` topi
 	[test/+]
 	targets = file:mylog, log:info, smtp:gmail, pushover:appkey
 
-These `test\+` MQTT messages can be published by any MQTT source, on the command line, as in 
+These `test/+` MQTT messages can be published by any MQTT source, on the command line, as in 
 
 	mosquitto_pub -t 'test/topic' -m 'helloWorld'
 	
 or from your openHab or any other application.
+
+If you have another PC connected to the same network as the RPi, test the system with the following command:
+
+	mosquitto_pub -h x.x.x.x -p 1883 -t "test/play" -m "howzat!"
+
+where the x.x.x.x is the IP address of your RPi.  It should interact with the RPi's MQTT broker and relay the message.
+
 
 For this to work, you have to have the following installed:
 
