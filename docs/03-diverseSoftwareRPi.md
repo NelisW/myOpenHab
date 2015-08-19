@@ -13,6 +13,26 @@
 [Tutorial – Prepare your Raspberry Pi to become a web server](http://www.raspipress.com/2012/09/tutorial-prepare-your-raspberry-pi-to-become-a-web-server/)  
 [How set up a secure Raspberry Pi server installation](https://www.pestmeester.nl/)
 
+##General software
+
+The full home automation requires quite a list of software to be installed - details are interspersed throughout the set of documentation files.  Software not listed elsewhere are as follows:
+
+- geany editor
+- vim editor (nano is actually quite useful - easier than vim)
+- chromium browser
+
+##Install samba
+
+To access files on your RPi directory from Windows.
+
+<http://www.homeautomationforgeeks.com/samba.shtml>
+
+	sudo apt-get install samba samba-common-bin
+	sudo nano /etc/samba/smb.conf
+
+Follow the instructions on the web site.
+
+
 
 ##Install pip
 

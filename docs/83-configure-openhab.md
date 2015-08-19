@@ -1,5 +1,17 @@
 #Configuring the openHAB runtime
 
+##Users and passwords
+
+The openHAB usernames and passwords are stored in the file 
+`/opt/openhab/configurations/users.cfg`.  The entries in this file must be of the format
+
+	yourusername=yourpassword
+	
+ignore the test beyond the comma in the example entry, it is not yet implemented.
+
+##todo this later:
+
+
 This page describes the different places in which the openHAB runtime can be configured and customized:
 
     general configuration
