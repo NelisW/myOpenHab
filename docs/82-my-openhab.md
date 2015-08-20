@@ -25,24 +25,37 @@ and set the following:
 - `security:option=EXTERNAL` 
 - `security:netmask=` to your local LAN IP subnet, i.e., `255.255.255.0/24`
 - `servicediscovery:bind_address= to your local (RPi) IP address
-- `mqtt:<broker>.url=tcp://yourlocalIP:1883
-	
-	
+
 After editing restart the daemon to note the new config settings:
 
 		sudo /etc/init.d/openhab restart
-
-sudo /etc/init.d/openhab restart
 
 ##Set up the Android app
 
 http://www.homeautomationforgeeks.com/openhab_android.shtml
 
 1. Install the app from Google Play
+
 2. Go to Settings and disable the demo mode
-3. Set `openHAB URL` to your local network url:  `http://192.168.1.80:8080` using the http protocal, port 8080 and no more.
-4. If your router is set up to pass internet traffic you can also set the remote URL.
-5.
+
+3. Deselect the demo mode, you want to use your own site.
+
+3. Set `openHAB URL` to your local network url:  `http://192.168.1.80:8080/` using the http protocal, port 8080. Use the http protocol and don't add anything beyond the port number.
+
+4. Set the `openHAB Remote URL`  to `https://my.openhab.org`
+
+5. Use the same username and password that you registered with on myopenHAB.
+
+6. Select the `Ignore SSL certificate` must have the tick mark.
+
+6. Deselect the `Ignore SSL hostname` must not have the tick mark.
+
+7. Escape back to the app's main window.  
+
+##Notes
+
+After setting up the openHAB and my.openHAB you have to wait some time before the app seems to work.
+
 
 
 

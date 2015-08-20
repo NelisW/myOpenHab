@@ -23,131 +23,112 @@ Scroll to the Transport section and look for the MQTT transport section.  Look f
 	mqtt:mymosquitto.url=tcp://localhost:1883
 	mqtt:mymosquitto.retain=true
 
+You may also decide to set the last-will-and-testament .lwt to send a final message when closing down.
+
+After editing restart the daemon to note the new config settings:
+
+		sudo /etc/init.d/openhab restart
+
 Save and exit the file.
 
-##Configuring detail
+##Notes on configuring openHAB
 
 Read these pages:
 <https://github.com/openhab/openhab/wiki/Configuring-the-openHAB-runtime>  
+
+You use the openHAB Designer, but you can also edit the files with a normal file editor.  The files must be in UTF-8 encoding.
+
+Item and sitemap files  can be changed during runtime, with no need to restart openHAB.
+
+The global configuration is done in the `openhab.cfg` file.  Changes made to this file have impact throughout all sitemaps.  There is a default version of this file which can be used as a template for your own work: make a copy of the default and edit the copy.
+
+The most common global configuration changes are to activate specific bindings by uncommenting the appropriate lines, e.g., as when the MQTT binding was activated above in this file.
+
+##Item definitions
+
+Item files are stored in `/opt/openhab/configurations/items`.
+Although items can be dynamically added, it is most common to statically define most of the items.  These static definition files follow a prescribed syntax.
+For more information on how to create item files see here:  
 <https://github.com/openhab/openhab/wiki/Explanation-of-Items>  
+
+For an example see here
+<http://www.homeautomationforgeeks.com/project/openhab.shtml>
+
+	sudo nano /opt/openhab/configurations/items/default.items
+	
+Add the following text:
+
+	Group All
+
+	Group gGroundFloor (All)
+
+	Group GF_Living "Living Room" <video> (gGroundFloor)
+
+	Number TestTemperature "Temperature [%.1f F]" <temperature> (GF_Living) {mqtt="<[mymosquitto:home/temperature:state:default]"}
+
+That last line is where we tell OpenHAB about our temperature sensor. The parts are:
+
+- Number: the type of the value.
+
+- TestTemperature: a name for this item.
+
+- "Temperature [%.1f C]": how we want the value to be displayed. "%.1f" is a way to format a decimal number
+
+- <temperature>: the name of a built-in icon to display (a thermometer).
+
+- (GF_Living): which group this item belongs to.
+
+- {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling OpenHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
+
+
+	
+
+##Sitemap definitions
+
+Sitemap files are stored in `/opt/openhab/configurations/sitemaps`.
+Sitemaps are used to define the user interface hierarchy - like a map of your home.
+For more information on how to create item sitemap files see here:  
 <https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps>  
 
+	sudo nano /opt/openhab/configurations/sitemaps/default.sitemap
+	
+Add the following text
+
+sitemap default label="Main Menu"
+{
+        Frame label="MQTT Test" {
+                Text item=TestTemperature
+        }
+}	
+
+##Test the simple demo
+
+Send the above set up with a temperature with this mqtt publish command
+
+	mosquitto_pub -t "home/temperature" -m "12"
+	
+or from another PC on the network send
+
+	mosquitto_pub -h yourRPiIPaddress -t "home/temperature" -m "12"
+	
 
 
 
-##todo this later:
-
-<https://github.com/openhab/openhab/wiki/Configuring-the-openHAB-runtime>
 
 
+##Other files
 
-This page describes the different places in which the openHAB runtime can be configured and customized:
+Rule files are stored in `/opt/openhab/configurations/rules`. Rules provide flexible logic to openHAB for automation which can also use scripts(macros) using related events and actions.
+Script files are stored in `/opt/openhab/configurations/scripts`.
 
-    general configuration
-    individual configuration
-    advanced configuration
-
-Note: The configuration files are text files that can be edited with any text editor of your choice. Nevertheless, you may want to use the openHAB designer to edit them, and you will get informed about any syntax error. Note that the expected file encoding is UTF-8.
-
-Note: Items and sitemap(s) may be changed during runtime as needed.
-
-Note: Use the demo setup if you wish: http://www.openhab.org/downloads.html
-General Configuration - openhab.cfg
-
-The runtime comes with one core configuration file, the file openhab_default.cfg. The purpose of this file is to define all basic settings, such as IP addresses, mail server, folder locations etc.
-
-The file also contains settings for all (optional) bindings. These settings are automatically dispatched to the according binding. For this, all settings come with a namespace (such as "mail:" or "knx:") to identify the associated binding.
-
-First thing after unzipping the runtime should be creating a copy of openhab_default.cfg to openhab.cfg. All personal settings should always only be done in this copy. This ensures that your settings are not lost, if you unzip a new version of the runtime to your openHAB home directory.
-
-The openhab_default.cfg file comes with extensive comments which explain, what settings are available and what can be configured with them. If you have any doubts, please ask on the discussion group.
-
-To activate a binding uncomment the specific settings.
-
-Example: The easiest way of configuring a KNX binding is by connecting in ROUTER mode. To do so, enable this: knx:type=ROUTER . If you cannot use the ROUTER mode, set it to TUNNEL, but you must then configure the IP: knx:ip=<IP of the KNX-IP module>
-Individual Configuration
-
-Besides the *.cfg files and *.xml files (see below: loggin) the configuration folder ${openhab_home}/configurations consists of dedicated subfolders for specific topics. For each topic, there should be another sub folder, such as ${openhab_home}/configurations/items.
-Item Definitions
-
-Item files are stored in ${openhab_home}/configurations/items.
-
-Although items can be dynamically added by item providers (as OSGi services), it is usually very practical to statically define most of the items that should be used in the UI or in automation rules.
-
-These static definition files follow a certain syntax. This syntax will be explained here. (For the technical interested: This syntax is in fact a Xtext DSL grammar.)
-
-Please visit the Items page on how to configure items.
-Sitemap Definitions
-
-Sitemap files are stored in ${openhab_home}/configurations/sitemaps.
-
-Sitemaps are a declarative UI definition. With a few lines it is possible to define the structure and the content of your UI screens.
-
-(For the technical interested: This syntax is in fact a Xtext DSL grammar.)
-
-Please see page sitemaps for a description on how to create sitemaps.
-Automation
-
-Rule files are stored in ${openhab_home}/configurations/rules.
-
-Script files are stored in ${openhab_home}/configurations/scripts.
-
-Rules provide flexible logic to openHAB for automation which can also use scripts(macros) using related events and actions..
-
-Please visit the automation section for further detailes.
-Persistence
-
-Script files are stored in ${openhab_home}/configurations/persistence.
-
+Persistence  files are stored in `/opt/openhab/configurations/persistence`.
 Persistences can store item states over a time (a time series).
 
-Please visit the persistence section for further details.
-Transformation
-
-Transformations files are stored in ${openhab_home}/configurations/transformation.
-
-Purpose: tbd...
-
-Please visit the transformation section for further details.
-Advanced Configuration
-general
-
-You will find the openHAB configuration under /etc/openhab. If you change configuration files it will not be overwritten by updates or upgrades.
-${openhab_home}/etc/default/openhab
-
-USER_AND_GROUP=openhab:openhab
-HTTP_PORT=8080
-HTTPS_PORT=8443
-TELNET_PORT=5555
-OPENHAB_JAVA=/usr/bin/java
-
-Logging
-Configuration
-
-The runtime uses /etc/openhab/logback.xml. A template for debugging is provided through /etc/openhab/logback_debug.xml. You can change logback.xml to your needs.
-Log files
-
-The runtime log: /var/log/openhab/openhab.log Further log files are placed also into: /var/log/openhab/
-Jetty
-
-/etc/openhab/jetty/etc/
-Runtime generated files
-
-/var/lib/openhab
-login.conf
-
-/etc/openhab/login.conf
-users.cfg
-
-/etc/openhab/users.cfg
-quartz.properties
-
-/etc/openhab/quartz.properties
 
 
----------------------------------
-Security
+#todo this later:
 
+##Security
 
 Documentation of openHAB's security features
 Introduction
@@ -178,13 +159,4 @@ In order to activate Authentication one has to add the following parameters to t
 By default the command line references the file <openhabhome>/etc/login.conf which in turn configures a PropertyFileLoginModule that references the user configuration file login.properties. One should use all available LoginModule implementation here as well (see http://wiki.eclipse.org/Jetty/Tutorial/JAAS for further information).
 
 The default configuration for login credentials for openHAB is the file <openhabhome>/configuration/users.cfg. In this file, you can put a simple list of "user=pwd" pairs, which will then be used for the authentication. Note that you could optionally add roles after a comma, but there is currently no support for different roles in openHAB.
-Security Options
-
-The security options can be configured through openhab.cfg. One can choose between
-
-    ON - security is enabled generally
-    OFF - security is disabled generally
-    EXTERNAL - security is switched on for external requests (e.g. originating from the Internet) only
-
-To distinguish between internal and external addresses one may configure a net mask in openhab.cfg. Every ip-address which is in range of this net mask will be treated as internal address must not be authorized though.
 
