@@ -9,7 +9,36 @@ The openHAB usernames and passwords are stored in the file
 	
 ignore the test beyond the comma in the example entry, it is not yet implemented.
 
+
+##Configure MQTT
+
+<http://www.homeautomationforgeeks.com/project/openhab.shtml>
+
+Edit the openHAB config file
+
+	sudo nano /opt/openhab/configurations/openhab.cfg
+
+Scroll to the Transport section and look for the MQTT transport section.  Look for the lines that contain `<broker>.url` and `<broker>.retain` and uncomment them.  Change them to the mosquitto broker that is running on the RPi.  Give the broker a name in the `<broker>` part - this name will be used later to refer to your broker.
+
+	mqtt:mymosquitto.url=tcp://localhost:1883
+	mqtt:mymosquitto.retain=true
+
+Save and exit the file.
+
+##Configuring detail
+
+Read these pages:
+<https://github.com/openhab/openhab/wiki/Configuring-the-openHAB-runtime>  
+<https://github.com/openhab/openhab/wiki/Explanation-of-Items>  
+<https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps>  
+
+
+
+
 ##todo this later:
+
+<https://github.com/openhab/openhab/wiki/Configuring-the-openHAB-runtime>
+
 
 
 This page describes the different places in which the openHAB runtime can be configured and customized:

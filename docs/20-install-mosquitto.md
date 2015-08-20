@@ -1,7 +1,10 @@
 #Install mosquitto on RPi
 
 <http://mosquitto.org/download/>  
-<http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>
+<http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>  
+<http://www.homeautomationforgeeks.com/mosquitto.shtml>  
+
+Mosquitto is an open-source message broker, which means it allows different programs to exchange information in a way they can all understand. 
 
 ##Installing the broker and clients
 
@@ -26,13 +29,13 @@ Test the installation as follows:
 
 	sudo /etc/init.d/mosquitto start
 
-2. Start the command line subscriber:
+2. Start the command line subscriber (-d is for debug information, -v is for verbose)
 
-	mosquitto_sub -v -t 'test/topic'
+	mosquitto_sub -v -d -t "test/topic"
 
 3. Publish test message with the command line publisher:
 
-	mosquitto_pub -t 'test/topic' -m 'helloWorld'
+	mosquitto_pub -t "test/topic" -m 'helloWorld'
 	
 As well as seeing both the subscriber and publisher connection messages in the broker terminal the following should be printed in the subscriber terminal:
 
@@ -42,7 +45,7 @@ As well as seeing both the subscriber and publisher connection messages in the b
 
 By default mosquitto has no security protection.  Two methods of secure operation are possible:
 
-1. Username/password:  this option sends the open password over the network and is fine for authentication and not safe on open networks.
+1. Username/password:  this option sends the open password over the network and is fine for authentication but is not safe on open networks.
 
 2. Certificates: a symmetric key pair is used to authenticate the messages.
 

@@ -12,6 +12,7 @@ You have to wait a while for the stop command to execute.
 <http://www.instructables.com/id/OpenHAB-on-Raspberry-Pi>  
 <http://www.openhab.org/getting-started/index.html>  
 <https://github.com/openhab/openhab/wiki/Samples-Tricks#how-to-configure-openhab-to-start-automatically-on-linux>
+<http://www.homeautomationforgeeks.com/project/openhab.shtml>  
 
 Update the software packages
 
@@ -27,13 +28,13 @@ Create a directory to download openhab
 	sudo mkdir /opt/openhab	
 	cd /opt/openhab 
 	
-Get the latest version and unzip
+Get the latest version and unzip - when I wrote this it was version 1.7.1, but it may have been updated since.
 
 	sudo wget https://bintray.com/artifact/download/openhab/bin/distribution-1.7.1-runtime.zip  
 	sudo unzip distribution-1.7.1-runtime.zip
 	sudo rm distribution-1.7.1-runtime.zip
 	
-The runtime is installed and the zip files erased, but in order for openHAB to work you will need to add bindings. Upon extrating the runtime zip a "addons" folder was created. All bindings belong in this folder. Go to the addons folder and extract the addons zip. First lets download them to the appropriate folder.	
+The runtime is installed and the zip files erased, but in order for openHAB to work you will need to add bindings. Upon extracting the runtime zip a "addons" folder was created. All bindings belong in this folder. Go to the addons folder and extract the addons zip. First lets download them to the appropriate folder.	
 	
 	cd addons/
 	sudo wget https://bintray.com/artifact/download/openhab/bin/distribution-1.7.1-addons.zip
