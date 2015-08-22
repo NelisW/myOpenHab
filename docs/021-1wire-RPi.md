@@ -4,22 +4,34 @@
 
 <http://www.maximintegrated.com/en/app-notes/index.mvp/id/1796>
 
-The basis of 1-Wire technology is a serial protocol using a single data line plus ground reference for communication. A 1-Wire master initiates and controls the communication with one or more 1-Wire slave devices on the 1-Wire bus). Each 1-Wire slave device has a unique, unalterable, factory-programmed, 64-bit ID (identification number), which serves as device address on the 1-Wire bus. 
-1-Wire devices can be connected in parallel on s single bus, they co-exist quite well without interfering with each other.
+The basis of 1-Wire technology is a serial protocol using a single data line plus ground reference for communication. A 1-Wire master initiates and controls the communication with one or more 1-Wire slave devices on the 1-Wire bus). Each 1-Wire slave device has a unique, unalterable, factory-programmed, 64-bit ID (identification number), which serves as device address on the 1-Wire bus. 1-Wire devices can be connected in parallel on s single bus, they co-exist quite well without interfering with each other.
 
 ##Installing 1-Wire drivers
 
-<http://pi-io.com/how-to/173-2/>
+<http://pi-io.com/how-to/173-2/>  
+<http://devicehive.com/samples/python-and-raspberry-pi-temperature-sensor>
 
-The library is installed in the Raspbian OS,  but not loaded/executed.
+<https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/ds18b20>
+
+It gets a bit confusing when you google, there are some minor differences between the different web pages.
+One says that the 1-Wire library is installed in the Raspbian OS,  but not loaded/executed.  We will follow the [Adafruit](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing/ds18b20) instruction here (it is dated relatively recently).
+
+If it is not already there, add the line `dtoverlay=w1-gpio,gpiopin=4` to the end of `/boot/config.txt`
+
+    sudo nano /boot/config.txt
+
+The reboot the RPi with `sudo reboot`
+
+
 
 Run following commands:
     sudo modprobe w1-gpio
-    sudo modprobe w1-therm
+    sudo modprobe w1_therm
   
-"modprobe w1-gpio" registers the new sensor connected to GPIO4.
-"w1-therm" adds the temperature support.
-Add lines "w1-gpio" and "w1_therm" into /etc/modules so they get loaded 
+`modprobe w1-gpio` registers the new sensor connected to GPIO4.   
+`w1-therm` adds the temperature support.   
+
+Add lines `w1-gpio` and `w1_therm` into /etc/modules so they get loaded 
 automatically the next time you restart the Raspberry Pi.
 
 "chmod 666" is adding all the permissions for reading the sensordata.
