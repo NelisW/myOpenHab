@@ -34,6 +34,19 @@ Set a password (the same password as when logging in as pi):
 
 	sudo smbpasswd -a pi
 	
+Add the requisite directories with appropriate rights to the samba config file 	
+	[OpenHAB]
+	comment = OpenHAB
+	path = /opt/openhab
+	browseable = Yes
+	writeable = Yes
+	only guest = no
+	create mask = 0777
+	directory mask = 0777
+	public = no
+	force user = root
+	
+	
 Open the folder in Windows Explorer as `\\yourRPiIPaddress`	
 
 ##Install pip
