@@ -30,9 +30,11 @@ To access files on your RPi directory from Windows.
 	sudo apt-get install samba samba-common-bin
 	sudo nano /etc/samba/smb.conf
 
-Follow the instructions on the web site.
+Set a password (the same password as when logging in as pi):
 
-
+	sudo smbpasswd -a pi
+	
+Open the folder in Windows Explorer as `\\yourRPiIPaddress`	
 
 ##Install pip
 
@@ -291,7 +293,11 @@ see the status:
 
 	sudo supervisorctl status
 		
-		
+##git-crypt
+
+If you want to save your files in a git repository and want to protect some files (e.g., password files, etc) consider 	(git-crypt)[<https://www.agwa.name/projects/git-crypt/] <https://github.com/AGWA/git-crypt>
+
+
 		
 		
 		
