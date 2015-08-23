@@ -13,7 +13,7 @@ Once the drivers are installed and the devices are wired as shown [here](https:/
 
 ![test](images/DS18B20-RPi-schematic.png)
 
-The temperature values are written to the file `/sys/bus/w1/devices/28__ADDRESS__/w1_slave`. To see the results open a terminal and type  
+You can add as many DS18B20 sensors as yoou wish, all in parallel (use a single 4.7 kOhm resistor).  The results from each of these sensors are written in a series of directories `/sys/bus/w1/devices/28*` (starting with 28 and ending with the device ID). The temperature values are written to the file `/sys/bus/w1/devices/28__ADDRESS__/w1_slave`. To see the results open a terminal and type  
 
     cat /sys/bus/w1/devices/28__ADDRESS__/w1_slave
 

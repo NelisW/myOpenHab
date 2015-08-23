@@ -30,7 +30,7 @@ We intend to use these technologies and tools:
 
 ##Status
 
-Warning: I am a tool freak: a job started with the right tools is 50% done at the moment you start.  This project is built on top of a series of  tools, integrated together into a powerful and easy to use/maintain system.  At present I am still waiting for most of the hardware - somewhere in the mail between China and here.  The Raspberry Pi is running. 
+Warning: I am a tool freak: a job started with the right tools is 50% done at the moment you start.  This project is built on top of a series of  tools, integrated together into a powerful and easy to use/maintain system.  At present I am still waiting for most of the hardware - somewhere in the mail.  The Raspberry Pi is running. 
 
 The current status of this project is very early pre-alpha.  It will take some time to complete this project.
 

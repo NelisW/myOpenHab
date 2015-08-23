@@ -1,5 +1,7 @@
 details to follow
 
+[Configuring GPIO](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-gpio)
+
 [How to communicate with gpio, onewire, spi, i2c](http://pi-io.com/how-to/173-2/)
 
 <http://forums.connectedly.com/guides-how-articles-f10/how-set-up-raspberry-pi-2626/>
