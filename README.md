@@ -1,7 +1,7 @@
 # myOpenHab
 
 ##Overview
-An implementation of a DIY home automation system based on openHab, mosquitto MQTT, mqttwarn, and lua or C, running on ESP8266 and Raspberry Pi
+An implementation of a DIY home automation system based on openHab, mosquitto MQTT, mqttwarn, and lua or C, running on ESP8266 and Raspberry Pi.
 
 In doing this work we are inspired by these noteworthy projects:
 
@@ -30,11 +30,12 @@ We intend to use these technologies and tools:
 
 ##Status
 
+Warning: I am a tool freak: a job started with the right tools is 50% done at the moment you start.  This project is built on top of a series of  tools, integrated together into a powerful and easy to use/maintain system.  At present I am still waiting for most of the hardware - somewhere in the mail between China and here.  The Raspberry Pi is running. 
+
 The current status of this project is very early pre-alpha.  It will take some time to complete this project.
 
-At present we only installed openHAB on the RPi and demonstrated the demo design that comes with openHAB.  The idea is to use the demo version as the starting point and then hack it to reflect our home.
-
-The smpt mail (gmail account) and msoquitto daemons are operational, together with push notification to pushover from mqttwarn.
+At present we installed most of the tools detailed in the `docs` folder (smpt, mosquitto, mqttwarn, supervisor). A DS18B20 temperature sensor is running on the RPi and the ambient room temperature and RPi CPU temperature are running in a small openHAB design, on the my.openHAB cloud.
+If the RPi CPU temperature exceeds a given threshold, a notification is pushed to Pushover.
 
 Our languages of choice in order of preference are Python, C or lua.  The initial implementation will probably use lua, simply because of the strong lua support for the ESP8266.  Later the code will be migrated to C. Even later we might be using micropython, but the ESP8266 implementation for micropython is still under development and not yet stable enough.
 

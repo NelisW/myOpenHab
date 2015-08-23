@@ -42,6 +42,8 @@ Setting up Pushover is outlined in the file `22-pushover-notification.md`.
 
 ##mqttwarn ini file
 
+The ini file sets up mqttwarn to define the appropriate actions on mqtt events.
+
 The following `mqttwarn.ini` file reports all MQTT messages on the `test\+` topic to
 1. the mqttwarn log file
 2. a message file located at `/tmp/mqtt.log`
@@ -74,7 +76,7 @@ The following `mqttwarn.ini` file reports all MQTT messages on the `test\+` topi
 	server  =  'smtp.gmail.com:587'
 	sender  =  "yourGmailUser@gmail.com"
 	username  =  "yourGmailUser@gmail.com"
-	password  =  "yourGmailPassword<Saw"
+	password  =  "yourGmailPassword"
 	starttls  =  True
 	targets = {
 		'gmail'     : [ 'recipient01@gmail.com', 'recipient02@gmail.com' ],
@@ -83,6 +85,10 @@ The following `mqttwarn.ini` file reports all MQTT messages on the `test\+` topi
 	[test/+]
 	targets = file:mylog, log:info, smtp:gmail, pushover:appkey
 
+    [pushover/+]
+    targets = file:mylog, log:info, smtp:gmail, pushover:appkey
+
+    
 These `test/+` MQTT messages can be published by any MQTT source, on the command line, as in 
 
 	mosquitto_pub -t 'test/topic' -m 'helloWorld'

@@ -1,22 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
-
 import os
 import glob
 import time
 import datetime
 import collections
 
-
 """
 Setting up  is described in 
 https://github.com/NelisW/myOpenHab/blob/master/docs/021-1wire-RPi.md
 https://github.com/NelisW/myOpenHab/blob/master/docs/050-DS18B20-temperature.md
+
+the driver expects the 1-wire device on GPIO4
 """
 
 # load the 1-wire interface driver, unless already loaded during boot
-# the driver expects the 1-wire device on GPIO4
+#ideally it must be done at boot, commented out here
 #os.system('modprobe w1-gpio')
 #adds temperature support
 #os.system('modprobe w1-therm')
@@ -48,7 +48,8 @@ def read_temp(device_folders):
             ctime = datetime.datetime.now().isoformat(' ')
             dicmeasure[devID]= [ctime, temp_c]
     return dicmeasure
-  
+
+lastTime = datetime.datetime.now()
 
 while True:
     dicmeasure = read_temp(device_folders)
@@ -60,9 +61,24 @@ while True:
     tempCPU = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
     #print('CPU temperature {} '.format(tempCPU))
     
-    #publish to mqtt
+    #publish regular status meassages to openHAB via mqtt
     os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(dicmeasure['28-000004d0250c'][1]))
     os.system("mosquitto_pub -t 'home/study/CPUTemperature' -m '{}'".format(tempCPU))
+    
+    #publish mqtt warnings when the CPU temperature rises above some threshold
+    #the message can be used to trigger a pushover and/or email notification
+    thresholdTempCPU = 40.
+    if tempCPU > thresholdTempCPU:
+		now = datetime.datetime.now()
+		#this warning must only be issued between 0600 and 2200
+		if now.hour > 6 and now.hour < 22:
+			#get day of year to ensure only one warning per day
+			lastDay = (lastTime.year - 2000) * 356 + lastTime.timetuple().tm_yday
+			nowDay = (now.year - 2000) * 356 + now.timetuple().tm_yday
+			#this warning must only be issued once per day 
+			if nowDay > lastDay:
+				os.system("mosquitto_pub -t 'pushover/warnCPU' -m 'CPU temperature is {} C'".format(tempCPU))			
+				lastTime = now	
     
     time.sleep(10)  
 
