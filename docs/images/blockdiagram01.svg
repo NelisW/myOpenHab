@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 744.09448819 1052.3622047"
+   width="143.55472mm"
+   height="122.93666mm"
+   viewBox="0 0 508.65845 435.60233"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0348276"
-     inkscape:cx="411.42857"
-     inkscape:cy="737.51991"
+     inkscape:cx="290.79108"
+     inkscape:cy="256.46816"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,11 @@
      inkscape:window-height="1011"
      inkscape:window-x="1596"
      inkscape:window-y="80"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -51,7 +55,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-120.63749,-135.70813)">
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4140"
@@ -82,19 +87,21 @@
        y="439.53387" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;text-anchor:middle;text-align:center;"
-       x="331.22433"
-       y="363.85178"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="339.58652"
+       y="362.8689"
        id="text4150"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4152"
-         x="288.47653"
-         y="363.85178">Automation</tspan><tspan
+         x="339.58652"
+         y="362.8689"
+         style="text-align:center;text-anchor:middle">Automation</tspan><tspan
          sodipodi:role="line"
-         x="288.47653"
-         y="382.60178"
-         id="tspan4154">server</tspan></text>
+         x="339.58652"
+         y="381.6189"
+         id="tspan4154"
+         style="text-align:center;text-anchor:middle">server</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4156"
