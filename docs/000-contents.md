@@ -32,6 +32,8 @@ The file sequence is more or less chronological, but there is no requirement to 
 
 ##Design overview
 
+![blockdiagram01.svg](images/blockdiagram01.svg)
+
 The design employs decentralised hardware units: comprising a server and a number of loose standing sensors/controllers, all on a wireless network.  I used an 802 wifi network, but in principle other wireless protocols could also be used.  Using wireless has a number of benefits: no wires, simplified communication and ease in reconfiguration.
 
 Communication between the units is done by the [MQTT](http://mqtt.org/) (Message Queuing Telemetry Transport) protocol.  MQTT is a light weight protocol that runs on top of TCP/IP, meant for use in machine-to-machine communication.  It uses the publish-subscribe model, and hence requires a broker to act as mediator between the clients that publish messages on a 'topic' or 'channel', and the subscribers that registered an interest in these topics or channels.  Communication is therefore quite simple: clients subscribe/publish to a topic and the broker sees to it that the messages are delivered.  These clients can even be present on the same hardware, they communicate via TCP/IP.  This approach leads to good decoupling, which is a good design principle when it comes to complex systems.  The mosquitto implementation is used here, but any other implementation would serve just as well.
