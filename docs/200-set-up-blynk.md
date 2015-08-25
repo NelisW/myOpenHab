@@ -2,21 +2,6 @@
 
 http://www.blynk.cc/getting-started
 
-##install wiring Pi
-
-<http://wiringpi.com/download-and-install/>
-
-	git clone git://git.drogon.net/wiringPi
-	cd wiringPi
-	git pull origin
-	cd wiringPi
-	./build
-
-run the gpio command to check the installation:
-
-	cd gpio
-	gpio -v
-	gpio readall
 
 
 ##install blynk library
