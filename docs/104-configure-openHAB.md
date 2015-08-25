@@ -160,3 +160,11 @@ By default the command line references the file <openhabhome>/etc/login.conf whi
 
 The default configuration for login credentials for openHAB is the file <openhabhome>/configuration/users.cfg. In this file, you can put a simple list of "user=pwd" pairs, which will then be used for the authentication. Note that you could optionally add roles after a comma, but there is currently no support for different roles in openHAB.
 
+##More information
+
+
+https://github.com/openhab/openhab/wiki/Explanation-of-Items
+
+https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps
+
+

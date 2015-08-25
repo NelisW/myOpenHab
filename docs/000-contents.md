@@ -16,6 +16,7 @@ The point of departure is to use existing tools to the maximum extent; there is 
 
 When I started on this project I had a reasonably good idea of what I wanted, but had no hardware to work with (except the Raspberry Pi [RPi]). The hardware was ordered, but still floating somewhere in the international mail system.  This forced me to look into architectures and tools before plunging into hardware details.  
 
+A non-trivial home automation system has considerable  complexity.  There are communication protocols, control software, user-interface software and much more.  The design choices we make shifts the complexity around between the parts, but the sum total complexity remains the same.  Retrospectively, it became evident that our decision to use MQTT/openHAB/supervisor and associated libraries, simplified our communication protocols and coding (simple messages along specific topics), but it increased the complexity of infrastructure in terms of libraries and tools.  Someone else might decide that the overhead of installing and maintaining the infrastructure is too complex and go for a low footprint option; but that would require more coding and more complex messages during implementation. In the end, the effort is the same.
 
 ##Design options
 
@@ -25,26 +26,34 @@ The main components in the home automation are shown in the diagram above.  Most
 
 The home automation marketplace is highly competitive in the commercial as well as the open source spheres. There is no standard today, only stronger and weaker offerings.  The multitude of product offerings makes committing to a specific offering a very difficult call.  I made my calls and report on this, you may have different convictions and needs. To each his own.
 
-You can have a home automation system that does not access the internet or a GSM network in any way.  
-Such a system is more secure and much harder to break into, but it limits access to devices located on the local area network.  We did not consider GSM-based systems (e.g., texting) for our implementation.  Commercial and open source offerings for cloud-based automation services abound. Some of the free and open source offerings include:
+The core of the system is the local automation server and the many clients actually doing the work.  This core is software based and should provide the integration between the units and the required monitoring and control functionality.  The scope and reach of this core part of the system is local to the home.  The better known offerings include:
 
 - openHAB
 
-- ???
+- Souliss
 
-The communication options for the local area network between the devices and the server are much wider.  These options include wired connections such as RS485 and ethernet using a great many protocols including TCP/IP, I2C, ISP and many more.
+Commercial and open source offerings for cloud-based automation services abound. Ideally the home automation system should be able to provide cloud access for monitoring and control purposes, but it should not depend on access to the cloud for basic operation.  The cloud provides roaming access to part of all of the functionality available in the home.
+Some of the free and open source offerings include:
+
+- openHAB
+
+- Home Automation Server is a relative newcomer  http://homeautomationserver.com/about
+
+- Blynk and many other smart phone applications offer access to your IoT clients/devices but can not really be considered home automation servers.
+
+- There are many commercial systems offering free access 'at the moment' but these are not considered here.
+
+- Numerous commercial systems are on offer, but were not considered here.
+
+- Off-the-Internet servers, e.g., using GSM networks were not considered here, even though these may provide more secure environments.
+
+
+The communication options for the local area network between the devices and the server are much wider.  These options include wired connections such as RS485 and ethernet using a great many protocols including TCP/IP, I2C, ISP and many more.  There are also numerous wireless approaches that may be used.  Some of these offerings include:
 
 
 
 
-https://github.com/openhab/openhab/wiki/Explanation-of-Items
-https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps
-
-https://github.com/NelisW/myOpenHab/blob/master/docs/000-contents.md
-
-
-
-
+If there are many software offerings, there are even more hardware products.  Open source or DIY approaches could use Raspberry Pi's, Arduinos, ESP266, PIC, and numerous other cards.  We choose the ESP8266 as the main client controller because it provides 
 
 
 
@@ -80,3 +89,5 @@ It is recommended that you read and construct the RPi, the MQTT and openHAB func
 - 30x describe hardware and software aspects of the ESP8266
 
 - 40x describe the lua language and its use in the ESP8266
+
+
