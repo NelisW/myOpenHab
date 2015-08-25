@@ -6,7 +6,6 @@ If the RPi is on a network it is very convenient to gain access from another PC.
 
 To follow
 
-
 ## Setting up to work with X11 forwarding using SSH on Mobaxterm
 
 <http://blogspot.tenettech.com/?p=2850>  
@@ -171,27 +170,8 @@ then try the following command:
 
 Reboot your Raspberry Pi and you should find a VNC server already started.
 
-##Access over the internet
 
-https://www.raspberrypi.org/documentation/remote-access/access-over-Internet/internetaccess.md
 
-###Access via weaved
-
-Create an account on weaved.
-
-https://developer.weaved.com/portal/members/betapi.php
-
-https://developer.weaved.com/portal/login.php
-
-On your RPi install the weaved software
-
-    wget https://github.com/weaved/installer/raw/master/binaries/weaved-nixinstaller_1.2.13.bin
-    chmod +x weaved-nixinstaller_1.2.13.bin
-    ./weaved-nixinstaller_1.2.13.bin
-
-Selected the `weavedssh22` service and select the `web` option. The http protocol works on port 80.
-
-you can install more than one service.
 
 
 
