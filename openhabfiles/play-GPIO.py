@@ -10,16 +10,21 @@ pinLedRd = 13
 
 #set the software to use the Broadcom numbers
 GPIO.setmode(GPIO.BCM)
-#set up th
+
+#set up the  pins definitions
 GPIO.setup(pinLedSw,GPIO.OUT)
 GPIO.setup(pinLedRd,GPIO.IN)
 
+
 def pinSet(pin, setLed):
-		GPIO.output(pin, setLed)
+	"""set pin number to given state"""
+	GPIO.output(pin, setLed)
 		
 def pinRead(pin):
-		return GPIO.input(pin)
-		
+	"""Read pin number state"""
+	return GPIO.input(pin)
+	
+#experiment with pins		
 pinSet(pinLedSw,True)
 print(pinRead(pinLedRd))
 sleep(2)
@@ -27,5 +32,6 @@ pinSet(pinLedSw,False)
 print(pinRead(pinLedRd))
 sleep(2)
 
+#we have to clean up to reset pin definitions
 GPIO.cleanup()
 

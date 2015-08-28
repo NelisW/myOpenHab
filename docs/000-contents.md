@@ -28,9 +28,9 @@ The home automation marketplace is highly competitive in the commercial as well 
 
 The core of the system is the local automation server and the many clients actually doing the work.  This core is software based and should provide the integration between the units and the required monitoring and control functionality.  The scope and reach of this core part of the system is local to the home.  The better known offerings include:
 
-- openHAB
+- openHAB, provding a home server and an internet cloud, together with Android and IOS applications.
 
-- Souliss
+- Souliss, provding a home server, but no cloud capability - use openHAB for cloud access.
 
 Commercial and open source offerings for cloud-based automation services abound. Ideally the home automation system should be able to provide cloud access for monitoring and control purposes, but it should not depend on access to the cloud for basic operation.  The cloud provides roaming access to part of all of the functionality available in the home.
 Some of the free and open source offerings include:
@@ -41,19 +41,17 @@ Some of the free and open source offerings include:
 
 - Blynk and many other smart phone applications offer access to your IoT clients/devices but can not really be considered home automation servers.
 
-- There are many commercial systems offering free access 'at the moment' but these are not considered here.
+- There are many commercial systems offering free access 'at the moment' but these services are not considered here.
 
 - Numerous commercial systems are on offer, but were not considered here.
 
 - Off-the-Internet servers, e.g., using GSM networks were not considered here, even though these may provide more secure environments.
 
 
-The communication options for the local area network between the devices and the server are much wider.  These options include wired connections such as RS485 and ethernet using a great many protocols including TCP/IP, I2C, ISP and many more.  There are also numerous wireless approaches that may be used.  Some of these offerings include:
+The communication options for the local area network between the devices and the server are very wide.  These options include wired connections such as RS485, ethernet and other wired connections using a great many protocols including TCP/IP, I2C, ISP and many more.  There are also numerous wireless approaches that may be used.  Some of these offerings include: wifi, Zigbee, RF69, RF24, etc.
 
 
-
-
-If there are many software offerings, there are even more hardware products.  Open source or DIY approaches could use Raspberry Pi's, Arduinos, ESP266, PIC, and numerous other cards.  We choose the ESP8266 as the main client controller because it provides 
+If there are many software offerings, there are even more hardware products.  Open source or DIY approaches could use Raspberry Pi's, Arduinos, ESP266, PIC, and numerous other cards.  We choose the ESP8266 as the main client controller because it provides a reasonably powerful microcontroller and a wifi interface at a reasonable price.
 
 
 
@@ -70,9 +68,11 @@ The integration of all these functions into a powerful home automation system is
 
 ##File structure
 
-The series of files in the `docs` directory serve to capture my experiences, actions and insights.  A number of smaller files are used, rather than one large file.  Keeping the information in separate files helps to keep things simple and focused.  The files are using markdown for formatting: easily edited by any ACII editor, and equally easily rendered by a number of markdown renderers. 
+The series of files in the `docs` directory of this repo serve to capture my experiences, actions and insights.  The files are not all in the same state of completion, some just contain links to web sites.
 
-Files are grouped in number series in order to contain topics together.  The file sequence is more or less chronological, but there is no requirement to strictly follow this sequence. 
+A number of smaller files are used, rather than one large file, to help help focus and direct access.  The files are using markdown for formatting: easily edited by any ACII editor, and equally easily rendered by a number of markdown renderers. 
+
+Files are grouped in number series in order to contain topics together.  The file sequence is more or less chronological in implementation sequence, but there is no requirement to strictly follow this sequence. 
 
 It is recommended that you read and construct the RPi, the MQTT and openHAB functionality as a single unit.
 
