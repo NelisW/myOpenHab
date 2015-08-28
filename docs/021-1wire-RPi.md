@@ -56,3 +56,18 @@ where `28__ADDRESS__` is the directory for each device.  The address is differen
 Reading and manipulating the data is described in   
 <https://github.com/NelisW/myOpenHab/blob/master/docs/050-DS18B20-temperature.md>
 
+## 1-wire switches
+
+http://www.teensypi.com/building-a-teensypi-1-wire-switches/
+
+http://www.jjoseph.org/misc_projects/1_wire_relay_lighting_controller
+
+http://wwwmnmteam.informatik.uni-muenchen.de/~roelle/private/1-wire/relay_controller-1.0/
+
+
+http://r.duckduckgo.com/l/?kh=-1&uddg=http%3A%2F%2Fusers.ece.gatech.edu%2F~hamblen%2F489X%2F1-wire.pdf
+
+http://www.maximintegrated.com/en/products/ibutton/software/1wire/wirekit.cfm
+
+
+
