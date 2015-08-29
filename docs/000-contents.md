@@ -28,9 +28,15 @@ The home automation marketplace is highly competitive in the commercial as well 
 
 The core of the system is the local automation server and the many clients actually doing the work.  This core is software based and should provide the integration between the units and the required monitoring and control functionality.  The scope and reach of this core part of the system is local to the home.  The better known offerings include:
 
-- openHAB, provding a home server and an internet cloud, together with Android and IOS applications.
+- openHAB, providing a home server and an internet cloud, together with Android and IOS applications.
 
-- Souliss, provding a home server, but no cloud capability - use openHAB for cloud access.
+- [Domoticz](https://domoticz.com/),  a C++-based home automation server, for various operating systems, using HTML5 front-end. Not further investigated.
+
+- [openRemote](http://openremote.org/display/HOME/OpenRemote)
+
+- Souliss, providing a home server, but no cloud capability - use openHAB for cloud access.
+
+- [OpenEnergyMonitor](http://openenergymonitor.org/emon/) is not quite a home automation system, but relates to remote-access home energy management.  See here for a  [PV power management system](http://openenergymonitor.org/emon/mk2)
 
 Commercial and open source offerings for cloud-based automation services abound. Ideally the home automation system should be able to provide cloud access for monitoring and control purposes, but it should not depend on access to the cloud for basic operation.  The cloud provides roaming access to part of all of the functionality available in the home.
 Some of the free and open source offerings include:

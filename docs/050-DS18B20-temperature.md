@@ -4,6 +4,9 @@
 <http://devicehive.com/samples/python-and-raspberry-pi-temperature-sensor>  
 <https://learn.adafruit.com/adafruits-raspberry-pi-lesson-11-ds18b20-temperature-sensing>  
 <http://www.brainworks.it/rpi-environmental-monitoring/index.php?id=read-temperature-from-ds18b20>  
+<https://www.modmypi.com/blog/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi>
+<http://www.astounding.org.uk/ian/raspi-1wire/>
+
 
 
 Install the 1-Wire gpio and therm drivers as described here   
