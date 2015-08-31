@@ -4,6 +4,13 @@
 
 to follow.
 
+http://www.buildcircuit.com/how-to-use-rf-module-with-arduino/
+https://www.pjrc.com/teensy/td_libs_VirtualWire.html
+http://www.instructables.com/id/RF-315433-MHz-Transmitter-receiver-Module-and-Ardu/?ALLSTEPS
+http://www.instructables.com/id/RF-315433-MHz-Transmitter-receiver-Module-and-Ardu/?ALLSTEPS
+
+http://randomnerdtutorials.com/nrf24l01-2-4ghz-rf-transceiver-module-with-arduino/
+
 ##ESP8266
 
 ##RF69
