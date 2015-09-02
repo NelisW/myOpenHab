@@ -1,6 +1,6 @@
 #ESP8266
 
-detail to follow.
+detail to follow - currently this file only contains links.
 
 
 [ESP8266 community](http://www.esp8266.com/)
@@ -11,7 +11,7 @@ detail to follow.
 
 [Spec](https://www.adafruit.com/images/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
 
-[Arduino codre for ESP8266](https://github.com/esp8266/Arduino)
+[Arduino code for ESP8266](https://github.com/esp8266/Arduino)
 
 [Catalogue of ESP8266 modules](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/)
 
@@ -21,7 +21,7 @@ detail to follow.
 
 [long series of posts](http://horaciobouzas.com/)
 
-
+[lua on ESP8266](https://www.youtube.com/watch?v=_GSYZ1e14nc)
 
 Nice series of articles:  
 
@@ -34,10 +34,7 @@ Nice series of articles:
 4. [Control from anywhere in the World–Internet of Things](https://alselectro.wordpress.com/2015/05/31/wi-fi-module-esp8266-4-control-from-anywhere-in-the-worldinternet-of-things/)
 
 
-[ESD8266-Dev,SDIO mode, UART mode and FLASH 
-mode.](https://www.olimex.com/Products/IoT/MOD-WIFI-ESP8266-DEV/resources/MOD-WIFI-ESP8266-DEV_jumper_reference.pdf)
-
-
+[ESD8266-Dev,SDIO mode, UART mode and FLASH mode.](https://www.olimex.com/Products/IoT/MOD-WIFI-ESP8266-DEV/resources/MOD-WIFI-ESP8266-DEV_jumper_reference.pdf)
 
 
 ##Setting up

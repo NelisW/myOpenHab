@@ -58,30 +58,32 @@ For an example see here
 	
 Add the following text:
 
-	Group All
+    Group All
+    Group gGroundFloor (All)
+    Group GF_Study "Study" <video> (gGroundFloor)
+    Number StudyTemperature "Room Temperature [%.1f C]" <temperature> (GF_Study) {mqtt="<[mymosquitto:home/study/RoomTemperature:state:default]"}
 
-	Group gGroundFloor (All)
+    Number CPUTemperature "CPU Temperature [%.1f C]" <temperature> (GF_Study) {mqtt="<[mymosquitto:home/study/CPUTemperature:state:default]"}
 
-	Group GF_Living "Living Room" <video> (gGroundFloor)
+    Switch PiLED "Pi-LED" (GF_Study) {mqtt=">[mymosquitto:/home/study/PiLED:command:on:ON],>[mymosquitto:/home/study/PiLED:command:off:OFF],<[mymosquitto:/home/study/PiLED:state:default]"}
+    
+The item lines have the following format:
 
-	Number TestTemperature "Temperature [%.1f F]" <temperature> (GF_Living) {mqtt="<[mymosquitto:home/temperature:state:default]"}
+    itemtype itemname ["labeltext"] [<iconname>] [(group1, group2, ...)] [{bindingconfig}]   
+    
+That last two lines are where we tell OpenHAB about our temperature sensor and LED. The parts are:
 
-That last line is where we tell OpenHAB about our temperature sensor. The parts are:
+- itemtype: (Number/Switch) the type of the value.
 
-- Number: the type of the value.
+- itemname: (TestTemperature/PiLED) a name for this item.
 
-- TestTemperature: a name for this item.
+- labeltext: ("Temperature [%.1f C]"/"PiLED") how we want the value to be displayed. "%.1f" is a way to format a decimal number
 
-- "Temperature [%.1f C]": how we want the value to be displayed. "%.1f" is a way to format a decimal number
+- iconname: (<temperature>/<light>) the name of a built-in icon to display (a thermometer).
 
-- <temperature>: the name of a built-in icon to display (a thermometer).
+- [(group1, group2, ...)]: (GF_Living) which group this item belongs to.
 
-- (GF_Living): which group this item belongs to.
-
-- {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling OpenHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
-
-
-	
+- [{bindingconfig}]: {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling OpenHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
 
 ##Sitemap definitions
 
@@ -94,16 +96,18 @@ For more information on how to create item sitemap files see here:
 	
 Add the following text
 
-sitemap default label="Main Menu"
-{
-        Frame label="MQTT Test" {
-                Text item=TestTemperature
-        }
-}	
+    sitemap default label="Main Menu"
+    {
+            Frame label="Study" {
+                    Text item=StudyTemperature
+                    Text item=CPUTemperature
+            Switch item=PiLED label="Pi-LED" mappings=[ON="On",OFF="Off"]
+            }
+    }	
 
 ##Test the simple demo
 
-Send the above set up with a temperature with this mqtt publish command
+Send a temperature value  with this mqtt publish command
 
 	mosquitto_pub -t "home/temperature" -m "12"
 	
@@ -111,6 +115,12 @@ or from another PC on the network send
 
 	mosquitto_pub -h yourRPiIPaddress -t "home/temperature" -m "12"
 	
+When the above sitemap and items file are selected in the Android app, the light switch can be tested by opening a terminal and running a mqtt client to listen to the PiLED topics:
+
+    mosquitto_sub -t "/home/study/PiLED"
+    
+Now, of the On or Off switch on the light entry in the Android app is touched, the mqtt client above responds with the text: `ON`, or `OFF`.
+
 
 
 
