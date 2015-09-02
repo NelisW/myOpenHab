@@ -1,0 +1,16 @@
+sitemap default label="Main Menu"
+
+{
+
+        Frame label="Study" {
+
+                Text item=StudyTemperature
+
+                Text item=CPUTemperature
+
+		Switch item=PiLED label="Pi-LED" mappings=[ON="On",OFF="Off"]
+        }
+
+}	
+
+
