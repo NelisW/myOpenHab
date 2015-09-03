@@ -67,7 +67,7 @@ while True:
     
     #publish mqtt warnings when the CPU temperature rises above some threshold
     #the message can be used to trigger a pushover and/or email notification
-    thresholdTempCPU = 40.
+    thresholdTempCPU = 50.
     if tempCPU > thresholdTempCPU:
 		now = datetime.datetime.now()
 		#this warning must only be issued between 0600 and 2200
