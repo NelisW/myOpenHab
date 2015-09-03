@@ -4,6 +4,14 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
+"""This file demonstrates switching on a LED, and sensing that it has been switched on.
+Pin 19 is used to switch the LED on.
+Pin 13 is used to sense the voltage level on the LED.
+
+We set up the pin definitions, do the work and then clean up the pins afterwards.
+"""
+
+
 #define some pin numbers
 pinLedSw = 19
 pinLedRd = 13

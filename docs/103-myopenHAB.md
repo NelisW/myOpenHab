@@ -54,7 +54,7 @@ http://www.homeautomationforgeeks.com/openhab_android.shtml
 
 ##Notes
 
-After setting up the openHAB and my.openHAB you have to wait some time before the app seems to work.
+After setting up the openHAB and my.openHAB you have to wait some time before the app seems to work.  One blog even mentioned a few minutes of waiting.  
 
 
 

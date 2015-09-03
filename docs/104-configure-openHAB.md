@@ -119,7 +119,9 @@ When the above sitemap and items file are selected in the Android app, the light
 
     mosquitto_sub -t "/home/study/PiLED"
     
-Now, of the On or Off switch on the light entry in the Android app is touched, the mqtt client above responds with the text: `ON`, or `OFF`.
+Now, if the On or Off switch on the light entry in the Android app is touched, the mqtt client in the terminal responds with the text: `ON`, or `OFF`.  Hence we can conclude that openHAB published the messages on mqtt.  The next step is to capture these messages and actually switch the light on and off.
+
+
 
 
 
