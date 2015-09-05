@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 1052.3622 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="concept-diagram.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2965921"
+     inkscape:cx="531.07177"
+     inkscape:cy="354.4689"
+     inkscape:document-units="px"
+     inkscape:current-layer="g5227"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="1596"
+     inkscape:window-y="80"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="332.37418,646.00915"
+       orientation="0,1"
+       id="guide4320" />
+    <sodipodi:guide
+       position="500.48443,685.73371"
+       orientation="0,1"
+       id="guide4654" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <g
+       id="g4230"
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="translate(-0.88714367,12.259913)">
+      <rect
+         y="355.06683"
+         x="91.723434"
+         height="38.464668"
+         width="103.55872"
+         id="rect4206"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4212"
+         y="378.44833"
+         x="124.1815"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="378.44833"
+           x="124.1815"
+           id="tspan4214"
+           sodipodi:role="line">Light </tspan></text>
+    </g>
+    <g
+       id="g4240"
+       transform="translate(-216.68979,9.7225196)"
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         y="357.03937"
+         x="486.23285"
+         height="40.437214"
+         width="126.24301"
+         id="rect4210"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4216"
+         y="381.40714"
+         x="502.09485"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="381.40714"
+           x="502.09485"
+           id="tspan4218"
+           sodipodi:role="line">Garage door</tspan></text>
+    </g>
+    <g
+       id="g4235"
+       transform="translate(385.15734,10.800061)"
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         y="357.03937"
+         x="273.19775"
+         height="39.450939"
+         width="140.05084"
+         id="rect4208"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4220"
+         y="381.40714"
+         x="323.49771"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="381.40714"
+           x="323.49771"
+           id="tspan4222"
+           sodipodi:role="line">Light</tspan></text>
+    </g>
+    <g
+       id="g4659">
+      <rect
+         y="367.75525"
+         x="455.89746"
+         height="38.103382"
+         width="151.98868"
+         id="rect4228"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.89744741;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4224"
+         y="390.75104"
+         x="492.5351"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="390.75104"
+           x="492.5351"
+           id="tspan4226"
+           sodipodi:role="line">PV system</tspan></text>
+    </g>
+    <g
+       transform="translate(565.64539,10.069119)"
+       id="g4284"
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4286"
+         width="140.05084"
+         height="39.450939"
+         x="273.19775"
+         y="357.03937" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="323.49771"
+         y="381.40714"
+         id="text4288"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4290"
+           x="323.49771"
+           y="381.40714">Light</tspan></text>
+    </g>
+    <g
+       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="g4544"
+       transform="translate(165.69395,-5.9176411)">
+      <ellipse
+         ry="32.086681"
+         rx="89.290565"
+         cy="667.22247"
+         cx="335.82614"
+         id="path4399"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4401"
+         y="661.89044"
+         x="335.63571"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="661.89044"
+           x="335.63571"
+           id="tspan4403"
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle">ADSL router</tspan><tspan
+           id="tspan4405"
+           y="680.64044"
+           x="335.63571"
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle">wifi access point</tspan></text>
+    </g>
+    <g
+       id="g4678"
+       transform="translate(3.8425885,111.43507)">
+      <ellipse
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ellipse4552"
+         cx="214.99097"
+         cy="663.49768"
+         rx="89.290565"
+         ry="32.086681" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="215.00195"
+         y="659.46204"
+         id="text4554"
+         sodipodi:linespacing="125%"><tspan
+           style="text-align:center;text-anchor:middle"
+           sodipodi:role="line"
+           x="215.00195"
+           y="659.46204"
+           id="tspan4558">myopenHAB</tspan><tspan
+           id="tspan4676"
+           style="text-align:center;text-anchor:middle"
+           sodipodi:role="line"
+           x="215.00195"
+           y="678.21204">cloud on web</tspan></text>
+    </g>
+    <ellipse
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.14763916;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4413"
+       cx="493.13675"
+       cy="836.22803"
+       rx="84.772835"
+       ry="48.140499" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="492.72659"
+       y="812.29248"
+       id="text4471"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4473"
+         x="492.72659"
+         y="812.29248"
+         style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">Controller</tspan><tspan
+         sodipodi:role="line"
+         x="492.72659"
+         y="831.04248"
+         style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan4562">Raspberry Pi</tspan><tspan
+         sodipodi:role="line"
+         x="492.72659"
+         y="849.79248"
+         style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan4542">openHAB server</tspan><tspan
+         sodipodi:role="line"
+         x="492.72659"
+         y="868.54248"
+         id="tspan4475"
+         style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">(wifi station)</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4477"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+         id="flowRegion4479"><rect
+           id="rect4481"
+           width="235.71938"
+           height="104.54499"
+           x="337.30554"
+           y="442.2948" /></flowRegion><flowPara
+         id="flowPara4483"></flowPara></flowRoot>    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0"
+       d="m 178.51551,495.11767 c 13.29618,10.662 29.33707,16.14794 44.3823,23.67056 22.81744,11.40872 53.87291,13.51013 73.97052,29.58821 34.51776,27.61421 92.32001,81.51671 125.25673,89.75089"
+       id="path4491"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0"
+       d="m 535.54652,498.07649 c -22.0843,29.58007 -15.02106,70.47932 -30.57448,101.58617 -4.71308,9.42615 -13.68096,20.20427 -15.78038,28.60193"
+       id="path4493"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:8,8;stroke-dashoffset:0"
+       d="m 358.01729,498.07649 c 36.70464,17.59863 41.86447,57.64485 68.05287,83.83325 8.19156,8.19156 20.73057,15.47672 27.61566,24.65683 5.08441,6.77923 11.37887,14.81859 15.78037,17.75293"
+       id="path4495"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 730.82867,487.22748 c 6.23026,14.42999 7.16103,48.33139 3.74991,74.06053 -7.79344,58.78379 -32.9102,91.27129 -99.38295,157.74404 -42.78192,42.78192 -4.71636,116.90574 -54.28053,104.5147"
+       id="path4497"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 907.37163,486.24121 c -7.17267,53.87546 -125.16312,77.08312 -172.3149,70.41478"
+       id="path4499"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4510"
+       d="m 496.83955,694.5326 c -22.0579,42.15511 26.63424,59.29151 1.11595,94.40242"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="72.876389"
+       y="510.69943"
+       id="text4512"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4514"
+         x="72.876389"
+         y="510.69943">mqtt pub/sub</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4516"
+       y="506.04776"
+       x="251.19095"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="506.04776"
+         x="251.19095"
+         id="tspan4518"
+         sodipodi:role="line">mqtt pub/sub</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="419.6853"
+       y="506.56461"
+       id="text4520"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4522"
+         x="419.6853"
+         y="506.56461">mqtt pub/sub</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4524"
+       y="839.9353"
+       x="301.84262"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="839.9353"
+         x="301.84262"
+         id="tspan4526"
+         sodipodi:role="line">mqtt pub/sub</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="407.28082"
+       y="784.11511"
+       id="text4528"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4530"
+         x="407.28082"
+         y="784.11511">mqtt broker</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 434.81709,796.86965 c -31.36127,-10.04712 -64.33203,6.57243 -29.37842,28.24514"
+       id="path4532"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 286.35825,753.45539 c 52.83127,-44.84643 108.95054,-40.8424 142.10687,-71.50973"
+       id="path4564"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="498.5022"
+       y="732.20978"
+       id="text4566"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4568"
+         x="498.5022"
+         y="732.20978">802.11</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4570"
+       y="577.28766"
+       x="261.56439"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="577.28766"
+         x="261.56439"
+         id="tspan4572"
+         sodipodi:role="line">802.11</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4574"
+       y="564.8241"
+       x="414.44391"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="564.8241"
+         x="414.44391"
+         id="tspan4576"
+         sodipodi:role="line">802.11</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4578"
+       y="559.70752"
+       x="520.43042"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="559.70752"
+         x="520.43042"
+         id="tspan4580"
+         sodipodi:role="line">802.11</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="614.72192"
+       y="609.41156"
+       id="text4582"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4584"
+         x="614.72192"
+         y="609.41156" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="665.88788"
+       y="618.91376"
+       id="text4586"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4588"
+         x="665.88788"
+         y="618.91376">1-wire</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 726.55601,705.12608 c -37.51067,6.37388 -63.53636,27.17515 -99.40806,22.65919"
+       id="path4598"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4642"
+       transform="translate(-296.03137,83.327349)">
+      <rect
+         y="800.91827"
+         x="712.66809"
+         height="129.37668"
+         width="146.18834"
+         id="rect4640"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4622"
+         y="822.67572"
+         x="785.24225"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="822.67572"
+           x="785.24225"
+           id="tspan4624"
+           sodipodi:role="line">openHAB</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4632"
+           y="841.42572"
+           x="785.24225"
+           sodipodi:role="line">mosquitto mqtt</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4626"
+           y="860.17572"
+           x="785.24225"
+           sodipodi:role="line">mqttwarn</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4628"
+           y="878.92572"
+           x="785.24225"
+           sodipodi:role="line">supervisord</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4634"
+           y="897.67572"
+           x="785.24225"
+           sodipodi:role="line">RPi-GPIO</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4636"
+           y="916.42572"
+           x="785.24225"
+           sodipodi:role="line">smpt</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4638"
+           y="935.17572"
+           x="785.24225"
+           sodipodi:role="line" /><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4630"
+           y="953.92572"
+           x="785.24225"
+           sodipodi:role="line" /></text>
+    </g>
+    <g
+       id="g4704"
+       transform="translate(3.8425885,111.43507)">
+      <ellipse
+         ry="32.086681"
+         rx="89.290565"
+         cy="765.71051"
+         cx="170.41695"
+         id="ellipse4686"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4688"
+         y="760.52496"
+         x="170.75386"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="760.52496"
+           x="170.75386"
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle"
+           id="tspan4692">Android / IoS</tspan><tspan
+           id="tspan4702"
+           y="779.27496"
+           x="170.75386"
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle">apps</tspan></text>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4694"
+       d="m 216.55807,806.86038 c -6.00019,22.99915 -27.44318,23.47982 -56.27654,37.46736"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g5066">
+      <ellipse
+         ry="42.871368"
+         rx="82.66169"
+         cy="449.25595"
+         cx="537.31036"
+         id="ellipse4457"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4717"
+         y="425.3204"
+         x="537.83405"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="425.3204"
+           x="537.83405"
+           id="tspan4719"
+           sodipodi:role="line">Local node</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4721"
+           y="444.0704"
+           x="537.83405"
+           sodipodi:role="line">Arduino / RPi</tspan><tspan
+           id="tspan4737"
+           style="text-align:center;text-anchor:middle"
+           y="462.8204"
+           x="537.83405"
+           sodipodi:role="line">ESP8266</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan4723"
+           y="481.5704"
+           x="537.83405"
+           sodipodi:role="line">(wifi station)</tspan></text>
+    </g>
+    <g
+       id="g4776">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4763"
+         width="103.55872"
+         height="38.464668"
+         x="88.530739"
+         y="548.6969" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="118.68535"
+         y="573.51398"
+         id="text4765"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4767"
+           x="118.68535"
+           y="573.51398">Alarm</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4769"
+       y="659.79181"
+       x="215.05217"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="659.79181"
+         x="215.05217"
+         id="tspan4771"
+         sodipodi:role="line">mqtt pub/sub</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4781"
+       d="m 218.47843,634.98789 c 58.11329,-4.45343 103.66952,8.36424 191.35035,24.65794"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="288.46252"
+       y="632.62091"
+       id="text4783"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4785"
+         x="288.46252"
+         y="632.62091">802.11</tspan></text>
+    <g
+       id="g4940">
+      <rect
+         y="559.23792"
+         x="849.60242"
+         height="39.450939"
+         width="140.05084"
+         id="rect4789"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4791"
+         y="583.15283"
+         x="879.59363"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="583.15283"
+           x="879.59363"
+           id="tspan4793"
+           sodipodi:role="line">Pool pump</tspan></text>
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4816"
+         width="140.05084"
+         height="39.450939"
+         x="849.60242"
+         y="559.23792" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="879.59363"
+         y="583.15283"
+         id="text4818"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4820"
+           x="879.59363"
+           y="583.15283">Pool pump</tspan></text>
+    </g>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4822"
+       d="M 846.65873,640.71327 C 796.44907,620.81103 771.44926,614.81502 724.29748,608.14668"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       id="g4875">
+      <ellipse
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.14763916;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ellipse4824"
+         cx="797.46973"
+         cy="838.53357"
+         rx="84.772835"
+         ry="48.140499" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="797.0376"
+         y="823.97302"
+         id="text4826"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="797.0376"
+           y="823.97302"
+           style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="tspan4832">Development PC</tspan><tspan
+           id="tspan4873"
+           sodipodi:role="line"
+           x="797.0376"
+           y="842.72302"
+           style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">dev tools</tspan><tspan
+           sodipodi:role="line"
+           x="797.0376"
+           y="861.47302"
+           id="tspan4834"
+           style="text-align:center;text-anchor:middle;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">(wifi station)</tspan></text>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4840"
+       d="M 723.01123,810.70297 C 691.64996,800.65585 584.9015,732.73845 553.76259,688.31864"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <g
+       transform="translate(8.3016359,85.632902)"
+       id="g4842" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4864"
+       y="783.70044"
+       x="680.64087"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="783.70044"
+         x="680.64087"
+         id="tspan4866"
+         sodipodi:role="line">802.11</tspan></text>
+    <g
+       id="g4956">
+      <rect
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4884"
+         width="146.18834"
+         height="129.37668"
+         x="730.96045"
+         y="886.55115" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="803.53461"
+         y="908.30859"
+         id="text4886"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="803.53461"
+           y="908.30859"
+           id="tspan4890"
+           style="text-align:center;text-anchor:middle">mosquitto mqtt</tspan><tspan
+           id="tspan4954"
+           sodipodi:role="line"
+           x="803.53461"
+           y="927.05859"
+           style="text-align:center;text-anchor:middle">ssh</tspan><tspan
+           sodipodi:role="line"
+           x="803.53461"
+           y="945.80859"
+           id="tspan4900"
+           style="text-align:center;text-anchor:middle">mobaxterm</tspan><tspan
+           id="tspan4930"
+           sodipodi:role="line"
+           x="803.53461"
+           y="964.55859"
+           style="text-align:center;text-anchor:middle">Arduino IDE</tspan><tspan
+           sodipodi:role="line"
+           x="803.53461"
+           y="983.30859"
+           id="tspan4902"
+           style="text-align:center;text-anchor:middle" /></text>
+    </g>
+    <flowRoot
+       transform="matrix(0.99997257,0,0,1.0447122,-182.50435,293.47238)"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:none;stroke-width:0.97838014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="flowRoot4443"
+       xml:space="preserve"><flowRegion
+         id="flowRegion4445"><rect
+           style="fill:none;stroke-width:0.97838014;stroke-miterlimit:4;stroke-dasharray:none"
+           y="119.78335"
+           x="439.87799"
+           height="94.682259"
+           width="144.98221"
+           id="rect4447" /></flowRegion><flowPara
+         style="text-align:center;text-anchor:middle;fill:none;stroke-width:0.97838014;stroke-miterlimit:4;stroke-dasharray:none"
+         id="flowPara4449">Local node</flowPara><flowPara
+         id="flowPara4451"
+         style="text-align:center;text-anchor:middle;fill:none;stroke-width:0.97838014;stroke-miterlimit:4;stroke-dasharray:none">ESP 8266</flowPara><flowPara
+         id="flowPara4453"
+         style="text-align:center;text-anchor:middle;fill:none;stroke-width:0.97838014;stroke-miterlimit:4;stroke-dasharray:none">(wifi station)</flowPara></flowRoot>    <g
+       id="g5074"
+       transform="translate(-207.46695,0.7712526)">
+      <ellipse
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ellipse5076"
+         cx="537.31036"
+         cy="449.25595"
+         rx="82.66169"
+         ry="42.871368" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="537.31769"
+         y="434.6954"
+         id="text5078"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5080"
+           x="537.31769"
+           y="434.6954"
+           style="text-align:center;text-anchor:middle">Local node</tspan><tspan
+           sodipodi:role="line"
+           x="537.31769"
+           y="453.4454"
+           style="text-align:center;text-anchor:middle"
+           id="tspan5084">ESP8266</tspan><tspan
+           sodipodi:role="line"
+           x="537.31769"
+           y="472.1954"
+           id="tspan5086"
+           style="text-align:center;text-anchor:middle">(wifi station)</tspan></text>
+    </g>
+    <g
+       id="g5125">
+      <ellipse
+         ry="42.871368"
+         rx="82.66169"
+         cy="448.48471"
+         cx="146.28529"
+         id="ellipse5090"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5092"
+         y="433.92416"
+         x="146.29262"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="433.92416"
+           x="146.29262"
+           id="tspan5094"
+           sodipodi:role="line">Local node</tspan><tspan
+           id="tspan5098"
+           style="text-align:center;text-anchor:middle"
+           y="452.67416"
+           x="146.29262"
+           sodipodi:role="line">ESP8266</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan5100"
+           y="471.42416"
+           x="146.29262"
+           sodipodi:role="line">(wifi station)</tspan></text>
+    </g>
+    <g
+       id="g5102"
+       transform="translate(-397.96634,180.47311)">
+      <g
+         id="g5134">
+        <ellipse
+           ry="42.871368"
+           rx="82.66169"
+           cy="449.25595"
+           cx="537.31036"
+           id="ellipse5104"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text5106"
+           y="434.6954"
+           x="537.31769"
+           style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="text-align:center;text-anchor:middle"
+             y="434.6954"
+             x="537.31769"
+             id="tspan5108"
+             sodipodi:role="line">Local node</tspan><tspan
+             id="tspan5112"
+             style="text-align:center;text-anchor:middle"
+             y="453.4454"
+             x="537.31769"
+             sodipodi:role="line">ESP8266</tspan><tspan
+             style="text-align:center;text-anchor:middle"
+             id="tspan5114"
+             y="472.1954"
+             x="537.31769"
+             sodipodi:role="line">(wifi station)</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g5149"
+       transform="translate(188.95689,0.7712526)">
+      <g
+         id="g5190">
+        <ellipse
+           ry="42.871368"
+           rx="82.66169"
+           cy="449.25595"
+           cx="537.31036"
+           id="ellipse5151"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text5153"
+           y="436.10898"
+           x="536.94415"
+           style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="text-align:center;text-anchor:middle"
+             id="tspan5161"
+             y="436.10898"
+             x="536.94415"
+             sodipodi:role="line">Local node</tspan><tspan
+             id="tspan5186"
+             style="text-align:center;text-anchor:middle"
+             y="454.85898"
+             x="536.94415"
+             sodipodi:role="line">DS2413</tspan><tspan
+             id="tspan5188"
+             style="text-align:center;text-anchor:middle"
+             y="473.60898"
+             x="536.94415"
+             sodipodi:role="line">1-wire</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(374.05751,0)"
+       id="g5197">
+      <g
+         id="g5199">
+        <ellipse
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="ellipse5201"
+           cx="537.31036"
+           cy="449.25595"
+           rx="82.66169"
+           ry="42.871368" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="536.94415"
+           y="436.10898"
+           id="text5203"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             x="536.94415"
+             y="436.10898"
+             id="tspan5205"
+             style="text-align:center;text-anchor:middle">Local node</tspan><tspan
+             sodipodi:role="line"
+             x="536.94415"
+             y="454.85898"
+             style="text-align:center;text-anchor:middle"
+             id="tspan5207">DS2413</tspan><tspan
+             sodipodi:role="line"
+             x="536.94415"
+             y="473.60898"
+             style="text-align:center;text-anchor:middle"
+             id="tspan5209">1-wire</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g5211"
+       transform="translate(382.54129,192.0419)">
+      <g
+         id="g5213">
+        <ellipse
+           ry="42.871368"
+           rx="82.66169"
+           cy="449.25595"
+           cx="537.31036"
+           id="ellipse5215"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           sodipodi:linespacing="125%"
+           id="text5217"
+           y="436.10898"
+           x="536.94415"
+           style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="text-align:center;text-anchor:middle"
+             id="tspan5219"
+             y="436.10898"
+             x="536.94415"
+             sodipodi:role="line">Local node</tspan><tspan
+             id="tspan5221"
+             style="text-align:center;text-anchor:middle"
+             y="454.85898"
+             x="536.94415"
+             sodipodi:role="line">DS2413</tspan><tspan
+             id="tspan5223"
+             style="text-align:center;text-anchor:middle"
+             y="473.60898"
+             x="536.94415"
+             sodipodi:role="line">1-wire</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(268.39591,266.08215)"
+       id="g5225">
+      <g
+         id="g5227">
+        <g
+           id="g5243">
+          <ellipse
+             ry="42.871368"
+             rx="82.66169"
+             cy="449.25595"
+             cx="537.31036"
+             id="ellipse5229"
+             style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.03645718;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text5231"
+             y="436.10898"
+             x="537.28839"
+             style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               style="text-align:center;text-anchor:middle"
+               id="tspan5233"
+               y="436.10898"
+               x="537.28839"
+               sodipodi:role="line">Thermometer</tspan><tspan
+               id="tspan5237"
+               style="text-align:center;text-anchor:middle"
+               y="454.85898"
+               x="537.28839"
+               sodipodi:role="line">DS18B20</tspan><tspan
+               id="tspan5241"
+               style="text-align:center;text-anchor:middle"
+               y="473.60898"
+               x="537.28839"
+               sodipodi:role="line">1-wire</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
