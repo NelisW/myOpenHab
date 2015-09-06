@@ -59,24 +59,6 @@ The communication options for the local area network between the devices and the
 
 If there are many software offerings, there are even more hardware products.  Open source or DIY approaches could use Raspberry Pi's, Arduinos, ESP266, PIC, and numerous other cards.  We choose the ESP8266 as the main client controller because it provides a reasonably powerful microcontroller and a wifi interface at a reasonable price.
 
-
-
-##Design overview
-![blockdiagram01.svg](images/concept-diagram.svg)
-
-The design employs decentralised hardware units: comprising a server and a number of loose standing local nodes, on 801.11 wifi wireless or 1-wire networks.  We used an 802.11 wifi network, but in principle other wireless protocols could also be used.  Using wireless has a number of benefits: no wires, simplified communication and ease in reconfiguration.  The wifi access point is a regular ADSL router (connected to the internet), whereas the local stations are wifi stations.
-In situations where wiring can be be used the 1-wire network is convenient because of the greatly simplified network (only three wires) and laser-labelled devices with unique IDs.
-
-On the 802.11 network the protocol between the units is the [MQTT](http://mqtt.org/) (Message Queuing Telemetry Transport) protocol.  MQTT is a light weight protocol that runs on top of TCP/IP, meant for use in machine-to-machine communication.  It uses a publish-subscribe model, and hence requires a broker (on the central RPi controller) to act as mediator between the clients that publish messages on a 'topic' or 'channel', and the subscribers that registered an interest in these topics or channels.  Communication is therefore quite simple: clients subscribe/publish to a topic and the broker sees to it that the messages are delivered.  These clients can even be present on the same hardware, they communicate via TCP/IP.  This approach leads to good decoupling, which is a good design principle when it comes to complex systems.  The mosquitto MQTT implementation is used here, but any other implementation would serve just as well.
-
-The main server is a Raspberry Pi 2 B, running Rasbpian (a Debian derivative). The hardware is simple and inexpensive, but sufficiently powerful for the task.  Both the hardware and operating system are made by the same organisation, so it simply works, and with little fuss.
-
-The sensors/controllers can employ any required controller technology, provided there is an MQTT service available for the controller.  This project mainly uses ESP8266 wifi controller cards, but other controllers with some communication protocol would serve equally well.  The ESP8266 was selected because it offers wifi capability and a reasonably powerful controller all on a single and very inexpensive card.  ESP8266 power use is high, so these controllers are not suitable for battery operation, but in my case this is acceptable.
-
-The 1-wire protocol supports an (almost) unlimited number of devices on a simple bus comprising three wires.  Each 1-wire device has a unique 64-bit ID allowing the software to address each device separately.  The protocol is relatively slow, but for IoT and home automation purposes is adequate.  The DC18B20 thermometer is well known and features prominently in RPi and Arduino tutorials. There is also the DS2413 which is a 2-pin IO switch/sensor, which is ideal to switch on/monitor lights.  Unfortunately there is little information on libraries for the DS2413 in the Arduino and RPi forums.
-
-The integration of all these functions into a powerful home automation system is made possible by the powerful openHAB project. The openHAB server runs locally on the the RPi, but can also communicate  to the myopenHAB cloud service (with Android and IoS apps). 
-
 ##File structure
 
 The series of files in the `docs` directory of this repo serve to capture my experiences, actions and insights.  The files are not all in the same state of completion, some just contain links to web sites.
@@ -85,20 +67,14 @@ A number of smaller files are used, rather than one large file, to help help foc
 
 Files are grouped in number series in order to contain topics together.  The file sequence is more or less chronological in implementation sequence, but there is no requirement to strictly follow this sequence. 
 
+Filenames are constantly changing, attempting to find the best file numbers for different topics.
+
 It is recommended that you read and construct the RPi, the MQTT and openHAB functionality as a single unit.
 
-- 00x describe various aspects of the Raspberry Pi installation (mainly software)
-
-- 02x describe various aspects of the Raspberry Pi hardware interfaces
-
-- 08x describe the mosquitto MQTT and related tools installation and operation
-
-- 10x describe the installation, set up and use of openHAB.
-
-- 20x describe various clients (Android and web) that may be useful
-
-- 30x describe hardware and software aspects of the ESP8266
-
-- 40x describe the lua language and its use in the ESP8266
-
-
+- 1xx describe various aspects of the Raspberry Pi installation and use.
+- 2xx describe protocols and using these protocols (such as MQTT).
+- 3xx describe the installation, set up and use of openHAB.
+- 4xx describe RF technologies, hardware and software (mainly ESP8266)
+- 5xx describe various clients (Android and web) that may be useful
+- 6xx describe OpenEnergyMonitor (home and PV energy measurement)
+- 7xx describe sensors for use in home automation

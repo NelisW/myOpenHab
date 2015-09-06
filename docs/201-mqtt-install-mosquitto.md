@@ -43,11 +43,18 @@ As well as seeing both the subscriber and publisher connection messages in the b
 	
 ##Authentication and security 	
 
-By default mosquitto has no security protection.  Two methods of secure operation are possible:
+By default mosquitto has no security protection.  Various methods of secure operation are possible:
 
-1. Username/password:  this option sends the open password over the network and is fine for authentication but is not safe on open networks.
+1. Username/password:  this option sends the open password over the network and is fine for authentication but is not safe on open or insecure networks.
 
 2. Certificates: a symmetric key pair is used to authenticate the messages.
+
+3. Asymmetric encryption, although this is not quite the use case for asymmetric encryption.
+
+Note that having a limited number of simple messages (like on/off) could be to vulnerable to attack, so pad simple messages with random data (e.g., if one bit is used to signal on/off, add 63 bits of random data).
+
+
+
 
 Todo: complete the security section
 
