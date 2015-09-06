@@ -37,17 +37,22 @@ def on_connect(client, userdata, flags, rc):
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("/test/me")
+    client.subscribe("home/study/PiLED")
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
 	print(msg.topic+" "+str(msg.payload))
-	if 'on' in msg.payload:
+	if 'ON' in msg.payload:
 		pinSet(pinLedSw,True)
-		print(pinRead(pinLedRd))
-	if 'off' in msg.payload:
+	if 'OFF' in msg.payload:
 		pinSet(pinLedSw,False)
-		print(pinRead(pinLedRd))
+	state = pinRead(pinLedRd)
+	if state:
+		sstate = "on"
+	else:
+		sstate = "off"
+	print(sstate)
+	client.publish("home/study/PiLED/state", sstate)
 
 client = mqtt.Client()
 client.on_connect = on_connect

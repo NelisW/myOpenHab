@@ -26,7 +26,7 @@ mqttc.on_connect = on_connect
 mqttc.connect("10.0.0.16", 1883, 60, True)
 
 #subscribe to topic 
-mqttc.subscribe("house/doorbell", 2)
+mqttc.subscribe("/home/study/PiLED", 2)
 
 #keep connected to broker
 while mqttc.loop() == 0:
