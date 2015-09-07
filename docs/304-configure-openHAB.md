@@ -23,7 +23,18 @@ Scroll to the Transport section and look for the MQTT transport section.  Look f
 	mqtt:mymosquitto.url=tcp://localhost:1883
 	mqtt:mymosquitto.retain=true
 
+You can set `localhost` to the IP address of the RPi.
+    
 You may also decide to set the last-will-and-testament .lwt to send a final message when closing down.
+
+Also add these lines immediately after the line where you set lwt.  
+<http://www.element14.com/community/community/design-challenges/forget-me-not/blog/2014/09/17/fmnxx-mqtt--the-language-of-iot>  
+<http://jpmens.net/2014/01/14/a-story-of-home-automation/>  
+<https://groups.google.com/forum/#!topic/openhab/mkthISbmmvU>  
+
+    mqtt-eventbus:broker=mymosquitto
+    mqtt-eventbus:commandPublishTopic=/home/out/${item}/command
+    mqtt-eventbus:statePublishTopic=/home/state/${item}/state
 
 After editing restart the daemon to note the new config settings:
 

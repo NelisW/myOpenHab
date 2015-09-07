@@ -38,39 +38,54 @@ Towards the bottom of this file is written
 
 which implies that process configuration files can be placed in `/etc/supervisor/conf.d/`, because these file will be included in the main config file.
 
+<http://supervisord.org/configuration.html>
+
 The scripts that you want to run must have config files in the `supervisor/conf.d` directory.  Here are two examples of such files in our home automation system.
 
 Save the following lines to a file as `/etc/supervisor/conf.d/mqttwarn.conf`
 
-	[program:mqttwarn]
-	directory = /home/pi/mqttwarn
-	command = /home/pi/mqttwarn/mqttwarn.py
-	autostart=true
-	autorestart=true
-	;startretries=1000
-	stderr_logfile=/home/pi/log/mqttwarn.err.log
-	stdout_logfile=/home/pi/log/mqttwarn.out.log
-	user = pi
-	environment= MQTTWARNINI="/home/pi/mqttwarn/mqttwarn.ini"
-    
+    [program:mqttwarn]
+    directory = /home/pi/mqttwarn
+    command = /home/pi//mqttwarn/mqttwarn.py
+    autostart=true
+    autorestart=true
+    ;startretries=1000
+    stderr_logfile=/home/pi/log/mqttwarn.err.log
+    stdout_logfile=/home/pi/log/mqttwarn.out.log
+    user = pi
+    environment= MQTTWARNINI="/home/pi/mqttwarn/mqttwarn.ini"
+        
 Save the following lines to a file as `/etc/supervisor/conf.d/mqttPubDS18B20.conf`
-	[program:mqttPubDS18B20]
-	directory = /home/pi/myOpenHab/openhabfiles
-	command = /home/pi/myOpenHab/openhabfiles/mqttPubDS18B20.py
-	autostart=true
-	autorestart=true
-	;startretries=1000
-	stderr_logfile=/home/pi/log/mqttPubDS18B20.err.log
-	stdout_logfile=/home/pi/log/mqttPubDS18B20.out.log
-	user = pi
+    [program:mqttPubDS18B20]
+    directory = /home/pi/myOpenHab/openhabfiles
+    command = /home/pi/myOpenHab/openhabfiles/mqttPubDS18B20.py
+    autostart=true
+    autorestart=true
+    ;startretries=1000
+    stderr_logfile=/home/pi/log/mqttPubDS18B20.err.log
+    stdout_logfile=/home/pi/log/mqttPubDS18B20.out.log
+    user = pi
 
+Save the following lines to a file as `/etc/supervisor/conf.d/mqttPubPiLED.conf`
+    [program:mqttPubPiLED]
+    directory=/home/pi/myOpenHab/openhabfiles
+    command=/home/pi/myOpenHab/openhabfiles/mqttPubPiLED.py
+    autostart=true
+    autorestart=true
+    ;startretries=1000
+    stderr_logfile=/home/pi/log/mqttPubPiLED.err.log
+    stdout_logfile=/home/pi/log/mqttPubPiLED.out.log
+    user=root
+
+    
 We will be setting up numerous file similar to these during the course of the project.   
     
 The first line points to the directory where mqttwarn is installed, change to suit your installation.  The same holds for the second line. In the third and fourth line enter your user home directory (if different from pi).
 
-After changing the file reload and update
+After changing the file reload and update or add
 
 	sudo supervisorctl reread
+	sudo supervisorctl add xxx
 	sudo supervisorctl update
 
 check that mqttwarn is running:

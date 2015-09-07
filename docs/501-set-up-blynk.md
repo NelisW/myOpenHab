@@ -26,3 +26,5 @@ Very limited documentation
 
 <https://github.com/blynkkk/blynkkk.github.io>
 
+##Using Blynk with ESP8266-as-Arduino-Uno-wifi/
+<http://www.instructables.com/id/Connect-to-Blynk-using-ESP8266-as-Arduino-Uno-wifi/>

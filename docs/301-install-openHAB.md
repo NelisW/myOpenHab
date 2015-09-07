@@ -69,7 +69,7 @@ You should have a fully loaded demo that you can use to familiarize yourself wit
 http://10.0.0.16:8080/openhab.app?sitemap=demo
 
 	
-#openHAB to start at boot
+#openHAB to start at boot as a service
 
 Create a new file in the /etc/init.d folder called "openhab" using your favourite editor
 
@@ -245,6 +245,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
         ;;
     esac
     :
+
 
 
 Lastly you will want to make this an executable file. 

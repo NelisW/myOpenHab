@@ -3,6 +3,8 @@
 <http://mosquitto.org/download/>  
 <http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>  
 <http://www.homeautomationforgeeks.com/mosquitto.shtml>  
+<http://www.element14.com/community/community/design-challenges/forget-me-not/blog/2014/09/17/fmnxx-mqtt--the-language-of-iot>
+
 
 Mosquitto is an open-source message broker, which means it allows different programs to exchange information in a way they can all understand. 
 
