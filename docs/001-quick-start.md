@@ -33,7 +33,7 @@ This is more or less our experimentation sequence. At present there is not much 
 1. Install openHAB and register a used on myopenHAB.
 1. Configure the openHAB sitemap and items files to display the temperature
 1. Set up and integrate the DS18B20 code, mqttwarn and the openHAB files to work with a web (Andriod) app.
-2. Install GPIO for RPi to gain access to the IO pins on the the 
+1. Install GPIO for RPi to gain access to the IO pins on the the 
 1. Build a simple LED blinker and control this with mqtt from mosquitto_pub from a terminal.
 
 

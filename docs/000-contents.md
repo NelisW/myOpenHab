@@ -36,6 +36,8 @@ The core of the system is the local automation server and the many clients actua
 
 - Souliss, providing a home server, but no cloud capability - use openHAB for cloud access.
 
+- http://domotica-arduino.es/en/ mostly in Spanish.
+
 - [OpenEnergyMonitor](http://openenergymonitor.org/emon/) is not quite a home automation system, but relates to remote-access home energy management.  See here for a  [PV power management system](http://openenergymonitor.org/emon/mk2)
 
 Commercial and open source offerings for cloud-based automation services abound. Ideally the home automation system should be able to provide cloud access for monitoring and control purposes, but it should not depend on access to the cloud for basic operation.  The cloud provides roaming access to part of all of the functionality available in the home.

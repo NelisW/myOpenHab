@@ -23,6 +23,8 @@ detail to follow - currently this file only contains links.
 
 [lua on ESP8266](https://www.youtube.com/watch?v=_GSYZ1e14nc)
 
+[Connecting two ESP8266, one as access point and one as station](http://randomnerdtutorials.com/how-to-make-two-esp8266-talk/)
+
 Nice series of articles:  
 
 1. [Getting started with AT commands](https://alselectro.wordpress.com/2015/05/05/wifi-module-esp8266-1-getting-started-with-at-commands/)
