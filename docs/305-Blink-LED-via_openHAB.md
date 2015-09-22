@@ -98,6 +98,10 @@ The Python code running on the RPI is as follows:
     # manual interface.
     client.loop_forever()
 
+Start the script as a     
+    
+    
+##openHAB
 On the other side of the mqtt channel we must have a publisher providing the LED switch commands and a subscriber listening to follow the LED status.  This functionality is running in openHAB.
 
 The openHAB sitemap file for this experiment is as follows (just ignore the temperature content):
@@ -134,6 +138,9 @@ In these two files the LED device is called PiLED, which is located in the study
     <[mymosquitto:home/study/PiLED/state:state:default]
     "}
 
+ 
+ 
+ 
  
 
  
