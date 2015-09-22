@@ -31,6 +31,12 @@ The Arduino IDE can be used to build and download ESP8266 software.
 
 
 ---------------------------------------------------------
+
+http://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/?ALLSTEPS
+
+http://www.instructables.com/id/ESP8266-Arduino-IDE-164-Portable-Full-Quick-Instal/?ALLSTEPS
+
+---------------------------------------------------------
 ##Prepare the FTDI 
 
 We used a [sparkfun FTDI Basic 3.3V](https://www.sparkfun.com/products/9873) but any equivalent USB to serial converter can be used.  Make sure to use a 3.3 V device to be compatible with the 3.3 V ESP 8266 device.
