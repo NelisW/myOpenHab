@@ -1,7 +1,6 @@
-#Setting up for Blynk
+#Blynk on Raspberry Pi
 
 http://www.blynk.cc/getting-started
-
 
 
 ##install blynk library
@@ -25,6 +24,3 @@ Libraries and examples for embedded hardware to work with Blynk platform <http:/
 Very limited documentation
 
 <https://github.com/blynkkk/blynkkk.github.io>
-
-##Using Blynk with ESP8266-as-Arduino-Uno-wifi/
-<http://www.instructables.com/id/Connect-to-Blynk-using-ESP8266-as-Arduino-Uno-wifi/>
