@@ -4,7 +4,7 @@
 
 <https://www.youtube.com/watch?v=hou4okcCX7E>
 
-Open *Computer Management > System Tools > Device Manager > Ports (COM & LPT)*.  
+Open *Computer Management > System Tools > Device Manager > Ports (COM & LPT)* or *Start Menu > Control Panel < Device manager*.  
 Identify the port number xx next to the text 'USB Serial Port (COMxx).
 
 ![''](images/id-com-port-windows7.PNG)
@@ -27,3 +27,10 @@ The pin definitions are shown on the silkscreen on the left side of the PCB.
 
 ![''](images/Sparkfun-basic-FTDI.jpg)
 
+##nodeMCU LoLin CH340G serial port
+
+Windows drivers are available [here](http://www.arduined.eu/tag/ch340g/). Download the zip file, look for the driver directory `CH341SER` and click on `setup.exe`.
+
+Plug in your LoLin board and then the serial driver should appear similar to this in the device manager:
+
+![''](images/CH340G-driver-in-devicemanager.png)

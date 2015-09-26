@@ -7,10 +7,11 @@
 
 [ESP8266 community](http://www.esp8266.com/) is a good source for information.
 
-There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/).  The ESP01 and ESP12 are by far two most popular.
+There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  The ESP01 and ESP12 are by far two most popular.
 
 
 [nodeMCU](http://nodemcu.com/index_en.html) is an ESP8266 installed  a development board that includes a USB download interface, more pins broken out and adequate power supply decoupling.  The nodeNCU board is a good place to begin learning about the ESP8266.
+
 
 There are quite a few different development environments to consider:
 1. Using the lua interpreter that is pre-installed in the nodeMCU firmware.
@@ -21,13 +22,39 @@ There are quite a few different development environments to consider:
 
 There is a good [technical overview  here](https://nurdspace.nl/ESP8266).
 
-##Working with the ESP8266
-###lua on the nodeMCU
+##nodeMCU
+###Introduction
+A brief [introduction](http://embeddedcomputing.weebly.com/nodemcu-board.html) states: "The NodeMCU board is based on an ESP8266-12 but features a built-in serial over USB interface and other amenities like 2 buttons and 2 LEDs.  The board can be programmed using the Wiring / Arduino framework as the other ESP8266 boards.  It features more available GPIOs, of which 
+-  9 digital GPIOs operating at 3,3V 
+- one analog GPIO, albeit limited to 1,8 V.
 
-[lua on ESP8266](https://www.youtube.com/watch?v=_GSYZ1e14nc)
+The [nodeMCU](nodemcu.com/index_en.html) is an open source development, with V1 documented (here)[https://github.com/nodemcu/nodemcu-devkit-v1.0]
+
+![''](images/nodeMCU-both.jpg)
+![''](images/nodeMCU-lolin.jpg)
+
+Hardware variants:
+- The NodeMCU V0.9 (brown PCB) uses the CH340 serial to USB programmer chip (needs a specific driver).  
+- The nodeMCU V1 (green PCB) uses the CP2102 serial programmer chip.  
+- The nodeMCU V2 - no information.  
+- The [nodeMCU V3 LoLin](http://www.aliexpress.com/store/product/New-Wireless-module-NodeMcu-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32307066449.html) uses the CH340G serial programmer chip (see the file `412-ESP8266-connect-serial-board.md` on how to install the driver).  
+- [Adafruit Huzzah](https://learn.adafruit.com/adafruit-huzzah-esp8266-breakout/using-arduino-ide) supports nodeMCU but does not have an integrated USB serial capability.  The pin layout is also different from the other nodeMCU boards.  
 
 
-###C on the Arduino IDE
+### nodeMCU V1
+
+The V1 pin definitions are as follows:
+![''](images/NODEMCU_DEVKIT_V1.0_PINMAP.png)
+
+### LoLin nodeMCU V3
+
+[LoLin](http://www.wemos.cc/wiki/) is based on nodeMCU. It has software support for the embedded lua language, with built-in json, file, timer, pwm, i2c, spi, 1-wire, net, mqtt, coap, gpio, wifi, adc, uart and system api. Both Integer version(less memory usage) and Float version(Default) firmware provided. 
+
+Howver, if you use the Arduino IDE the built-in firmware is overwritten by the Arduino libraries.
+
+The pin definition for the LoLin board is given [here](http://www.wemos.cc/wiki/Hardware/Pin), with additional information on the [wemos D1 here](http://www.wemos.cc/d1/Hardware).
+
+##C on the Arduino IDE
 
 [Arduino code for ESP8266](https://github.com/esp8266/Arduino)
 
@@ -37,7 +64,7 @@ There is a good [technical overview  here](https://nurdspace.nl/ESP8266).
 ###AT commands
 ESP01, in it’s default configuration, boots up into the serial modem mode. In this mode you can communicate with it using a set of [AT](https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/) commands.  ESP8266 expects <CR><LF> or CarriageReturn and LineFeed at the end of each command, but just<CR> seems to work too.
 
-###Web-based ESP environments
+##Web-based ESP environments
 
 A somewhat confusing [post](http://www.instructables.com/id/ESP8266-based-web-configurable-wifi-general-purpos-1/)
 
@@ -50,6 +77,8 @@ The [ESPEasy project](http://www.esp8266.nu/index.php/Main_Page)
 [Connecting two ESP8266](http://randomnerdtutorials.com/how-to-make-two-esp8266-talk/), one as access point and one as station
 
 [Using Blynk with ESP8266-as-Arduino-Uno-wifi](http://www.instructables.com/id/Connect-to-Blynk-using-ESP8266-as-Arduino-Uno-wifi/)
+
+[Wireless logger ESP8266 NodeMCU v1.0 with Arduino IDE](http://www.instructables.com/id/ESP8266-NodeMCU-v10-ESP12-E-with-Arduino-IDE/)
 
 ##Miscellaneous hardware notes
 
