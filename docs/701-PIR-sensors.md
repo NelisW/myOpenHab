@@ -14,3 +14,6 @@
 
 [Example projects](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/example-projects)
 
+[modifying-cheap-pir-motion-sensor-to-work-at-3-3v](http://randomnerdtutorials.com/modifying-cheap-pir-motion-sensor-to-work-at-3-3v/)
+
+[arduino-with-pir-motion-sensor](http://randomnerdtutorials.com/arduino-with-pir-motion-sensor/)

@@ -63,3 +63,6 @@ pip is not installed by default on RPi.
 
 If you want to save your files in a git repository and want to protect some files (e.g., password files, etc) consider 	(git-crypt)[<https://www.agwa.name/projects/git-crypt/] <https://github.com/AGWA/git-crypt>
 
+##node-js
+
+<http://randomnerdtutorials.com/how-to-install-the-latest-version-of-node-js-in-raspberry-pi/> not yet installed.

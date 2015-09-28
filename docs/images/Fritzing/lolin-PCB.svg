@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32mm" height="59mm" version="1.0" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 3200 5900"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:cc="http://creativecommons.org/ns#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:svg="http://www.w3.org/2000/svg"
+ xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+ xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+ inkscape:version="0.91 r13725"
+ sodipodi:docname="lolin-PCB.svg">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1365" inkscape:window-height="868" id="namedview10352" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:zoom="3.3929555" inkscape:cx="55.105934" inkscape:cy="103.1549" inkscape:window-x="2143" inkscape:window-y="187" inkscape:window-maximized="0" inkscape:current-layer="layer2"/>
+  <g id="silkscreen" inkscape:groupmode="layer" inkscape:label="Layer 1">
+   <rect id="rect10354" fill="none" stroke="white" stroke-width="3.53" x="54" y="25" width="3107" height="5819"/>
+  </g>
+  <g id="copper1" inkscape:groupmode="layer" inkscape:label="copper">
+   <circle id="connector0pin" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="1159" r="42"/>
+   <circle id="connector0pin_0" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="1159" r="42"/>
+   <circle id="connector0pin_1" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="1413" r="42"/>
+   <circle id="connector0pin_2" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="1413" r="42"/>
+   <circle id="connector0pin_3" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="1667" r="42"/>
+   <circle id="connector0pin_4" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="1667" r="42"/>
+   <circle id="connector0pin_5" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="1921" r="42"/>
+   <circle id="connector0pin_6" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="1921" r="42"/>
+   <circle id="connector0pin_7" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="2175" r="42"/>
+   <circle id="connector0pin_8" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="2175" r="42"/>
+   <circle id="connector0pin_9" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="2429" r="42"/>
+   <circle id="connector0pin_10" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="2429" r="42"/>
+   <circle id="connector0pin_11" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="2683" r="42"/>
+   <circle id="connector0pin_12" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="2683" r="42"/>
+   <circle id="connector0pin_13" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="2937" r="42"/>
+   <circle id="connector0pin_14" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="2937" r="42"/>
+   <circle id="connector0pin_15" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="3191" r="42"/>
+   <circle id="connector0pin_16" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="3191" r="42"/>
+   <circle id="connector0pin_17" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="3445" r="42"/>
+   <circle id="connector0pin_18" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="3445" r="42"/>
+   <circle id="connector0pin_19" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="3699" r="42"/>
+   <circle id="connector0pin_20" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="3699" r="42"/>
+   <circle id="connector0pin_21" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="3953" r="42"/>
+   <circle id="connector0pin_22" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="3953" r="42"/>
+   <circle id="connector0pin_23" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="4207" r="42"/>
+   <circle id="connector0pin_24" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="4207" r="42"/>
+   <circle id="connector0pin_25" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="4461" r="42"/>
+   <circle id="connector0pin_26" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="4461" r="42"/>
+   <circle id="connector0pin_27" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="203" cy="4715" r="42"/>
+   <circle id="connector0pin_28" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2997" cy="4715" r="42"/>
+  </g>
+ </g>
+</svg>

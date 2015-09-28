@@ -1,3 +1,4 @@
+-- code originally by Rui Santos (I think!).
 lighton=0
 -- pin 4 is GPIO 2, or D4 on the nodeMCU.
 pin=4

@@ -6,6 +6,7 @@ The Arduino IDE can be used to build and download ESP8266 software.  The [GitHub
 
 At the time of writing the IDE version is 1.6.5.
 
+<http://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/>
 <http://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/>    
 <http://www.instructables.com/id/ESP8266-Arduino-IDE-164-Portable-Full-Quick-Instal/>    
 <http://www.esp8266-projects.com/2015/06/esp8266-arduino-ide-v164-portable.html>  

@@ -7,7 +7,7 @@
 
 [ESP8266 community](http://www.esp8266.com/) is a good source for information.
 
-There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  The ESP01 and ESP12 are by far two most popular.
+There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  See also [here](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family).  The ESP01 and ESP12 are by far two most popular.
 
 
 [nodeMCU](http://nodemcu.com/index_en.html) is an ESP8266 installed  a development board that includes a USB download interface, more pins broken out and adequate power supply decoupling.  The nodeNCU board is a good place to begin learning about the ESP8266.
@@ -128,3 +128,10 @@ ESP8266 WIFI module can operate in three modes:
 - Both – ST & AP both mode is allowed in ESP.The mode of operation is set by the AT command
 
 Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
+
+
+##Diverse Projects
+
+<http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
+
+<http://randomnerdtutorials.com/how-to-control-your-esp8266-from-anywhere-in-the-world/>
