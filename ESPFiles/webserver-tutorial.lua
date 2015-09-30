@@ -1,9 +1,15 @@
+-- code originally by Rui Santos
+
 --this file requires prior connection to the wifi
 
 led1 = 3
 led2 = 4
 gpio.mode(led1, gpio.OUTPUT)
 gpio.mode(led2, gpio.OUTPUT)
+--switch both LEDs off
+gpio.write(led1, gpio.LOW);
+gpio.write(led2, gpio.LOW);
+--start a server that listens on port 80
 srv=net.createServer(net.TCP)
 srv:listen(80,function(conn)
     conn:on("receive", function(client,request)

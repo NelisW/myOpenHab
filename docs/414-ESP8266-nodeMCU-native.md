@@ -63,29 +63,43 @@ My WLAN already has an access point and the ESP8266 must be set up in station mo
 
 	wifi.setmode(wifi.STATION)
 	wifi.sta.config("WLAN-SSID","WLAN-password")
+	--wait a second for the connection to succeed
+	tmr.delay(1000000)
 	print(wifi.sta.status())
 	print(wifi.sta.getip())
 	print(wifi.sta.getmac())
 
 See the [API](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en) or [API](http://www.nodemcu.com/docs/wifi-sta-module/#wifi-sta-module-wifi-sta-getmac) for more detail on these functions.  The first line sets the wifi in station mode.  The second line passes the wireless router's SSID and password to the router to request access. Wait for a short while before testing the status, the wifi connection protocol takes some time. The remaining three lines prints the status, IP address and MAC address of the ESP8266 wifi station. A status of 5 means that an IP address has been granted.
 
+The init.lua file above just waits for a fixed time period before proceeding.  A better way would be to test the IP address in a loop, see [here](https://primalcortex.wordpress.com/2014/12/30/esp8266-nodemcu-and-lua-language-and-some-arduino-issues/).
+
 ###LED Flasher
 
-Experiment with Rui's guidance from the [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf).  The process is well documented and there is no need for me to repeat everything here.
+Experiment with Rui's guidance from the [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf).  Power to the nodeMCU is from the USB port (provided the PC can supply sufficient current) - there is no need for an external power supply.
 
-Note that the LED flash example requires an external LED to be connected to GPIO2. On the nodeMCU, this is pin D4. I used a 120 Ohm series resistor to limit the LED current from pin D4.
+Note that the LED flash example requires an external LED to be connected to GPIO2. On the nodeMCU, this is pin D4. I used a 120 Ohm series resistor to limit the LED current from pin D4.  I also added a LED to D3, but it remains switched off.  The wiring is done as follows:
+
+![''](images/nodeMCU-lolin-flasher.png)
+![''](images/nodeMCU-lolin-flasher-sch.png)
+
+
+The code used to flash the LEDS are as follows:
 
 	-- code originally by Rui Santos (I think!).
-	lighton=0
+	-- pin 3 is GPIO 0, or D3 on the nodeMCU, switch it off
+	gpio.mode(3,gpio.OUTPUT)
+	gpio.write(3,gpio.LOW)
+	
 	-- pin 4 is GPIO 2, or D4 on the nodeMCU.
+	lighton4=0
 	pin=4
 	gpio.mode(pin,gpio.OUTPUT)
 	tmr.alarm(1,2000,1,function()
-	    if lighton==0 then
-	        lighton=1
+	    if lighton4==0 then
+	        lighton4=1
 	        gpio.write(pin,gpio.HIGH)
 	    else
-	        lighton=0
+	        lighton4=0
 	         gpio.write(pin,gpio.LOW)
 	    end
 	end)
@@ -103,7 +117,7 @@ So it seems that this code uses timer 1, with a 2 second interval, repeating and
 
 ###ESP8266 Web Server controlling LEDs.
 
-This is another one of  Rui Santos' great [examples](http://randomnerdtutorials.com/esp8266-web-server/) tutorials.   He shows us how to create a standalone web server with an ESP8266 that can toggle two LEDs.
+This is another one of  Rui Santos' great [examples](http://randomnerdtutorials.com/esp8266-web-server/) tutorials.   He shows us how to create a standalone web server with an ESP8266 that can toggle two LEDs.  The circuit diagram is as shown before for the LED flasher. The code 
 
 
 
