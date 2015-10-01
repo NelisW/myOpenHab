@@ -73,6 +73,42 @@ See the [API](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en) o
 
 The init.lua file above just waits for a fixed time period before proceeding.  A better way would be to test the IP address in a loop, see [here](https://primalcortex.wordpress.com/2014/12/30/esp8266-nodemcu-and-lua-language-and-some-arduino-issues/).
 
+###GPIO pins
+
+From <https://github.com/nodemcu/nodemcu-firmware/blob/master/README.md>
+
+<a id="new_gpio_map"></a>
+<table>
+  <tr>
+    <th scope="col">IO index</th><th scope="col">ESP8266 pin</th><th scope="col">IO index</th><th scope="col">ESP8266 pin</th>
+  </tr>
+  <tr>
+    <td>0 [*]</td><td>GPIO16</td><td>8</td><td>GPIO15 (SPI CS)</td>
+  </tr>
+  <tr>
+    <td>1</td><td>GPIO5</td><td>9</td><td>GPIO3 (UART RX)</td>
+   </tr>
+   <tr>
+    <td>2</td><td>GPIO4</td><td>10</td><td>GPIO1 (UART TX)</td>
+  </tr>
+  <tr>
+    <td>3</td><td>GPIO0</td><td>11</td><td>GPIO9</td>
+   </tr>
+   <tr>
+    <td>4</td><td>GPIO2</td><td>12</td><td>GPIO10</td>
+  </tr>
+  <tr>
+    <td>5</td><td>GPIO14 (SPI CLK)</td><td></td><td></td>
+   </tr>
+   <tr>
+    <td>6</td><td>GPIO12 (SPI MISO)</td><td></td><td></td>
+  </tr>
+  <tr>
+    <td>7</td><td>GPIO13 (SPI MOSI)</td><td></td><td></td>
+   </tr>
+</table>
+#### [*] D0(GPIO16) can only be used as gpio read/write. no interrupt supported. no pwm/i2c/ow supported.
+
 ###LED Flasher
 
 Experiment with Rui's guidance from the [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf).  Power to the nodeMCU is from the USB port (provided the PC can supply sufficient current) - there is no need for an external power supply.

@@ -1,519 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-   id="svg9339"
-   viewBox="0 0 1527 4084"
-   version="1.0"
-   height="40.84mm"
-   width="15.27mm"
-   xml:space="preserve"><metadata
-     id="metadata9535"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs9533" /><g
-     transform="translate(-11176,-8036)"
-     id="Layer_x0020_1"><metadata
-       id="CorelCorpID_0Corel-Layer" /><polygon
-       style="fill:#ffffff"
-       id="polygon9343"
-       points="12060,8825 12060,10743 11862,10743 11862,8825 " /><g
-       id="g9345"
-       transform="matrix(0,-1,1,0,1527.82,25609.5)"><text
-         style="font-weight:normal;font-size:4.25pt;font-family:OCRA;fill:#555555"
-         id="text9347"
-         font-size="4.5pt"
-         font-weight="normal"
-         y="10500"
-         x="14850">Lolin nodeMCU V3.1</text>
-</g><polygon
-       style="fill:#ffffff"
-       id="polygon9349"
-       points="11731,8402 11580,8402 11580,8239 11731,8239 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9351"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8376"
-       x="11566">A0</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9353"
-       points="12341,8402 12191,8402 12191,8239 12341,8239 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9355"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8375"
-       x="12177">D0</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9357"
-       points="11797,8658 11557,8658 11557,8495 11797,8495 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9359"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8632"
-       x="11543">GND</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9361"
-       points="12385,8648 12235,8648 12235,8485 12385,8485 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9363"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8622"
-       x="12221">D1</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9365"
-       points="11721,8912 11570,8912 11570,8749 11721,8749 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9367"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8885"
-       x="11556">VU</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9369"
-       points="12355,8898 12204,8898 12204,8736 12355,8736 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9371"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="8872"
-       x="12190">D2</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9373"
-       points="11710,9163 11559,9163 11559,9000 11710,9000 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9375"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9137"
-       x="11545">S3</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9377"
-       points="12355,9173 12204,9173 12204,9010 12355,9010 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9379"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9147"
-       x="12190">D3</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9381"
-       points="11718,9425 11567,9425 11567,9262 11718,9262 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9383"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9399"
-       x="11553">S2</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9385"
-       points="12344,9442 12196,9442 12196,9280 12344,9280 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9387"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9416"
-       x="12182">D4</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9389"
-       points="11710,9671 11559,9671 11559,9508 11710,9508 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9391"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9645"
-       x="11545">S1</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9393"
-       points="12342,9683 12191,9683 12191,9520 12342,9520 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9395"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9657"
-       x="12177">3V</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9397"
-       points="11710,9925 11559,9925 11559,9762 11710,9762 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9399"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9899"
-       x="11545">SC</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9401"
-       points="12357,9906 12296,9906 12296,9743 12357,9743 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9403"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="9880"
-       x="12282">G</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9405"
-       points="11710,10178 11559,10178 11559,10016 11710,10016 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9407"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10152"
-       x="11545">S0</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9409"
-       points="12354,10175 12203,10175 12203,10013 12354,10013 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9411"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10149"
-       x="12189">D5</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9413"
-       points="11710,10432 11559,10432 11559,10269 11710,10269 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9415"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10406"
-       x="11545">SK</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9417"
-       points="12352,10436 12201,10436 12201,10273 12352,10273 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9419"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10409"
-       x="12187">D6</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9421"
-       points="11621,10685 11559,10685 11559,10523 11621,10523 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9423"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10659"
-       x="11545">G</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9425"
-       points="12352,10691 12202,10691 12202,10528 12352,10528 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9427"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10665"
-       x="12188">D7</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9429"
-       points="11710,10939 11559,10939 11559,10776 11710,10776 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9431"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10913"
-       x="11545">3V</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9433"
-       points="12353,10946 12202,10946 12202,10784 12353,10784 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9435"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="10920"
-       x="12188">D8</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9437"
-       points="11710,11192 11559,11192 11559,11030 11710,11030 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9439"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11166"
-       x="11545">EN</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9441"
-       points="12353,11197 12202,11197 12202,11034 12353,11034 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9443"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11171"
-       x="12188">D9</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9445"
-       points="11799,11446 11559,11446 11559,11283 11799,11283 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9447"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11420"
-       x="11545">RST</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9449"
-       points="12352,11457 12112,11457 12112,11295 12352,11295 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9451"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11431"
-       x="12098">D10</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9453"
-       points="11621,11699 11559,11699 11559,11537 11621,11537 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9455"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11673"
-       x="11545">G</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9457"
-       points="12355,11698 12115,11698 12115,11536 12355,11536 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9459"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11672"
-       x="12101">GND</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9461"
-       points="11799,11953 11559,11953 11559,11790 11799,11790 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9463"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11927"
-       x="11545">Vin</text>
-<polygon
-       style="fill:#ffffff"
-       id="polygon9465"
-       points="12340,11957 12189,11957 12189,11794 12340,11794 " /><text
-       style="font-weight:normal;font-size:3.5pt;font-family:OCRA;fill:#555555"
-       id="text9467"
-       font-size="3.5pt"
-       font-weight="normal"
-       y="11931"
-       x="12175">3V</text>
-<rect
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="rect9469"
-       height="4064"
-       width="1017"
-       y="8046"
-       x="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9471"
-       y2="8300"
-       x2="11177"
-       y1="8300"
-       x1="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9473"
-       y2="8564"
-       x2="11177"
-       y1="8564"
-       x1="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9475"
-       y2="8812"
-       x2="11177"
-       y1="8812"
-       x1="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9477"
-       y2="9065"
-       x2="11177"
-       y1="9065"
-       x1="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9479"
-       y2="9318"
-       x2="11177"
-       y1="9318"
-       x1="11428" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9481"
-       y2="8300"
-       x2="12703"
-       y1="8300"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9483"
-       y2="8547"
-       x2="12703"
-       y1="8547"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9485"
-       y2="8812"
-       x2="12703"
-       y1="8812"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9487"
-       y2="9070"
-       x2="12703"
-       y1="9070"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9489"
-       y2="9324"
-       x2="12703"
-       y1="9324"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9491"
-       y2="9566"
-       x2="12703"
-       y1="9566"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9493"
-       y2="9825"
-       x2="12703"
-       y1="9825"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9495"
-       y2="10078"
-       x2="12703"
-       y1="10078"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9497"
-       y2="10342"
-       x2="12703"
-       y1="10342"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9499"
-       y2="10585"
-       x2="12703"
-       y1="10585"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9501"
-       y2="10838"
-       x2="12703"
-       y1="10838"
-       x1="12445" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9503"
-       y2="11094"
-       x2="12700"
-       y1="11094"
-       x1="12446" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9505"
-       y2="11348"
-       x2="12700"
-       y1="11348"
-       x1="12446" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9507"
-       y2="11602"
-       x2="12700"
-       y1="11602"
-       x1="12446" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9509"
-       y2="11856"
-       x2="12700"
-       y1="11856"
-       x1="12446" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9511"
-       y2="9570"
-       x2="11176"
-       y1="9570"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9513"
-       y2="9824"
-       x2="11176"
-       y1="9824"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9515"
-       y2="10078"
-       x2="11176"
-       y1="10078"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9517"
-       y2="10332"
-       x2="11176"
-       y1="10332"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9519"
-       y2="10586"
-       x2="11176"
-       y1="10586"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9521"
-       y2="10840"
-       x2="11176"
-       y1="10840"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9523"
-       y2="11094"
-       x2="11176"
-       y1="11094"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9525"
-       y2="11348"
-       x2="11176"
-       y1="11348"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9527"
-       y2="11602"
-       x2="11176"
-       y1="11602"
-       x1="11430" /><line
-       style="fill:none;stroke:#000000;stroke-width:20"
-       id="line9529"
-       y2="11856"
-       x2="11176"
-       y1="11856"
-       x1="11430" /></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16mm" height="42mm" version="1.0" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 1600 4200"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon fill="white" points="739,2726 739,809 937,809 937,2726 "/>
+  <g transform="matrix(2.64845E-014 -1 1 2.64845E-014 -1194.79 3543.3)">
+   <text x="800" y="2100"  fill="#555555" font-weight="normal" font-size="4pt" font-family="OCRA">Lolin nodeMCU V3.1</text>
+  </g>
+  <polygon fill="white" points="435,223 586,223 586,386 435,386 "/>
+  <text x="422" y="360"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">A0</text>
+  <polygon fill="white" points="1068,223 1219,223 1219,385 1068,385 "/>
+  <text x="1054" y="359"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D0</text>
+  <polygon fill="white" points="435,479 675,479 675,642 435,642 "/>
+  <text x="421" y="615"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">GND</text>
+  <polygon fill="white" points="1079,479 1230,479 1230,642 1079,642 "/>
+  <text x="1065" y="616"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D1</text>
+  <polygon fill="white" points="435,734 586,734 586,897 435,897 "/>
+  <text x="421" y="871"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">VU</text>
+  <polygon fill="white" points="1081,719 1232,719 1232,882 1081,882 "/>
+  <text x="1067" y="856"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D2</text>
+  <polygon fill="white" points="437,984 588,984 588,1147 437,1147 "/>
+  <text x="423" y="1121"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">S3</text>
+  <polygon fill="white" points="1082,994 1232,994 1232,1157 1082,1157 "/>
+  <text x="1068" y="1130"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D3</text>
+  <polygon fill="white" points="435,1246 586,1246 586,1409 435,1409 "/>
+  <text x="421" y="1383"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">S2</text>
+  <polygon fill="white" points="1082,1263 1230,1263 1230,1426 1082,1426 "/>
+  <text x="1068" y="1400"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D4</text>
+  <polygon fill="white" points="437,1492 588,1492 588,1655 437,1655 "/>
+  <text x="423" y="1629"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">S1</text>
+  <polygon fill="white" points="1079,1504 1230,1504 1230,1667 1079,1667 "/>
+  <text x="1065" y="1641"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">3V</text>
+  <polygon fill="white" points="437,1746 588,1746 588,1909 437,1909 "/>
+  <text x="423" y="1882"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">SC</text>
+  <polygon fill="white" points="1169,1723 1230,1723 1230,1886 1169,1886 "/>
+  <text x="1155" y="1860"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">G</text>
+  <polygon fill="white" points="437,1999 588,1999 588,2162 437,2162 "/>
+  <text x="423" y="2136"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">S0</text>
+  <polygon fill="white" points="1081,1997 1231,1997 1231,2159 1081,2159 "/>
+  <text x="1067" y="2133"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D5</text>
+  <polygon fill="white" points="437,2253 588,2253 588,2416 437,2416 "/>
+  <text x="423" y="2389"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">SK</text>
+  <polygon fill="white" points="1079,2257 1229,2257 1229,2419 1079,2419 "/>
+  <text x="1065" y="2393"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D6</text>
+  <polygon fill="white" points="437,2506 498,2506 498,2669 437,2669 "/>
+  <text x="423" y="2643"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">G</text>
+  <polygon fill="white" points="1079,2512 1230,2512 1230,2675 1079,2675 "/>
+  <text x="1065" y="2649"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D7</text>
+  <polygon fill="white" points="437,2760 588,2760 588,2923 437,2923 "/>
+  <text x="423" y="2896"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">3V</text>
+  <polygon fill="white" points="1080,2768 1230,2768 1230,2930 1080,2930 "/>
+  <text x="1066" y="2904"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D8</text>
+  <polygon fill="white" points="437,3013 588,3013 588,3176 437,3176 "/>
+  <text x="423" y="3150"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">EN</text>
+  <polygon fill="white" points="1079,3018 1230,3018 1230,3181 1079,3181 "/>
+  <text x="1065" y="3155"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D9</text>
+  <polygon fill="white" points="437,3267 677,3267 677,3430 437,3430 "/>
+  <text x="423" y="3403"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">RST</text>
+  <polygon fill="white" points="990,3278 1230,3278 1230,3441 990,3441 "/>
+  <text x="976" y="3415"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">D10</text>
+  <polygon fill="white" points="437,3520 498,3520 498,3683 437,3683 "/>
+  <text x="423" y="3657"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">G</text>
+  <polygon fill="white" points="993,3519 1233,3519 1233,3682 993,3682 "/>
+  <text x="979" y="3656"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">GND</text>
+  <polygon fill="white" points="437,3774 677,3774 677,3937 437,3937 "/>
+  <text x="423" y="3910"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">Vin</text>
+  <polygon fill="white" points="1079,3778 1230,3778 1230,3941 1079,3941 "/>
+  <text x="1065" y="3915"  fill="#555555" font-weight="normal" font-size="3.5pt" font-family="OCRA">3V</text>
+  <rect fill="none" stroke="black" stroke-width="20" x="306" y="30" width="1017" height="4064"/>
+  <line fill="none" stroke="black" stroke-width="20" x1="306" y1="283" x2="55" y2= "283" />
+  <line fill="none" stroke="black" stroke-width="20" x1="306" y1="547" x2="55" y2= "547" />
+  <line fill="none" stroke="black" stroke-width="20" x1="306" y1="795" x2="55" y2= "795" />
+  <line fill="none" stroke="black" stroke-width="20" x1="306" y1="1049" x2="55" y2= "1049" />
+  <line fill="none" stroke="black" stroke-width="20" x1="306" y1="1302" x2="55" y2= "1302" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="283" x2="1580" y2= "283" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="531" x2="1580" y2= "531" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="795" x2="1580" y2= "795" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="1054" x2="1580" y2= "1054" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="1307" x2="1580" y2= "1307" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="1550" x2="1580" y2= "1550" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="1809" x2="1580" y2= "1809" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="2062" x2="1580" y2= "2062" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="2326" x2="1580" y2= "2326" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="2569" x2="1580" y2= "2569" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="2822" x2="1580" y2= "2822" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="3078" x2="1577" y2= "3078" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="3332" x2="1577" y2= "3332" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="3586" x2="1577" y2= "3586" />
+  <line fill="none" stroke="black" stroke-width="20" x1="1323" y1="3840" x2="1577" y2= "3840" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="1554" x2="53" y2= "1554" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="1808" x2="53" y2= "1808" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="2062" x2="53" y2= "2062" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="2316" x2="53" y2= "2316" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="2570" x2="53" y2= "2570" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="2824" x2="53" y2= "2824" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="3078" x2="53" y2= "3078" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="3332" x2="53" y2= "3332" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="3586" x2="53" y2= "3586" />
+  <line fill="none" stroke="black" stroke-width="20" x1="307" y1="3840" x2="53" y2= "3840" />
+ </g>
+</svg>

@@ -1,519 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Creator: CorelDRAW X7 -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xml:space="preserve"
-   width="31.050001mm"
-   height="60.040005mm"
-   version="1.0"
-   viewBox="0 0 3105.0002 6004.0007"
-   id="svg9191"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="lolin-BB.svg"
-   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"><metadata
-     id="metadata9329"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs9327" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1048"
-     inkscape:window-height="554"
-     id="namedview9325"
-     showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:zoom="3.1222223"
-     inkscape:cx="122.13779"
-     inkscape:cy="91.984268"
-     inkscape:window-x="1798"
-     inkscape:window-y="282"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg9191" /><g
-     id="Layer_x0020_1"
-     transform="translate(-363,-402)"><metadata
-       id="CorelCorpID_0Corel-Layer" /><path
-       d="m 486,402 2859,0 c 68,0 123,55 123,123 l 0,5561 c 0,68 -55,124 -123,124 l -2859,0 c -68,0 -123,-56 -123,-124 l 0,-5561 c 0,-68 55,-123 123,-123 z m 2708,5333 c 93,0 169,76 169,169 0,93 -76,169 -169,169 -94,0 -169,-76 -169,-169 0,-93 75,-169 169,-169 z m -2540,17 c 93,0 168,75 168,169 0,93 -75,169 -168,169 -94,0 -169,-76 -169,-169 0,-94 75,-169 169,-169 z m 6,-5211 c 93,0 168,76 168,169 0,93 -75,169 -168,169 -94,0 -169,-76 -169,-169 0,-93 75,-169 169,-169 z m 2503,16 c 93,0 169,76 169,169 0,93 -76,169 -169,169 -93,0 -169,-76 -169,-169 0,-93 76,-169 169,-169 z"
-       id="path9195"
-       inkscape:connector-curvature="0"
-       style="fill:#006633" /><rect
-       x="1070"
-       y="421"
-       width="1652"
-       height="2398"
-       id="rect9197"
-       style="fill:#009933" /><rect
-       x="1241"
-       y="1086"
-       width="1279"
-       height="1597"
-       id="rect9199"
-       style="fill:#ccccff" /><path
-       d="m 2120,1047 -700,0 0,-583 m 0,4 105,0 0,377 113,0 0,-377 116,0 0,377 121,0 0,-377 116,0 0,377 117,0 0,-377 427,0"
-       id="path9201"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#ff9966;stroke-width:50;stroke-linecap:round;stroke-linejoin:round" /><rect
-       x="2582"
-       y="5672"
-       width="311"
-       height="342"
-       id="rect9203"
-       style="fill:#e6e6e6" /><circle
-       cx="2738"
-       cy="5843"
-       r="78"
-       id="circle9205"
-       style="fill:#000066" /><rect
-       x="927"
-       y="5675"
-       width="311"
-       height="342"
-       id="rect9207"
-       style="fill:#e6e6e6" /><circle
-       cx="1083"
-       cy="5846"
-       r="78"
-       id="circle9209"
-       style="fill:#000066" /><rect
-       x="1486"
-       y="5784"
-       width="801"
-       height="622"
-       id="rect9211"
-       style="fill:#ccccff" /><text
-       x="742"
-       y="5377"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9213"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">Lolin nodeMCU V3.1</text>
-<text
-       x="1620"
-       y="6217"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9215"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#000000">USB</text>
-<g
-       transform="matrix(0,1,-1,0,5100.08,1894.07)"
-       id="g9217"><text
-         x="3810"
-         y="3810"
-         font-weight="normal"
-         font-size="5pt"
-         id="text9219"
-         style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">RST</text>
-</g><text
-       x="646"
-       y="1600"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9221"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">A0</text>
-<text
-       x="1374"
-       y="5531"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9223"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">wemos.cc</text>
-<text
-       x="1425"
-       y="1320"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9225"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">ESP-12E</text>
-<text
-       x="2192"
-       y="1600"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9227"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO6/D0</text>
-<text
-       x="623"
-       y="1855"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9229"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GND</text>
-<text
-       x="2236"
-       y="1846"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9231"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO5/D1</text>
-<text
-       x="636"
-       y="2109"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9233"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">VU</text>
-<text
-       x="2205"
-       y="2097"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9235"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO4/D2</text>
-<text
-       x="625"
-       y="2361"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9237"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">S3/GPIO10</text>
-<text
-       x="2205"
-       y="2371"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9239"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO0/D3</text>
-<text
-       x="632"
-       y="2622"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9241"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">S2/GPIO9</text>
-<text
-       x="2197"
-       y="2626"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9243"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO2/D4</text>
-<text
-       x="625"
-       y="2869"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9245"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">S1/MOSI</text>
-<text
-       x="2320"
-       y="2881"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9247"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">3.3V/3V</text>
-<text
-       x="625"
-       y="3122"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9249"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">CMD/CS/SC</text>
-<text
-       x="2590"
-       y="3104"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9251"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GND/G</text>
-<text
-       x="625"
-       y="3376"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9253"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">S0/MISO</text>
-<text
-       x="2077"
-       y="3374"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9255"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO14/D5</text>
-<text
-       x="625"
-       y="3629"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9257"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">SK/SCLK</text>
-<text
-       x="2075"
-       y="3634"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9259"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO12/D6</text>
-<text
-       x="625"
-       y="3883"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9261"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">G/GND</text>
-<text
-       x="2075"
-       y="3889"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9263"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO13/D7</text>
-<text
-       x="625"
-       y="4136"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9265"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">3V/3.3V</text>
-<text
-       x="2076"
-       y="4145"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9267"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO15/D8</text>
-<text
-       x="625"
-       y="4390"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9269"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">EN</text>
-<text
-       x="2203"
-       y="4395"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9271"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO3/D9</text>
-<text
-       x="625"
-       y="4643"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9273"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">RST</text>
-<text
-       x="2075"
-       y="4655"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9275"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">GPIO1/D10</text>
-<g
-       transform="matrix(0,1,-1,0,6188.25,1757.49)"
-       id="g9277"><text
-         x="3810"
-         y="3810"
-         font-weight="normal"
-         font-size="5pt"
-         id="text9279"
-         style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">FLASH</text>
-</g><circle
-       id="connector0pin"
-       cx="508"
-       cy="1524"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_0"
-       cx="3302"
-       cy="1524"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_1"
-       cx="508"
-       cy="1778"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_2"
-       cx="3302"
-       cy="1778"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_3"
-       cx="508"
-       cy="2032"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_4"
-       cx="3302"
-       cy="2032"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_5"
-       cx="508"
-       cy="2286"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_6"
-       cx="3302"
-       cy="2286"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_7"
-       cx="508"
-       cy="2540"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_8"
-       cx="3302"
-       cy="2540"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_9"
-       cx="508"
-       cy="2794"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_10"
-       cx="3302"
-       cy="2794"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_11"
-       cx="508"
-       cy="3048"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_12"
-       cx="3302"
-       cy="3048"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_13"
-       cx="508"
-       cy="3302"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_14"
-       cx="3302"
-       cy="3302"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_15"
-       cx="508"
-       cy="3556"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_16"
-       cx="3302"
-       cy="3556"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_17"
-       cx="508"
-       cy="3810"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_18"
-       cx="3302"
-       cy="3810"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_19"
-       cx="508"
-       cy="4064"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_20"
-       cx="3302"
-       cy="4064"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_21"
-       cx="508"
-       cy="4318"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_22"
-       cx="3302"
-       cy="4318"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_23"
-       cx="508"
-       cy="4572"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_24"
-       cx="3302"
-       cy="4572"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_25"
-       cx="508"
-       cy="4826"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_26"
-       cx="3302"
-       cy="4826"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_27"
-       cx="508"
-       cy="5080"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><circle
-       id="connector0pin_28"
-       cx="3302"
-       cy="5080"
-       r="42"
-       style="fill:none;stroke:#ffbf00;stroke-width:30.47999954" /><rect
-       x="1074"
-       y="4762"
-       width="1022"
-       height="385"
-       id="rect9311"
-       style="fill:#333333" /><g
-       transform="matrix(-1,0,0,-1,5905.63,8644.02)"
-       id="g9313"><text
-         x="3810"
-         y="3810"
-         font-weight="normal"
-         font-size="5pt"
-         id="text9315"
-         style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">CH340G</text>
-</g><text
-       x="625"
-       y="4897"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9317"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">G/GND</text>
-<text
-       x="2588"
-       y="4897"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9319"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">G/GND</text>
-<text
-       x="625"
-       y="5150"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9321"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">Vin/5V</text>
-<text
-       x="2317"
-       y="5155"
-       font-weight="normal"
-       font-size="5pt"
-       id="text9323"
-       style="font-weight:normal;font-size:176.38999939px;font-family:OCRA;fill:#ffffff">3.3V/3V</text>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="32mm" height="59mm" version="1.0" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 3200 5900"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path fill="#006633" d="M176 25l2859 0c68,0 124,56 124,123l0 5562c0,67 -56,123 -124,123l-2859 0c-67,0 -123,-56 -123,-123l0 -5562c0,-67 56,-123 123,-123zm2708 5333c93,0 169,76 169,169 0,93 -76,169 -169,169 -93,0 -169,-76 -169,-169 0,-93 76,-169 169,-169zm-2540 17c93,0 169,76 169,169 0,93 -76,169 -169,169 -93,0 -169,-76 -169,-169 0,-93 76,-169 169,-169zm6 -5211c93,0 169,76 169,169 0,94 -76,169 -169,169 -93,0 -169,-75 -169,-169 0,-93 76,-169 169,-169zm2504 17c93,0 168,75 168,168 0,94 -75,169 -168,169 -94,0 -169,-75 -169,-169 0,-93 75,-168 169,-168z"/>
+  <rect fill="#009933" x="761" y="45" width="1652" height="2398"/>
+  <rect fill="#CCCCFF" x="932" y="709" width="1279" height="1597"/>
+  <path fill="none" stroke="#FF9966" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" d="M1810 670l-700 0 0 -583m0 4l105 0 0 377 113 0 0 -377 117 0 0 377 120 0 0 -377 117 0 0 377 116 0 0 -377 428 0"/>
+  <rect fill="#E6E6E6" x="2272" y="5295" width="311" height="342"/>
+  <circle fill="#000066" cx="2428" cy="5466" r="78"/>
+  <rect fill="#E6E6E6" x="618" y="5298" width="311" height="342"/>
+  <circle fill="#000066" cx="773" cy="5469" r="78"/>
+  <rect fill="#CCCCFF" x="1177" y="5408" width="801" height="622"/>
+  <text x="432" y="5001"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">Lolin nodeMCU V3.1</text>
+  <text x="1310" y="5840"  fill="black" font-weight="normal" font-size="4.5pt" font-family="OCRA">USB</text>
+  <g transform="matrix(2.64845E-014 1 -1 2.64845E-014 3930.47 3727.39)">
+   <text x="1600" y="2950"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">RST</text>
+  </g>
+  <text x="336" y="1223"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">A0</text>
+  <text x="1064" y="5154"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">wemos.cc</text>
+  <text x="1115" y="943"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">ESP-12E</text>
+  <text x="1773" y="1213"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO16/D0</text>
+  <text x="313" y="1479"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GND</text>
+  <text x="1900" y="1469"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO5/D1</text>
+  <text x="326" y="1732"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">VU</text>
+  <text x="1902" y="1716"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO4/D2</text>
+  <text x="315" y="1984"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">S3/GPIO10</text>
+  <text x="1900" y="1996"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO0/D3</text>
+  <text x="323" y="2246"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">S2/GPIO9</text>
+  <text x="1904" y="2241"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO2/D4</text>
+  <text x="315" y="2492"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">S1/MOSI</text>
+  <text x="2027" y="2503"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">3.3V/3V</text>
+  <text x="315" y="2746"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">CMD/CS/SC</text>
+  <text x="2281" y="2727"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GND/G</text>
+  <text x="315" y="2999"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">S0/MISO</text>
+  <text x="1772" y="3000"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO14/D5</text>
+  <text x="315" y="3253"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">SK/SCLK</text>
+  <text x="1772" y="3249"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO12/D6</text>
+  <text x="315" y="3506"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">G/GND</text>
+  <text x="1772" y="3509"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO13/D7</text>
+  <text x="315" y="3760"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">3V/3.3V</text>
+  <text x="1772" y="3770"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO15/D8</text>
+  <text x="315" y="4013"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">EN</text>
+  <text x="1900" y="4020"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO3/D9</text>
+  <text x="315" y="4267"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">RST</text>
+  <text x="1772" y="4279"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">GPIO1/D10</text>
+  <g transform="matrix(2.64845E-014 1 -1 2.64845E-014 5018.64 3590.81)">
+   <text x="1600" y="2950"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">FLASH</text>
+  </g>
+  <circle id="connector0pin" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="1147" r="42"/>
+  <circle id="connector0pin_0" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="1147" r="42"/>
+  <circle id="connector0pin_1" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="1401" r="42"/>
+  <circle id="connector0pin_2" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="1401" r="42"/>
+  <circle id="connector0pin_3" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="1655" r="42"/>
+  <circle id="connector0pin_4" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="1655" r="42"/>
+  <circle id="connector0pin_5" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="1909" r="42"/>
+  <circle id="connector0pin_6" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="1909" r="42"/>
+  <circle id="connector0pin_7" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="2163" r="42"/>
+  <circle id="connector0pin_8" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="2163" r="42"/>
+  <circle id="connector0pin_9" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="2417" r="42"/>
+  <circle id="connector0pin_10" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="2417" r="42"/>
+  <circle id="connector0pin_11" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="2671" r="42"/>
+  <circle id="connector0pin_12" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="2671" r="42"/>
+  <circle id="connector0pin_13" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="2925" r="42"/>
+  <circle id="connector0pin_14" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="2925" r="42"/>
+  <circle id="connector0pin_15" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="3179" r="42"/>
+  <circle id="connector0pin_16" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="3179" r="42"/>
+  <circle id="connector0pin_17" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="3433" r="42"/>
+  <circle id="connector0pin_18" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="3433" r="42"/>
+  <circle id="connector0pin_19" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="3687" r="42"/>
+  <circle id="connector0pin_20" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="3687" r="42"/>
+  <circle id="connector0pin_21" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="3941" r="42"/>
+  <circle id="connector0pin_22" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="3941" r="42"/>
+  <circle id="connector0pin_23" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="4195" r="42"/>
+  <circle id="connector0pin_24" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="4195" r="42"/>
+  <circle id="connector0pin_25" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="4449" r="42"/>
+  <circle id="connector0pin_26" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="4449" r="42"/>
+  <circle id="connector0pin_27" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="198" cy="4703" r="42"/>
+  <circle id="connector0pin_28" fill="none" stroke="#FFBF00" stroke-width="30.48" cx="2992" cy="4703" r="42"/>
+  <rect fill="#333333" x="765" y="4386" width="1022" height="385"/>
+  <g transform="matrix(-1 -0 -0 -1 3386.02 7407.34)">
+   <text x="1600" y="2950"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">CH340G</text>
+  </g>
+  <text x="315" y="4520"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">G/GND</text>
+  <text x="2278" y="4520"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">G/GND</text>
+  <text x="315" y="4774"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">Vin/5V</text>
+  <text x="2027" y="4777"  fill="white" font-weight="normal" font-size="4.5pt" font-family="OCRA">3.3V/3V</text>
+ </g>
+</svg>
