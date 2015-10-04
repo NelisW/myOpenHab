@@ -2,3 +2,4 @@
 
 <http://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/>
 
+https://github.com/gonium/esp8266-dht22-sensor

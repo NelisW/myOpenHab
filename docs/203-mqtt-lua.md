@@ -15,3 +15,5 @@ Not nodeMCU: <https://olimex.wordpress.com/2015/05/15/esp8266-evb-lua-mqtt-examp
 
 Not nodeMCU: <https://github.com/geekscape/mqtt_lua>
 
+[Lua quick reference](https://gist.github.com/tylerneylon/5853042)  
+

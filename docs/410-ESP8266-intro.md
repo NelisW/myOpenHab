@@ -130,6 +130,28 @@ ESP8266 WIFI module can operate in three modes:
 Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
 
 
+##Hardware issues and instability.
+
+[There appears to be]](http://internetofhomethings.com/homethings/?p=605) a mixup with pin wiring GPOI4 and GPIO5 pins are interchanged on early ESP12 boards
+
+[Flash memory problems](http://internetofhomethings.com/homethings/?p=396):  "we know the flash chip (25Q40) used with many of these ESP8266 module is of low quality and fails after only a few flash cycles. Perhaps sending the code somewhere that it never returns from. Triggering the watchdog timer to reset the unit."
+
+Power supply issues:
+1.  The general advice is that the ESP8266 must be run of a power supply with at least 300 to 500 mA  capacity.  Furthermore, decoupling and supply capacitors are advised.  
+
+2.  Put a large electrolytic capacitor on the power supply near the ESP, recommended values range from 10 uF to 470 uF depending on where you read.
+
+3. Put a decoupling capacitor across the Vcc to Gnd pins, within 10 mm from the pins. Recommended values are 100 nF.
+
+See the following websites:  
+http://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf  
+http://www.esp8266.com/viewtopic.php?f=6&t=497  
+http://internetofhomethings.com/homethings/?p=605  
+http://internetofhomethings.com/homethings/?p=396  
+https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
+http://bbs.espressif.com/viewtopic.php?t=1078  
+
+
 ##Diverse Projects
 
 <http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
