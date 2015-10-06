@@ -1,4 +1,4 @@
-#nodeMCU with its native tools
+#nodeMCU with Lua and its native tools
 
 ##Introduction
 
@@ -46,6 +46,12 @@ Follow the instructions in [Getting Started With The ESPlorer IDE](http://esp826
   -  click on the connect button.
   ![''](images/ESPlorerConnect.png)
 
+###Resetting the nodeMCU
+The `Reset` button (bottom right) can be used to reset the chip.
+
+![''](images/ESPlorerReset.png)
+
+
 ###Filenames and file management
 
 nodeMCU has an elementary file system that allows us to download and run lua files on the ESP. Many different scripts and files can be uploaded and run when appropriate.
@@ -56,9 +62,18 @@ ESPlorer has a very nice 'browser' to show the files on the ESP.  Click on the `
 
 ![''](images/ESPlorerShowFiles.png)
 
-The bottom of the right side has drop-down menu with a number of commonly used commands, such as `dofile("")` which can be sent to the ESP by pressing on the Send button.  In this case enter the name of the file as the first parameter in the `dofile` call.  The `Reset` button can be used to reset the chip.
+The bottom of the right side has drop-down menu with a number of commonly used commands, such as `dofile("")` which can be sent to the ESP by pressing on the Send button.  In this case enter the name of the file as the first parameter in the `dofile` call.  
 
-![''](images/ESPlorerReset.png)
+###Installing library-like script files
+Many sensors require special scripts to execute the interface software with the sensor; setting up, reading, etc.  One such example the the DHT temperature/humidity sensor code `dht.lua` in the `myOpenHab\ESPFiles` directory.  It was written by Javier Yanez and copied countless times to various web sites and ultimately to the ESP in the nodeMCU.  
+
+Once the library script is flashed to the ESP it is available to be called by other scripts.  
+It seems that this call procedure is something like (for the dht module)
+
+    dht=require("dht")
+    dht.read(pin)
+
+where your script first indicates which lua file must be used `dht.lua`, which is then imported into the `dht` variable in the lua code.
 
 ###Wireless setup
 If the ESP is set up as [access point](https://en.wikipedia.org/wiki/Wireless_access_point) (allows other wifi devices to connect to a network) remember to set up a password to prevent unauthorised access.  In most cases the ESP will be set up as a station, meaning that it is only a client and does not connect to other networks.

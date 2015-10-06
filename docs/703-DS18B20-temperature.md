@@ -145,7 +145,8 @@ More detail to follow
 
 <https://bigdanzblog.wordpress.com/2015/04/25/esp8266-and-ds18b20-transmitting-temperature-data/>  
 <http://www.esp8266.com/viewtopic.php?f=19&t=752>  
-
+<http://www.esp8266.com/viewtopic.php?f=19&t=3418>
+<https://github.com/beckdac/esp8266_lua_mqtt_ds18b60>
 
 ##Links
 

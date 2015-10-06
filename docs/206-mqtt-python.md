@@ -5,6 +5,8 @@ MQTT messages can be sent and received using the paho module in Python.
 The installation instructions and brief documentation are available here: 
 <https://pypi.python.org/pypi/paho-mqtt>
 
+https://www.cloudmqtt.com/docs-python.html
+
 ##Installing paho-mqtt
 
     pip install paho-mqtt
