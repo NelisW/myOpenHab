@@ -116,7 +116,7 @@ see the status:
 
     #!/usr/bin/env python
 	
-There is one catch however, if the file is created in Windows, the line ending is not Linux (RPi) friendly.  This means that the operating system is looking for something called `python\r', which is not recognised in Linux.  I tried converting the file from Windows to Linux format by using the `fromdos` command, but that did not help.  Opening and closing the file in `nano` did not help either.  The only remedy was to (1) open the file in `nano` move to the top of the file, (2) manually type in the whole first line followed by `Enter` a few times, making very sure that a new line ending is introduced, and (3) then remove the old line with the bad line ending.
+There is one catch however, if the file is created in Windows, the line ending is not Linux (RPi) friendly.  This means that the operating system is looking for something like `python\r`, which is not recognised in Linux.  I tried converting the file from Windows to Linux format by using the `fromdos` command, but that did not help.  Opening and closing the file in `nano` did not help either.  The only remedy was to (1) open the file in `nano` move to the top of the file, (2) manually type in the whole first line followed by `Enter` a few times, making very sure that a new line ending is introduced, and (3) then remove the old line with the bad line ending.
 
 
 
