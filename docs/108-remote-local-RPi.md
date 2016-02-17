@@ -2,6 +2,8 @@
 
 If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
 
+
+
 ##Terminal access
 
 To follow

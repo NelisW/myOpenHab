@@ -49,7 +49,9 @@ Add the requisite directories with appropriate rights to the samba config file
 	force user = root
 	
 	
-Open the folder in Windows Explorer as `\\yourRPiIPaddress`	
+Open the folder in Windows Explorer as `\\yourRPiIPaddress\sambamount`  
+For example, if your RPi IP address is `10.0.0.5`, open Windows Explorer and then type `\\10.0.0.5\OpenHab`, or just `\\10.0.0.5` to see all the samba folders.
+	
 
 ##Install pip
 

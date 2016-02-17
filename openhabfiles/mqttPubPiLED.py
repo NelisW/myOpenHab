@@ -14,7 +14,7 @@ pinLedSw = 19
 pinLedRd = 13
 
 #we have to clean up to reset pin definitions
-GPIO.cleanup()
+#GPIO.cleanup()
 
 #set the software to use the Broadcom numbers
 GPIO.setmode(GPIO.BCM)
@@ -46,19 +46,25 @@ def on_message(client, userdata, msg):
 		pinSet(pinLedSw,True)
 	if 'OFF' in msg.payload:
 		pinSet(pinLedSw,False)
+	sleep(0.1)
 	state = pinRead(pinLedRd)
 	if state:
-		sstate = "on"
+		sstate = 1
 	else:
-		sstate = "off"
-	print(sstate)
+		sstate = 0
 	client.publish("home/study/PiLED/state", sstate)
 
+#def on_disconnect(client, userdata, rc):
+#	if rc != 0:
+#		pass
+#	client.connect("10.0.0.16", 1883, 60)
+	
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
+#client.on_disconnect = on_disconnect
 
-client.connect("10.0.0.16", 1883, 60)
+client.connect(host="10.0.0.16", port=1883, keepalive=60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
