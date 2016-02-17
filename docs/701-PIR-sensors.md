@@ -1,6 +1,12 @@
 #PIR Sensors
 
-![test](images/DS18B20-RPi-schematic.png)
+##Overview
+
+From: <https://www.mpja.com/download/31227sc.pdf>  
+
+![PIR schematic](images/pir-schematic.png)
+
+![PIR wiring](images/pir-wiring.png)
 
 
 
