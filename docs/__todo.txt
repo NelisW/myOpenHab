@@ -1,0 +1,10 @@
+https://tools.upverter.com/eda/#tool=schematic,designId=57d8c48db8507258
+
+https://github.com/nodemcu/nodemcu-devkit-v1.0
+
+https://github.com/esp8266/Arduino/issues/292  NodeMCU v2 dev board not working
+
+http://embeddedcomputing.weebly.com/nodemcu-board.html - review all information here
+
+http://www.instructables.com/id/Import-a-Code-Library-to-Arduino/?ALLSTEPS
+
