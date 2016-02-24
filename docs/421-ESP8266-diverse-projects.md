@@ -1,9 +1,13 @@
-#ESPEasy
+# ESP8266 Diverse Projects
 
-http://sourceforge.net/projects/espeasy/?source=typ_redirect
+## Weather station with DS18B20, DHT11 and BMP085
 
-http://www.esp8266.com/viewtopic.php?f=29&t=4540
+http://internetofhomethings.com/homethings/?p=345
 
-http://www.esp8266.nu/forum/viewtopic.php?t=37
+## Intro with remote power switching
 
+http://www.instructables.com/id/An-inexpensive-IoT-enabler-using-ESP8266/?ALLSTEPS
 
+## ESP with DHT and display
+https://nathan.chantrell.net/20141230/wifi-mqtt-display-with-the-esp8266  
+https://github.com/nathanchantrell/esp_mqtt_oled  

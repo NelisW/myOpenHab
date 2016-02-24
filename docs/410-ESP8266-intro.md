@@ -150,7 +150,7 @@ http://internetofhomethings.com/homethings/?p=605
 http://internetofhomethings.com/homethings/?p=396  
 https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
 http://bbs.espressif.com/viewtopic.php?t=1078  
-
+   
 
 ##Diverse Projects
 

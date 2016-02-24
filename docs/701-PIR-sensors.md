@@ -22,10 +22,10 @@ The device operates from a 5V supply, but provides a 3.3 V output signal when mo
 
 The devices with hemispherical dome lenses have angular coverage is 110 degrees in all directions.  Detection range depends on the temperature contrast and can be up to six to eight metres for humans.
 
-The most likely components are 
+The most likely components are
 1.  BIS0001  decoder chip
 1.  RE200B  PIR sensing element
-1.  NL11NH  multi-facet fresnel lens 
+1.  NL11NH  multi-facet fresnel lens
 
 Some PIR devices have visible light detectors to prevent triggering during day time.
 
@@ -69,11 +69,17 @@ http://www.instructables.com/id/Raspberry-Pi-Motion-Sensitive-Camera/
 
 http://www.esp8266-projects.com/2015/03/esp8266-pir-motion-sensor-detection.html?m=1
 
+https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/
+
 https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview
+
+https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/using-a-pir
 
 http://blog.roman-mueller.ch/index.php/2013/01/26/hc-sr501-passive-infrared-sensor-with-arduino/
 
 http://electronics.stackexchange.com/questions/120611/help-understanding-pir-amplifier-analog-circuit
+
+This sketch will detect if the PIR motion sensor switches on, and when it is off long enough to be sure that there is no motion detected anymore.  http://playground.arduino.cc/Code/PIRsense
 
 Python code with multiple sensors:  
 <http://tigermountainsprings.net/wp/index.php/6-pir-infrared-sensors-and-the-coop/>
@@ -166,7 +172,7 @@ Python code with multiple sensors:
                 print ('EndingProcess " + pir_id)
                 GPIO.cleanup()
                 break
-        
+
     mcp = p.MCP23S17()
     h = httplib2.Http()
     print ("Setting Up")
@@ -199,9 +205,8 @@ Python code with multiple sensors:
         mcp.gpioa.value = mcp.gpioa.value & 227
         GPIO.cleanup()
         print ('All Done with the PIR')
-         
+
 Arduino example
 
-http://www.mysensors.org/build/motion
+http://www.mysensors.org/build/motion  
 https://github.com/mysensors/
-
