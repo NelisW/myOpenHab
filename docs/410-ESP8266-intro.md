@@ -1,6 +1,6 @@
-#ESP8266
+# ESP8266
 
-##Introduction
+## Introduction
 
 [Specification](https://www.adafruit.com/images/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
 
@@ -22,10 +22,10 @@ There are quite a few different development environments to consider:
 
 There is a good [technical overview  here](https://nurdspace.nl/ESP8266).
 
-##nodeMCU
-###Introduction
-A brief [introduction](http://embeddedcomputing.weebly.com/nodemcu-board.html) states: "The NodeMCU board is based on an ESP8266-12 but features a built-in serial over USB interface and other amenities like 2 buttons and 2 LEDs.  The board can be programmed using the Wiring / Arduino framework as the other ESP8266 boards.  It features more available GPIOs, of which 
--  9 digital GPIOs operating at 3,3V 
+## nodeMCU
+### Introduction
+A brief [introduction](http://embeddedcomputing.weebly.com/nodemcu-board.html) states: "The NodeMCU board is based on an ESP8266-12 but features a built-in serial over USB interface and other amenities like 2 buttons and 2 LEDs.  The board can be programmed using the Wiring / Arduino framework as the other ESP8266 boards.  It features more available GPIOs, of which
+-  9 digital GPIOs operating at 3,3V
 - one analog GPIO, albeit limited to 1,8 V.
 
 The [nodeMCU](nodemcu.com/index_en.html) is an open source development, with V1 documented (here)[https://github.com/nodemcu/nodemcu-devkit-v1.0]
@@ -48,11 +48,47 @@ The V1 pin definitions are as follows:
 
 ### LoLin nodeMCU V3
 
-[LoLin](http://www.wemos.cc/wiki/) is based on nodeMCU. It has software support for the embedded lua language, with built-in json, file, timer, pwm, i2c, spi, 1-wire, net, mqtt, coap, gpio, wifi, adc, uart and system api. Both Integer version(less memory usage) and Float version(Default) firmware provided. 
+
+[LoLin](http://www.wemos.cc/wiki/) is based on nodeMCU. It has software support for the embedded lua language, with built-in json, file, timer, pwm, i2c, spi, 1-wire, net, mqtt, coap, gpio, wifi, adc, uart and system api. Both Integer version(less memory usage) and Float version(Default) firmware provided.
 
 Howver, if you use the Arduino IDE the built-in firmware is overwritten by the Arduino libraries.
 
 The pin definition for the LoLin board is given [here](http://www.wemos.cc/wiki/Hardware/Pin), with additional information on the [wemos D1 here](http://www.wemos.cc/d1/Hardware).
+
+
+### White breakout boards
+
+http://www.electrodragon.com/product/esp8266-smd-adapter-board-wi07-12/   
+
+1.    Reserved LDO place on the back of board
+1.    10K resistor between CHPD and VCC, to enable chip
+1.    10K resistor between GPIO2 and GND
+1.    GPIO15 to GND for normal flash boot mode
+
+http://www.esp8266.com/viewtopic.php?f=13&t=3609   
+
+shorting Vcc to VIN through what seems to be a 0k resistor (labelled 000 and measures direct with a multimeter)????  It's there, so you can use the board without a LDO. If you mount a LDO, you need to remove that resistor.
+
+If you connect 3.3v to vcc the board works fine. You can put a voltage reg onto the position on the back of the board to power it at 5v. I bought the ams1117? But they are the wrong pinout for that position.
+All was not lost as you can use it by cutting a track and positioning carefully. Not recommended though.
+I now use an offboard regulator on vero board as I needed multiple gnd and vcc points.
+
+
+
+http://tronixlabs.com.au/wireless/esp8266/esp8266-smd-adaptor-board-australia/  
+Please note - the labelling is incorrect on the right-hand side of the board. It should be TXD, RXD, GPIO4, GPIO5, GPIO0, GPIO1, GPIO15, GND.
+
+http://www.ebay.co.uk/itm/171822251755  
+Fixes incorrectly labelled pin assignments.
+
+It incorporates all the pull-up/down circuitry required to put your ESP8266 into normal operating mode. Just solder your ESP8266 module on, supply 2.7 - 3.6 volts (3.3v nominal) across the VCC and GND pins and away you go!
+
+It also has pads on the underside to accept a SOT-89 3.3v voltage regulator. (In a pinch, I've used a cheap SOT-23 AMS1117 instead, though it's a bit too big really.)
+(Note: There's a jumper on the top side that needs to be removed if a voltage regulator is installed - it's the central SMD component, marked "000".)
+
+
+
+
 
 ##C on the Arduino IDE
 
@@ -100,8 +136,17 @@ Nice series of articles:
 4. [Control from anywhere in the World–Internet of Things](https://alselectro.wordpress.com/2015/05/31/wi-fi-module-esp8266-4-control-from-anywhere-in-the-worldinternet-of-things/)
 
 
+5. [ESP8266 boot up modes](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process#esp-boot-modes)
 
+The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
 
+|MTDO 	|GPIO0 	|GPIO2 	|Mode 	Description|
+|--|--|--|--|
+|L 	|L 	|H |UART 	Download code from UART|
+|L |H 	|H 	|Flash 	Boot from SPI Flash|
+|H 	|x 	|x 	|SDIO 	Boot from SD-card|
+
+you do want GPIO15 pulled low on chip boot, and you want GPIO2 pulled high
 
 ###ESP-12 series
 ESP-12 modules have metal shield with FCC logo on it. It appears these modules are FCC approved (FCC ID: 2ADUIESP-12). The modules have 16 pins and PCB antenna. Similar to ESP-07, some ESP-12 boards have GPIO 4 and 5 switched.  The newer ESP-12-E module adds 5 more half-hole (without extra hole) pins on the side. There are also two more variations of ESP-12-E module: ESP-12-D and ESP-12-Q. Probably referring to Dual and Quad SPI operations for Flash chip because ESP-12-D frees up GPIO 9 and GPIO 10 which are usually occupied for Quad mode SPI operations.
@@ -117,7 +162,7 @@ The [nodeMCU](http://nodemcu.com/index_en.html#fr_54747661d775ef1a3600009e) uses
 [Olimex ESD8266-Dev, SDIO mode, UART mode and FLASH mode.](https://www.olimex.com/Products/IoT/MOD-WIFI-ESP8266-DEV/resources/MOD-WIFI-ESP8266-DEV_jumper_reference.pdf)
 
 
-##Operational modes 
+##Operational modes
 
 ESP8266 WIFI module can operate in three modes:
 
@@ -150,7 +195,7 @@ http://internetofhomethings.com/homethings/?p=605
 http://internetofhomethings.com/homethings/?p=396  
 https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
 http://bbs.espressif.com/viewtopic.php?t=1078  
-   
+
 
 ##Diverse Projects
 
