@@ -1,6 +1,6 @@
-#PIR Sensors
+# PIR Sensors
 
-##Overview
+## Overview
 
 From:   
 <https://www.mpja.com/download/31227sc.pdf>    
@@ -35,6 +35,33 @@ In the above diagram the jumper on the left side sets the operation to (1) retri
 
 The two potentiometers provide the facility to adjust the sensitivity of the device (essentially a gain setting) and the output pulse width.  The pot on the left adjusts the sensitivity: counter-clockwise is less sensitive.  The pot on the right adjusts the output pulse width.
 
+The PIR module is supplied with 5 V, but internally works at 3.3 V.
+You can use the existing 5V pin or bypass or remove the regulator to work at 3.3 volt. See [here](http://iot-playground.com/blog/2-uncategorised/74-esp8266-wifi-pir-motion-sensor-easyiot-cloud-rest-api) for details.
+
+## Projects
+
+### esp8266 + PIR + C (Arduino IDE)
+
+http://iot-playground.com/blog/2-uncategorised/42-esp8266-wifi-pir-motion-sensor-arduino-ide
+
+code is here:
+https://github.com/iot-playground/Arduino/blob/master/ESP8266ArduinoIDE/ESP8266_di/ESP8266_di.ino
+
+http://iot-playground.com/blog/2-uncategorised/74-esp8266-wifi-pir-motion-sensor-easyiot-cloud-rest-api
+
+
+
+
+
+
+### esp8266 + PIR + Lua
+
+http://www.esp8266-projects.com/2015/03/esp8266-pir-motion-sensor-detection.html (unfortunately lua code)
+
+In PIR module description you can find that it's powered at 5V!  And as you know already ESP8266 it's a 3V only chip. The good thing is that if you look in the BISS0001 datasheet you will see that it's working ok also at 3V level. Looking deeper on the PIR Module board we can find even better news: The board it's actually already a 3V one! The 5V voltage from the power pin is going only to the onboard power regulator! Output is at 3V logic levels. No level shifting or anything else needed !
+
+
+## Wider reading
 <https://www.modmypi.com/blog/raspberry-pi-gpio-sensing-motion-detection>
 
 [Principles of operation](http://www.glolab.com/pirparts/infrared.html)
@@ -52,7 +79,6 @@ The two potentiometers provide the facility to adjust the sensitivity of the dev
 [modifying-cheap-pir-motion-sensor-to-work-at-3-3v](http://randomnerdtutorials.com/modifying-cheap-pir-motion-sensor-to-work-at-3-3v/)
 
 [arduino-with-pir-motion-sensor](http://randomnerdtutorials.com/arduino-with-pir-motion-sensor/)
-
 
 
 http://www.raspberrypi-spy.co.uk/2013/01/cheap-pir-sensors-and-the-raspberry-pi-part-1/

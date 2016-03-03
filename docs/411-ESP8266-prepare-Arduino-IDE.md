@@ -4,7 +4,7 @@
 
 The Arduino IDE can be used to build and download ESP8266 software.  The [GitHub repo](https://github.com/esp8266/Arduino) for the project describes it as  follows: "This project brings support for ESP8266 chip to the Arduino environment. It lets you write sketches using familiar Arduino functions and libraries, and run them directly on ESP8266, no external microcontroller required. ESP8266 Arduino core comes with libraries to communicate over WiFi using TCP and UDP, set up HTTP, mDNS, SSDP, and DNS servers, do OTA updates, use a file system in flash memory, work with SD cards, servos, SPI and I2C peripherals."
 
-At the time of writing the IDE version is 1.6.5.
+At the time of writing the IDE version is 1.6.7.
 
 <http://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/>
 <http://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/>    
@@ -12,8 +12,8 @@ At the time of writing the IDE version is 1.6.5.
 <http://www.esp8266-projects.com/2015/06/esp8266-arduino-ide-v164-portable.html>  
 
 1. You have to have an internet connection to execute the procedure below.
-1. Download and install the Arduino IDE from here: <https://www.arduino.cc/en/Main/Software>. 
- -  You can download the exe for installation as a regular Windows application. 
+1. Download and install the Arduino IDE from here: <https://www.arduino.cc/en/Main/Software>.
+ -  You can download the exe for installation as a regular Windows application.
  -  Alternatively you can create a portable installation by  downloading the zip file and unzipping in the directory of your choice.  This directory may be on a USB memory device for portability.
  -  Either way, the IDE will create a directory in your user home directory, something like `C:\Users\YourUserName\AppData\Roaming\Arduino15`
 2. The exe install will create all the shortcuts automatically.  If you downloaded and unzipped the zip file, Windows will not know of the software. Create a shortcut to the IDE and place it in QuickLaunch or in the Start Menu.
@@ -67,13 +67,13 @@ Once the board has been selected, you can set up the communication parameters fo
   ![''](images/arduino-ide-library-install-2-8266.png)
 
 4. You can also install zip libraries, directly from the menu, no need to unzip the file.  Navigate to *Sketch > Include Library > Add .ZIP Library* and select the library in your file system.
- 
+
 4.  Most of the popular libraries are already included in the core package, including WiFi using TCP and UDP, set up HTTP, mDNS, SSDP, and DNS servers, do OTA updates, use a file system in flash memory, work with SD cards, servos, SPI and I2C peripherals.  Suggested libraries to be additionally installed include:
 
  - [Adafruit MQTT library](https://github.com/adafruit/Adafruit_MQTT_Library)
- 
+
  - If you want to use [Blynk](http://www.blynk.cc/), open the Blynk library [GitHub page](https://github.com/blynkkk/blynk-library) and click on the  ![''](images/github-download-zip.png) button on the right side of the page and save the file in your file system.  Then install the ZIP library as outlined above.
- 
+
 ---------------------------------------------------------
 ---------------------------------------------------------
 ##Example software
@@ -93,4 +93,3 @@ There is some example code [here](https://github.com/adafruit/Adafruit_ESP8266).
 	  digitalWrite(15, LOW);    // turn the LED off by making the voltage LOW
 	  delay(1000);              // wait for a second
 	}
-

@@ -1,4 +1,4 @@
-#nodeMCU on the Arduino IDE
+#ESP8266 on the Arduino IDE
 
 ##Setting up the Arduino IDE
 
@@ -21,4 +21,3 @@ issues with expressif SKD http://internetofhomethings.com/homethings/?p=426
 Note that the SDK has been updated in the meantime.
 
 issues with Arduino IDE  http://internetofhomethings.com/homethings/?p=429  
-
