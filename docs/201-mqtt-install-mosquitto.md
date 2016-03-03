@@ -1,4 +1,4 @@
-#Install mosquitto on RPi
+# Install mosquitto on RPi
 
 <http://mosquitto.org/download/>  
 <http://jpmens.net/2013/09/01/installing-mosquitto-on-a-raspberry-pi/>  
@@ -6,9 +6,9 @@
 <http://www.element14.com/community/community/design-challenges/forget-me-not/blog/2014/09/17/fmnxx-mqtt--the-language-of-iot>
 
 
-Mosquitto is an open-source message broker, which means it allows different programs to exchange information in a way they can all understand. 
+Mosquitto is an open-source message broker, which means it allows different programs to exchange information in a way they can all understand.
 
-##Installing the broker and clients
+## Installing the broker and clients
 
 Install the mosquitto lib on RPi, **But do not use JPM's commands**. mosquitto is now in the debian distribution (<http://mosquitto.org/download/>). Just do this:
 
@@ -22,7 +22,11 @@ The broker is immediately started; stop it in order to configure it:
 
 	sudo /etc/init.d/mosquitto stop
 
-##Testing
+## installing mosquitto from source:  
+
+http://blog.thingstud.io/recipes/how-to-make-your-raspberry-pi-the-ultimate-iot-hub/
+
+## Testing
 
 Test the installation as follows:
 <http://stackoverflow.com/questions/26716279/how-to-test-the-mosquitto-server>
@@ -38,12 +42,12 @@ Test the installation as follows:
 3. Publish test message with the command line publisher:
 
 	mosquitto_pub -t "test/topic" -m 'helloWorld'
-	
+
 As well as seeing both the subscriber and publisher connection messages in the broker terminal the following should be printed in the subscriber terminal:
 
-	test/topic helloWorld	
-	
-##Authentication and security 	
+	test/topic helloWorld
+
+## Authentication and security 	
 
 By default mosquitto has no security protection.  Various methods of secure operation are possible:
 
@@ -73,4 +77,3 @@ http://stackoverflow.com/questions/18896087/mosquitto-mqtt-broker-and-java-clien
 http://stackoverflow.com/questions/29576230/arduino-with-mosquitto-mqtt
 
 http://stackoverflow.com/questions/26657319/how-do-you-set-up-encrypted-mosquitto-broker-like-a-webpage-which-has-https
-
