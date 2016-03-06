@@ -4,8 +4,11 @@
 
 The Arduino IDE can be used to build and download ESP8266 software.  The [GitHub repo](https://github.com/esp8266/Arduino) for the project describes it as  follows: "This project brings support for ESP8266 chip to the Arduino environment. It lets you write sketches using familiar Arduino functions and libraries, and run them directly on ESP8266, no external microcontroller required. ESP8266 Arduino core comes with libraries to communicate over WiFi using TCP and UDP, set up HTTP, mDNS, SSDP, and DNS servers, do OTA updates, use a file system in flash memory, work with SD cards, servos, SPI and I2C peripherals."
 
+<https://github.com/esp8266/Arduino/blob/master/doc/reference.md>  Reference
+
 At the time of writing the IDE version is 1.6.7.
 
+<https://github.com/esp8266/Arduino/blob/master/README.md>  how-to install.  
 <http://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/>
 <http://www.instructables.com/id/ESP8266-ESP-12Standalone-Blynk-101/>    
 <http://www.instructables.com/id/ESP8266-Arduino-IDE-164-Portable-Full-Quick-Instal/>    

@@ -56,6 +56,11 @@ Howver, if you use the Arduino IDE the built-in firmware is overwritten by the A
 The pin definition for the LoLin board is given [here](http://www.wemos.cc/wiki/Hardware/Pin), with additional information on the [wemos D1 here](http://www.wemos.cc/d1/Hardware).
 
 
+### ESP12
+![ESP12](images/esp12.png)
+
+Digital pins 6—11 are not shown on this diagram because they are used to connect flash memory chip on most modules. Trying to use these pins as IOs will likely cause the program to crash.
+
 ### White breakout boards
 
 http://www.electrodragon.com/product/esp8266-smd-adapter-board-wi07-12/   
