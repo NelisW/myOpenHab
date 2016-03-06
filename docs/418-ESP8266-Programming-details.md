@@ -82,6 +82,12 @@ Serial uses UART0, Serial1 uses UART1
 By default the diagnostic output from WiFi libraries is disabled when you call `Serial.begin`. To enable debug output again, call `Serial.setDebugOutput(true);`
 
 Upload via serial port:  Select “esptool” as a programmer, and pick the correct serial port. You need to put ESP8266 into bootloader mode before uploading code (pull GPIO0 low and toggle power).
+
+Serial.print is interrupt-driven, so it is "fire and forget" most of the time, unless the TX buffer overflows. When it does, it blocks hard until it gets a TX_EMPTY interrupt, then it puts more data into the buffer.
+Long story short: don't call Serial.print from interrupt, or expect that long strings will lead to a halt (and a WDT reset afterwards).
+There's ets_printf which doesn't buffer and you can use it from interrupts. It may loose some characters though.
+
+
 # Program memory
 
 The Program memory features work much the same way as on a regular Arduino; placing read only data and strings in read only memory and freeing heap for your application. The important difference is that on the ESP8266 the literal strings are not pooled. This means that the same literal string defined inside a F("") and/or PSTR("") will take up space for each instance in the code. So you will need to manage the duplicate strings yourself.
