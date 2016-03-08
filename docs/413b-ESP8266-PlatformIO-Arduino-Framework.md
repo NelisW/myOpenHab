@@ -1,1 +1,1 @@
-# ESP8266 on the PlatformIO wit the Arduino framework
+# ESP8266 on the PlatformIO with the Arduino framework
