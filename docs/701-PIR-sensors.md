@@ -37,6 +37,8 @@ The two potentiometers provide the facility to adjust the sensitivity of the dev
 
 The PIR module is supplied with 5 V, but internally works at 3.3 V.
 You can use the existing 5V pin or bypass or remove the regulator to work at 3.3 volt. See [here](http://iot-playground.com/blog/2-uncategorised/74-esp8266-wifi-pir-motion-sensor-easyiot-cloud-rest-api) for details.
+A simpler option is to connect the 3.3 V supply to one of the retrigger pins as explained in
+http://techgurka.blogspot.co.za/2013/05/cheap-pyroelectric-infrared-pir-motion.html.  The solution is to simply connect the 3.3 V supply to the H retrigger pin.
 
 ## Projects
 
