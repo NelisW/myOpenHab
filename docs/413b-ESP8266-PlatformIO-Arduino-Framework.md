@@ -37,10 +37,8 @@ For future reference, note that the Atom packages are installed into `~/.atom/pa
 
 When you install [`platformio-ide`](https://atom.io/packages/platformio-ide), it also installs `platformio-ide-terminal` and `tool-bar`.  While you are busy installing platformio, you might just as well also install these useful Atom packages:
 `git-plus`,
-`auto-detect-indentation`,
 `autocomplete-python`,
 `highlight-selected`,
-`language-ino`,
 `language-arduino`,
 `minimap`, and
 `open-recent`.

@@ -44,3 +44,11 @@ The configuration portal is of the captive variety, so on various devices it wil
 https://dzone.com/articles/its-time-develop-applications
 
 flashes two leds
+
+#ESPEasy
+
+http://sourceforge.net/projects/espeasy/?source=typ_redirect
+
+http://www.esp8266.com/viewtopic.php?f=29&t=4540
+
+http://www.esp8266.nu/forum/viewtopic.php?t=37
