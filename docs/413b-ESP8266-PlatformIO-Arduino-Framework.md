@@ -85,10 +85,16 @@ The `Serial.Print` output appears in the serial monitor, which can be opened fro
 
 PlatformIO supports OTA on the Expressif platform.
 
-https://github.com/esp8266/Arduino/blob/master/doc/ota_updates/ota_updates.md  
+https://github.com/esp8266/Arduino/tree/master/doc/ota_updates  
 
 http://docs.platformio.org/en/latest/platforms/espressif.html?highlight=ota#over-the-air-ota-update
 
 http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/
 
 https://github.com/esp8266/Arduino/blob/master/libraries/ArduinoOTA/examples/BasicOTA/BasicOTA.ino
+
+multiple ESP OTA
+
+https://esp8266hints.wordpress.com/category/arduino-ide/
+
+http://www.whatimade.today/esp8266-on-websockets-mdns-ota-and-leds/

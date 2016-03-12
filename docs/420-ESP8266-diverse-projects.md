@@ -45,10 +45,26 @@ https://dzone.com/articles/its-time-develop-applications
 
 flashes two leds
 
-#ESPEasy
+## ESPEasy
 
 http://sourceforge.net/projects/espeasy/?source=typ_redirect
 
 http://www.esp8266.com/viewtopic.php?f=29&t=4540
 
 http://www.esp8266.nu/forum/viewtopic.php?t=37
+
+http://www.whatimade.today/esp8266-on-websockets-mdns-ota-and-leds/
+
+## OTA house project
+
+http://www.whatimade.today/esp8266-on-websockets-mdns-ota-and-leds/
+
+ESP8266 - On Websockets, mdns, OTA and LEDS
+
+So what this project consists?
+
+-  An ESP8266 which controls a 7 meters, 5050 RGB 12V led strip, 60Leds/meter.
+-  The ESP8266 is connected to the house router via WiFi.
+-  The ESP8266 receives data through a websocket on port 81, which means it can be controlled from any browser/OS.
+-  It supports mdns, so no need for IP address to communicate with the ESP8266 (Partially at the moment).
+-  It supports OTA (Over-The-Air) updates - So no need to connect it to the computer to update the code.
