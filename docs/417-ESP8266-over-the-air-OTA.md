@@ -13,3 +13,8 @@ OTA may be done using:
 Arduino IDE option is intended primarily for software development phase. The two other options would be more useful after deployment, to provide module with application updates manually with a web browser or automatically using a http server.
 
 In any case first firmware upload have to be done over a serial port. If OTA routines are correctly implemented in a sketch, then all subsequent uploads may be done over the air.
+
+
+http://www.esp8266.com/viewtopic.php?f=29&t=6022
+
+http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/

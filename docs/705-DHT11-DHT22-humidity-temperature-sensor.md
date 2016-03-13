@@ -9,11 +9,11 @@ https://github.com/gonium/esp8266-dht22-sensor
 
 https://arduino-info.wikispaces.com/DHT11-Humidity-TempSensor
 
+http://labs.arduino.org/Arduino+UNO+DHT11+Temperature+and+Humidity+Sensor+Example
 
 
-Interupt-driven library
+Interrupt-driven library
 https://github.com/niesteszeck/idDHT11
-
 
 http://www.esp8266.com/viewtopic.php?f=19&t=2029
 

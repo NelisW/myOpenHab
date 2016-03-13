@@ -68,3 +68,26 @@ So what this project consists?
 -  The ESP8266 receives data through a websocket on port 81, which means it can be controlled from any browser/OS.
 -  It supports mdns, so no need for IP address to communicate with the ESP8266 (Partially at the moment).
 -  It supports OTA (Over-The-Air) updates - So no need to connect it to the computer to update the code.
+
+## iot-playground
+
+
+http://iot-playground.com/
+
+http://iot-playground.com/download
+
+http://iot-playground.com/blog/2-uncategorised/67-arduino-esp8266-ide
+
+http://iot-playground.com/blog/2-uncategorised/35-esp8266-firmware-update
+
+http://iot-playground.com/blog/2-uncategorised/15-esp8266-wifi-temperature-and-humidity-sensor
+
+http://iot-playground.com/blog/2-uncategorised/21-esp8266-wifi-air-pressure-and-weather-forecast-sensor
+
+http://iot-playground.com/blog/2-uncategorised/41-esp8266-ds18b20-temperature-sensor-arduino-ide
+
+http://iot-playground.com/blog/2-uncategorised/74-esp8266-wifi-pir-motion-sensor-easyiot-cloud-rest-api
+
+## internetofhomethings
+
+http://internetofhomethings.com/homethings/?page_id=207

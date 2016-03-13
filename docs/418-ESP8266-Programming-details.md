@@ -1,3 +1,5 @@
+
+
 # Programming details
 
 <https://github.com/esp8266/Arduino/blob/master/doc/reference.md>    
@@ -40,9 +42,40 @@ When using a GPIO as output (i.e. to drive something such as an LED) it is impor
 
 GPIO1 which is also TX is wired to the blue LED on many devices. Note that the LED is active low (conected to Vcc and sinks through the chip to ground) so setting a logical value of 0 will light it up. Since GPIO1 is also the TX pin, you won't be able to blink the LED and perform Serial communications at thew same time unless you switch TX/RX pins
 
-## Interrupts
+## Interrupts and Timers
 
 Pin interrupts are supported through attachInterrupt, detachInterrupt functions. Interrupts may be attached to any GPIO pin, except GPIO16. Standard Arduino interrupt types are supported: CHANGE, RISING, FALLING.
+
+
+http://www.switchdoc.com/2015/10/iot-esp8266-timer-tutorial-arduino-ide/
+
+
+This project describes how to obtain a steady 2 millisecond interrupt based timer to do the pulse sampling.
+The best way of doing this is to use a timer and a callback routine.
+Note that it doesn’t have to be a repeatable event.  You can schedule one-shots too in the future.
+
+There are two types of timers on the ESP8266.   There is os_timer, which is a software based interval timer and the os_timer apparently only has capacity to have seven timers set at one time.  The second type of timer is a hardware based timer, hw_timer, of which there is apparently only one.  We would suggest not to use the hw_timer, as we really don’t know or understand what the ESP8266 libraries are using it for.  You could easily screw up the WiFi, for example.   The documentation for the hw_timer is sparse, at best.  Our example below uses the os_timer.
+
+Update November 13, 2015:   We now have found out that the use of the os_timer set to a 2ms interrupt will cause the WiFi to fail.  We are investigating the cause, but right now it definitely kills the WiFi connection and will not reconnect.  Probably the use of Serial inside the
+
+Because os_timer is a software timer, based on the underlying hardware timer, it is 'Soft Real Time'.  Depending on what the rest of the operating system is doing (WiFi, PWM, etc.), it will interrupt you when triggered, but it isn’t at an exact time.  The faster interval you set for the os_timer, the more jitter you may see.
+
+
+Here are few pointers about using interrupts in the ESP8266, as well as in any Arduino based system.
+
+-  Keep your Interrupt Service Routine (ISR) short.  ISR is another name for the callback function.
+-  Do not use 'serial print' commands in an ISR.  The serial commands also use interrupts and using them can hang the processor
+-  It is good practice to disable interrupts in an ISR routine (os_intr_lock();/os_intr_unlock();) and then enable them as you leave.   We are not doing that in this routine as we are not sure what the effects would be on the underlying operating system.  Our routine is so short, it clearly doesn’t matter here.
+-  Note that the real work of the interrupt is being done in the main loop.  That can affect your timing of your servicing your interrupt.
+-  You have to put a yield() or a delay(0) in your main loop to allow the underlying operating system to do it’s work.
+-  There is a watchdog timer in the ESP8266 that will reset the processor if you keep it busy too long.  More on that in a future posting.   Put lots of yield() or delay(0) statement in your program to keep this from happening.  Note, delays with values greater than zero (delay(10) for example) are fine.
+
+
+http://tech.scargill.net/esp8266-timers/
+
+
+
+
 
 ## Analog input
 
@@ -57,6 +90,8 @@ To read VCC voltage, use ESP.getVcc() and ADC pin must be kept unconnected. Addi
 This line has to appear outside of any functions, for instance right after the #include lines of your sketch.
 
 The ADC cannot be used when the chip is transmitting. Otherwise the voltage may be inaccurate.(From Expressif datasheet CH 8.5)
+
+http://arduino.stackexchange.com/questions/17903/interrupt-on-analog-port-esp8266-w-arduino
 
 ## PWM
 
@@ -133,10 +168,18 @@ Only master mode works
 
 Library was adapted to work with ESP8266 by including register definitions into OneWire.h Note that if you have OneWire library in your Arduino/libraries folder, it will be used instead of the one that comes with the Arduino IDE (this one).
 
+## MQTT
+
+http://mqttfx.jfx4ee.org/
+
+http://www.penninkhof.com/2015/05/linking-the-esp8266-a-raspberry-pi-through-mqtt/
+
+-  PubSubClient MQTT library
+
+
 ##  Other libraries
 
 Libraries that don’t rely on low-level access to AVR registers should work well. Here are a few libraries that were verified to work:
 
--  PubSubClient MQTT library
 -  DHT11 – initialize DHT as follows: DHT dht(DHTPIN, DHTTYPE, 15);
 -  DallasTemperature

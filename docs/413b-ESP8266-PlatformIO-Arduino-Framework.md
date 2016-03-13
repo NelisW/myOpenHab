@@ -3,6 +3,7 @@
 ## PlatformIO
 
 <http://platformio.org/#!/>  
+<http://docs.platformio.org/en/latest/frameworks/arduino.html>
 
 The next generation integrated development environment for IoT.
 C/C++ Intelligent code completion and Smart code linter with Built-in Terminal and Serial Monitor.
