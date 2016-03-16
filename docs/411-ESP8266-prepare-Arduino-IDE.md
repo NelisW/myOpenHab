@@ -2,6 +2,11 @@
 
 ##Install Arduino IDE
 
+**Note** In the context of the ESP8266, the term 'Arduino IDE' can be used in two meanings: (1) the developer environment and (2) the core libraries developed for use in the development environment.
+The original Arduino core libraries were developed to program the Arduino microcontrollers, but the ESP8266 developers created an ESP8266 core library API that very strongly resembles the Arduino API.  This means that the software developed for the ESP8266 with the Arduino ESP8266 core library has very much the same look and feel as the code developed for the Arduino itself.  There obviously are differences, but the similarity in the core API is high.  The differences arise in the non-core libraries, scuh as the wifi libraries, etc.
+
+This document describes the use of the Arduino IDE software and core ESP8266 libraries to program and flash the ESP8266.  The Arduino IDE core libraries can also be used in other development environments.  One such development environment is the [platformio-ide](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).
+
 The Arduino IDE can be used to build and download ESP8266 software.  The [GitHub repo](https://github.com/esp8266/Arduino) for the project describes it as  follows: "This project brings support for ESP8266 chip to the Arduino environment. It lets you write sketches using familiar Arduino functions and libraries, and run them directly on ESP8266, no external microcontroller required. ESP8266 Arduino core comes with libraries to communicate over WiFi using TCP and UDP, set up HTTP, mDNS, SSDP, and DNS servers, do OTA updates, use a file system in flash memory, work with SD cards, servos, SPI and I2C peripherals."
 
 <https://github.com/esp8266/Arduino/blob/master/doc/reference.md>  Reference

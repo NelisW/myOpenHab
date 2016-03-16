@@ -1,5 +1,9 @@
 # ESP8266 on the PlatformIO with the Arduino framework
 
+## ESP8266 Arduino IDE core libraries
+
+The ESP8266 Arduino IDE core libraries present the same API to the user as does die Arduino libraries, but is is coded to flash ESP8266 code.  For more detail see [here](https://github.com/NelisW/myOpenHab/blob/master/docs/411-ESP8266-prepare-Arduino-IDE.md).
+
 ## PlatformIO
 
 <http://platformio.org/#!/>  
@@ -17,6 +21,12 @@ PlatformIO is written in pure Python and doesn't depend on any additional librar
 PlatformIO manual is [here](https://media.readthedocs.org/pdf/platformio/latest/platformio.pdf)
 
 PlatformIO supports the [Arduino framework](http://docs.platformio.org/en/latest/frameworks/arduino.html), so all the Arduino libraries work out the box, as if built on the Arduino IDE.
+
+http://charlottegodley.co.uk/writing-libraries-for-arduino/
+
+http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/
+
+http://blog.squix.ch/2016/01/esp8266-arduino-ide-alternative.html
 
 ## Installing
 

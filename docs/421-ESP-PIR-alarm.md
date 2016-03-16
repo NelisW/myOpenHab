@@ -20,6 +20,8 @@ The idea is to use the low-cost PIR sensors available on EBay and AliExpress for
 This text accompanies the ESP code [here](
 https://github.com/NelisW/IoTPlay/blob/master/PlatformIO-IDE/interrupt/src/main.ino)
 
+The code developed here uses the Arduino-IDE ESP8266 core libraries,  in the [platformio-ide](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).  Using the Arduino core libraries simplifies the coding considerably compared to writing code in the Expressif SDK.
+
 ## Use case
 The alarm must be deployed to cover an area outside the house, such that sustained movement in Zone 1 must trigger the alarm, movement in Zone 2 must not trigger the alarm, but movement in either of the zones must switch on the light.  
 
@@ -52,7 +54,8 @@ The purpose with this ESP8266 device and PIRs is to raise an alarm via MQTT.  Th
 alarm is serviced elsewhere on another board.  
 
 The ESP8266 uses the PubSubClient library, originally developed for the Arduino,
-then ported to the ESP8266.  
+then ported to the ESP8266.  Install PubSubClient from http://platformio.org/#!/lib.
+Download the tar file and untar into this project's lib folder.
 
 The MQTT server/broker runs on a Raspberry Pi, which also handles the alarm events
 in a larger OpenHab system.
@@ -77,3 +80,12 @@ file (the main.ino) file.
 OTA is faster than using the serial download and supports firmware deployment to
 ESP boards irrespective of where they are, provided that network access is available
 (which is a given, because the ESP8266 must be on the wifi network to do its thing).
+
+
+## Interrupts and times
+
+ESP Pin interrupts are supported through attachInterrupt(), detachInterrupt()
+functions. Interrupts may be attached to any GPIO pin except GPIO16,
+but since GPIO6-GPIO11 are typically used to interface with the flash memory ICs
+on most esp8266 modules, applying interrupts to these pins are likely to cause problems.
+Standard Arduino interrupt types are supported: CHANGE, RISING, FALLING.
