@@ -27,6 +27,53 @@ Zone 1 must have a low false alarm rate: one or more designated PIR sensors must
 
 A trigger on any PIR, or a MQTT message, must switch on the light, which must stay on for Tl seconds.
 
-## Over the Air Update (OTA)
+## Hardware
 
-OTA was implemented right from the start to free up a USB on my PC.
+The software is developed on the nodeMCU ESP8266 dev board.  This board is freely available
+on EBay and AliExpress, at a price of around USD 5-7.  The board features a USB port, power
+supply regulator and download functionality.  Just plug it into the PC USB port and it works.
+
+The PIR sensors are operated from the nodeMCU 3.3V supply.  Connect the PIR ground to nodeMCU
+ground. Connect the PIR positive supply to the 3.3 V supply to the H retrigger pin.
+
+![pir_motion_sensor_arduino.jpg](images/pir_motion_sensor_arduino.jpg)
+
+The three PIR sensors are connected to the following pins:
+
+|PIR ID | GPIO pin | nodeMCU pin|
+|---|-----|----|
+| 0 | 12  | D6 |
+| 1 | 13  | D7 |
+| 2 | 14  | D5 |
+
+## MQTT
+
+The purpose with this ESP8266 device and PIRs is to raise an alarm via MQTT.  The
+alarm is serviced elsewhere on another board.  
+
+The ESP8266 uses the PubSubClient library, originally developed for the Arduino,
+then ported to the ESP8266.  
+
+The MQTT server/broker runs on a Raspberry Pi, which also handles the alarm events
+in a larger OpenHab system.
+
+The messages are transmitted on the `alarmW/` topic and messages can be displayed
+any PC on the network by the Mosquitto client command:
+
+    mosquitto_sub -v -d -t "alarmW/+
+
+## Wireless
+
+### Fixed IP address
+I have this thing about fixed IP addresses. In this project there may be more than
+one ESP8266 device on the network and in order to do over the air (OTA) updates there
+two choices: use a fixed IP address or use mDNS to resolve IP addresses.  The
+fixed-IP-address seems simpler because all the configuration information is in one
+file (the main.ino) file.
+
+
+### Over the Air Update (OTA)
+
+OTA is faster than using the serial download and supports firmware deployment to
+ESP boards irrespective of where they are, provided that network access is available
+(which is a given, because the ESP8266 must be on the wifi network to do its thing).

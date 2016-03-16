@@ -91,3 +91,8 @@ http://iot-playground.com/blog/2-uncategorised/74-esp8266-wifi-pir-motion-sensor
 ## internetofhomethings
 
 http://internetofhomethings.com/homethings/?page_id=207
+
+
+## Weather station
+
+https://github.com/squix78/platformio-test
