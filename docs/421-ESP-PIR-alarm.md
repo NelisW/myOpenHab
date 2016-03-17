@@ -9,10 +9,11 @@ This project creates an alarm system with the following objectives:
 1. The ESP must be programmable/flashable over the air (OTA) once deployed. Completed.
 1. MQTT comms with a Raspberry Pi to escalate the alarm to an OpenHab instance. Completed.
 1. The ESP must send regular MQTT pings to confirm it is on the air. Completed.
-1. Multiple PIR sensors, with intelligent logic before triggering the alarm. Completed.
-1. Switching on a security light if any one of the PIRs is triggered.
-1. The light must remain on for a programmable time, and then switch off again.
-1. The light must switch on if an approriate MQTT command is sent to the ESP.
+1. Multiple PIR sensors, with intelligent logic before triggering the alarm. Outstanding.
+1. Switching on a security light if any one of the PIRs is triggered. Completed.
+1. The PIR triggered light must remain on for a programmable time, and then switch off again.  Completed.
+1. The light must switch on/off if an appropriate MQTT command is sent to the ESP.  Completed.
+.  The MQTT triggered light must remain on until switched off, or 3 hours, whichever occurs first.
 1. Set up the OpenHab environment to react to messages from this alarm
 
 The idea is to use the low-cost PIR sensors available on EBay and AliExpress for dollar or two.
@@ -52,6 +53,10 @@ The three PIR sensors are connected to the following pins:
 | 0 | 12  | D6 |
 | 1 | 13  | D7 |
 | 2 | 14  | D5 |
+
+## Controller concept
+
+Most events don't directly control some functionality, the events rather trigger semaphores or flags in the interrupt or timer callback routines.  The control changes take place in the `loop()` function, based on the flag settings.
 
 ## MQTT
 
