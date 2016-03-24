@@ -7,13 +7,13 @@ This project creates an alarm system with the following objectives:
 
 1. Standalone ESP8266, connected by wifi to the rest of the network. Completed.
 1. The ESP must be programmable/flashable over the air (OTA) once deployed. Completed.
-1. MQTT comms with a Raspberry Pi to escalate the alarm to an OpenHab instance. Completed.
 1. The ESP must send regular MQTT pings to confirm it is on the air. Completed.
 1. Multiple PIR sensors, with intelligent logic before triggering the alarm. Outstanding.
 1. Switching on a security light if any one of the PIRs is triggered. Completed.
 1. The PIR triggered light must remain on for a programmable time, and then switch off again.  Completed.
 1. The light must switch on/off if an appropriate MQTT command is sent to the ESP.  Completed.
-.  The MQTT triggered light must remain on until switched off, or 3 hours, whichever occurs first.
+1.  The MQTT triggered light must remain on until switched off, or 3 hours, whichever occurs first. Completed.
+1. MQTT communicate with a Raspberry Pi to escalate the alarm to an OpenHab instance.
 1. Set up the OpenHab environment to react to messages from this alarm
 
 The idea is to use the low-cost PIR sensors available on EBay and AliExpress for dollar or two.
@@ -21,7 +21,7 @@ The idea is to use the low-cost PIR sensors available on EBay and AliExpress for
 Presently a LED is switched on/off but the idea is to later switch a mains-powered LED.
 
 ## Code
-This text accompanies the ESP code [here](
+This text accompanies the ESP code [here on github](
 https://github.com/NelisW/IoTPlay/blob/master/PlatformIO-IDE/interrupt/src/main.ino)
 
 The code developed here uses the Arduino-IDE ESP8266 core libraries,  in the [platformio-ide](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).  Using the Arduino core libraries simplifies the coding considerably compared to writing code in the Expressif SDK.
@@ -38,7 +38,7 @@ The light must also be switched on and off via OpenHab.
 ## Hardware
 
 The software is developed on the nodeMCU ESP8266 dev board.  This board is freely available
-on EBay and AliExpress, at a price of around USD 5-7.  The board features a USB port, power
+on EBay and AliExpress, at a price of around USD5.  The board features a USB port, power
 supply regulator and download functionality.  Just plug it into the PC USB port and it works.
 
 The PIR sensors are operated from the nodeMCU 3.3V supply.  Connect the PIR ground to nodeMCU
@@ -58,22 +58,32 @@ The three PIR sensors are connected to the following pins:
 
 Most events don't directly control some functionality, the events rather trigger semaphores or flags in the interrupt or timer callback routines.  The control changes take place in the `loop()` function, based on the flag settings.
 
+The interrupt service routines are very small, only setting the flags, hence it returns quickly after servicing the interrupt.
+
 ## MQTT
 
 The purpose with this ESP8266 device and PIRs is to raise an alarm via MQTT.  The
-alarm is serviced elsewhere by another controller that subscribes to the alarm MQTT messages.  
+alarm events are escalated to an OpenHab system by another controller (the Raspberry Pi) that subscribes to the alarm MQTT messages.   The MQTT broker/server also runs on the same Raspberry Pi.
 
 The ESP8266 uses the PubSubClient library, originally developed for the Arduino,
 then ported to the ESP8266.  Install the PubSubClient from http://platformio.org/#!/lib.
 Download the tar file and untar into this project's lib folder (follow the platformio conventions).
 
-The MQTT broker/server runs on a Raspberry Pi, which also handles the alarm events
-in a larger OpenHab system.
-
 The messages are transmitted on the `alarmW/` topic and messages can be displayed
 any PC on the network by the Mosquitto client subscription command:
 
     mosquitto_sub -v -d -t "alarmW/+
+
+The LED can also be switched on from OpenHab, via MQTT commands to which this ESP8266 subscribes.
+
+On startup the EPS transmitts a message with payload `Hello World` on topic `alarmW/mqtttest`.
+
+The alarm heartbeat is transmitting a `1`  on the topic  `alarmW/alive` at regular intervals. If the OpenHab Raspberry Pi does not receive the regular heartbeats it means that the alarm is down and needs attention.
+
+Motion on any of the PIR sensors results in a MQTT message `1` on or more of the topics `alarmW/movement/PIR0`, `alarmW/movement/PIR1`, or `alarmW/movement/PIR2`, as appropriate.
+
+The ESP MQTT client subscribes to the topic `alarmW/control/LEDCtlOn` and of the first character of the payload is a character `1` the LED will be switched on.
+`
 
 ## Wireless
 
