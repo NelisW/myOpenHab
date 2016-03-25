@@ -36,7 +36,7 @@ http://www.smartarduino.com/esp8266-wifi-web-sever-shield-for-arduino_p94660.htm
 https://github.com/contractorwolf/ESP8266/blob/master/ESP8266.ino
 http://contractorwolf.com/esp8266-wifi-arduino-micro/
 
-###Other
+### Other
 
 http://www.instructables.com/id/ESP8266-WiFi-Shield-for-Arduino-and-other-micros
 

@@ -1,8 +1,8 @@
-#Pushover
+# Pushover
 
 [Pushover](https://pushover.net/) is a notification app for Android, IOS and other clients.  It is a relatively simple tool to set up and very simple to use.  You are allowed 7500 notifications per month on the free account.
 
-##Setting up
+## Setting up
 
 1.  [Install the app from Google Play](https://play.google.com/store/apps/details?id=net.superblock.pushover&hl=en).  The app provides a seven day free trial, after which you must but the app for USD5.  The app has built in plugins for several applications, and you can add your own plugin for your specific need.
 
@@ -11,7 +11,7 @@
 3. You can send notifications by sending an email to YourKey@api.pushover.net or by sending a notification from <https://pushover.net/>
 
 
-##Registering your mqttwarn application
+## Registering your mqttwarn application
 
 
 <https://pushover.net/apps> lists a number of existing clients.  You can also register your own app from this page.  

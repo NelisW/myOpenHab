@@ -1,4 +1,4 @@
-#Start and stop openHAB
+# Start and stop openHAB
 
 	sudo /etc/init.d/openhab start
 	sudo /etc/init.d/openhab status
@@ -7,11 +7,11 @@
 
 You have to wait a while for the stop command to execute.
 
-#Install OpenHab
+# Install OpenHab
 
 <http://www.instructables.com/id/OpenHAB-on-Raspberry-Pi>  
 <http://www.openhab.org/getting-started/index.html>  
-<https://github.com/openhab/openhab/wiki/Samples-Tricks#how-to-configure-openhab-to-start-automatically-on-linux>
+<https://github.com/openhab/openhab/wiki/Samples-Tricks# how-to-configure-openhab-to-start-automatically-on-linux>
 <http://www.homeautomationforgeeks.com/project/openhab.shtml>  
 
 Update the software packages
@@ -69,17 +69,17 @@ You should have a fully loaded demo that you can use to familiarize yourself wit
 http://10.0.0.16:8080/openhab.app?sitemap=demo
 
 	
-#openHAB to start at boot as a service
+# openHAB to start at boot as a service
 
 Create a new file in the /etc/init.d folder called "openhab" using your favourite editor
 
 	sudo nano /etc/init.d/openhab
 
 See the contents of the file here:   
-<https://github.com/openhab/openhab/wiki/Samples-Tricks#how-to-configure-openhab-to-start-automatically-on-linux>
+<https://github.com/openhab/openhab/wiki/Samples-Tricks# how-to-configure-openhab-to-start-automatically-on-linux>
 Be sure to remove leading spaces  (the hash comments must all start on the first character of the line).
 
-    #! /bin/sh
+    # ! /bin/sh
     ### BEGIN INIT INFO
     # Provides:          openhab
     # Required-Start:    $remote_fs $syslog
@@ -207,15 +207,15 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
       status)
            status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
            ;;
-      #reload|force-reload)
+      # reload|force-reload)
         #
         # If do_reload() is not implemented then leave this commented out
         # and leave 'force-reload' as an alias for 'restart'.
         #
-        #log_daemon_msg "Reloading $DESC" "$NAME"
-        #do_reload
-        #log_end_msg $?
-        #;;
+        # log_daemon_msg "Reloading $DESC" "$NAME"
+        # do_reload
+        # log_end_msg $?
+        # ;;
       restart|force-reload)
         #
         # If the "reload" option is implemented then remove the
@@ -239,7 +239,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
         esac
         ;;
       *)
-        #echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
+        # echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
         echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
         exit 3
         ;;
@@ -267,7 +267,7 @@ If you get an error that looks like this:
 	....
 	insserv: Default-Stop undefined, assuming empty stop runlevel(s) for script `openhab'	
 	
-Then you have an indentation problem. Sometimes upon pasting into your editor the text gets placed into an easy to read format which places indentations into some of the initial lines of code. Any information that is written for update-rc.d must be in first column. And there should not be any tabulation or space before the "#". If there are any remove them or you will generate that error. 
+Then you have an indentation problem. Sometimes upon pasting into your editor the text gets placed into an easy to read format which places indentations into some of the initial lines of code. Any information that is written for update-rc.d must be in first column. And there should not be any tabulation or space before the "# ". If there are any remove them or you will generate that error. 
 
 It seems that the /opt/openhab files must be in the pi group and owned by pi to load at boot. Do the following:
 

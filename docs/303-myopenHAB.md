@@ -1,8 +1,8 @@
-#my.openHAB
+# my.openHAB
 
 <https://my.openhab.org/docs>
 
-##register on my.openHAB
+## register on my.openHAB
 
 For this purpose you will need your local openHAB UUID and secret key.
 These two numbers are located in the `secret` and `uuid` files in ([see here](https://my.openhab.org/docs))
@@ -30,7 +30,7 @@ After editing restart the daemon to note the new config settings:
 
 		sudo /etc/init.d/openhab restart
 
-##Set up the Android app
+## Set up the Android app
 
 http://www.homeautomationforgeeks.com/openhab_android.shtml
 
@@ -52,7 +52,7 @@ http://www.homeautomationforgeeks.com/openhab_android.shtml
 
 7. Escape back to the app's main window.  
 
-##Notes
+## Notes
 
 After setting up the openHAB and my.openHAB you have to wait some time before the app seems to work.  One blog even mentioned a few minutes of waiting.  
 

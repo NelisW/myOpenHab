@@ -95,23 +95,23 @@ It also has pads on the underside to accept a SOT-89 3.3v voltage regulator. (In
 
 
 
-##C on the Arduino IDE
+## C on the Arduino IDE
 
 [Arduino code for ESP8266](https://github.com/esp8266/Arduino)
 
 [Introduction to nodeMCU on Arduino IDE](http://embeddedcomputing.weebly.com/nodemcu-board.html)
 
 
-###AT commands
+### AT commands
 ESP01, in it’s default configuration, boots up into the serial modem mode. In this mode you can communicate with it using a set of [AT](https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/) commands.  ESP8266 expects <CR><LF> or CarriageReturn and LineFeed at the end of each command, but just<CR> seems to work too.
 
-##Web-based ESP environments
+## Web-based ESP environments
 
 A somewhat confusing [post](http://www.instructables.com/id/ESP8266-based-web-configurable-wifi-general-purpos-1/)
 
 The [ESPEasy project](http://www.esp8266.nu/index.php/Main_Page)
 
-##Miscellaneous projects
+## Miscellaneous projects
 
 <http://horaciobouzas.com/> has a number of project posts, some of which are in the amateur radio context.  The author also sells PCBs for some of his projects.
 
@@ -121,14 +121,14 @@ The [ESPEasy project](http://www.esp8266.nu/index.php/Main_Page)
 
 [Wireless logger ESP8266 NodeMCU v1.0 with Arduino IDE](http://www.instructables.com/id/ESP8266-NodeMCU-v10-ESP12-E-with-Arduino-IDE/)
 
-##Miscellaneous hardware notes
+## Miscellaneous hardware notes
 
-###ESP-01
+### ESP-01
 [Boot modes](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process)
 
 [Setup Guide](http://rancidbacon.com/files/kiwicon8/ESP8266_WiFi_Module_Quick_Start_Guide_v_1.0.4.pdf)
 
-[Firmware upgrade](https://alselectro.wordpress.com/2015/07/28/esp8266-wifi-firmware-upgrading/#comment-1506)
+[Firmware upgrade](https://alselectro.wordpress.com/2015/07/28/esp8266-wifi-firmware-upgrading/# comment-1506)
 
 Nice series of articles:  
 
@@ -141,7 +141,7 @@ Nice series of articles:
 4. [Control from anywhere in the World–Internet of Things](https://alselectro.wordpress.com/2015/05/31/wi-fi-module-esp8266-4-control-from-anywhere-in-the-worldinternet-of-things/)
 
 
-5. [ESP8266 boot up modes](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process#esp-boot-modes)
+5. [ESP8266 boot up modes](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process# esp-boot-modes)
 
 The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
 
@@ -153,21 +153,21 @@ The Espressif code can boot in different modes, selected on power-up based on GP
 
 you do want GPIO15 pulled low on chip boot, and you want GPIO2 pulled high
 
-###ESP-12 series
+### ESP-12 series
 ESP-12 modules have metal shield with FCC logo on it. It appears these modules are FCC approved (FCC ID: 2ADUIESP-12). The modules have 16 pins and PCB antenna. Similar to ESP-07, some ESP-12 boards have GPIO 4 and 5 switched.  The newer ESP-12-E module adds 5 more half-hole (without extra hole) pins on the side. There are also two more variations of ESP-12-E module: ESP-12-D and ESP-12-Q. Probably referring to Dual and Quad SPI operations for Flash chip because ESP-12-D frees up GPIO 9 and GPIO 10 which are usually occupied for Quad mode SPI operations.
 [Getting Started with the ESP8266 ESP-12](http://www.instructables.com/id/Getting-Started-with-the-ESP8266-ESP-12/?ALLSTEPS)
 
 [ESP-12 spec](https://www.mikrocontroller.net/attachment/243558/fcc_11.pdf)
 
-###nodeMCU
+### nodeMCU
 
-The [nodeMCU](http://nodemcu.com/index_en.html#fr_54747661d775ef1a3600009e) uses the ESP-12, but provides additional hardware around the ESP-12:  
+The [nodeMCU](http://nodemcu.com/index_en.html# fr_54747661d775ef1a3600009e) uses the ESP-12, but provides additional hardware around the ESP-12:  
 
-###Olimex
+### Olimex
 [Olimex ESD8266-Dev, SDIO mode, UART mode and FLASH mode.](https://www.olimex.com/Products/IoT/MOD-WIFI-ESP8266-DEV/resources/MOD-WIFI-ESP8266-DEV_jumper_reference.pdf)
 
 
-##Operational modes
+## Operational modes
 
 ESP8266 WIFI module can operate in three modes:
 
@@ -180,7 +180,7 @@ ESP8266 WIFI module can operate in three modes:
 Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
 
 
-##Hardware issues and instability.
+## Hardware issues and instability.
 
 [There appears to be]](http://internetofhomethings.com/homethings/?p=605) a mixup with pin wiring GPOI4 and GPIO5 pins are interchanged on early ESP12 boards
 
@@ -202,7 +202,7 @@ https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_fla
 http://bbs.espressif.com/viewtopic.php?t=1078  
 
 
-##Diverse Projects
+## Diverse Projects
 
 <http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
 

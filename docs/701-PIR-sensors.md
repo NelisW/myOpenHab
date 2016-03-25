@@ -116,7 +116,7 @@ Python code with multiple sensors:
 <http://tigermountainsprings.net/wp/index.php/6-pir-infrared-sensors-and-the-coop/>
 
 
-    #!/usr/bin/python
+    # !/usr/bin/python
     #
     -*- coding: utf-8 -*-
     from multiprocessing  import Process

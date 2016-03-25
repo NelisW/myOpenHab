@@ -1,4 +1,4 @@
-#HC-SR04 Ultrasonic Sensor
+# HC-SR04 Ultrasonic Sensor
 
 http://uglyduck.ath.cx/ep/archive/2014/01/Making_a_better_HC_SR04_Echo_Locator.html
 

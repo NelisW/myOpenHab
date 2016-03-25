@@ -1,4 +1,4 @@
-#lua on RPi
+# lua on RPi
 
 https://bigdanzblog.wordpress.com/2015/04/16/installing-lua-on-raspberry-pi-and-getting-it-running/
 
@@ -29,7 +29,7 @@ Now create a simple test program such as this helloworld:
 
 	rpi/lua:vi helloworld
 
-	#!/usr/bin/lua
+	# !/usr/bin/lua
 
 	print ('hello world')
 

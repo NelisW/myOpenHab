@@ -1,12 +1,12 @@
-#1-Wire on RPi
+# 1-Wire on RPi
 
-##1-Wire overview
+## 1-Wire overview
 
 <http://www.maximintegrated.com/en/app-notes/index.mvp/id/1796>
 
 The basis of 1-Wire technology is a serial protocol using a single data line plus ground reference for communication. A 1-Wire master initiates and controls the communication with one or more 1-Wire slave devices on the 1-Wire bus). Each 1-Wire slave device has a unique, unalterable, factory-programmed, 64-bit ID (identification number), which serves as device address on the 1-Wire bus. 1-Wire devices can be connected in parallel on s single bus, they co-exist quite well without interfering with each other.
 
-##Installing 1-Wire drivers
+## Installing 1-Wire drivers
 
 <http://pi-io.com/how-to/173-2/>  
 <http://devicehive.com/samples/python-and-raspberry-pi-temperature-sensor>

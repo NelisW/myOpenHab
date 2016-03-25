@@ -30,9 +30,9 @@ The following procedure works in the platformio environment.
 In the main source file make the following includes:
 
     // start OTA block
-    #include <ESP8266mDNS.h>
-    #include <WiFiUdp.h>
-    #include <ArduinoOTA.h>
+    # include <ESP8266mDNS.h>
+    # include <WiFiUdp.h>
+    # include <ArduinoOTA.h>
     // end OTA block
 
 In setup() include the following, after the `wifi.begin();wifi.config();` statements:

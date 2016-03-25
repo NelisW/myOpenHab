@@ -1,12 +1,12 @@
-#Blinking a LED via openHAB
+# Blinking a LED via openHAB
 
-##Purpose
+## Purpose
 
 The purpose with this experiment is to switch a LED on and off via openHAB. We are using mqtt to communicate between openHAB, the RPi and the LED controller. This means that the LED controller can be any device on the network that is reachable via mqtt: just use the appropriate topic for the specific controller.  
 
 In this experiment the LED control happens to be on the RPi, but it can easily be moved to an ESP8266 or any other station on the network. This change is as simple as an edit to change the mqtt topic.
 
-##Prerequisites
+## Prerequisites
 
 You must have the following functionality on the RPi:
 
@@ -16,13 +16,13 @@ You must have the following functionality on the RPi:
 1. Registration on the myopenHAB  server in order to use a smart phone app for control.
 1. The RPi must have the python libraries `RPi.GPIO` and `paho.mqtt`
 
-##Hardware
+## Hardware
 
 Wire the LED and current limiting resistor to pin 19.  This pin will be used to switch the LED on and off.
 
 Wire pin 13 to read the voltage on pin 19. The idea is that the LED state can be read at any time to determine if it is switched on.
 
-##Software
+## Software
 
 The code here is based on the examples given in the []Python mqtt library](https://pypi.python.org/pypi/paho-mqtt).  The code is well documented and should be easy to follow.
 
@@ -34,23 +34,23 @@ In the `on_message` function do everything that needs to be done during the oper
 
 The Python code running on the RPI is as follows:
 
-    #!/usr/bin/env python
+    # !/usr/bin/env python
 
     import paho.mqtt.client as mqtt
     import RPi.GPIO as GPIO
     from time import sleep
 
 
-    #define some pin numbers
+    # define some pin numbers
     pinLedSw = 19
     pinLedRd = 13
 
-    #we have to clean up to reset pin definitions
+    # we have to clean up to reset pin definitions
     GPIO.cleanup()
 
-    #set the software to use the Broadcom numbers
+    # set the software to use the Broadcom numbers
     GPIO.setmode(GPIO.BCM)
-    #set up the  pins definitions
+    # set up the  pins definitions
     GPIO.setup(pinLedSw,GPIO.OUT)
     GPIO.setup(pinLedRd,GPIO.IN)
 
@@ -101,7 +101,7 @@ The Python code running on the RPI is as follows:
 Start the script as a     
     
     
-##openHAB
+## openHAB
 On the other side of the mqtt channel we must have a publisher providing the LED switch commands and a subscriber listening to follow the LED status.  This functionality is running in openHAB.
 
 The openHAB sitemap file for this experiment is as follows (just ignore the temperature content):

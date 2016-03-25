@@ -1,13 +1,13 @@
-#IO on the RPi
+# IO on the RPi
 
-##RPi pins-python-2818/
+## RPi pins-python-2818/
 [gadgetoid](http://pi.gadgetoid.com/pinout/pin8_gpio14) has a very nice web site explaining the IO pins on the RPi.
 
- ##The GPIO  library
+## The GPIO  library
 
 The GPIO library provides Python access to set and read the input/output pin on the Raspberry.
 
-##Installing the GPIO  library
+## Installing the GPIO  library
 
 [Installing GPIO](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-gpio)
 
@@ -19,7 +19,7 @@ The RPi.GPIO library uses access to /dev/mem which requires root. So, to run you
 
     sudo python myscrpt.py
 
-##Using GPIO
+## Using GPIO
 
 [GPIO pins tutorial](http://makezine.com/projects/tutorial-raspberry-pi-gpio-pins-and-python/)
 
@@ -35,7 +35,7 @@ The RPi.GPIO library uses access to /dev/mem which requires root. So, to run you
 
 
 ------------------------------------------------------------------------
-##C / C++
+## C / C++
 
 http://visualgdb.com/tutorials/raspberry/  Developing a Raspberry PI app with Visual Studio
 http://visualgdb.com/tutorials/raspberry/LED/
@@ -46,7 +46,7 @@ http://abyz.co.uk/rpi/pigpio/index.html
 -----------------------------------------------------------------
 
 
-##install wiringPi and its Python binding
+## install wiringPi and its Python binding
 
 __Don't execute the installation in this section, not required__
 

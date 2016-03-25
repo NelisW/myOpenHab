@@ -6,7 +6,7 @@ The ESP8266 Arduino IDE core libraries present the same API to the user as does 
 
 ## PlatformIO
 
-<http://platformio.org/#!/>  
+<http://platformio.org/# !/>  
 <http://docs.platformio.org/en/latest/frameworks/arduino.html>
 
 The next generation integrated development environment for IoT.
@@ -14,7 +14,7 @@ C/C++ Intelligent code completion and Smart code linter with Built-in Terminal a
 
 Rapid Embedded Development, Continuous and IDE integration in a few steps with PlatformIO thanks to built-in project generator for the most popular embedded boards and IDE.
 
-Hundreds Popular Libraries are organized into [single Web 2.0 platform](http://platformio.org/#!/lib): list by categories, keywords, authors, compatible platforms and frameworks; learn via examples; be up-to-date with the latest version.
+Hundreds Popular Libraries are organized into [single Web 2.0 platform](http://platformio.org/# !/lib): list by categories, keywords, authors, compatible platforms and frameworks; learn via examples; be up-to-date with the latest version.
 
 PlatformIO is written in pure Python and doesn't depend on any additional libraries/tools from an operation system. It allows you to use PlatformIO beginning from PC and ending with credit-card sized computers
 
@@ -30,7 +30,7 @@ http://blog.squix.ch/2016/01/esp8266-arduino-ide-alternative.html
 
 ## Installing
 
-There are several different options to install and use PlatformIO: as a commandline tool, as a package in Atom or integrated into your own favourite IDE.  See the install website:  http://platformio.org/#!/get-started
+There are several different options to install and use PlatformIO: as a commandline tool, as a package in Atom or integrated into your own favourite IDE.  See the install website:  http://platformio.org/# !/get-started
 
 PlatformIO by itself is a Python-based library manager and project builder.  The core commandline (CLI)functionality can be installed like any other PYthon package:
 
@@ -40,7 +40,7 @@ There are two [Atom](https://atom.io/)-based installation options:
 [PlatformIO-IDE](https://atom.io/packages/platformio-ide)
 and
 [Platomformio](https://atom.io/packages/platomformio).  I installed the
-[PlatformIO-IDE](https://atom.io/packages/platformio-ide) which is part of the [PlatformIO offering](http://platformio.org/#!/platformio-ide). See the [documentation](http://docs.platformio.org/en/latest/ide/atom.html).
+[PlatformIO-IDE](https://atom.io/packages/platformio-ide) which is part of the [PlatformIO offering](http://platformio.org/# !/platformio-ide). See the [documentation](http://docs.platformio.org/en/latest/ide/atom.html).
 
 The general Atom manual is [here (PDF)](http://orm-atlas2-prod.s3.amazonaws.com/pdf/9af84cd12b0be2cc97b3951aee5bf949.pdf) and [here (online)](https://atom.io/docs/latest/).
 For future reference, note that the Atom packages are installed into `~/.atom/packages`.  New packages are installed from the Atom menu `Packages/Settings View/Install packages/themes`.  You can also copy the package files manually to this directory.
@@ -58,7 +58,7 @@ After PlatformIO-IDE package in Atom, it adds a new menu (PlatformIO) and a tool
 
 ## Arduino and local libraries
 
-<http://docs.platformio.org/en/latest/ide/atom.html#atom-ide-quickstart>  
+<http://docs.platformio.org/en/latest/ide/atom.html# atom-ide-quickstart>  
 <http://docs.platformio.org/en/latest/quickstart.html>  
 
 After a fresh install the appropriate libraries must still be downloaded.  On the `PlatformIO` menu entry, select `Initialize new PlatformIO project...`.  Select the framework you want to use and then select the board you want to use.  When clicking `Initialize` it may take a while to download the files required for the framework and the board.
@@ -71,7 +71,7 @@ The new project is set up in a new directory (according to your choosing).
 
 The directory structure is shown above, explained as follows:
 
--  Project Configuration File [`platformio.ini`](http://docs.platformio.org/en/latest/projectconf.html#projectconf). This file defines the target hardware. Example entry:
+-  Project Configuration File [`platformio.ini`](http://docs.platformio.org/en/latest/projectconf.html# projectconf). This file defines the target hardware. Example entry:
 
         [env:esp12e]
         platform = espressif
@@ -98,7 +98,7 @@ PlatformIO supports OTA on the Expressif platform.
 
 https://github.com/esp8266/Arduino/tree/master/doc/ota_updates  
 
-http://docs.platformio.org/en/latest/platforms/espressif.html?highlight=ota#over-the-air-ota-update
+http://docs.platformio.org/en/latest/platforms/espressif.html?highlight=ota# over-the-air-ota-update
 
 http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/
 

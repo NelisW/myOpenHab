@@ -1,4 +1,4 @@
-#openHAB
+# openHAB
 
 more detail to follow
 

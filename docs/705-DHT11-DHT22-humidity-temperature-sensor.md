@@ -1,4 +1,4 @@
-#DHT11/DHT22 Humidity and Temperature Sensor
+# DHT11/DHT22 Humidity and Temperature Sensor
 
 
 https://learn.adafruit.com/dht?view=all

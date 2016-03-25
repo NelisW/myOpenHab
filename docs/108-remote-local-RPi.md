@@ -1,10 +1,10 @@
-#Setting up the Raspberry Pi Remote Access
+# Setting up the Raspberry Pi Remote Access
 
 If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
 
 
 
-##Terminal access
+## Terminal access
 
 To follow
 
@@ -56,7 +56,7 @@ You can also make a shell script to start the server
 
 and enter the text
 
-	#!/bin/sh
+	# !/bin/sh
 	vncserver :0 -geometry 1920x1080 -depth 24 -dpi 96
 
 Make the file executable:
@@ -77,7 +77,7 @@ Look for the IP address on the wlanx line next to inet addr: something like `10.
 When you enter the ip address on a vncviewer, you have to enter the server and screen number. 
 For example 192.xxx.x.x and then enter :1 or :2 etc. to indicate the screen number. 
 
-##Set up the RPi to start the VNC server on boot-up
+## Set up the RPi to start the VNC server on boot-up
 
 	sudo raspi-config
 
@@ -122,7 +122,7 @@ Create a new file `vncboot` with the following script:
 	# Description: Start VNC Server at boot time.
 	### END INIT INFO
 	
-	#! /bin/sh
+	# ! /bin/sh
 	# /etc/init.d/vncboot
 	
 	USER=pi
@@ -133,7 +133,7 @@ Create a new file `vncboot` with the following script:
 	case "$1" in
 	 start)
 	  echo "Starting VNC Server"
-	  #Insert your favoured settings for a VNC session
+	  # Insert your favoured settings for a VNC session
 	  su - pi -c "/usr/bin/vncserver :0 -geometry 1280x800 -depth 16 -pixelformat rgb565"
 	  ;;
 	

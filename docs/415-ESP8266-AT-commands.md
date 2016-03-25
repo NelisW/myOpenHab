@@ -1,6 +1,6 @@
-#nodeMCU with its native tools
+# nodeMCU with its native tools
 
-##Introduction
+## Introduction
 
 The [nodeMCU](nodemcu.com/index_en.html) is the primary source of information.  nodeMCU is pre-loaded on the nodeMCU dev boards, but you can also [flash it on an ESP01](http://randomnerdtutorials.com/esp8266-web-server/).
 
@@ -8,32 +8,32 @@ nodeMCU's main attraction appears to be the availability of [lua on ESP8266](htt
 
 NodeMCU is a firmware that allows you to program the ESP8266 modules with LUA script. And you’ll find it very similar to the way you program your Arduino. With just a few lines of code you can establish a WiFi connection, control the ESP8266 GPIOs, turning your ESP8266 into a web server and a lot more.
 
-##LUA
+## LUA
 [Lua quick reference](https://gist.github.com/tylerneylon/5853042)  
 
 
-##Flashing nodeMCU to the ESP01
+## Flashing nodeMCU to the ESP01
 
 This article focuses mostly on using the nodeMCU dev boards, but you can flash the nodeMCU software to an ESP01 and achieve the same effect as using the dev board.  Note, however that the ESP01 has limited memory and this may limit you to smaller projects.  [Flashing noceMCU firmware on the ESP8266 using Windows](http://randomnerdtutorials.com/flashing-nodemcu-firmware-on-the-esp8266-using-windows/) provides instructions.
 
 
-##Integrated Development Environments
+## Integrated Development Environments
 
 1. [ESPlorer](http://esp8266.ru/esplorer/), the essential multiplatforms tools for any ESP8266 developer from luatool author’s, including a LUA for NodeMCU and MicroPython. Also, all AT commands are supported.  [Download binaries (big blue button)](esp8266.ru) or see [Github repo](https://github.com/4refr0nt/ESPlorer). See [here for instructions for installing on Linux](http://www.digitalsyncretism.com/blog/esplorer-tool/). The use of ESPlorer is well documented in [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf) and [Home Automation Using ESP8266](http://randomnerdtutorials.com/home-automation-using-esp8266/) both written by Rui Santos.
 
-2. The [LuaLoader](http://benlo.com/esp8266/index.html#LuaLoader)  is a Windows program for uploading files to the ESP8266 and working with the Lua serial interface. See also [here](http://benlo.com/esp8266/esp8266QuickStart.html)
+2. The [LuaLoader](http://benlo.com/esp8266/index.html# LuaLoader)  is a Windows program for uploading files to the ESP8266 and working with the Lua serial interface. See also [here](http://benlo.com/esp8266/esp8266QuickStart.html)
 
 3. The [LoLin IDE](http://www.wemos.cc/wiki/Tutorial/IDE) provides basic but reasonably complete support for working with the board.  There appears to be a connection between the [wemos D1](http://www.wemos.cc/d1/Main_Page) and the Lolin, but the details are not clear.  
 The LoLin [firmware can be upgraded](http://www.wemos.cc/wiki/Tutorial/UpgradeFirmware).
 
-##ESPlorer with LoLin
+## ESPlorer with LoLin
 
 This section serves to capture my work with ESPlorer on the LoLin board.  I purchased Rui Santos' book [Home Automation Using ESP8266](http://randomnerdtutorials.com/home-automation-using-esp8266/) and I will first start working through this book.
 
 The LoLin can run from the computer's USB supply only, no external power supply required.  It has a 3.3 V voltage-down regulator that provides the 3.3 V for the ESP.  Presumably the nodeMCU V3 (LoLin) and the nodeMCU V1 pin definitions are the same: 
 ![''](images/NODEMCU_DEVKIT_V1.0_PINMAP.png)
 
-###Starting up and connecting to the nodeMCU
+### Starting up and connecting to the nodeMCU
 
 Follow the instructions in [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf):
 1. Install the USB-to-serial driver for the UART chip (CH340 if a LoLin board is used!).
@@ -46,7 +46,7 @@ Follow the instructions in [Getting Started With The ESPlorer IDE](http://esp826
   -  click on the connect button.
   ![''](images/ESPlorerConnect.png)
 
-###Filenames and file management
+### Filenames and file management
 
 nodeMCU has an elementary file system that allows us to download and run lua files on the ESP. Many different scripts and files can be uploaded and run when appropriate.
 
@@ -60,7 +60,7 @@ The bottom of the right side has drop-down menu with a number of commonly used c
 
 ![''](images/ESPlorerReset.png)
 
-###Wireless setup
+### Wireless setup
 If the ESP is set up as [access point](https://en.wikipedia.org/wiki/Wireless_access_point) (allows other wifi devices to connect to a network) remember to set up a password to prevent unauthorised access.  In most cases the ESP will be set up as a station, meaning that it is only a client and does not connect to other networks.
 
 My WLAN already has an access point and the ESP8266 must be set up in station mode.  Put the following commands in the init.lua file (replace with your own network SSID/name and password (WEP/WPA/etc.):
@@ -73,11 +73,11 @@ My WLAN already has an access point and the ESP8266 must be set up in station mo
 	print(wifi.sta.getip())
 	print(wifi.sta.getmac())
 
-See the [API](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en) or [API](http://www.nodemcu.com/docs/wifi-sta-module/#wifi-sta-module-wifi-sta-getmac) for more detail on these functions.  The first line sets the wifi in station mode.  The second line passes the wireless router's SSID and password to the router to request access. Wait for a short while before testing the status, the wifi connection protocol takes some time. The remaining three lines prints the status, IP address and MAC address of the ESP8266 wifi station. A status of 5 means that an IP address has been granted.
+See the [API](https://github.com/nodemcu/nodemcu-firmware/wiki/nodemcu_api_en) or [API](http://www.nodemcu.com/docs/wifi-sta-module/# wifi-sta-module-wifi-sta-getmac) for more detail on these functions.  The first line sets the wifi in station mode.  The second line passes the wireless router's SSID and password to the router to request access. Wait for a short while before testing the status, the wifi connection protocol takes some time. The remaining three lines prints the status, IP address and MAC address of the ESP8266 wifi station. A status of 5 means that an IP address has been granted.
 
 The init.lua file above just waits for a fixed time period before proceeding.  A better way would be to test the IP address in a loop, see [here](https://primalcortex.wordpress.com/2014/12/30/esp8266-nodemcu-and-lua-language-and-some-arduino-issues/).
 
-###GPIO pins
+### GPIO pins
 
 From <https://github.com/nodemcu/nodemcu-firmware/blob/master/README.md>
 
@@ -113,7 +113,7 @@ From <https://github.com/nodemcu/nodemcu-firmware/blob/master/README.md>
 </table>
 #### [*] D0(GPIO16) can only be used as gpio read/write. no interrupt supported. no pwm/i2c/ow supported.
 
-###LED Flasher
+### LED Flasher
 
 Experiment with Rui's guidance from the [Getting Started With The ESPlorer IDE](http://esp8266.ru/download/esp8266-doc/Getting%20Started%20with%20the%20ESPlorer%20IDE%20-%20Rui%20Santos.pdf).  Power to the nodeMCU is from the USB port (provided the PC can supply sufficient current) - there is no need for an external power supply.
 
@@ -155,14 +155,14 @@ The code is reasonably self-explanatory, except perhaps the timer code.  The [AP
 
 So it seems that this code uses timer 1, with a 2 second interval, repeating and it then executes the function embodied in the call (sometimes called a lambda function in other languages).
 
-###ESP8266 Web Server controlling LEDs.
+### ESP8266 Web Server controlling LEDs.
 
 This is another one of  Rui Santos' great [examples](http://randomnerdtutorials.com/esp8266-web-server/) tutorials.   He shows us how to create a standalone web server with an ESP8266 that can toggle two LEDs.  The circuit diagram is as shown before for the LED flasher. The code 
 
 
 
 
-##Diverse Projects
+## Diverse Projects
 
 These are really links I stumbled on just want so save them for later study.
 

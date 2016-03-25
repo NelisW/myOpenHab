@@ -1,6 +1,6 @@
-#Setting up mail
+# Setting up mail
 
-##Install mail sending capability using gmail as a server
+## Install mail sending capability using gmail as a server
 
 This was a hit-and-miss process. In the end I installed both ssmtp and exim4.
 
@@ -15,13 +15,13 @@ https://www.google.com/settings/security/lesssecureapps
 The procedure used here is taken from:  
 <http://www.sbprojects.com/projects/raspberrypi/exim4.php>
 
-###ssmtp
+### ssmtp
 
 The ssmtp package is used to transport your mails to your provider, i.e. an MTA.
 Install ssmtp
 
 	sudo apt-get install ssmtp mailutils mpack
-	#sudo apt-get install heirloom-mailx
+	# sudo apt-get install heirloom-mailx
 
 Now edit the file `/etc/ssmtp/ssmtp.conf` as root 
 
@@ -34,7 +34,7 @@ and add the next lines. Please note that some of the lines already exist and may
 	hostname=ENTER YOUR RPI'S HOST NAME HERE
 	AuthUser=YOU@gmail.com
 	AuthPass=PASSWORD
-	#useTLS=Yes
+	# useTLS=Yes
 	useSTARTTLS=YES
 	
 You can obtain the hostname by opening a terminal and typing the command `hostname`.
@@ -43,7 +43,7 @@ Replace YOU with your gmail login name and PASSWORD with your gmail password.
 After this you're done. You don't even have to restart the SSMTP server (in fact, there is none).
 
 
-###exim4
+### exim4
 
 Install and configure
 
@@ -93,7 +93,7 @@ Update and restart exim4
 	sudo update-exim4.conf
 	sudo /etc/init.d/exim4 restart
 
-###Setting aliases
+### Setting aliases
 
 Some processes, for instance crontabs, can send mails to root or other system users. If you don't want to miss any of them you can setup some aliases. You can do that by editing the file /etc/aliases. 
 
@@ -124,7 +124,7 @@ The `change finger` command will setup a new linux finger name (this is like a n
 	sudo chfn -f "myfinger(nick)name" pi
 
 
-###Testing
+### Testing
 
 Test from the command line with one of these commands: 
 
@@ -137,7 +137,7 @@ Test from the command line with one of these commands:
 	
 The `-v` flag in the `sendmail` command activates the verbose mode: you can use this for debugging.    It seems that only the root user can use `sendmail`
 
-###Additional reading on setting up email
+### Additional reading on setting up email
 
 smtp and exim4:   
 [Prepare Your Pi To Send Mail Through Gmail](http://www.sbprojects.com/projects/raspberrypi/exim4.php)  
@@ -161,7 +161,7 @@ Sending mail from the command line:
 
 Sending mail from Python:   
 http://trevorappleton.blogspot.co.uk/2014/11/sending-email-using-python.html  
-http://rosettacode.org/wiki/Send_an_email#Python  
+http://rosettacode.org/wiki/Send_an_email# Python  
 https://www.raspberrypi.org/forums/viewtopic.php?f=32&t=94023  
 
 

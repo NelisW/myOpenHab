@@ -1,6 +1,6 @@
-#ESP8266 on Windows 7 with Arduino IDE
+# ESP8266 on Windows 7 with Arduino IDE
 
-##Install Arduino IDE
+## Install Arduino IDE
 
 **Note** In the context of the ESP8266, the term 'Arduino IDE' can be used in two meanings: (1) the developer environment and (2) the core libraries developed for use in the development environment.
 The original Arduino core libraries were developed to program the Arduino microcontrollers, but the ESP8266 developers created an ESP8266 core library API that very strongly resembles the Arduino API.  This means that the software developed for the ESP8266 with the Arduino ESP8266 core library has very much the same look and feel as the code developed for the Arduino itself.  There obviously are differences, but the similarity in the core API is high.  The differences arise in the non-core libraries, scuh as the wifi libraries, etc.
@@ -46,20 +46,20 @@ At the time of writing the IDE version is 1.6.7.
 
   ![''](images/arduino-ide-install-8266.png)
 
-5. Install the ESP8266 File System IDE tool, as described [here](https://github.com/esp8266/Arduino/blob/esp8266/hardware/esp8266com/esp8266/doc/reference.md#uploading-files-to-file-system).  This tool is used to upload files to the ESP flash file system.
+5. Install the ESP8266 File System IDE tool, as described [here](https://github.com/esp8266/Arduino/blob/esp8266/hardware/esp8266com/esp8266/doc/reference.md# uploading-files-to-file-system).  This tool is used to upload files to the ESP flash file system.
 
 6. If you have the [nodeMCU V3.0 lolin](http://www.wemos.cc/d1/Getting_Started) ESP8266 board
 -  Paste the link <https://github.com/wemos/WeMos_Boards/raw/master/package_wemos.cc_index.json> in the *Additional boards manager URLs*.  You can add multiple URLs, separating them with commas.
 -  Navigate to *Tools > Board* and then click on *Board Manager...*. A new dialog box will open. Scroll down to the WeMos WiFi entry, click on it and click *Install*.  The board and example information should now appear in the menus (might be called 'D1').
 
-##Setting up the comms config
+## Setting up the comms config
 
 Once the board has been selected, you can set up the communication parameters for connecting the IDE with the ESP8266.  The example below shows how to set the serial download speed.
 
   ![''](images/arduino-ide-setup-8266.png)
 
 
-##Installing libraries
+## Installing libraries
 
 <https://www.arduino.cc/en/guide/libraries>
 
@@ -84,7 +84,7 @@ Once the board has been selected, you can set up the communication parameters fo
 
 ---------------------------------------------------------
 ---------------------------------------------------------
-##Example software
+## Example software
 
 There is some example code [here](https://github.com/adafruit/Adafruit_ESP8266).
 

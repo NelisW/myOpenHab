@@ -1,6 +1,6 @@
-#Introduction to RPi
+# Introduction to RPi
 
-##Adafruit's RPi Lessons
+## Adafruit's RPi Lessons
 Some of these lessons are relevant to home automation, such as setting up the RPi (first few lessons), and then the sensing lessions (Lessons 11 to 13).
 
 <https://learn.adafruit.com/adafruit-raspberry-pi-lesson-1-preparing-and-sd-card-for-your-raspberry-pi>  

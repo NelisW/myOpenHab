@@ -1,4 +1,4 @@
-#MQTT in lua
+# MQTT in lua
 
 
 <http://www.nodemcu.com/docs/mqtt-module/>
@@ -170,7 +170,7 @@ to topic "/lwt" if client don't send keepalive packet. Returns nil.
 How to reconnect when the connection is lost.
 
 
-##DS18B20 with MQTT and Lua
+## DS18B20 with MQTT and Lua
 
 <http://www.esp8266.com/viewtopic.php?f=19&t=3418>
 <https://github.com/beckdac/esp8266_lua_mqtt_ds18b60>

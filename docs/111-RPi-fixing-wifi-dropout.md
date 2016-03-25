@@ -1,8 +1,8 @@
-#Fixing wifi dropout on the RPi
+# Fixing wifi dropout on the RPi
 
 details to follow
 
-https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/test-and-configure#fixing-wifi-dropout-issues
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/test-and-configure# fixing-wifi-dropout-issues
 
 http://weworkweplay.com/play/rebooting-the-raspberry-pi-when-it-loses-wireless-connection-wifi/
 

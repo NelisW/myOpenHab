@@ -66,7 +66,7 @@ The purpose with this ESP8266 device and PIRs is to raise an alarm via MQTT.  Th
 alarm events are escalated to an OpenHab system by another controller (the Raspberry Pi) that subscribes to the alarm MQTT messages.   The MQTT broker/server also runs on the same Raspberry Pi.
 
 The ESP8266 uses the PubSubClient library, originally developed for the Arduino,
-then ported to the ESP8266.  Install the PubSubClient from http://platformio.org/#!/lib.
+then ported to the ESP8266.  Install the PubSubClient from http://platformio.org/# !/lib.
 Download the tar file and untar into this project's lib folder (follow the platformio conventions).
 
 The messages are transmitted on the `alarmW/` topic and messages can be displayed

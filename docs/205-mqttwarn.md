@@ -1,4 +1,4 @@
-#mqttwarn on RPi
+# mqttwarn on RPi
 
 <https://github.com/jpmens/mqttwarn>   
 <http://jpmens.net/2014/02/17/introducing-mqttwarn-a-pluggable-mqtt-notifier/>  
@@ -11,10 +11,10 @@ Notifications are sent to targets. A target is a combination of a service (e.g. 
 
 mqttwarn will also attempt to decode incoming messages from JSON. If that succeeds, you can transform the message before it's sent out. 
 
-##Instaling mqttwarn
+## Instaling mqttwarn
 
 Go right to the end of the readme.md file on the github repo  
-<https://github.com/jpmens/mqttwarn#installation> 
+<https://github.com/jpmens/mqttwarn# installation> 
 
 You'll need at least the following components:
 
@@ -28,19 +28,19 @@ Installation
 
 	git clone https://github.com/jpmens/mqttwarn.git
 	
-2. Copy mqttwarn.ini.sample to mqttwarn.ini and edit to your taste. A good start is to use the ini file shown at <https://github.com/jpmens/mqttwarn#getting-started>
+2. Copy mqttwarn.ini.sample to mqttwarn.ini and edit to your taste. A good start is to use the ini file shown at <https://github.com/jpmens/mqttwarn# getting-started>
 
 3. Install the prerequisite Python modules for the services you want to use
 
 4. Launch mqttwarn.py. JPM recommends you use [Supervisord](http://supervisord.org/) for running the script.  For starters just open a terminal and run `./mqttwarn.py`
 
-5. Proceed to test the installation as described in <https://github.com/jpmens/mqttwarn#getting-started>.  
+5. Proceed to test the installation as described in <https://github.com/jpmens/mqttwarn# getting-started>.  
 
 6. Look at <http://jpmens.net/2014/04/03/how-do-your-servers-talk-to-you/> and see if you can get the smtp and pushover services working.
 Setting up Pushover is outlined in the file `22-pushover-notification.md`.
 
 
-##mqttwarn ini file
+## mqttwarn ini file
 
 The ini file sets up mqttwarn to define the appropriate actions on mqtt events.
 

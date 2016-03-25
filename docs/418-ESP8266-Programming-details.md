@@ -87,7 +87,7 @@ To read VCC voltage, use ESP.getVcc() and ADC pin must be kept unconnected. Addi
 
     ADC_MODE(ADC_VCC);
 
-This line has to appear outside of any functions, for instance right after the #include lines of your sketch.
+This line has to appear outside of any functions, for instance right after the # include lines of your sketch.
 
 The ADC cannot be used when the chip is transmitting. Otherwise the voltage may be inaccurate.(From Expressif datasheet CH 8.5)
 

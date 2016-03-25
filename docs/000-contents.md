@@ -1,4 +1,4 @@
-#Roadmap
+# Roadmap
 
 This document serves as an overview to the home automation design described on this website.  
 In completing my system I tried to document the process along the way (mainly as reference for myself, but also to assist others).  In some areas the documentation may be more complete and in other areas less so.  
@@ -8,7 +8,7 @@ The system is relatively complex, comprising many different technologies and sof
 The Internet is exceedingly successful in making information available, and what you see here is not new, just repackaged.  The Internet is however exceedingly weak in configuration and quality control.  In a dynamically changing environment most of the information on the Internet is old and to some extent not fully relevant.  You need to filter and evaluate before accepting Internet-based information.  This set of documents is an attempt to bring together the current information (August 2015).  The  information contained here is also subject to time expiry, it is at best a current snapshot.
 
 
-##Overview
+## Overview
 
 This repository serves to document my work in building my home automation system using readily available tools and technologies.  There are several well documented examples on the web but, as you probably also experienced, none of these are quite complete in the sense of what I wanted to do.  You would also find these notes lacking, for the same reason.
 
@@ -18,7 +18,7 @@ When I started on this project I had a reasonably good idea of what I wanted, bu
 
 A non-trivial home automation system has considerable  complexity.  There are communication protocols, control software, user-interface software and much more.  The design choices we make shifts the complexity around between the parts, but the sum total complexity remains the same.  Retrospectively, it became evident that our decision to use MQTT/openHAB/supervisor and associated libraries, simplified our communication protocols and coding (simple messages along specific topics), but it increased the complexity of infrastructure in terms of libraries and tools.  Someone else might decide that the overhead of installing and maintaining the infrastructure is too complex and go for a low footprint option; but that would require more coding and more complex messages during implementation. In the end, the effort is the same.
 
-##Design options
+## Design options
 
 ![blockdiagram01.svg](images/blockdiagram01.svg)
 
@@ -61,7 +61,7 @@ The communication options for the local area network between the devices and the
 
 If there are many software offerings, there are even more hardware products.  Open source or DIY approaches could use Raspberry Pi's, Arduinos, ESP266, PIC, and numerous other cards.  We choose the ESP8266 as the main client controller because it provides a reasonably powerful microcontroller and a wifi interface at a reasonable price.
 
-##File structure
+## File structure
 
 The series of files in the `docs` directory of this repo serve to capture my experiences, actions and insights.  The files are not all in the same state of completion, some just contain links to web sites.
 

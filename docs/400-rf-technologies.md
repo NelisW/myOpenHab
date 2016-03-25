@@ -1,4 +1,4 @@
-#RF communications technologies
+# RF communications technologies
 
 
 
@@ -11,15 +11,15 @@ http://www.instructables.com/id/RF-315433-MHz-Transmitter-receiver-Module-and-Ar
 
 http://randomnerdtutorials.com/nrf24l01-2-4ghz-rf-transceiver-module-with-arduino/
 
-##ESP8266
+## ESP8266
 
-##RF69
+## RF69
 
 <http://www.hoperf.com/rf/fsk_module/RFM69HCW.htm>  
 <https://hallard.me/bp-ulpnode/>  
 <http://lowpowerlab.com/blog/2013/06/20/rfm69-library/>  
 
-##RF24
+## RF24
 
 <https://arduino-info.wikispaces.com/Nrf24L01-2.4GHz-HowTo>  
 <http://www.homeautomationforgeeks.com/project/rf24software.shtml>  

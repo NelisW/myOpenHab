@@ -1,4 +1,4 @@
-#WiPy 
+# WiPy 
 
 The WiPy is a good fit for a large number of embedded applications. It has up to 24 GPIO pins available, UARTs, SPI, I2C, SD card, and I2S interfaces, WDT, RTC, 32 bit timers with PWM, a 12 bit ADC, and of course, a state of the art WiFi network processor. Besides that, the board packs 3v3 ultra low noise regulator output, which you can use to power lots of external accessories. In general the WiPy is made for WiFi connected applications (IoT), and if low power is a must, then the WiPy is the way to go.
 

@@ -1,7 +1,7 @@
-#Quick Start
+# Quick Start
 
 
-##Design overview
+## Design overview
 ![blockdiagram01.svg](images/concept-diagram.svg)
 
 The design employs decentralised hardware units: comprising a server and a number of loose standing local nodes, on 801.11 wifi wireless or 1-wire networks.  We used an 802.11 wifi network, but in principle other wireless protocols could also be used.  Using wireless has a number of benefits: no wires, simplified communication and ease in reconfiguration.  The wifi access point is a regular ADSL router (connected to the internet), whereas the local stations are wifi stations. In situations where wiring can be be used the 1-wire network is convenient because of the greatly simplified network (only three wires) and laser-labelled devices with unique IDs.
@@ -16,7 +16,7 @@ The 1-wire protocol supports an (almost) unlimited number of devices on a simple
 
 The integration of all these functions into a powerful home automation system is made possible by the powerful openHAB project. The openHAB server runs locally on the the RPi, but can also communicate  to the myopenHAB cloud service (with Android and IoS apps). 
 
-##Implementation steps
+## Implementation steps
 
 This is more or less our experimentation sequence. At present there is not much hardware work, this will follow when the hardware arrives.
 

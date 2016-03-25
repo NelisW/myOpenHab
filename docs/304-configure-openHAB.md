@@ -1,6 +1,6 @@
-#Configuring the openHAB runtime
+# Configuring the openHAB runtime
 
-##Users and passwords
+## Users and passwords
 
 The openHAB usernames and passwords are stored in the file 
 `/opt/openhab/configurations/users.cfg`.  The entries in this file must be of the format
@@ -10,7 +10,7 @@ The openHAB usernames and passwords are stored in the file
 ignore the test beyond the comma in the example entry, it is not yet implemented.
 
 
-##Configure MQTT
+## Configure MQTT
 
 <http://www.homeautomationforgeeks.com/project/openhab.shtml>
 
@@ -30,7 +30,7 @@ You may also decide to set the last-will-and-testament .lwt to send a final mess
 Also add these lines immediately after the line where you set lwt.  
 <http://www.element14.com/community/community/design-challenges/forget-me-not/blog/2014/09/17/fmnxx-mqtt--the-language-of-iot>  
 <http://jpmens.net/2014/01/14/a-story-of-home-automation/>  
-<https://groups.google.com/forum/#!topic/openhab/mkthISbmmvU>  
+<https://groups.google.com/forum/# !topic/openhab/mkthISbmmvU>  
 
     mqtt-eventbus:broker=mymosquitto
     mqtt-eventbus:commandPublishTopic=/home/out/${item}/command
@@ -42,7 +42,7 @@ After editing restart the daemon to note the new config settings:
 
 Save and exit the file.
 
-##Notes on configuring openHAB
+## Notes on configuring openHAB
 
 Read these pages:
 <https://github.com/openhab/openhab/wiki/Configuring-the-openHAB-runtime>  
@@ -55,7 +55,7 @@ The global configuration is done in the `openhab.cfg` file.  Changes made to thi
 
 The most common global configuration changes are to activate specific bindings by uncommenting the appropriate lines, e.g., as when the MQTT binding was activated above in this file.
 
-##Item definitions
+## Item definitions
 
 Item files are stored in `/opt/openhab/configurations/items`.
 Although items can be dynamically added, it is most common to statically define most of the items.  These static definition files follow a prescribed syntax.
@@ -96,7 +96,7 @@ That last two lines are where we tell OpenHAB about our temperature sensor and L
 
 - [{bindingconfig}]: {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling OpenHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
 
-##Sitemap definitions
+## Sitemap definitions
 
 Sitemap files are stored in `/opt/openhab/configurations/sitemaps`.
 Sitemaps are used to define the user interface hierarchy - like a map of your home.
@@ -116,7 +116,7 @@ Add the following text
             }
     }	
 
-##Test the simple demo
+## Test the simple demo
 
 Send a temperature value  with this mqtt publish command
 
@@ -139,7 +139,7 @@ Now, if the On or Off switch on the light entry in the Android app is touched, t
 
 
 
-##Other files
+## Other files
 
 Rule files are stored in `/opt/openhab/configurations/rules`. Rules provide flexible logic to openHAB for automation which can also use scripts(macros) using related events and actions.
 Script files are stored in `/opt/openhab/configurations/scripts`.
@@ -149,9 +149,9 @@ Persistences can store item states over a time (a time series).
 
 
 
-#todo this later:
+# todo this later:
 
-##Security
+## Security
 
 Documentation of openHAB's security features
 Introduction
@@ -183,7 +183,7 @@ By default the command line references the file <openhabhome>/etc/login.conf whi
 
 The default configuration for login credentials for openHAB is the file <openhabhome>/configuration/users.cfg. In this file, you can put a simple list of "user=pwd" pairs, which will then be used for the authentication. Note that you could optionally add roles after a comma, but there is currently no support for different roles in openHAB.
 
-##More information
+## More information
 
 
 https://github.com/openhab/openhab/wiki/Explanation-of-Items

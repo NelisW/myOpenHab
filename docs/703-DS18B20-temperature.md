@@ -47,7 +47,7 @@ https://github.com/iot-playground/Arduino/blob/master/ESP8266ArduinoIDE/DS18B20_
 
 This program reads all DS18B20 devices on the bus and prints the temperatures to the screen, as well as publishes the temperatures on MQTT.
 
-    #!/usr/bin/env python
+    # !/usr/bin/env python
     # -*- coding: utf8 -*-
 
     import os
@@ -65,17 +65,17 @@ This program reads all DS18B20 devices on the bus and prints the temperatures to
     """
 
     # load the 1-wire interface driver, unless already loaded during boot
-    #ideally it must be done at boot, commented out here
-    #os.system('modprobe w1-gpio')
-    #adds temperature support
-    #os.system('modprobe w1-therm')
+    # ideally it must be done at boot, commented out here
+    # os.system('modprobe w1-gpio')
+    # adds temperature support
+    # os.system('modprobe w1-therm')
 
 
-    #set up the path to device and get list of all devices
+    # set up the path to device and get list of all devices
     base_dir = '/sys/bus/w1/devices/'
     device_folders = glob.glob(base_dir + '28*')
 
-    #print(device_folders)
+    # print(device_folders)
 
     def read_temp_raw(device):
         f = open(device + '/w1_slave', 'r')
@@ -103,28 +103,28 @@ This program reads all DS18B20 devices on the bus and prints the temperatures to
     while True:
         dicmeasure = read_temp(device_folders)
 
-        #for i,key in enumerate(dicmeasure):
-            #print('{}: {} {:.1f} C'.format(key,dicmeasure[key][0], dicmeasure[key][1]))
+        # for i,key in enumerate(dicmeasure):
+            # print('{}: {} {:.1f} C'.format(key,dicmeasure[key][0], dicmeasure[key][1]))
 
         # RPi CPU temperature
         tempCPU = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
-        #print('CPU temperature {} '.format(tempCPU))
+        # print('CPU temperature {} '.format(tempCPU))
 
-        #publish regular status meassages to openHAB via mqtt
+        # publish regular status meassages to openHAB via mqtt
         os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(dicmeasure['28-000004d0250c'][1]))
         os.system("mosquitto_pub -t 'home/study/CPUTemperature' -m '{}'".format(tempCPU))
 
-        #publish mqtt warnings when the CPU temperature rises above some threshold
-        #the message can be used to trigger a pushover and/or email notification
+        # publish mqtt warnings when the CPU temperature rises above some threshold
+        # the message can be used to trigger a pushover and/or email notification
         thresholdTempCPU = 40.
         if tempCPU > thresholdTempCPU:
             now = datetime.datetime.now()
-            #this warning must only be issued between 0600 and 2200
+            # this warning must only be issued between 0600 and 2200
             if now.hour > 6 and now.hour < 22:
-                #get day of year to ensure only one warning per day
+                # get day of year to ensure only one warning per day
                 lastDay = (lastTime.year - 2000) * 356 + lastTime.timetuple().tm_yday
                 nowDay = (now.year - 2000) * 356 + now.timetuple().tm_yday
-                #this warning must only be issued once per day
+                # this warning must only be issued once per day
                 if nowDay > lastDay:
                     os.system("mosquitto_pub -t 'pushover/warnCPU' -m 'CPU temperature is {} C'".format(tempCPU))			
                     lastTime = now

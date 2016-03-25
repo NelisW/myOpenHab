@@ -1,4 +1,4 @@
-#Using Blynk natively on ESP8266 with Arduino IDE
+# Using Blynk natively on ESP8266 with Arduino IDE
 
 <http://www.blynk.cc/>
 
@@ -10,7 +10,7 @@
 
 
 
-##node-red for blynk
+## node-red for blynk
 
 http://nodered.org/  
 

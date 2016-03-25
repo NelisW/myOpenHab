@@ -1,4 +1,4 @@
-#MQTT in C
+# MQTT in C
 
 http://www.eclipse.org/paho/files/mqttdoc/Cclient/
 

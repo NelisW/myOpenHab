@@ -1,4 +1,4 @@
-#supervisord
+# supervisord
 
 `supervisor` is a service system that allows its users to monitor and control a number of processes on UNIX-like operating systems. Supervisor launches programs, monitors them for failure, logs their output, and restarts them.
 
@@ -6,12 +6,12 @@
 
 There is also another method to this: [systemd](https://learn.adafruit.com/running-programs-automatically-on-your-tiny-computer/systemd-writing-and-enabling-a-service)
 
-##Install supervisord
+## Install supervisord
 
 <http://jpmens.net/2014/02/13/in-my-toolbox-supervisord/>  
 <http://supervisord.org/>
 
-###Installing supervisor
+### Installing supervisor
 
 <https://serversforhackers.com/monitoring-processes-with-supervisord>
 
@@ -105,7 +105,7 @@ see the status:
 
 	sudo supervisorctl status
 
-##Preparing files for execution in `supervisor`
+## Preparing files for execution in `supervisor`
 
 `supervisor` requires the file to be executable.  Scripts (Bash, Python or Perl scripts) can be made e(x)ecutable by (a)ll users, with  the following command
 
@@ -113,8 +113,8 @@ see the status:
 
 <https://en.wikipedia.org/wiki/Shebang_%28Unix%29>
 
-`#!` at the beginning of a script is called shebang. Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead.  Often the `#!` is followed by `/usr/bin/env` to introduce a level of indirection, followed by the desired command with or without full path, as in  `#!/usr/bin/env python`; which will start up the Python interpreter and then process the rest of the file in the Python interpreter.  You need to add this first line to all scripts to be run under `supervisor` (or from the command line):
+`# !` at the beginning of a script is called shebang. Under Unix-like operating systems, when a script with a shebang is run as a program, the program loader parses the rest of the script's initial line as an interpreter directive; the specified interpreter program is run instead.  Often the `# !` is followed by `/usr/bin/env` to introduce a level of indirection, followed by the desired command with or without full path, as in  `# !/usr/bin/env python`; which will start up the Python interpreter and then process the rest of the file in the Python interpreter.  You need to add this first line to all scripts to be run under `supervisor` (or from the command line):
 
-    #!/usr/bin/env python
+    # !/usr/bin/env python
 
 There is one catch however, if the file is created in Windows, the line ending is not Linux (RPi) friendly.  This means that the operating system is looking for something like `python\r`, which is not recognised in Linux.  I tried converting the file from Windows to Linux format by using the `fromdos` command, but that did not help.  Opening and closing the file in `nano` did not help either.  The only remedy was to (1) open the file in `nano` move to the top of the file, (2) manually type in the whole first line followed by `Enter` a few times, making very sure that a new line ending is introduced, and (3) then remove the old line with the bad line ending.

@@ -1,10 +1,10 @@
-#Access via weaved
+# Access via weaved
 
 [Weaved](https://www.weaved.com) is a powerful cloud for IoT devices. It has an API and support for Raspberry Pi for web access and an iOS push notification app (it seems there is no Android app as yet).  <http://www.weaved.com/in-action/weaved-iot-kit>
 
 Ypi can access the cloud service via SSH (port 22), via HTTP (port 80), via VNC (port 5901) or you can even write your own TCP service.
 
-##Installing
+## Installing
 
 Create an account on weaved.
 
@@ -20,7 +20,7 @@ On your RPi install the weaved software
 
 Depending on the services you want select the `weavedssh22` service and/or select the `web` option. Use names that you can identify the type of service.  You can install more than one service.
 
-##Using weaved
+## Using weaved
 
 https://developer.weaved.com/portal/login.php
 
@@ -31,7 +31,7 @@ Login to https://developer.weaved.com/portal/login.php and select the SSH servic
 
 
 
-###Web (http) on port 80
+### Web (http) on port 80
 
 This option is pre-configured for port 80, but don’t worry, all Weaved based connections are secure even if not using SSL. The free iOS app also includes a built in web browser, so you can use that to connect as well.
 
