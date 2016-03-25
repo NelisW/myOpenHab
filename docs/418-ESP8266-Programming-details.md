@@ -54,12 +54,14 @@ This project describes how to obtain a steady 2 millisecond interrupt based time
 The best way of doing this is to use a timer and a callback routine.
 Note that it doesn’t have to be a repeatable event.  You can schedule one-shots too in the future.
 
-There are two types of timers on the ESP8266.   There is os_timer, which is a software based interval timer and the os_timer apparently only has capacity to have seven timers set at one time.  The second type of timer is a hardware based timer, hw_timer, of which there is apparently only one.  We would suggest not to use the hw_timer, as we really don’t know or understand what the ESP8266 libraries are using it for.  You could easily screw up the WiFi, for example.   The documentation for the hw_timer is sparse, at best.  Our example below uses the os_timer.
+There are two types of timers on the ESP8266.   There is os_timer, which is a software based interval timer.  The second type of timer is a hardware based timer, hw_timer, of which there is apparently only one.  We would suggest not to use the hw_timer, as we really don’t know or understand what the ESP8266 libraries are using it for.  You could easily screw up the WiFi, for example.   The documentation for the hw_timer is sparse, at best.  Our example below uses the os_timer.
 
-Update November 13, 2015:   We now have found out that the use of the os_timer set to a 2ms interrupt will cause the WiFi to fail.  We are investigating the cause, but right now it definitely kills the WiFi connection and will not reconnect.  Probably the use of Serial inside the
 
+The os_timers are supported from the [Expressif SDK](https://github.com/espressif/ESP8266_RTOS_SDK/blob/master/include/espressif/esp_timer.h).
 Because os_timer is a software timer, based on the underlying hardware timer, it is 'Soft Real Time'.  Depending on what the rest of the operating system is doing (WiFi, PWM, etc.), it will interrupt you when triggered, but it isn’t at an exact time.  The faster interval you set for the os_timer, the more jitter you may see.
-
+There is no clarity on how many os_times the ESP can support --- some blogs claim that the os_timer apparently only has capacity to have seven timers set at one time.
+[Other blogs](http://cholla.mmto.org/esp8266/sdk/timers.html) claim differently.
+Not all the SDK source are freely available, the only implementation I could find is [alternative implementation](https://gitlab.com/Phrobs/esp8266-frankenstein/blob/master/src/esp_timer.c), but this is not the true SDK code.
 
 Here are few pointers about using interrupts in the ESP8266, as well as in any Arduino based system.
 
@@ -70,10 +72,15 @@ Here are few pointers about using interrupts in the ESP8266, as well as in any A
 -  You have to put a yield() or a delay(0) in your main loop to allow the underlying operating system to do it’s work.
 -  There is a watchdog timer in the ESP8266 that will reset the processor if you keep it busy too long.  More on that in a future posting.   Put lots of yield() or delay(0) statement in your program to keep this from happening.  Note, delays with values greater than zero (delay(10) for example) are fine.
 
-
 http://tech.scargill.net/esp8266-timers/
 
+Here is [some advice](http://cholla.mmto.org/esp8266/sdk/timers.html) on the use of os_timers:
 
+1.There are "sloppy" timers like these and also hardware timers.
+1. You need to disarm the timer before setting it up.
+1. You don't initialize or allocate a timer, you just start with an empty structure and have at it.
+1. The timer structure cannot be a stack variable, it needs to persist after user_init() (or whatever) exits.
+1. setting the Wifi mode to null avoids lots of useless messages.
 
 
 
@@ -183,3 +190,36 @@ Libraries that don’t rely on low-level access to AVR registers should work wel
 
 -  DHT11 – initialize DHT as follows: DHT dht(DHTPIN, DHTTYPE, 15);
 -  DallasTemperature
+
+
+## Clock time
+
+You can run clock time on the ESP, include `time.h` as follows:
+
+    #include <time.h>
+
+    void synchroniseLocalTime()
+    {
+        //get the current wall clock time from time servers
+        //we are not overly concerned with the real time,
+        //just do it as init values.
+        if (WiFi.status() == WL_CONNECTED)
+        {
+            //my timezone is 2 hours ahead of GMT
+            configTime(2 * 3600, 0, "pool.ntp.org", "time.nist.gov");
+            while (!time(nullptr))
+                {
+                  delay(1000);
+                }
+            time_t now = time(nullptr);
+            publishMQTT("alarmW/timesynchronised", ctime(&now));
+        }
+    }
+
+    //around midday sync with the NTP server
+    time_t now = time(nullptr);
+    struct tm* p_tm = localtime(&now);
+    if (p_tm->tm_hour==12 && p_tm->tm_min==0 && p_tm->tm_sec<6)
+    {
+        synchroniseLocalTime();
+    }

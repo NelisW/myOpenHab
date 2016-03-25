@@ -14,7 +14,7 @@ The sensors/controllers can employ any required controller technology, provided 
 
 The 1-wire protocol supports an (almost) unlimited number of devices on a simple bus comprising three wires.  Each 1-wire device has a unique 64-bit ID allowing the software to address each device separately.  The protocol is relatively slow, but for IoT and home automation purposes is adequate.  The DC18B20 thermometer is well known and features prominently in RPi and Arduino tutorials. There is also the DS2413 which is a 2-pin IO switch/sensor, which is ideal to switch on/monitor lights.  Unfortunately there is little information on libraries for the DS2413 in the Arduino and RPi forums.
 
-The integration of all these functions into a powerful home automation system is made possible by the powerful openHAB project. The openHAB server runs locally on the the RPi, but can also communicate  to the myopenHAB cloud service (with Android and IoS apps). 
+The integration of all these functions into a powerful home automation system is made possible by the powerful openHAB project. The openHAB server runs locally on the the RPi, but can also communicate  to the myopenHAB cloud service (with Android and IoS apps).
 
 ## Implementation steps
 
@@ -32,8 +32,12 @@ This is more or less our experimentation sequence. At present there is not much 
 1. Install openHAB and register a used on myopenHAB.
 1. Configure the openHAB sitemap and items files to display the temperature
 1. Set up and integrate the DS18B20 code, mqttwarn and the openHAB files to work with a web (Andriod) app.
-1. Install GPIO for RPi to gain access to the IO pins on the the 
+1. Install GPIO for RPi to gain access to the IO pins on the the
 1. Build a simple LED blinker and control this with mqtt from mosquitto_pub from a terminal.
+
+## security
+
+https://www.openhomeautomation.net/how-to-keep-hackers-out-of-your-smart-home/
 
 
 The rest is still under construction.

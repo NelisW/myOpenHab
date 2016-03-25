@@ -27,13 +27,19 @@ https://github.com/NelisW/IoTPlay/blob/master/PlatformIO-IDE/interrupt/src/main.
 The code developed here uses the Arduino-IDE ESP8266 core libraries,  in the [platformio-ide](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).  Using the Arduino core libraries simplifies the coding considerably compared to writing code in the Expressif SDK.
 
 ## Use case
-The alarm must be deployed to cover an area outside the house, such that sustained movement in Zone 1 must trigger the alarm, movement in Zone 2 must not trigger the alarm, but movement in either of the zones must switch on the light.  
+The alarm must be deployed to cover an area outside the house, such that sustained movement in Zone 1 must trigger the alarm, movement in Zone 2 must not trigger the alarm, but movement in either of the zones must switch on the light for `LEDPIRTimeOn` seconds.
 
-Zone 1 must have a low false alarm rate: one or more designated PIR sensors must trigger within Tsim seconds of each other, at least N times in a Twin second period.  The Twin period is a running window that must keep track of alarms in the most recent Twin seconds. Tsim, Twin and N must be software programmable.
+Zone 1 must have a low false alarm rate: one or more designated PIR sensors must trigger while another PIR pulse is still high,
+at least `numFAsamples` times in a `timFAsamples` second period. In other words at least two PIR sensor trigger pulses must be on simultaneously.  The pulse duration must be adjusted on the PIR hardware potentiometer to the required time.  The `timFAsamples` period is a running window that must keep track of `numFAsamples` alarms in the most recent `timFAsamples` seconds.  
 
-A trigger on any PIR, or a MQTT message, must switch on the light, which must stay on for Tl seconds.
+The light must switch on for `LEDPIRTimeOn` seconds, on a trigger on any PIR, or receipt of a MQTT message from OpenHab to which the alarm is subscribed.
 
-The light must also be switched on and off via OpenHab.
+The first alarm implementation must give alarm if PIR0 and PIR1 trigger simultaneously, but any of PIR0, PIR1, or PIR2 must switch on a light.
+
+The second alarm implementation must give alarm if any two PIRs trigger simultaneously, but any of PIR0, PIR1, or PIR2 must switch on a light.
+
+If OpenHab sends the alarm a signal to switch on the light, it must be for `LEDCtlTimeOn` seconds or until it is commanded to switch off again.
+
 
 ## Hardware
 
@@ -53,6 +59,13 @@ The three PIR sensors are connected to the following pins:
 | 0 | 12  | D6 |
 | 1 | 13  | D7 |
 | 2 | 14  | D5 |
+
+![pir-wiring.png](images/pir-wiring.png)
+
+Set the jumper to single trigger to cause the PIR to create a new pulse every time new movement is detected.  The interrupt triggers on the rising edge of the PIR output. The duration of the pulse is important because at least two PIRs must trigger within this duration period.  The pulse must not be too long, because too long a pulse may prevent the detection of repeated movement because the sensor is essentially blind during this pulse. Use the 'Time delay adjust' potentiometer on the board and move it all the way to the anti-clockwise limit (shortest pulse). The shortest delay on my PIRs were around three seconds, which is about right for the simultaneous trigger requirement.
+
+The sensitivity setting adjusts the operating range of the sensor.  More sensitive means longer range.  Play around to find the values that suits you.
+
 
 ## Controller concept
 
@@ -76,11 +89,11 @@ any PC on the network by the Mosquitto client subscription command:
 
 The LED can also be switched on from OpenHab, via MQTT commands to which this ESP8266 subscribes.
 
-On startup the EPS transmitts a message with payload `Hello World` on topic `alarmW/mqtttest`.
+On startup the EPS transmitts a message with payload `Hello World` on topic `alarmW/alive`.
 
 The alarm heartbeat is transmitting a `1`  on the topic  `alarmW/alive` at regular intervals. If the OpenHab Raspberry Pi does not receive the regular heartbeats it means that the alarm is down and needs attention.
 
-Motion on any of the PIR sensors results in a MQTT message `1` on or more of the topics `alarmW/movement/PIR0`, `alarmW/movement/PIR1`, or `alarmW/movement/PIR2`, as appropriate.
+Motion on any of the PIR sensors results in a MQTT message on the `alarmW/movement/PIR` topc with the payload indicating which PIRs are currently triggered.  A star `*` in the payload indicates that an alarm condition is raised.
 
 The ESP MQTT client subscribes to the topic `alarmW/control/LEDCtlOn` and of the first character of the payload is a character `1` the LED will be switched on.
 `
@@ -104,7 +117,13 @@ ESP boards irrespective of where they are, provided that network access is avail
 
 The code describes how to program the OTA functionality.
 
-## Interrupts and times
+## Wall clock time
+
+The ESP has a wall clock that is synchronised daily at noon with an internet NTP server.
+
+The code describes how to program the wall clock functionality.
+
+## Interrupts and timers
 
 ESP Pin interrupts are supported through attachInterrupt(), detachInterrupt()
 functions. Interrupts may be attached to any GPIO pin except GPIO16,
@@ -117,3 +136,8 @@ In this code the three PIRs each has its own interrupt service routine, because 
 The alive-ping signal is provided by a timer that triggers another interrupt service routine every few seconds.
 
 Very little work is done in the interrupt service routines. These routines simply set flags for processing later in the `loop()` function phase of execution.  When action is taken in the `loop()` function, the flags are reset. This approach ensures stable interrupt operation.
+
+The PIR trigger events are handled as follows:
+
+1. A Flag `PIRxOccured` is used to flag the `PIRx_ISR()` interrupt. There are three flags and three interrupt service routines.  The flags are set in the ISR and reset in `loop()`, i.e., they do not stay set for very long.
+1. In `loop()` if any `PIRxOccured` is set (true) it is reset, the LEDTimer is started and a MQTT message is published.
