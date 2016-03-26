@@ -56,6 +56,8 @@ When you install [`platformio-ide`](https://atom.io/packages/platformio-ide), it
 
 After PlatformIO-IDE package in Atom, it adds a new menu (PlatformIO) and a toolbar.  You can switch off the toolbar in the menu.
 
+
+
 ## Arduino and local libraries
 
 <http://docs.platformio.org/en/latest/ide/atom.html# atom-ide-quickstart>  
@@ -79,8 +81,29 @@ The directory structure is shown above, explained as follows:
         board = esp12e
 
 -  `src` directory where you should place source code (`*.h, *.c, *.cpp, *.S, *.ino,` etc.).  Your project code comes here.
--  `lib` directory can be used for the project specific (private) libraries. This means that dedicated libraries can be used.  The directory and file structure details are located in `lib/readme.txt` file.  In the example directory shown above the `PubSubClient` library is used as a local library (it is not part of the Arduino framework libraries).
+-  `lib` directory can be used for the project specific (private) libraries. This means that dedicated libraries can be used.  The directory and file structure details are located in `lib/readme.txt` file.  In the example directory shown above the `PubSubClient` library was downloaded as a project-specific local library (note that is is available in the platformio library set, and should rather be installed from there).
 -  Miscellaneous files for CVS and Continuous Integration support.
+
+## Installing platformio libraries
+
+Some libraries are not in the preloaded set and must be downloaded when required.
+Open `http://platformio.org/lib` and search for the required library. For example look for the DallasTemperature or BMP085 libraries.
+It will open a new page with a list of all possible libraries (in the examples below only one DallasTemperature library but many BMP085 libraries are found).  Click on the name of the specific library you want to install.
+
+![platformio-library01a.png](images/platformio-library01a.png)
+
+![platformio-library01.png](images/platformio-library01.png)
+
+This should take you to the download page.
+
+![platformio-library02.png](images/platformio-library02.png)
+
+Notice down the bottom of the page there are instructions how to download.  You can either click the download button (bottom right) and do a regular download, or do a commandline install (see the line at the bottom left).  The easiest method is to work in an environment with no proxies (and disable your PC IE proxy) and then type the following at the command line to load the DallasTemperature library (which is number 54):
+
+    platformio lib install 54
+
+This will install both the  DallasTemperature library and its dependency, the OneWire library.  The libraries will be installed in the general platformio library folders `%USER%\ezwill\.platformio\lib`, not in a project folder.
+
 
 ## Building and downloading
 
@@ -94,18 +117,5 @@ The `Serial.Print` output appears in the serial monitor, which can be opened fro
 
 ## ESP8266 over the air (OTA) updates
 
-PlatformIO supports OTA on the Expressif platform.
-
-https://github.com/esp8266/Arduino/tree/master/doc/ota_updates  
-
-http://docs.platformio.org/en/latest/platforms/espressif.html?highlight=ota# over-the-air-ota-update
-
-http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/
-
-https://github.com/esp8266/Arduino/blob/master/libraries/ArduinoOTA/examples/BasicOTA/BasicOTA.ino
-
-multiple ESP OTA
-
-https://esp8266hints.wordpress.com/category/arduino-ide/
-
-http://www.whatimade.today/esp8266-on-websockets-mdns-ota-and-leds/
+PlatformIO supports OTA on the Expressif platform.  It appears intimidating at first look, but actually is quite simple.
+For more details see here: <https://github.com/NelisW/myOpenHab/blob/master/docs/417-ESP8266-over-the-air-OTA.md>

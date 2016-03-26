@@ -26,7 +26,7 @@ There is a good [technical overview  here](https://nurdspace.nl/ESP8266).
 ### Introduction
 A brief [introduction](http://embeddedcomputing.weebly.com/nodemcu-board.html) states: "The NodeMCU board is based on an ESP8266-12 but features a built-in serial over USB interface and other amenities like 2 buttons and 2 LEDs.  The board can be programmed using the Wiring / Arduino framework as the other ESP8266 boards.  It features more available GPIOs, of which
 -  9 digital GPIOs operating at 3,3V
-- one analog GPIO, albeit limited to 1,8 V.
+- one analog GPIO, albeit limited to 1.8 V (note that there is a voltage divider on the input pin.)
 
 The [nodeMCU](nodemcu.com/index_en.html) is an open source development, with V1 documented (here)[https://github.com/nodemcu/nodemcu-devkit-v1.0]
 
@@ -192,6 +192,8 @@ Power supply issues:
 2.  Put a large electrolytic capacitor on the power supply near the ESP, recommended values range from 10 uF to 470 uF depending on where you read.
 
 3. Put a decoupling capacitor across the Vcc to Gnd pins, within 10 mm from the pins. Recommended values are 100 nF.
+
+![ESP_improved_stability.png](images/ESP_improved_stability.png)
 
 See the following websites:  
 http://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf  

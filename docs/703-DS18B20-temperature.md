@@ -7,7 +7,23 @@
 <https://www.modmypi.com/blog/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi>
 <http://www.astounding.org.uk/ian/raspi-1wire/>
 
+## DS18B20 not working
 
+Some users have difficulty getting the DS18B20 to work on the ESP8266.  A common complaint is that the temperatures are out of range at 85C, 100 C, 127C or -127C.  Digging in to Arduino Core  `DallasTemperature.h` revealed this:
+
+    #define DEVICE_DISCONNECTED_C -127
+    #define DEVICE_DISCONNECTED_F -196.6
+    #define DEVICE_DISCONNECTED_RAW -7040
+
+Also looking into the DS18B20 datasheet is is clear that 85C is the preloaded temperatures in the sensor, prior to any measurement execution.  So if you do read these values do some hardware fault finding.  
+
+Check the power supply, perhaps don't use a parasitic supply. If you have long leads, place capacitors across the DS18B20 device power pins to keep some local charge in supply.
+Keep the leads to multiple devices in a ring topology rather than a star topology.
+
+I could not get the library going on my ESP12e GPIO pin 15 (D8 on my nodemcu), so I moved it to GPIO pin 3 (D9 on nodeMCU) and it worked well.
+
+
+## Raspberry Pi
 
 Install the 1-Wire gpio and therm drivers as described here   
 <https://github.com/NelisW/myOpenHab/blob/master/docs/021-1wire-RPi.md>  
@@ -35,11 +51,6 @@ The first line confirms that the cyclic redundancy check passed (data is trustwo
 
 By default the device measures with 12 bits resolution, or 0.0625 deg C per least significant bit.
 The hex values shown are the values returned from the device itself.  The first byte `74` is the least significant byte and the second byte `01` is the most significant byte. Convert the number to decimal and multiply with 0.0625 to get the temperature.  `0174` is 372, 372*0.062.5=23.25.
-
-## C example (Arduino IDE)
-
-This example writes the output to Serial:  
-https://github.com/iot-playground/Arduino/blob/master/ESP8266ArduinoIDE/DS18B20_temperature_sensor/DS18B20_temperature_sensor.ino
 
 
 
@@ -145,6 +156,21 @@ Create a file with the following contents (assuming the file is located at  `/ho
     user = pi
 
  and save the file to `/etc/supervisor/conf.d/mqttPubDS18B20.conf`  and manage the file execution henceforth with supervisord, as explained in `007-Supervisord.md`.
+
+## C example (Arduino IDE)
+
+ This example writes the output to Serial:  
+ https://github.com/iot-playground/Arduino/blob/master/ESP8266ArduinoIDE/DS18B20_temperature_sensor/DS18B20_temperature_sensor.ino
+
+## C on platformio
+
+Install the DallasTemperature library from <http://platformio.org/lib/show/54/DallasTemperature>.  
+The easiest method is to work in an environment with no proxies (and set your PC to no proxy) and then type the following at the command line:
+
+    platformio lib install 54
+
+This will install both the  DallasTemperature library and its dependency, the OneWire library.  The libraries will be installed in the general platformio library folders (`%USER%\.platformio\lib`), not in your project folders.
+
 
 ## lua ESP8266 example
 

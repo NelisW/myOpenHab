@@ -76,7 +76,7 @@ this will tell platformio to use the wifi to upload to the specified IP address.
 In my case I hardcoded the IP address (not using DCHP and mDNS).
 Uncomment the line in platformio.ini to disable OTA and use USB.
 
-To hardcode the IP address do the following (replace with your own local IP, local gateway and subnet values)
+I prefer to use hardcoded IP addresses, because it simplifies OTA if you have more than one ESP8266 on the network. To hardcode the IP address do the following (replace with your own local IP, local gateway and subnet values)
 
     IPAddress ipLocal(XXX.XXX.XXX.XXX);
     IPAddress ipGateway(YYY, YYY, YYY, YYY);
@@ -86,3 +86,21 @@ To hardcode the IP address do the following (replace with your own local IP, loc
     WiFi.begin(wifi_ssid, wifi_password);
     //set up the static IP
     WiFi.config(ipLocal, ipGateway, ipSubnetMask);
+
+
+## References
+
+
+    https://github.com/esp8266/Arduino/tree/master/doc/ota_updates  
+
+    http://docs.platformio.org/en/latest/platforms/espressif.html?highlight=ota# over-the-air-ota-update
+
+    http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-platformio/
+
+    https://github.com/esp8266/Arduino/blob/master/libraries/ArduinoOTA/examples/BasicOTA/BasicOTA.ino
+
+    multiple ESP OTA
+
+    https://esp8266hints.wordpress.com/category/arduino-ide/
+
+    http://www.whatimade.today/esp8266-on-websockets-mdns-ota-and-leds/
