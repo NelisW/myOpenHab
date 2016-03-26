@@ -87,6 +87,11 @@ Motion on any of the PIR sensors results in a MQTT message on the `alarmW/moveme
 
 The environmental sensors publish MQTT messages on the topics `alarmW/temperatureDS18B20-C`, `alarmW/temperatureBMP085-C`, and `alarmW/pressure-mB`, with the payload comprising the current date and time and the measured temperature or pressure in the units indicated in the topic.  It is interesting to see how the two sensors measure slightly different temperatures, generally within 0.5 C of each other.
 
+Here are two screen dumps of the MQTT messages on another computer:
+
+![screendump01.png](images/screendump01.png)
+![screendump02.png](images/screendump02.png)
+
 ### Wall clock time
 
 The ESP has wall clock timekeeping (Arduino `time.h`) that is synchronised daily at noon with an internet NTP server. The time of day is required to support the timestamping of environmental data. Alarm events are not currently timestamped. The code describes how to program the wall clock functionality.
