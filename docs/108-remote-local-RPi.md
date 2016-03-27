@@ -8,6 +8,17 @@ If the RPi is on a network it is very convenient to gain access from another PC.
 
 To follow
 
+
+## sftp net drive
+
+https://www.eldos.com/sftp-net-drive/index.php
+
+SFTP Net Drive lets you create a virtual drive on your local computer that will expose the remote file system accessible via SFTP protocol. Essentially you mount the remote file system to your local system and access the files from the local system.
+There is a video on how to set up the remote server and load this app on the above website.  There is a free version with limited capability.  The paid version supports multiple profiles whereas the free version requires you only one profile that must be set up at the start of the session.
+
+
+
+
 ## Setting up to work with X11 forwarding using SSH on Mobaxterm
 
 <http://blogspot.tenettech.com/?p=2850>  
@@ -21,7 +32,7 @@ Download and install Mobaxterm <http://mobaxterm.mobatek.net/download.html>
 
 1. Start Mobaxterm
 2. Start a new `Session` (click on icon on the left).  
-1. Click on SSH 
+1. Click on SSH
 1. Add the remote host IP address (e.g., 10.0.0.16)
 3. Click on `Advanced SSH settings`
 4. In the `Remote environment` dropdown select the `LDXE` desktop and click `OK`.
@@ -74,8 +85,8 @@ Set up the client by determining the IP address of the Raspberry Pi
 
 Look for the IP address on the wlanx line next to inet addr: something like `10.0.0.16` or similar.
 
-When you enter the ip address on a vncviewer, you have to enter the server and screen number. 
-For example 192.xxx.x.x and then enter :1 or :2 etc. to indicate the screen number. 
+When you enter the ip address on a vncviewer, you have to enter the server and screen number.
+For example 192.xxx.x.x and then enter :1 or :2 etc. to indicate the screen number.
 
 ## Set up the RPi to start the VNC server on boot-up
 
@@ -91,8 +102,8 @@ Set up the RPi to boot to the graphical user interface:
 	cd autostart
 	sudo geany tightvnc.desktop
 
-or 
-	
+or
+
 	sudo nano /home/pi/.config/autostart/tightvnc.desktop
 
 enter the following into the file
@@ -121,33 +132,33 @@ Create a new file `vncboot` with the following script:
 	# Short-Description: Start VNC Server at boot time
 	# Description: Start VNC Server at boot time.
 	### END INIT INFO
-	
+
 	# ! /bin/sh
 	# /etc/init.d/vncboot
-	
+
 	USER=pi
 	HOME=/home/pi
-	
+
 	export USER HOME
-	
+
 	case "$1" in
 	 start)
 	  echo "Starting VNC Server"
 	  # Insert your favoured settings for a VNC session
 	  su - pi -c "/usr/bin/vncserver :0 -geometry 1280x800 -depth 16 -pixelformat rgb565"
 	  ;;
-	
+
 	 stop)
 	  echo "Stopping VNC Server"
 	  /usr/bin/vncserver -kill :0
 	  ;;
-	
+
 	 *)
 	  echo "Usage: /etc/init.d/vncboot {start|stop}"
 	  exit 1
 	  ;;
 	esac
-	
+
 	exit 0
 
 Make the file executable
@@ -171,9 +182,3 @@ then try the following command:
 	update-rc.d vncboot defaults
 
 Reboot your Raspberry Pi and you should find a VNC server already started.
-
-
-
-
-
-
