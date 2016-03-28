@@ -2,11 +2,11 @@
 
 ## Users and passwords
 
-The openHAB usernames and passwords are stored in the file 
+The openHAB usernames and passwords are stored in the file
 `/opt/openhab/configurations/users.cfg`.  The entries in this file must be of the format
 
 	yourusername=yourpassword
-	
+
 ignore the test beyond the comma in the example entry, it is not yet implemented.
 
 
@@ -24,7 +24,7 @@ Scroll to the Transport section and look for the MQTT transport section.  Look f
 	mqtt:mymosquitto.retain=true
 
 You can set `localhost` to the IP address of the RPi.
-    
+
 You may also decide to set the last-will-and-testament .lwt to send a final message when closing down.
 
 Also add these lines immediately after the line where you set lwt.  
@@ -66,7 +66,7 @@ For an example see here
 <http://www.homeautomationforgeeks.com/project/openhab.shtml>
 
 	sudo nano /opt/openhab/configurations/items/default.items
-	
+
 Add the following text:
 
     Group All
@@ -77,11 +77,11 @@ Add the following text:
     Number CPUTemperature "CPU Temperature [%.1f C]" <temperature> (GF_Study) {mqtt="<[mymosquitto:home/study/CPUTemperature:state:default]"}
 
     Switch PiLED "Pi-LED" (GF_Study) {mqtt=">[mymosquitto:/home/study/PiLED:command:on:ON],>[mymosquitto:/home/study/PiLED:command:off:OFF],<[mymosquitto:/home/study/PiLED:state:default]"}
-    
+
 The item lines have the following format:
 
     itemtype itemname ["labeltext"] [<iconname>] [(group1, group2, ...)] [{bindingconfig}]   
-    
+
 That last two lines are where we tell OpenHAB about our temperature sensor and LED. The parts are:
 
 - itemtype: (Number/Switch) the type of the value.
@@ -104,7 +104,7 @@ For more information on how to create item sitemap files see here:
 <https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps>  
 
 	sudo nano /opt/openhab/configurations/sitemaps/default.sitemap
-	
+
 Add the following text
 
     sitemap default label="Main Menu"
@@ -114,22 +114,22 @@ Add the following text
                     Text item=CPUTemperature
             Switch item=PiLED label="Pi-LED" mappings=[ON="On",OFF="Off"]
             }
-    }	
+    }
 
 ## Test the simple demo
 
 Send a temperature value  with this mqtt publish command
 
 	mosquitto_pub -t "home/temperature" -m "12"
-	
+
 or from another PC on the network send
 
 	mosquitto_pub -h yourRPiIPaddress -t "home/temperature" -m "12"
-	
+
 When the above sitemap and items file are selected in the Android app, the light switch can be tested by opening a terminal and running a mqtt client to listen to the PiLED topics:
 
     mosquitto_sub -t "/home/study/PiLED"
-    
+
 Now, if the On or Off switch on the light entry in the Android app is touched, the mqtt client in the terminal responds with the text: `ON`, or `OFF`.  Hence we can conclude that openHAB published the messages on mqtt.  The next step is to capture these messages and actually switch the light on and off.
 
 
@@ -183,6 +183,12 @@ By default the command line references the file <openhabhome>/etc/login.conf whi
 
 The default configuration for login credentials for openHAB is the file <openhabhome>/configuration/users.cfg. In this file, you can put a simple list of "user=pwd" pairs, which will then be used for the authentication. Note that you could optionally add roles after a comma, but there is currently no support for different roles in openHAB.
 
+## Notepad++ syntax highlighting
+
+https://github.com/openhab/openhab/wiki/Syntax-Highlighting-for-external-editors
+
+https://github.com/thefrip/openhab-samples/blob/master/openHAB-Sitemap.xml
+
 ## More information
 
 
@@ -190,8 +196,26 @@ https://github.com/openhab/openhab/wiki/Explanation-of-Items
 
 https://github.com/openhab/openhab/wiki/Explanation-of-Sitemaps
 
+https://github.com/openhab/openhab/wiki/Rules
+
+https://github.com/openhab/openhab/wiki/Scripts
+
+https://github.com/openhab/openhab/wiki/Actions
+
+https://github.com/openhab/openhab/wiki/Samples-Rules
+
+https://github.com/openhab/openhab/wiki/Samples-Item-Definitions
+
+https://github.com/openhab/openhab/wiki/Taking-Rules-to-New-Heights
+
+https://github.com/openhab/openhab/wiki/MQTT-Binding
+
+http://www.homeautomationforgeeks.com/openhab_rules.shtml
+
+A very complex apparently working system : - http://www.instructables.com/id/Uber-Home-Automation-w-Arduino-Pi/?ALLSTEPS  
+
+
 
 [Use a MAP](http://forum.mysensors.org/topic/1405/adding-a-light-switch-to-openhab-mqtt-gateway/2):
 
     Switch node1_sw1 "sw1" {mqtt=">[mysensors:MyMQTT/1/1/V_LIGHT:command:ON:1],>[mysensors:MyMQTT/1/1/V_LIGHT:command:OFF:0],<[mysensors:MyMQTT/1/1/V_LIGHT:command:MAP(1on0off.map)]"}
-

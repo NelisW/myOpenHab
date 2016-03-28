@@ -18,34 +18,34 @@ Update the software packages
 
 	sudo apt-get update
 	sudo apt-get upgrade
-	
+
 Update raspbian
 
 	sudo rpi-update
-	
+
 Create a directory to download openhab
-	
-	sudo mkdir /opt/openhab	
-	cd /opt/openhab 
-	
+
+	sudo mkdir /opt/openhab
+	cd /opt/openhab
+
 Get the latest version and unzip - when I wrote this it was version 1.7.1, but it may have been updated since.
 
 	sudo wget https://bintray.com/artifact/download/openhab/bin/distribution-1.7.1-runtime.zip  
 	sudo unzip distribution-1.7.1-runtime.zip
 	sudo rm distribution-1.7.1-runtime.zip
-	
-The runtime is installed and the zip files erased, but in order for openHAB to work you will need to add bindings. Upon extracting the runtime zip a "addons" folder was created. All bindings belong in this folder. Go to the addons folder and extract the addons zip. First lets download them to the appropriate folder.	
-	
+
+The runtime is installed and the zip files erased, but in order for openHAB to work you will need to add bindings. Upon extracting the runtime zip a "addons" folder was created. All bindings belong in this folder. Go to the addons folder and extract the addons zip. First lets download them to the appropriate folder.
+
 	cd addons/
 	sudo wget https://bintray.com/artifact/download/openhab/bin/distribution-1.7.1-addons.zip
 	sudo unzip distribution-1.7.1-addons.zip
 	sudo rm distribution-1.7.1-addons.zip
 
-This contains all the bindings available for openHAB. As stated in the openHAB wiki, Bindings are optional packages that can be used to extend functionality of openHAB. 
+This contains all the bindings available for openHAB. As stated in the openHAB wiki, Bindings are optional packages that can be used to extend functionality of openHAB.  Someone mentioned that having many bindings slow down the startup process, so you may want to move some of the unused bindings to another directory for safekeeping.
 
 	cd ..
 	sudo cp configurations/openhab_default.cfg configurations/openhab.cfg
-	
+
 make a copy of the "openhab_default.cfg" file. You will call the copy "openhab.cfg". In the event that you have to update your openhab the default file will be updated as well. By making a copy of this file, openhab will use this file for configurations and also not update it. Since you will be making your own custom configurations, it is important that those get written in the "openhab.cfg" file for safe keeping.
 
 Deploy the demo app
@@ -53,9 +53,9 @@ Deploy the demo app
 	cd /opt/openhab
 	sudo wget https://bintray.com/artifact/download/openhab/bin/distribution-1.7.1-demo.zip
 	sudo unzip distribution-1.7.1-demo.zip
-	sudo rm distribution-1.7.1-demo.zip 
+	sudo rm distribution-1.7.1-demo.zip
 	sudo chmod +x start.sh
-	
+
 When unzipping it will ask to overwrite addons/org.openhab.binding.http-1.7.1.jar.
 I am not sure if the answer must be yes or no. I said yes.
 
@@ -63,12 +63,12 @@ I am not sure if the answer must be yes or no. I said yes.
 Then the fun begins:
 
 	sudo ./start.sh
-	
-You should have a fully loaded demo that you can use to familiarize yourself with openHAB. Just go to your telephone or computer and place the following url in your favorite browser. Be sure to replace the ip address with the Ip address of your Pi. 
+
+You should have a fully loaded demo that you can use to familiarize yourself with openHAB. Just go to your telephone or computer and place the following url in your favorite browser. Be sure to replace the ip address with the Ip address of your Pi.
 
 http://10.0.0.16:8080/openhab.app?sitemap=demo
 
-	
+
 # openHAB to start at boot as a service
 
 Create a new file in the /etc/init.d folder called "openhab" using your favourite editor
@@ -89,7 +89,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
     # Short-Description: OpenHAB Daemon
     ### END INIT INFO
 
-    # Author: Thomas Brettinger 
+    # Author: Thomas Brettinger
 
     # Do NOT "set -e"
 
@@ -105,7 +105,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
     HTTPPORT=8080
     HTTPSPORT=8443
     TELNETPORT=5555
-    # be sure you are adopting the user to your local OH user 
+    # be sure you are adopting the user to your local OH user
     RUN_AS=pi
 
     # get path to equinox jar inside $eclipsehome folder
@@ -197,7 +197,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
         esac
         ;;
       stop)
-        log_daemon_msg "Stopping $DESC" 
+        log_daemon_msg "Stopping $DESC"
         do_stop
         case "$?" in
             0|1) log_end_msg 0 ;;
@@ -221,7 +221,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
         # If the "reload" option is implemented then remove the
         # 'force-reload' alias
         #
-        log_daemon_msg "Restarting $DESC" 
+        log_daemon_msg "Restarting $DESC"
         do_stop
         case "$?" in
           0|1)
@@ -248,31 +248,33 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
 
 
 
-Lastly you will want to make this an executable file. 
+Lastly you will want to make this an executable file.
 
 	sudo chmod a+x /etc/init.d/openhab
 
-And for it to automatically boot at the start of Pi 
+And for it to automatically boot at the start of Pi
 
-	sudo update-rc.d openhab defaults	
+	sudo update-rc.d openhab defaults
 
 you should get a response like this:
-	
-	update-rc.d: using dependency based boot sequencing
-	
-If you get an error that looks like this: 
 
-	insserv: Script openhab is broken: incomplete LSB comment. 
-	insserv: missing `Provides:' entry: please add. 
+	update-rc.d: using dependency based boot sequencing
+
+If you get an error that looks like this:
+
+	insserv: Script openhab is broken: incomplete LSB comment.
+	insserv: missing `Provides:' entry: please add.
 	....
-	insserv: Default-Stop undefined, assuming empty stop runlevel(s) for script `openhab'	
-	
-Then you have an indentation problem. Sometimes upon pasting into your editor the text gets placed into an easy to read format which places indentations into some of the initial lines of code. Any information that is written for update-rc.d must be in first column. And there should not be any tabulation or space before the "# ". If there are any remove them or you will generate that error. 
+	insserv: Default-Stop undefined, assuming empty stop runlevel(s) for script `openhab'
+
+Then you have an indentation problem. Sometimes upon pasting into your editor the text gets placed into an easy to read format which places indentations into some of the initial lines of code. Any information that is written for update-rc.d must be in first column. And there should not be any tabulation or space before the "# ". If there are any remove them or you will generate that error.
 
 It seems that the /opt/openhab files must be in the pi group and owned by pi to load at boot. Do the following:
 
 	sudo chown -hR pi:pi /opt/openhab
-	
+
 openhab should now load at boot.
 
+## Restarting openHAB once running as a service
 
+	sudo service openhab restart

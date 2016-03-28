@@ -38,6 +38,15 @@ The core of the system is the local automation server and the many clients actua
 
 - http://domotica-arduino.es/en/ mostly in Spanish.
 
+- http://www.ingeniousfool.net/
+
+- http://www.homeautomationforgeeks.com/index.shtml
+
+- http://www.mysensors.org/
+
+- http://www.instructables.com/id/Uber-Home-Automation-w-Arduino-Pi/?ALLSTEPS  
+
+
 - [OpenEnergyMonitor](http://openenergymonitor.org/emon/) is not quite a home automation system, but relates to remote-access home energy management.  See here for a  [PV power management system](http://openenergymonitor.org/emon/mk2)
 
 Commercial and open source offerings for cloud-based automation services abound. Ideally the home automation system should be able to provide cloud access for monitoring and control purposes, but it should not depend on access to the cloud for basic operation.  The cloud provides roaming access to part of all of the functionality available in the home.
@@ -65,9 +74,9 @@ If there are many software offerings, there are even more hardware products.  Op
 
 The series of files in the `docs` directory of this repo serve to capture my experiences, actions and insights.  The files are not all in the same state of completion, some just contain links to web sites.
 
-A number of smaller files are used, rather than one large file, to help help focus and direct access.  The files are using markdown for formatting: easily edited by any ACII editor, and equally easily rendered by a number of markdown renderers. 
+A number of smaller files are used, rather than one large file, to help help focus and direct access.  The files are using markdown for formatting: easily edited by any ACII editor, and equally easily rendered by a number of markdown renderers.
 
-Files are grouped in number series in order to contain topics together.  The file sequence is more or less chronological in implementation sequence, but there is no requirement to strictly follow this sequence. 
+Files are grouped in number series in order to contain topics together.  The file sequence is more or less chronological in implementation sequence, but there is no requirement to strictly follow this sequence.
 
 Filenames are constantly changing, attempting to find the best file numbers for different topics.
 

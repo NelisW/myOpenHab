@@ -1,30 +1,27 @@
 # Setting up the Raspberry Pi Remote Access
 
-If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
+If the RPi is on a network it is very convenient to gain access from another PC.  There are several available options, ranging from simple terminal access to X11 graphical interface access.  
 
 
 
-## Terminal access
-
-To follow
+## sftp-net-drive for mounting RPi folders to Windows
 
 
-## sftp net drive
+Eldos SFTP Net Drive lets you create a virtual drive on your local computer that will expose the remote file system accessible via SFTP protocol. Essentially you mount the remote file system to your local system and access the files from the local system.
+Download and instructions are here <https://www.eldos.com/sftp-net-drive/>, the video shows how to set up the remote server.  There is a free version with limited capability.  The paid version supports multiple profiles, whereas the free version allows you only one profile that must be set up at the start of every  session.  You are not allowed to share the root folder `\`, but I had no difficulty in sharing the `/opt/openhab` folder where my OpenHab config files are located. The down side is that you can only have one session open at a time in free version.
 
-https://www.eldos.com/sftp-net-drive/index.php
-
-SFTP Net Drive lets you create a virtual drive on your local computer that will expose the remote file system accessible via SFTP protocol. Essentially you mount the remote file system to your local system and access the files from the local system.
-There is a video on how to set up the remote server and load this app on the above website.  There is a free version with limited capability.  The paid version supports multiple profiles whereas the free version requires you only one profile that must be set up at the start of the session.
-
-
+In order to run SFTP you need to need to install SSH on the Raspberry Pi, but this appears to be set up by default.
 
 
 ## Setting up to work with X11 forwarding using SSH on Mobaxterm
 
+The [Mobaxterm](http://mobaxterm.mobatek.net/download.html) software provides a variety of means to access your RPi remotely.
+
+
 <http://blogspot.tenettech.com/?p=2850>  
 <http://en.tldp.org/HOWTO/XDMCP-HOWTO/ssh.html>  
 
-The X windowing system comprises a server and a client with messages travelling between the two.  In this case the server is running on the RPi and the client is run on a remote PC.  The client understands the X11 commands and renders these on the screen.  The user interaction is then captured on the PC and sent back to the server on the RPi.
+The X windowing system comprises a server and a client with messages traveling between the two.  In this case the server is running on the RPi and the client is run on a remote PC.  The client understands the X11 commands and renders these on the screen.  The user interaction is then captured on the PC and sent back to the server on the RPi.
 
 X11 server-client communication is insecure - SSH forwarding can be used to secure the channel. This is called 'X11 Forwarding using SSH'.  
 

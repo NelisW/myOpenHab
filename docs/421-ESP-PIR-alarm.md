@@ -85,7 +85,9 @@ Motion on any of the PIR sensors results in a MQTT message on the `alarmW/moveme
 
 3. If the required number of simultaneous PIR triggers took place within the prescribed time, the alarm raises, with the payload `alarm`.  
 
-The environmental sensors publish MQTT messages on the topics `alarmW/temperatureDS18B20-C`, `alarmW/temperatureBMP085-C`, and `alarmW/pressure-mB`, with the payload comprising the current date and time and the measured temperature or pressure in the units indicated in the topic.  It is interesting to see how the two sensors measure slightly different temperatures, generally within 0.5 C of each other.
+The environmental sensors publish MQTT messages on the topics `alarmW/temperatureDS18B20-C`, `alarmW/temperatureBMP085-C`, and `alarmW/pressure-mB`, with the payload comprising the current date and time and the measured temperature or pressure in the units indicated in the topic.  It is interesting to see how the two sensors measure slightly different temperatures, generally within 0.5 C of each other during transients, but closely matched under soaked conditions.
+
+The long strings with the date and temperature/pressure described above obviously did not work in OpenHab, because OpenHab expected only float values.  And mind you, there should also not be any leading spaces in the string either, only numbers and decimal.  To provide the required format for OpenHab, three new topics were created that works with OpenHab:  `home/alarmW/temperatureDS18B20-Cs`,  `home/alarmW/pressure-mBs`, and `home/alarmW/temperatureBMP085-Cs`.  This means three more messages, but at least we still retain the time stamped versions.
 
 Here are two screen dumps of the MQTT messages on another computer:
 
@@ -212,3 +214,5 @@ Note that the DS18B20 conversion time varies with the required resolution. The d
 Install the `Sensors` library (number 578) from http://platformio.org/lib/show/578/Sensors>.  
 
 Digging in the library source code revealed the two I2C pins used by the library. SDA defaults to GPIO04 (D2 on the nodeMCU) and SCL defaults to GPIO05 (D1 on the nodeMCU).  The values can be set with the function `Wire.begin(int sda, int scl)`.
+
+## Integrating with openHAB
