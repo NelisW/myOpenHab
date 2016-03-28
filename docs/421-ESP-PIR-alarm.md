@@ -217,4 +217,54 @@ Digging in the library source code revealed the two I2C pins used by the library
 
 ## Integrating with openHAB
 
-I was hoping to keep openHAB out of this description, but it turned out that openHAB is an essential part at the higher level system.  The ESP8266 code desribed so far can be seen as an intelligent sensor: it provides information to some server, but is unable to handle the alarm event in terms of human interaction.
+The ESP8266 code described so far can be seen only as an intelligent sensor providing information to some server, but is unable to handle the alarm event in terms of human interaction.  I was hoping to keep openHAB out of this description, but it turned out that the fact that openHAB is an essential part at the higher level system.
+
+The design is one-way in the sense that the ESP alarm does not require input from the server, so it can operate independently. Also the interface is simple: other than the ESP-generate MQTT topics and their meaning, there is no other mutual interaction.  This is called loose coupling between the sensor and the server: a desired software practice.
+
+From the server perspective, it receives signals from the sensor, but once received no further action is required with the sensor.  All processing and state must be managed in the openHAB server.  The sensor transmits following MQTT messages, only some of which is used by the server:
+
+|Message | Used by server |
+|--|--|
+|home/alarmW/alive| |
+|home/alarmW/timesynchronised| |
+|home/alarmW/alarm| alarm|
+|home/alarmW/temperatureDS18B20-C| |
+|home/alarmW/temperatureDS18B20-Cs|environmental |
+|home/alarmW/pressure-mB| |
+|home/alarmW/pressure-mBs|environmental |
+|home/alarmW/temperatureBMP085-C| |
+|home/alarmW/temperatureBMP085-Cs|environmental |
+|home/alarmW/movement/PIR|alarm |
+
+As a result of the sensor's data the server transmits a message on the topic `home/alarm/siren`
+
+home/alarmW/control/LEDCtlOn
+
+
+
+
+
+## Attend to this later, just keep it safe here so long
+
+http://openenergymonitor.blogspot.co.za/2015/12/openenergymonitor-emonpi-and-openhab.html?m=1
+For example the line in the items file to pull power 1 from emonhub MQTT is as follows:
+Number  emonpi_ct1       "Power 1 [%d W]"    { mqtt="<[mosquitto:emonhub/rx/5/values:state:REGEX((.*),.*,.*,.*,.*,.*,.*,.*,.*,.*,.*)]" }
+Notice the REGEX is used to tell openHAB that we want the first value in the 11 part CSV emonhub posts to MQTT to emonhub/rx/5/values.
+
+Number emonpi_ct1 "Power 1 [%d W]" { mqtt="<[mosquitto:emonhub/rx/5/values:state:REGEX((.*),.*,.*,.*,.*,.*,.*,.*,.*,.*,.*)]" }
+
+or
+
+Number emonpi_ct1 "Power 1 [%d W]" { mqtt="<[mosquitto:emonhub/rx/5/values:state:REGEX((.*?),.*?,.*?,.*?,.*?,.*?,.*?,.*?,.*?,.*?,.*?)]" }
+
+Seem to work fine for me. Either with or without the '?'. What effect does adding '?' have?
+
+Most regex quantifiers (such as * or +) are "greedy". That is : they will look for the biggest string which matches the expression. The question mark make them "lazy"; looking for the shortest string.
+
+For instance, here is a sample string : "whatever". If you have the following regex /<.+>/, it will match the full string. If you use /<.+?>/, it will match "".
+
+In your case, it does not change much it terms of match but it may have a performance impact. I think using ? make it faster because it won't try to read the whole string to see if there's a longer match.
+
+You could also use /([^,]*),[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*,[^,]*/. This may be even better in terms of performance. [^,]* means any string not containing ",".
+
+But if you want to only retrieve the first field (and not checking there is exactly 11 fields, then you could use /^([^,]*)/ which will find the first substring not containing a ",".
