@@ -93,7 +93,7 @@ These `test/+` MQTT messages can be published by any MQTT source, on the command
 
 	mosquitto_pub -t 'test/topic' -m 'helloWorld'
 	
-or from your openHab or any other application.
+or from your openHAB or any other application.
 
 If you have another PC connected to the same network as the RPi, test the system with the following command:
 

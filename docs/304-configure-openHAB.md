@@ -82,7 +82,7 @@ The item lines have the following format:
 
     itemtype itemname ["labeltext"] [<iconname>] [(group1, group2, ...)] [{bindingconfig}]   
 
-That last two lines are where we tell OpenHAB about our temperature sensor and LED. The parts are:
+That last two lines are where we tell openHAB about our temperature sensor and LED. The parts are:
 
 - itemtype: (Number/Switch) the type of the value.
 
@@ -94,7 +94,7 @@ That last two lines are where we tell OpenHAB about our temperature sensor and L
 
 - [(group1, group2, ...)]: (GF_Living) which group this item belongs to.
 
-- [{bindingconfig}]: {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling OpenHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
+- [{bindingconfig}]: {mqtt="<[mymosquitto:home/temperature:state:default]"}: where to get the value. This is telling openHAB to use the MQTT binding named "mymosquitto" (which we set up earlier) and to listen to the home/temperature channel. "state" is the type (another value is "command") and "default" is the transformation (in this case, no transformation). The < sign near the beginning means that we'll read from the channel (as opposed to writing to it).
 
 ## Sitemap definitions
 

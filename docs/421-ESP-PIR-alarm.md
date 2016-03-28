@@ -7,7 +7,7 @@ The alarm must be deployed to cover an area outside the house, such that sustain
 Zone 1 must have a low false alarm rate: one or more designated PIR sensors must trigger while another PIR pulse is still high,
 at least `numFAsamples` times in a `timFAsamples` second period. In other words at least two PIR sensor trigger pulses must be on simultaneously.  The pulse duration must be adjusted on the PIR hardware potentiometer to the required time.  The `timFAsamples` period is a running window that must keep track of `numFAsamples` alarms in the most recent `timFAsamples` seconds.  
 
-The light must switch on for `LEDPIRTimeOn` seconds, on a trigger on any PIR, or receipt of a MQTT message from OpenHab to which the alarm is subscribed.
+The light must switch on for `LEDPIRTimeOn` seconds, on a trigger on any PIR, or receipt of a MQTT message from openHAB to which the alarm is subscribed.
 
 The first alarm implementation must give alarm if PIR0 and PIR1 trigger simultaneously, but any of PIR0, PIR1, or PIR2 must switch on a light.
 
@@ -31,7 +31,7 @@ This project creates an alarm system with the following objectives:
 1. And for more fun I added a BMP085 pressure sensor.
 1. To timestamp the environmental data I added a local wall clock time library,  synchronised with NTP servers on the internet.  The time is synchronised at startup and then every day at noon.
 1. Communicate by MQTT to subscribers to relay alarm events and environmental data to the outside world.
-1. Set up the OpenHab environment to react to messages from this alarm. Outstanding.
+1. Set up the openHAB environment to react to messages from this alarm. Outstanding.
 
 ## Software
 ### Source code and development environment
@@ -65,7 +65,7 @@ In a way this design follows the principles of [distributed microservices](http:
 ### MQTT
 
 The main objective with this project is to raise an alarm via MQTT.  The
-alarm events are escalated to an OpenHab system by another controller (the Raspberry Pi) that subscribes to the alarm MQTT messages.   The MQTT broker/server also runs on the same Raspberry Pi.
+alarm events are escalated to an openHAB system by another controller (the Raspberry Pi) that subscribes to the alarm MQTT messages.   The MQTT broker/server also runs on the same Raspberry Pi.
 
 The messages are transmitted on the `alarmW/` topic and messages can be displayed on any PC on the network by the Mosquitto (or any other) client subscription command:
 
@@ -87,7 +87,7 @@ Motion on any of the PIR sensors results in a MQTT message on the `alarmW/moveme
 
 The environmental sensors publish MQTT messages on the topics `alarmW/temperatureDS18B20-C`, `alarmW/temperatureBMP085-C`, and `alarmW/pressure-mB`, with the payload comprising the current date and time and the measured temperature or pressure in the units indicated in the topic.  It is interesting to see how the two sensors measure slightly different temperatures, generally within 0.5 C of each other during transients, but closely matched under soaked conditions.
 
-The long strings with the date and temperature/pressure described above obviously did not work in OpenHab, because OpenHab expected only float values.  And mind you, there should also not be any leading spaces in the string either, only numbers and decimal.  To provide the required format for OpenHab, three new topics were created that works with OpenHab:  `home/alarmW/temperatureDS18B20-Cs`,  `home/alarmW/pressure-mBs`, and `home/alarmW/temperatureBMP085-Cs`.  This means three more messages, but at least we still retain the time stamped versions.
+The long strings with the date and temperature/pressure described above obviously did not work in openHAB, because openHAB expected only float values.  And mind you, there should also not be any leading spaces in the string either, only numbers and decimal.  To provide the required format for OpenHab, three new topics were created that works with OpenHab:  `home/alarmW/temperatureDS18B20-Cs`,  `home/alarmW/pressure-mBs`, and `home/alarmW/temperatureBMP085-Cs`.  This means three more messages, but at least we still retain the time stamped versions.
 
 Here are two screen dumps of the MQTT messages on another computer:
 

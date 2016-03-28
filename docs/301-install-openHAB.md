@@ -7,7 +7,7 @@
 
 You have to wait a while for the stop command to execute.
 
-# Install OpenHab
+# Install openHAB
 
 <http://www.instructables.com/id/OpenHAB-on-Raspberry-Pi>  
 <http://www.openhab.org/getting-started/index.html>  
@@ -86,7 +86,7 @@ Be sure to remove leading spaces  (the hash comments must all start on the first
     # Required-Stop:     $remote_fs $syslog
     # Default-Start:     2 3 4 5
     # Default-Stop:      0 1 6
-    # Short-Description: OpenHAB Daemon
+    # Short-Description: openHAB Daemon
     ### END INIT INFO
 
     # Author: Thomas Brettinger
