@@ -216,3 +216,5 @@ Install the `Sensors` library (number 578) from http://platformio.org/lib/show/5
 Digging in the library source code revealed the two I2C pins used by the library. SDA defaults to GPIO04 (D2 on the nodeMCU) and SCL defaults to GPIO05 (D1 on the nodeMCU).  The values can be set with the function `Wire.begin(int sda, int scl)`.
 
 ## Integrating with openHAB
+
+I was hoping to keep openHAB out of this description, but it turned out that openHAB is an essential part at the higher level system.  The ESP8266 code desribed so far can be seen as an intelligent sensor: it provides information to some server, but is unable to handle the alarm event in terms of human interaction.
