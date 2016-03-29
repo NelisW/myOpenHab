@@ -38,6 +38,8 @@ The core of the system is the local automation server and the many clients actua
 
 - http://domotica-arduino.es/en/ mostly in Spanish.
 
+Other sites of interest:
+
 - http://www.ingeniousfool.net/
 
 - http://www.homeautomationforgeeks.com/index.shtml
@@ -46,6 +48,7 @@ The core of the system is the local automation server and the many clients actua
 
 - http://www.instructables.com/id/Uber-Home-Automation-w-Arduino-Pi/?ALLSTEPS  
 
+- http://jonathangiles.net/blog/?p=1646
 
 - [OpenEnergyMonitor](http://openenergymonitor.org/emon/) is not quite a home automation system, but relates to remote-access home energy management.  See here for a  [PV power management system](http://openenergymonitor.org/emon/mk2)
 

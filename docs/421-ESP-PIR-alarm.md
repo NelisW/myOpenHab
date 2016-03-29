@@ -45,11 +45,15 @@ The project uses the following libraries:
 
 1. [PubSubClient](http://platformio.org/lib/show/89/PubSubClient) MQTT client to publish and subscribe to topics.
 
-2. [DallasTemperature](http://platformio.org/lib/show/54/DallasTemperature) to read the DS18B20 temperature sensor.
+2. Optional: [DallasTemperature](http://platformio.org/lib/show/54/DallasTemperature) to read the DS18B20 temperature sensor.
 
-3. [OneWire](http://platformio.org/lib/show/1/OneWire) to provide the onewire library required by the DS18B20 sensor.
+3. Optional: [OneWire](http://platformio.org/lib/show/1/OneWire) to provide the onewire library required by the DS18B20 sensor.
 
 4. [Sensors](http://platformio.org/lib/show/578/Sensors) to provide the I2C and BMP085 libraries required for the pressure sensor.
+
+5. [DHT](http://platformio.org/lib/show/19/Adafruit-DHT) to provide an interface to the DHT11.
+
+Thw code for the two optional libraries is currently commented out because the pin originally used by the DS18B20 is now used for the DHT11.
 
 For more information on how to load the libraries see the platformio website or [here](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).
 
@@ -215,6 +219,17 @@ Install the `Sensors` library (number 578) from http://platformio.org/lib/show/5
 
 Digging in the library source code revealed the two I2C pins used by the library. SDA defaults to GPIO04 (D2 on the nodeMCU) and SCL defaults to GPIO05 (D1 on the nodeMCU).  The values can be set with the function `Wire.begin(int sda, int scl)`.
 
+### DHT11 Relative humidty and temperature sensor
+
+The Adafruit DHT library is used here.  The following is taken from the Adafruit code:
+
+Connect pin 1 (on the left) of the sensor to +3.3V.  Connect pin 2 of the sensor to whatever your DHTPIN is.
+Connect pin 3 or 4 (on the right) of the sensor to GROUND.  
+Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
+
+Note that older versions of this library took an optional third parameter to tweak the timings for faster processors.  This parameter is no longer needed as the current DHT reading algorithm adjusts itself to work on faster processors.
+
+
 ## Integrating with openHAB
 
 The ESP8266 code described so far can be seen only as an intelligent sensor providing information to some server, but is unable to handle the alarm event in terms of human interaction.  I was hoping to keep openHAB out of this description, but it turned out that the fact that openHAB is an essential part at the higher level system.
@@ -234,11 +249,17 @@ From the server perspective, it receives signals from the sensor, but once recei
 |home/alarmW/pressure-mBs|environmental |
 |home/alarmW/temperatureBMP085-C| |
 |home/alarmW/temperatureBMP085-Cs|environmental |
+|home/alarmW/humidityDHT11|| |
+|home/alarmW/humidityDHT11s||environmental |
+|home/alarmW/temperatureDHT11-C|| |
+|home/alarmW/temperatureDHT11-Cs||environmental |
 |home/alarmW/movement/PIR|alarm |
 
 As a result of the sensor's data the server transmits a message on the topic `home/alarm/siren`
 
 home/alarmW/control/LEDCtlOn
+
+
 
 
 
