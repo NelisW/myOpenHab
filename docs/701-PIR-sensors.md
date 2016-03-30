@@ -14,7 +14,7 @@ There are several different variations of the PIR module.  The version described
 
 ![PIR wiring](images/PIR-SensorModule.jpg)
 
-The Pyroelectric sensor responds to variations in incident infrared flux. Static scenes do not produce signals, only changes in the scene creates and output signal.  The two adjacent detector elements produces a difference signal as the image of the hot or cold objects sweeps across the detector elements.  The plastic lens is in fact a multi-facetted collection of lenses, each small lens focus flux from a different direction - thereby providing directional sensitivity.
+The Pyroelectric sensor responds to variations in incident infrared flux. Static scenes do not produce signals, only changes in the scene creates and output signal.  The two adjacent detector elements produces a difference signal as the image of the hot or cold objects sweeps across the detector elements.  The plastic lens is in fact a multi-faceted collection of lenses, each small lens focus flux from a different direction - thereby providing directional sensitivity.
 
 ![PIR wiring](images/pir-operation.png)
 
@@ -41,11 +41,31 @@ A simpler option is to connect the 3.3 V supply to one of the retrigger pins as 
 
 ![pir_motion_sensor_arduino.jpg](images/pir_motion_sensor_arduino.jpg)
 
+**Sensitivity to supply voltages**
 
+Note that the PIR sensor may be sensitive to supply voltage spikes if powered directly on the 3.3 V pin.  If I run my [PIR alarm](https://github.com/NelisW/myOpenHab/blob/master/docs/421-ESP-PIR-alarm.md) from a Samsung mobile phone charger the PIR alarms would regularly send a false alarm trigger. In this experiment the PIR sensors were within 200 mm of the ESP chip, so it could be that the close proximity also had some effect.
+
+When measured the positive supply voltage showed the following 280 mV spikes on the nodeMCU board, after it has been down regulated to 3.3 volt:
+
+![charger-supply-voltage02.JPG](images/charger-supply-voltage02.JPG)
+
+It is not easy to filter the supply voltage on the 5V side of the regulator because the power is fed in on a USB connector and the 5V line is not easily accessible.  The two 3.3 V rails on the breadboard were both decoupled with a 150 nF and 100 uF capacitors (which is not the ideal location, you want to do this on the 5V supply before the regulator).  This dropped the spikes to around 40 mV, still causing the occasional false alarm - too many false alarms in fact.
+
+![charger-supply-voltage01.JPG](images/charger-supply-voltage01.JPG)
+
+When the decoupled circuit is powered from my laptop, the spikes are of the order of 14 mV, and then the alarm is quite quiet.
+
+Study the PIR schematic diagram and you will note two high capacity filtering capacitors: one at the output of the regulator and another near the detector.   The capacitor near the detector is in fact in a low-pass filter configuration with the voltage divider.  This should tell us that the device is sensitive to supply voltage noise.
+
+The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply.  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
+
+Ideally one should power the PIRs from an independent regulator from the one used in the nodeCMU or to drive the ESP chip.
 
 ## Projects
 
 ### esp8266 + PIR + C (Arduino IDE)
+
+My own PIR alarm with lots of bells and whistles: <https://github.com/NelisW/myOpenHab/blob/master/docs/421-ESP-PIR-alarm.md>
 
 http://iot-playground.com/blog/2-uncategorised/42-esp8266-wifi-pir-motion-sensor-arduino-ide
 

@@ -118,7 +118,7 @@ A number of software times are set up to control regular events such as the aliv
 Also in the case of timers, are only flags set in the the timer service routines, for subsequent servicing in the `loop()` phase.
 
 ## Hardware
-### Components
+### PIR sensors
 The idea is to use the low-cost PIR sensors available on EBay and AliExpress for dollar or two. The software is developed on the nodeMCU ESP8266 dev board.  This board is freely available on EBay and AliExpress, at a price of around USD5.  The board features a USB port, power supply regulator and download functionality.  Just plug it into the PC USB port and it works.
 
 Presently the hardware is still in a breadboard form on my desk. A LED is switched on/off but the idea is to later use a mains-powered floodlight.
@@ -140,6 +140,8 @@ ground. Connect the PIR positive supply to the 3.3 V supply to the H retrigger p
 Set the jumper to single trigger to cause the PIR to create a new pulse every time new movement is detected.  The interrupt triggers on the rising edge of the PIR output. The duration of the pulse is important because at least two PIRs must trigger within this duration period.  The pulse must not be too long, because too long a pulse may prevent the detection of repeated movement because the sensor is essentially blind during this pulse. Use the 'Time delay adjust' potentiometer on the board and move it all the way to the anti-clockwise limit (shortest pulse). The shortest delay on my PIRs were around three seconds, which is about right for the simultaneous trigger requirement.
 
 The sensitivity setting adjusts the operating range of the sensor.  More sensitive means longer range.  Play around to find the values that suits you.
+
+Note that the PIR sensors are sensitive to spikes on the 3.3 V supply (if you drive it directly on the 3.3V pin), see [here](https://github.com/NelisW/myOpenHab/blob/master/docs/701-PIR-sensors.md)
 
 ### nodeMCU Pin allocation
 
@@ -219,7 +221,7 @@ Install the `Sensors` library (number 578) from http://platformio.org/lib/show/5
 
 Digging in the library source code revealed the two I2C pins used by the library. SDA defaults to GPIO04 (D2 on the nodeMCU) and SCL defaults to GPIO05 (D1 on the nodeMCU).  The values can be set with the function `Wire.begin(int sda, int scl)`.
 
-### DHT11 Relative humidty and temperature sensor
+### DHT11 Relative humidity and temperature sensor
 
 The Adafruit DHT library is used here.  The following is taken from the Adafruit code:
 
