@@ -38,15 +38,20 @@ def read_temp(device_folders, device_key):
     dicmeasure = {}
     for device in device_folders:
         devID = device[device.rfind('/')+1:]
+        #return devID
         lines = read_temp_raw(device)
         while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
             lines = read_temp_raw(device)
         equals_pos = lines[1].find('t=')
         if equals_pos != -1:
+            #print(lines[1])
+            #print(lines[1][equals_pos+2:])
             temp_c = float(lines[1][equals_pos+2:]) / 1000.0 
             ctime = datetime.datetime.now().isoformat(' ')
             dicmeasure[devID]= [ctime, temp_c]
+        else:
+            rtnTemp = -200.
 	if device_key in dicmeasure.keys():
 		rtnTemp = dicmeasure[device_key]
 	else:
@@ -65,16 +70,20 @@ while True:
     tempCPU = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
     #print('CPU temperature {} '.format(tempCPU))
     
-    #publish regular status meassages to openHAB via mqtt
-    #os.system("mosquitto_pub -t 'home/garage/PVTemperatureMid' -m '{}'".format(dicmeasure['28-000004d0250c'][1]))
-    #os.system("mosquitto_pub -t 'home/garage/PVTemperatureFar' -m '{}'".format(dicmeasure['28-021582d1d0ff'][1]))
-    #os.system("mosquitto_pub -t 'home/garage/PVTemperatureNer' -m '{}'".format(dicmeasure['28-021582f6a5ff'][1]))
-    #os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(dicmeasure['28-021582d26eff'][1]))
+    ##publish regular status meassages to openHAB via mqtt
+    ##os.system("mosquitto_pub -t 'home/solar/PVTemperatureMid' -m '{}'".format(dicmeasure['28-000004d0250c'][1]))
+    ##os.system("mosquitto_pub -t 'home/solar/PVTemperatureFar' -m '{}'".format(dicmeasure['28-021582d1d0ff'][1]))
+    ##os.system("mosquitto_pub -t 'home/solar/PVTemperatureNer' -m '{}'".format(dicmeasure['28-021582f6a5ff'][1]))
+    ##os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(dicmeasure['28-021582d26eff'][1]))
 
-    os.system("mosquitto_pub -t 'home/garage/PVTemperatureMid' -m '{}'".format(read_temp(device_folders, '28-000004d0250c')))
-    os.system("mosquitto_pub -t 'home/garage/PVTemperatureFar' -m '{}'".format(read_temp(device_folders, '28-021582d1d0ff')))
-    os.system("mosquitto_pub -t 'home/garage/PVTemperatureNer' -m '{}'".format(read_temp(device_folders, '28-021582f6a5ff')))
-    os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(read_temp(device_folders, '28-021582d26eff')))
+    #os.system("mosquitto_pub -t 'home/solar/PVTemperatureMid' -m '{}'".format(read_temp(device_folders, '28-000004d0250c')[1]))
+    #os.system("mosquitto_pub -t 'home/solar/PVTemperatureFar' -m '{}'".format(read_temp(device_folders, '28-021582d1d0ff')[1]))
+    #os.system("mosquitto_pub -t 'home/solar/PVTemperatureNer' -m '{}'".format(read_temp(device_folders, '28-021582f6a5ff')[1]))
+
+    #print(read_temp(device_folders, '28-000005043944'))
+    #print(read_temp(device_folders, '28-000005043944')[1])
+    os.system("mosquitto_pub -t 'home/study/RoomTemperature' -m '{}'".format(read_temp(device_folders, '28-000005043944')[1]))
+
     os.system("mosquitto_pub -t 'home/study/CPUTemperature' -m '{}'".format(tempCPU))
     
     #publish mqtt warnings when the CPU temperature rises above some threshold
