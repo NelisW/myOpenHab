@@ -9,6 +9,31 @@
 
 There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  See also [here](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family).  The ESP01 and ESP12 are by far two most popular.
 
+[Getting started with the ESP8266](http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266)
+
+[Loading new firmware onto an ESP8266](http://www.esp8266.com/wiki/doku.php?id=loading_firmware)
+
+[ESP8266 Introduction](http://fabacademy.org/archives/2015/doc/networking-esp8266.html)
+
+[Installing and Building an Arduino Sketch for the $5 ESP8266 Microcontroller](http://makezine.com/2015/04/01/installing-building-arduino-sketch-5-microcontroller/)
+
+[ESP8266 Wemos D1 mini](https://primalcortex.wordpress.com/tag/sming/)
+
+
+[ESP8266 Programming Jig (for ESP-01) ](https://www.hackster.io/glowascii/esp8266-programming-jig-5afd03)
+
+[DIT ESP01 motherboard](http://www.nfriedly.com/techblog/2015/07/build-a-diy-esp8266ex-esp-01-dev-test-programming-board/)
+[Esp8266 firmware update](http://www.instructables.com/id/Intro-Esp-8266-firmware-update/)
+
+[Update the Firmware in Your ESP8266 Wi-Fi Module](http://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/), see also the [first part-(http://www.allaboutcircuits.com/projects/breadboard-and-program-an-esp-01-circuit-with-the-arduino-ide/)
+
+[Building a battery powered ESP8266](https://www.agocontrol.com/2015/03/building-a-battery-powered-wifi-iot-sensor-with-esp8266-ms-5611-gy-63-nodemcu-and-mqtt/)
+
+[Low Power ESP8266 – Sleeping at 78 micro Amps](http://tim.jagenberg.info/2015/01/18/low-power-esp8266/)
+
+
+
+
 
 [nodeMCU](http://nodemcu.com/index_en.html) is an ESP8266 installed  a development board that includes a USB download interface, more pins broken out and adequate power supply decoupling.  The nodeNCU board is a good place to begin learning about the ESP8266.
 
