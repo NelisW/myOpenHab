@@ -30,7 +30,7 @@ The LoLin [firmware can be upgraded](http://www.wemos.cc/wiki/Tutorial/UpgradeFi
 
 This section serves to capture my work with ESPlorer on the LoLin board.  I purchased Rui Santos' book [Home Automation Using ESP8266](http://randomnerdtutorials.com/home-automation-using-esp8266/) and I will first start working through this book.
 
-The LoLin can run from the computer's USB supply only, no external power supply required.  It has a 3.3 V voltage-down regulator that provides the 3.3 V for the ESP.  Presumably the nodeMCU V3 (LoLin) and the nodeMCU V1 pin definitions are the same: 
+The LoLin can run from the computer's USB supply only, no external power supply required.  It has a 3.3 V voltage-down regulator that provides the 3.3 V for the ESP.  Presumably the nodeMCU V3 (LoLin) and the nodeMCU V1 pin definitions are the same:
 ![''](images/NODEMCU_DEVKIT_V1.0_PINMAP.png)
 
 ### Starting up and connecting to the nodeMCU
@@ -129,7 +129,7 @@ The code used to flash the LEDS are as follows:
 	-- pin 3 is GPIO 0, or D3 on the nodeMCU, switch it off
 	gpio.mode(3,gpio.OUTPUT)
 	gpio.write(3,gpio.LOW)
-	
+
 	-- pin 4 is GPIO 2, or D4 on the nodeMCU.
 	lighton4=0
 	pin=4
@@ -147,8 +147,8 @@ The code used to flash the LEDS are as follows:
 The code is reasonably self-explanatory, except perhaps the timer code.  The [API](http://www.nodemcu.com/docs/timer-module/) docs describes the `tmr.alarm` parameters as  follows:
 
 	tmr.alarm(id, interval, repeat, function do())
-	
-- id: 0~6, alarmer id. 
+
+- id: 0~6, alarmer id.
 - Interval: alarm time, unit: millisecond
 - repeat: 0 - one time alarm, 1 - repeat
 - function do(): callback function for alarm timed out
@@ -157,7 +157,7 @@ So it seems that this code uses timer 1, with a 2 second interval, repeating and
 
 ### ESP8266 Web Server controlling LEDs.
 
-This is another one of  Rui Santos' great [examples](http://randomnerdtutorials.com/esp8266-web-server/) tutorials.   He shows us how to create a standalone web server with an ESP8266 that can toggle two LEDs.  The circuit diagram is as shown before for the LED flasher. The code 
+This is another one of  Rui Santos' great [examples](http://randomnerdtutorials.com/esp8266-web-server/) tutorials.   He shows us how to create a standalone web server with an ESP8266 that can toggle two LEDs.  The circuit diagram is as shown before for the LED flasher. The code
 
 
 
@@ -175,3 +175,7 @@ These are really links I stumbled on just want so save them for later study.
 
 <http://randomnerdtutorials.com/how-to-make-two-esp8266-talk/>
 
+
+## Testing AT commands in an IPython notebook.
+
+See [here](http://lucsmall.com/2015/02/23/homebrew-esp8266-breakout/) how `pyserial` is used to communicate with an ESP8266, using AT commands.

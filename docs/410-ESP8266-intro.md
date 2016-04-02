@@ -207,11 +207,13 @@ Remember to secure the ESP8266 if used in access point mode to prevent hacking i
 
 ## Hardware issues and instability.
 
-[There appears to be]](http://internetofhomethings.com/homethings/?p=605) a mixup with pin wiring GPOI4 and GPIO5 pins are interchanged on early ESP12 boards
+### Pin errors
+[There appears to be](http://internetofhomethings.com/homethings/?p=605) a mixup with pin wiring GPOI4 and GPIO5 pins are interchanged on early ESP12 boards
 
+### Flash quality
 [Flash memory problems](http://internetofhomethings.com/homethings/?p=396):  "we know the flash chip (25Q40) used with many of these ESP8266 module is of low quality and fails after only a few flash cycles. Perhaps sending the code somewhere that it never returns from. Triggering the watchdog timer to reset the unit."
 
-Power supply issues:
+### Power supply issues:
 1.  The general advice is that the ESP8266 must be run of a power supply with at least 300 to 500 mA  capacity.  Furthermore, decoupling and supply capacitors are advised.  
 
 2.  Put a large electrolytic capacitor on the power supply near the ESP, recommended values range from 10 uF to 470 uF depending on where you read.
@@ -227,6 +229,40 @@ http://internetofhomethings.com/homethings/?p=605
 http://internetofhomethings.com/homethings/?p=396  
 https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
 http://bbs.espressif.com/viewtopic.php?t=1078  
+
+### Supply current
+
+There is a general warning out that a sufficiently large power supply must be used (500 mA plus) because the ESP is quite hungry when transmitting. The ESP also has low power sleep mode operation but most boards do not implement this currently.
+
+Measured the positive supply voltage showed the following 280 mV spikes on the nodeMCU board, after it has been down regulated to 3.3 volt:
+
+![charger-supply-voltage02.JPG](images/charger-supply-voltage02.JPG)
+
+It is not easy to filter the supply voltage on the 5V side of the regulator because the power is fed in on a USB connector and the 5V line is not easily accessible.  The two 3.3 V rails on the breadboard were both decoupled with a 150 nF and 100 uF capacitors (which is not the ideal location, you want to do this on the 5V supply before the regulator).  This dropped the spikes to around 40 mV, still causing the occasional false alarm - too many false alarms in fact.
+
+![charger-supply-voltage01.JPG](images/charger-supply-voltage01.JPG)
+
+When the decoupled circuit is powered from my laptop, the spikes are of the order of 14 mV, and then the alarm is quite quiet.
+
+Study the PIR schematic diagram and you will note two high capacity filtering capacitors: one at the output of the regulator and another near the detector.   The capacitor near the detector is in fact in a low-pass filter configuration with the voltage divider.  This should tell us that the device is sensitive to supply voltage noise.
+
+The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply (but to a far lesser extend on the laptop).  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
+
+I measured the current consumption of a nodeMCU board by placing a 1.5 Ohm series resistor in the supply line.  The power supply used was a very small footprint AC/DC 5V 700mA board bought on EBay.  The no-load supply voltage was within spec and the ripple was reasonably small (less than 20 mV), but with occasional very short spikes.
+
+Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 100 nF and 75 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what I read elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks!
+
+![charger-supply-current-1_5ohm.JPG](images/charger-supply-current-1_5ohm.JPG)
+
+See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/701-PIR-sensors.md) for more detail on the use of a linear regulator to filter out the ESP-induced noise.
+
+
+
+
+
+
+
+
 
 
 ## Diverse Projects

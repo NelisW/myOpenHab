@@ -57,9 +57,32 @@ When the decoupled circuit is powered from my laptop, the spikes are of the orde
 
 Study the PIR schematic diagram and you will note two high capacity filtering capacitors: one at the output of the regulator and another near the detector.   The capacitor near the detector is in fact in a low-pass filter configuration with the voltage divider.  This should tell us that the device is sensitive to supply voltage noise.
 
-The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply.  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
+The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply (but to a far lesser extend on the laptop).  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
 
-Ideally one should power the PIRs from an independent regulator from the one used in the nodeCMU or to drive the ESP chip.
+As part of solving my problem I measured the current consumption of a nodeMCU board by placing a 1.5 Ohm series resistor in the supply line.  The power supply used was a very small footprint AC/DC 5V 700mA board bought on EBay.  The no-load supply voltage was within spec and the ripple was reasonably small (less than 20 mV), but with occasional very short spikes.
+
+Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 100 nF and 75 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what I read elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks!
+
+![charger-supply-current-1_5ohm.JPG](images/charger-supply-current-1_5ohm.JPG)
+
+To verify that it was the power supply that caused the false alarms, I powered the nodeMCU with PIR sensors from my notebook USB port. There where no false alarms.  To verify that the PIR sensors are not overly sensitive to RF interference, I placed the switch mode power supply right next to the PIR sensors. Still no false alarms (at least not during my short experiment). The following graph shows the supply voltage after 3.3 V regulation on the nodeMCU board, when powered from my notebook. Note the low frequency content in the signal spectrum, also there were no spikes on the supply.
+
+![charger-supply-voltage07-laptop-supply.JPG](images/charger-supply-voltage07-laptop-supply.JPG)
+
+When powered from the switch mode supply with no decoupling capacitors, there were many false alarms.  Note the severe spikes on the power supply, occurring every second or so. Note also the large low frequency noise spectrum.
+![charger-supply-voltage07-SMPSno-decoupling.JPG](images/charger-supply-voltage07-SMPSno-decoupling.JPG)
+
+Adding decoupling capacitors helped somewhat, but there were still far too many false alarms. All/most PIR sensors triggered at the same time, rendering my false alarm rejection logic useless.  The spikes still remained. Even though the  capacitors suppressed some of the high frequency noise, the low frequency noise persisted.
+
+![charger-supply-voltage07-SMPS-with-decoupling.JPG](images/charger-supply-voltage07-SMPS-with-decoupling.JPG)
+
+No amount of decoupling will reject the noise and protect my PIR sensors, so I decided to use a separate 3.3 V regulator, but still supplied from the same 5V supply that powers the nodeMCU.  The input and output of the LM1117AL-3.3V linear regulator were decoupled by large electrolytic and small decoupling capacitors. The PIR alarms do not trigger falsely any any more (actually down to once per hour, which is fine for my false alarm rejection logic).  The final graphs shows the power supply noise after linear regulation and decoupling.  Note that the spikes are much reduced (effectively gone, except for the occasional weak spike) and that the noise spectrum is much smaller (both low and high frequencies) than before.
+
+![charger-supply-voltage07-SMPS-with-LM1117AL-3-3-with-decoupling.JPG](images/charger-supply-voltage07-SMPS-with-LM1117AL-3-3-with-decoupling.JPG)
+
+My conclusion is now that the sensitive PIR detector picks up sufficient noise to trigger from the power supply (created by the ESP) and not from general RF interference. With a clean power supply the alarm false triggers are not problematic any more. Once deployed the PIRs will be about four to five metres from the power supply, and it is expected that the long leads will further suppress the high frequency spikes.
+
+
 
 ## Projects
 
