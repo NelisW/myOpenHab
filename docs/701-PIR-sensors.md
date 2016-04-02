@@ -61,7 +61,7 @@ The nature of the spikes are quite interesting.  The same pattern appears on bot
 
 As part of solving my problem I measured the current consumption of a nodeMCU board by placing a 1.5 Ohm series resistor in the supply line.  The power supply used was a very small footprint AC/DC 5V 700mA board bought on EBay.  The no-load supply voltage was within spec and the ripple was reasonably small (less than 20 mV), but with occasional very short spikes.
 
-Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 100 nF and 75 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what I read elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks!
+Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 150 nF and 100 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what is published elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks! It later turned out that it was not the large obvious spikes, but other smaller spikes that triggered the false alarms.
 
 ![charger-supply-current-1_5ohm.JPG](images/charger-supply-current-1_5ohm.JPG)
 
