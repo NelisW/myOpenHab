@@ -45,14 +45,16 @@ and
 The general Atom manual is [here (PDF)](http://orm-atlas2-prod.s3.amazonaws.com/pdf/9af84cd12b0be2cc97b3951aee5bf949.pdf) and [here (online)](https://atom.io/docs/latest/).
 For future reference, note that the Atom packages are installed into `~/.atom/packages`.  New packages are installed from the Atom menu `Packages/Settings View/Install packages/themes`.  You can also copy the package files manually to this directory.
 
+Select the editor themes according to your liking. Click on `Settings/Themes` then select the UI theme and syntax theme. I like the pre-installed `One light` UI theme and the `Solarized light` syntax themes.
 
 When you install [`platformio-ide`](https://atom.io/packages/platformio-ide), it also installs `platformio-ide-terminal` and `tool-bar`.  While you are busy installing platformio, you might just as well also install these useful Atom packages:
-`git-plus`,
 `autocomplete-python`,
+`open-recent`,
 `highlight-selected`,
+`minimap`,
 `language-arduino`,
-`minimap`, and
-`open-recent`.
+
+Some packages are loaded by default, such as `markdown-preview`.
 
 After PlatformIO-IDE package in Atom, it adds a new menu (PlatformIO) and a toolbar.  You can switch off the toolbar in the menu.
 
