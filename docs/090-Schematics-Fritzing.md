@@ -1,5 +1,9 @@
 # Schematics with Fritzing
 
+
+Fritzing is a real paint to use, I am trying to see if I can use Eagle.
+
+
 ## Download
 
 ## Additional parts
