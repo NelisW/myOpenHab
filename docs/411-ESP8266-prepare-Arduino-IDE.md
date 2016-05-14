@@ -1,5 +1,9 @@
 # ESP8266 on Windows 7 with Arduino IDE
 
+[Arduino code for ESP8266](https://github.com/esp8266/Arduino)
+
+[Introduction to nodeMCU on Arduino IDE](http://embeddedcomputing.weebly.com/nodemcu-board.html)
+
 ## Install Arduino IDE
 
 **Note** In the context of the ESP8266, the term 'Arduino IDE' can be used in two meanings: (1) the developer environment and (2) the core libraries developed for use in the development environment.

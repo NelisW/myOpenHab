@@ -1,5 +1,21 @@
 # ESP8266 Diverse Projects
 
+## Web-based ESP environments
+
+A somewhat confusing [post](http://www.instructables.com/id/ESP8266-based-web-configurable-wifi-general-purpos-1/)
+
+The [ESPEasy project](http://www.esp8266.nu/index.php/Main_Page)
+
+## Miscellaneous projects
+
+<http://horaciobouzas.com/> has a number of project posts, some of which are in the amateur radio context.  The author also sells PCBs for some of his projects.
+
+[Connecting two ESP8266](http://randomnerdtutorials.com/how-to-make-two-esp8266-talk/), one as access point and one as station
+
+[Using Blynk with ESP8266-as-Arduino-Uno-wifi](http://www.instructables.com/id/Connect-to-Blynk-using-ESP8266-as-Arduino-Uno-wifi/)
+
+[Wireless logger ESP8266 NodeMCU v1.0 with Arduino IDE](http://www.instructables.com/id/ESP8266-NodeMCU-v10-ESP12-E-with-Arduino-IDE/)
+
 ## Weather station with DS18B20, DHT11 and BMP085
 
 http://internetofhomethings.com/homethings/?p=345
@@ -96,3 +112,12 @@ http://internetofhomethings.com/homethings/?page_id=207
 ## Weather station
 
 https://github.com/squix78/platformio-test
+
+
+
+
+## Diverse Projects
+
+<http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
+
+<http://randomnerdtutorials.com/how-to-control-your-esp8266-from-anywhere-in-the-world/>

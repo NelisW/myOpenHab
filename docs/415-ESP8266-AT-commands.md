@@ -1,5 +1,7 @@
 # nodeMCU with its native tools
 
+ESP01, in it’s default configuration, boots up into the serial modem mode. In this mode you can communicate with it using a set of [AT](https://room-15.github.io/blog/2015/03/26/esp8266-at-command-reference/) commands.  ESP8266 expects <CR><LF> or CarriageReturn and LineFeed at the end of each command, but just <CR> seems to work too.
+
 ## Introduction
 
 The [nodeMCU](nodemcu.com/index_en.html) is the primary source of information.  nodeMCU is pre-loaded on the nodeMCU dev boards, but you can also [flash it on an ESP01](http://randomnerdtutorials.com/esp8266-web-server/).
