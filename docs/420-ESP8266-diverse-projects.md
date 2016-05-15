@@ -121,3 +121,5 @@ https://github.com/squix78/platformio-test
 <http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
 
 <http://randomnerdtutorials.com/how-to-control-your-esp8266-from-anywhere-in-the-world/>
+
+http://blog.thethings.io/connect-esp8266-to-the-internet-at-thethings-io/

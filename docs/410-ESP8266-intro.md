@@ -41,16 +41,34 @@ ESP8266 WIFI module can operate in three modes:
 
 Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
 
-[ESP8266 boot up modes](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process# esp-boot-modes).  The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
+### Flash GPIO pins – GPIO6 to GPIO11
+http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
 
-|MTDO 	|GPIO0 	|GPIO2 	|Mode 	Description|
+Most ESP8266 boards have a flash chip connected to some or all of GPIO6-GPIO11. Most programs use flash memory, as well as RAM, so unless you specifically make sure your code only runs from RAM, you can't use these pins for other purposes.
+
+The exact number of pins used in the range GPIO6 to GPIO11 depends on the type of flash hardware used on your module. Quad IO uses 4 lines for data (6 pins total) for up to 4 times the speed of standard. Dual IO uses 2 lines for data (4 pins total) Standard uses a single line for data ( 3 pins total).
+
+Unless you know exactly what your board requires, you are best to just ignore GPIO6 to GPIO11 and do not refer to them from your code.
+
+### ESP8266 boot up modes
+See [here](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process# esp-boot-modes) and [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html).  The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
+
+|GPIO15 / MTDO 	|GPIO0 	|GPIO2 	|Mode 	Description|
 |--|--|--|--|
-|L 	|L 	|H |UART 	Download code from UART|
-|L |H 	|H 	|Flash 	Boot from SPI Flash|
+|L 	|L 	|H |Programming download via UART|
+|L |H 	|H 	|Normal operation, boot from SPI Flash|
 |H 	|x 	|x 	|SDIO 	Boot from SD-card|
 
-you do want GPIO15 pulled low on chip boot, and you want GPIO2 pulled high
+The settings of these inputs is only checked during the power up (or reset) of the chip. After that the pins are available for general use, but  restricted by these external pull up/down resistors.
 
+Pull-up and pull-down resistors can be in the range 2k to 10k. A 2k resistor gives better noise immunity.
+
+### Upsing GPIO0, GPIO2 and GPIO16
+
+See [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
+) for a detailed description.
+
+For normal boot-up the GPIO0, GPIO2 and GPIO16 pins will already have a resistor connected to either VCC (GPIO0 and GPIO2) or GND for GPIO15. This determines how any external device, like a relay or led+resistor, must be connected.  In general, you cannot just attach an external switch to the these pins because at power up you usually cannot guarantee the switch will not be pulling the input to ground and so prevent the module from starting correctly.
 
 
 ### Flash quality
@@ -126,6 +144,15 @@ Nice series of articles:
 ESP-12 modules have metal shield with FCC logo on it. It appears these modules are FCC approved (FCC ID: 2ADUIESP-12). The modules have 16 pins and PCB antenna. Similar to ESP-07, some ESP-12 boards have GPIO 4 and 5 switched.  The newer ESP-12-E module adds 5 more half-hole (without extra hole) pins on the side. There are also two more variations of ESP-12-E module: ESP-12-D and ESP-12-Q. Probably referring to Dual and Quad SPI operations for Flash chip because ESP-12-D frees up GPIO 9 and GPIO 10 which are usually occupied for Quad mode SPI operations.
 [Getting Started with the ESP8266 ESP-12](http://www.instructables.com/id/Getting-Started-with-the-ESP8266-ESP-12/?ALLSTEPS)
 
+http://blog.falafel.com/programming-gpio-on-the-esp8266-with-nodemcu/
+
+While the ESP8266EX microcontroller itself has 17 GPIO pins, only 11 are available on the ESP8266-12 module because the chip is already connected to external SPI flash memory using some of the pins.
+
+GPIO on the ESP8266EX is multiplexed with other functions, which may limit the availability of pins for GPIO usage. So, for example, while HSPI is enabled, the pins for GPIO12-15 are unavailable for GPIO use, and when you need to connect to the module via the UART, then GPIO1 and GPIO3 are unavailable for GPIO use.
+
+All digital I/O pins are protected from over-voltage by means of a snap-back circuit between the pin and ground. The output devices are also protected from reverse voltages with diodes. This suggests that the ESP may be 5V-tolerant, but official guidance from Espressif says to stick to 3.3V to prevent damaging the chip. Note: [This blogger has  accidentally connected](http://blog.falafel.com/programming-gpio-on-the-esp8266-with-nodemcu/
+) 5V to my ESP’s GPIO without any noticeable damage.
+
 [There appears to be](http://internetofhomethings.com/homethings/?p=605) a mixup with pin wiring GPOI4 and GPIO5 pins are interchanged on early ESP12 boards
 
 [ESP-12 spec](https://www.mikrocontroller.net/attachment/243558/fcc_11.pdf)
@@ -138,6 +165,11 @@ Digital pins 6—11 are not shown on this diagram because they are used to conne
 ![esp826612pinout.png](images/esp826612pinout.png)
 
 ![ESP8266_ESP-12_pinouts_pighixxx.jpg](images/ESP8266_ESP-12_pinouts_pighixxx.jpg)
+
+![nodemcu-esp12e-pins.JPG](images/nodemcu-esp12e-pins.JPG)
+
+
+
 
 
 ### White ESP12 breakout boards
@@ -173,12 +205,18 @@ There are quite a few different development environments to consider:
 3. Using Python, but the [MicroPython on ESP8266](https://github.com/micropython/micropython/tree/master/esp8266)
 with documentation [here](http://docs.micropython.org/en/latest/esp8266/).
 
+
+[Programming GPIO on the ESP8266 with NodeMCU](http://blog.falafel.com/programming-gpio-on-the-esp8266-with-nodemcu)
+
+
 Hardware variants:
 - The NodeMCU V0.9 (brown PCB) uses the CH340 serial to USB programmer chip (needs a specific driver).  
 - The nodeMCU V1 (green PCB) uses the CP2102 serial programmer chip.  
 - The nodeMCU V2 - no information.  
 - The [nodeMCU V3 LoLin](http://www.aliexpress.com/store/product/New-Wireless-module-NodeMcu-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32307066449.html) uses the CH340G serial programmer chip (see the file `412-ESP8266-connect-serial-board.md` on how to install the driver).  
 - [Adafruit Huzzah](https://learn.adafruit.com/adafruit-huzzah-esp8266-breakout/using-arduino-ide) supports nodeMCU firmware but does not have an integrated USB serial capability.  The pin layout is also different from the other nodeMCU boards.  
+
+![nodemcu-esp12e-outside-pins.JPG](images/nodemcu-esp12e-outside-pins.JPG)
 
 ### nodeMCU V1
 
