@@ -117,6 +117,8 @@ Driving the nodeMCU the power supply performance was quite poor, even after deco
 
 See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/701-PIR-sensors.md) for more detail on the use of a linear regulator to filter out the ESP-induced noise.
 
+## Deep sleep
+https://github.com/z2amiller/sensorboard/blob/master/PowerSaving.md
 
 
 ## ESP01

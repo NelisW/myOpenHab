@@ -20,6 +20,8 @@ The [ESPEasy project](http://www.esp8266.nu/index.php/Main_Page)
 
 http://internetofhomethings.com/homethings/?p=345
 
+http://www.survivingwithandroid.com/2016/04/iot-arduino-programming-monitor-environment.html
+
 ## Intro with remote power switching
 
 http://www.instructables.com/id/An-inexpensive-IoT-enabler-using-ESP8266/?ALLSTEPS
@@ -117,6 +119,8 @@ https://github.com/squix78/platformio-test
 
 
 ## Diverse Projects
+
+[Low power sensor board](https://github.com/z2amiller/sensorboard).
 
 <http://randomnerdtutorials.com/7-weekend-projectstutorials-for-the-esp8266-wifi-module/>
 

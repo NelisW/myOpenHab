@@ -7,6 +7,12 @@
 <https://www.modmypi.com/blog/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi>
 <http://www.astounding.org.uk/ian/raspi-1wire/>
 
+<http://iot-playground.com/blog/2-uncategorised/41-esp8266-ds18b20-temperature-sensor-arduino-ide>  
+<https://milesburton.com/Dallas_Temperature_Control_Library>  
+<https://github.com/milesburton/Arduino-Temperature-Control-Library>  
+<https://www.pjrc.com/teensy/td_libs_OneWire.html>  
+
+
 ## DS18B20 not working
 
 Some users have difficulty getting the DS18B20 to work on the ESP8266.  A common complaint is that the temperatures are out of range at 85C, 100 C, 127C or -127C.  Digging in to Arduino Core  `DallasTemperature.h` revealed this:
