@@ -194,7 +194,7 @@ Plug in your LoLin board and then the serial driver should appear similar to thi
 
 ![''](images/CH340G-driver-in-devicemanager.png)
 
-
+http://m.instructables.com/id/How-to-fix-bad-Chinese-Arduino-clones/
 
 
 ## Finding the serial COM port

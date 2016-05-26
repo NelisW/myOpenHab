@@ -1,3 +1,6 @@
-# Gas sensors
+# Energy and Power Measurement
 
-http://labs.arduino.org/Arduino+UNO+Gas+Sensor+Example
+
+http://arduinotronics.blogspot.co.za/2016/02/ac-current-monitoring-current.html?m=1
+
+http://www.butlerwinding.com/current-transformers-theory-operation/
