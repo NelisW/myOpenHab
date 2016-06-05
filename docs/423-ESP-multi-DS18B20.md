@@ -28,11 +28,18 @@ The code developed here uses the Arduino ESP8266 core framework,  in the [platfo
 ### Libraries
 The project uses the following libraries:
 
-1. [PubSubClient](http://platformio.org/lib/show/89/PubSubClient) MQTT client to publish and subscribe to topics.
 
-2. [DallasTemperature](http://platformio.org/lib/show/54/DallasTemperature) to read the DS18B20 temperature sensor.  Install in platformio with `platformio lib install 54`.
+1. [PubSubClient](http://platformio.org/lib/show/89/PubSubClient) MQTT client to publish and subscribe to topics. Install in platformio terminal with `platformio lib install 89`.
 
-3. [OneWire](http://platformio.org/lib/show/1/OneWire) to provide the onewire library required by the DS18B20 sensor.  Install in platformio with `platformio lib install 1`.
+2. [DallasTemperature](http://platformio.org/lib/show/54/DallasTemperature) to read the DS18B20 temperature sensor.  Install in platformio terminal with `platformio lib install 54`.
+
+3. [OneWire](http://platformio.org/lib/show/1/OneWire) to provide the onewire library required by the DS18B20 sensor.  Install in platformio terminal with `platformio lib install 1`.
+
+4. [WifiManager](http://platformio.org/lib/show/567/WifiManager) to provide the WifiManager library to default to Access Point mode if Station Mode fails.  Install in platformio terminal with `platformio lib install 567`.
+
+4. [Json](http://platformio.org/lib/show/64/Json) to provide the Json library to read and write files to the filesystem.  Install in platformio terminal with `platformio lib install 64`.
+
+
 
 Install the required libraries using the platformio command line method. The easiest method is to work in an environment with no proxies (and set your PC to no proxy) and then type the following at the command line:
 

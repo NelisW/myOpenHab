@@ -52,6 +52,7 @@ When you install [`platformio-ide`](https://atom.io/packages/platformio-ide), it
 `open-recent`,
 `highlight-selected`,
 `minimap`,
+`minimap-find-and-replace`,
 `language-arduino`,
 
 Some packages are loaded by default, such as `markdown-preview`.
