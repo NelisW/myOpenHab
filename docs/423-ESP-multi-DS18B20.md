@@ -109,6 +109,25 @@ two choices: use a fixed IP address or use mDNS to resolve IP addresses.  The
 fixed-IP-address seems simpler because all the configuration information is in one
 file (the main.ino) file. See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/417-ESP8266-over-the-air-OTA.md) how to implement fixed IP addresses.
 
+### WiFiManager
+
+The [WiFiManager by tzapu](https://github.com/tzapu/WiFiManager) provides the facility to define the WiFi configuration during runtime, at the first startup. Details are given [here](https://github.com/tzapu/WiFiManager), and repeated below in slightly modified form:
+
+1.  When the ESP starts up, it sets it up in Station mode and tries to connect to a previously saved Access Point.  
+2.  If the Station mode access is unsuccessful, the ESP changes to Access Point mode and starts up a DNS and WebServer (default ip 192.168.4.1).
+3.  Using any wifi enabled device with a browser (computer, phone, tablet) you must now connect to the newly created Access Point, called `AutoConnectAP`, use the password `Bug35*able`.
+4.  Once on the `AutoConnectAP` network, open a browser and load the Captive Portal page at http://192.168.4.1.
+5. The captive portal page allows you to configure the ESP8266.
+6. Click on the network/access point you want to join (this network must be alive). Enter the password if required.
+7. Below access point/password entries, there are a few more values to be entered (see below).
+8. Once all the configuration information is entered click save.  Be very careful to use the right information, it is quite painful to undo an error.
+9. The ESP will try to connect. If successful, it relinquishes control back to your app. If not, it will reconnect to Access Point and attempt to reconfigure.
+
+The configuration page requires you to enter the following information:
+
+
+
+The previously saved access point SSID and password details are stored in a json file in the ESP8266 SPIFFs filesystem, but more importantly, it is also stored at some other location outside the downloaded program, [in the flash memory](http://www.esp8266.com/viewtopic.php?f=32&t=8204).  Flashing new code does not reset or remove this saved SSID, you must [reflash __all__ of the device's memory](https://github.com/NelisW/myOpenHab/blob/master/docs/418-ESP8266-Programming-details.md), which means that you have to download/flash the binary code again.
 
 ### Over the Air Update (OTA)
 

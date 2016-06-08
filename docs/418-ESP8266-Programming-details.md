@@ -154,26 +154,21 @@ Long story short: don't call `Serial.print` from interrupt, or expect that long 
 There's `ets_printf` which doesn't buffer and you can use it from interrupts. It may loose some characters though.
 
 ## ESP8266 Keeps SSID in Memory
-http://www.esp8266.com/viewtopic.php?f=32&t=8204
 
-The ESP keeps memory of the most recently used wifi SSID credentials.  Flashing new code does not overwrite this.
+The [ESP keeps memory](http://www.esp8266.com/viewtopic.php?f=32&t=8204) of the most recently used wifi SSID credentials.  Flashing new executable code does not overwrite this.  
 
-clear the following address on most hardware: 0x7E000 -- around 128 bytes looks like the values you want to clear.
-You can investigate more by doing this before and after changing your wifi settings:
+One way to erase this memory is by resetting the flash memory with the ESPTool
+
+	pip install esptool
+	python c:\Miniconda2\lib\site-packages\esptool.py -p COM7 erase_flash
+ 
+Another  way is to clear the relevant part in memory (on most hardware: 0x7E000 -- around 128 bytes).  You can investigate more by doing this before and after changing your wifi settings:
 
 	./esptool.py read_flash 0x7E000 128 wifisettings.bin
 
-Then read the file using your favorite hex editor like xxd or whatever.
+Then study the file using your favorite hex editor like xxd or whatever.
 
 	xxd wifisettings.bin
-
-Alternatively reset the flash memory with the ESPTool.
-
-	pip install esptool
-
-then 
-
-	python c:\Miniconda2\lib\site-packages\esptool.py -p COM7 erase_flash
 
 
 ## Program memory
