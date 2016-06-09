@@ -125,7 +125,7 @@ The [WiFiManager by tzapu](https://github.com/tzapu/WiFiManager) provides the fa
 
 The configuration page requires you to enter the following information:
 
-
+![images/ds18b20-wifimanager.jpg](images/ds18b20-wifimanager.jpg)
 
 The previously saved access point SSID and password details are stored in a json file in the ESP8266 SPIFFs filesystem, but more importantly, it is also stored at some other location outside the downloaded program, [in the flash memory](http://www.esp8266.com/viewtopic.php?f=32&t=8204).  Flashing new code does not reset or remove this saved SSID, you must [reflash __all__ of the device's memory](https://github.com/NelisW/myOpenHab/blob/master/docs/418-ESP8266-Programming-details.md), which means that you have to download/flash the binary code again.
 
