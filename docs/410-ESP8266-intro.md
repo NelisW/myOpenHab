@@ -1,124 +1,63 @@
 # ESP8266
 
-## Introduction
+## Quick Introduction 
 
-[Specification](https://www.adafruit.com/images/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
-
-
-[ESP8266 community](http://www.esp8266.com/) is a good source for information.
-
-There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  See also [here](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family).  The ESP01 and ESP12 are by far two most popular.
-
-[Getting started with the ESP8266](http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266)
-
-[Loading new firmware onto an ESP8266](http://www.esp8266.com/wiki/doku.php?id=loading_firmware)
 
 [ESP8266 Introduction](http://fabacademy.org/archives/2015/doc/networking-esp8266.html)
 
+There are several different ESP boards available, as documented [here](http://www.happybison.com/reviews/esp8266-based-esp-modules-10/) and [here - read the comments](http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/).  See also [here](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family).  The ESP01 and ESP12 are by far two most popular.  My recommendation is to use the lolin nodeMCU with the CH340 serial interface.
+
+### Using the Expressif SDK
+
+Not for beginners.
+
+### Lua in the nodeMCU
+
+Not recommended, rather use C in the Arduino Core ESP8266
+
+### Using the Arduino Core ESP8266 libraries
+
+The [Arduino Core ESP8266](https://github.com/esp8266/Arduino) are not Arduino libraries, but ESP8266 libraries written for use in the Ardunio IDE (and other IDEs) that emulate the Arduino library calls. In other words if you are using Arduino modules, it is easy to move to the ESP8266 with these libraries.
+
 [Installing and Building an Arduino Sketch for the $5 ESP8266 Microcontroller](http://makezine.com/2015/04/01/installing-building-arduino-sketch-5-microcontroller/)
 
-[ESP8266 Wemos D1 mini](https://primalcortex.wordpress.com/tag/sming/)
+[Using the Arduino IDE](http://www.allaboutcircuits.com/projects/breadboard-and-program-an-esp-01-circuit-with-the-arduino-ide/)
+
+Of all the IDE options the [Aruino IDE](https://learn.adafruit.com/adafruit-huzzah-esp8266-breakout/using-arduino-ide) may be the simplest to install and use, but it is not the best. The Arduino Core ESP8266 libraries are also available in the [PlatformIO](http://platformio.org/)-IDE, running in Atom, Sublime text and other editors.  Then there is also the [Arduino plugin for Visual Studio](http://www.visualmicro.com/).  I prefer the [PlatformIO-IDE option](https://github.com/NelisW/myOpenHab/blob/master/docs/413b-ESP8266-PlatformIO-Arduino-Framework.md).
 
 
-[ESP8266 Programming Jig (for ESP-01) ](https://www.hackster.io/glowascii/esp8266-programming-jig-5afd03)
+### MicroPython
+[MicroPython](https://github.com/micropython/micropython) runs on the ESP8266, see [here](http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html) for documentation.
 
-[DIT ESP01 motherboard](http://www.nfriedly.com/techblog/2015/07/build-a-diy-esp8266ex-esp-01-dev-test-programming-board/)
-[Esp8266 firmware update](http://www.instructables.com/id/Intro-Esp-8266-firmware-update/)
+### More Information
 
-[Update the Firmware in Your ESP8266 Wi-Fi Module](http://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/), see also the [first part](http://www.allaboutcircuits.com/projects/breadboard-and-program-an-esp-01-circuit-with-the-arduino-ide/)
+You can search the internet to find very many examples and details.  Avoid these topics: AT commands, lua programming and most pages on the ESP01. Search for pages on ESP12, nodeMCU, Huzza and Sparkfun.  Only after browsing many such pages will you begin to get a clear picture of the ESP8266 scene.
 
-[Building a battery powered ESP8266](https://www.agocontrol.com/2015/03/building-a-battery-powered-wifi-iot-sensor-with-esp8266-ms-5611-gy-63-nodemcu-and-mqtt/)
+My own experiences are written up in [this series](https://github.com/NelisW/myOpenHab/tree/master/docs) of giles, from about 410 to 423. Not all the files in this series are nicely written, some only have basic outlines and links, but there should be some useful information in some of these.
 
-[Low Power ESP8266 – Sleeping at 78 micro Amps](http://tim.jagenberg.info/2015/01/18/low-power-esp8266/)
+### Forums
 
-ESP8266 WIFI module can operate in three modes:
+Look for ESP8266 information on Google+ and Twitter - there some really useful information there.
 
-- ST  – Station mode in which ESP acts as a device & connects to an existing Access point.
+### Blogs
 
-- AP – Access Point mode where the ESP itself acts as AP & other devices like Mobile can connect to it.
+There are quite a few nice blogs to follow:  
 
-- Both – ST & AP both mode is allowed in ESP.The mode of operation is set by the AT command
+1. [JP Mens](http://jpmens.net/)
+2. [Pete Scargill](http://tech.scargill.net/)
+3. [Daniel Eichhorn](http://blog.squix.org/)
+4. [Jan Penninkhof](http://www.penninkhof.com/esp8266-blogs/)
+5. [Notey](http://www.notey.com/blogs/esp8266)
 
-Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
+### Detail
 
-### Flash GPIO pins – GPIO6 to GPIO11
-http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
+[Kolban's book](http://neilkolban.com/tech/esp8266/)
 
-Most ESP8266 boards have a flash chip connected to some or all of GPIO6-GPIO11. Most programs use flash memory, as well as RAM, so unless you specifically make sure your code only runs from RAM, you can't use these pins for other purposes.
+[Specification](https://www.adafruit.com/images/product-files/2471/0A-ESP8266__Datasheet__EN_v4.3.pdf)
 
-The exact number of pins used in the range GPIO6 to GPIO11 depends on the type of flash hardware used on your module. Quad IO uses 4 lines for data (6 pins total) for up to 4 times the speed of standard. Dual IO uses 2 lines for data (4 pins total) Standard uses a single line for data ( 3 pins total).
+[ESP8266 community](http://www.esp8266.com/) is a good source for information.
 
-Unless you know exactly what your board requires, you are best to just ignore GPIO6 to GPIO11 and do not refer to them from your code.
-
-### ESP8266 boot up modes
-See [here](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process# esp-boot-modes) and [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html).  The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
-
-|GPIO15 / MTDO 	|GPIO0 	|GPIO2 	|Mode 	Description|
-|--|--|--|--|
-|L 	|L 	|H |Programming download via UART|
-|L |H 	|H 	|Normal operation, boot from SPI Flash|
-|H 	|x 	|x 	|SDIO 	Boot from SD-card|
-
-The settings of these inputs is only checked during the power up (or reset) of the chip. After that the pins are available for general use, but  restricted by these external pull up/down resistors.
-
-Pull-up and pull-down resistors can be in the range 2k to 10k. A 2k resistor gives better noise immunity.
-
-### Upsing GPIO0, GPIO2 and GPIO16
-
-See [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
-) for a detailed description.
-
-For normal boot-up the GPIO0, GPIO2 and GPIO16 pins will already have a resistor connected to either VCC (GPIO0 and GPIO2) or GND for GPIO15. This determines how any external device, like a relay or led+resistor, must be connected.  In general, you cannot just attach an external switch to the these pins because at power up you usually cannot guarantee the switch will not be pulling the input to ground and so prevent the module from starting correctly.
-
-
-### Flash quality
-[Flash memory problems](http://internetofhomethings.com/homethings/?p=396):  "we know the flash chip (25Q40) used with many of these ESP8266 module is of low quality and fails after only a few flash cycles. Perhaps sending the code somewhere that it never returns from. Triggering the watchdog timer to reset the unit."
-
-### Power supply issues:
-1.  The general advice is that the ESP8266 must be run of a power supply with at least 300 to 500 mA  capacity.  Furthermore, decoupling and supply capacitors are advised.  
-
-2.  Put a large electrolytic capacitor on the power supply near the ESP, recommended values range from 10 uF to 470 uF depending on where you read.
-
-3. Put a decoupling capacitor across the Vcc to Gnd pins, within 10 mm from the pins. Recommended values are 100 nF.
-
-![ESP_improved_stability.png](images/ESP_improved_stability.png)
-
-See the following websites:  
-http://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf  
-http://www.esp8266.com/viewtopic.php?f=6&t=497  
-http://internetofhomethings.com/homethings/?p=605  
-http://internetofhomethings.com/homethings/?p=396  
-https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
-http://bbs.espressif.com/viewtopic.php?t=1078  
-
-### Supply current
-
-There is a general warning out that a sufficiently large power supply must be used (500 mA plus) because the ESP is quite hungry when transmitting. The ESP also has low power sleep mode operation but most boards do not implement this currently.
-
-Measured the positive supply voltage showed the following 280 mV spikes on the nodeMCU board, after it has been down regulated to 3.3 volt:
-
-![charger-supply-voltage02.JPG](images/charger-supply-voltage02.JPG)
-
-It is not easy to filter the supply voltage on the 5V side of the regulator because the power is fed in on a USB connector and the 5V line is not easily accessible.  The two 3.3 V rails on the breadboard were both decoupled with a 150 nF and 100 uF capacitors (which is not the ideal location, you want to do this on the 5V supply before the regulator).  This dropped the spikes to around 40 mV, still causing the occasional false alarm - too many false alarms in fact.
-
-![charger-supply-voltage01.JPG](images/charger-supply-voltage01.JPG)
-
-When the decoupled circuit is powered from my laptop, the spikes are of the order of 14 mV, and then the alarm is quite quiet.
-
-Study the PIR schematic diagram and you will note two high capacity filtering capacitors: one at the output of the regulator and another near the detector.   The capacitor near the detector is in fact in a low-pass filter configuration with the voltage divider.  This should tell us that the device is sensitive to supply voltage noise.
-
-The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply (but to a far lesser extend on the laptop).  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
-
-I measured the current consumption of a nodeMCU board by placing a 1.5 Ohm series resistor in the supply line.  The power supply used was a very small footprint AC/DC 5V 700mA board bought on EBay.  The no-load supply voltage was within spec and the ripple was reasonably small (less than 20 mV), but with occasional very short spikes.
-
-Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 100 nF and 75 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what I read elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks!
-
-![charger-supply-current-1_5ohm.JPG](images/charger-supply-current-1_5ohm.JPG)
-
-See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/701-PIR-sensors.md) for more detail on the use of a linear regulator to filter out the ESP-induced noise.
-
-## Deep sleep
-https://github.com/z2amiller/sensorboard/blob/master/PowerSaving.md
+[Loading new firmware onto an ESP8266](http://www.esp8266.com/wiki/doku.php?id=loading_firmware)
 
 
 ## ESP01
@@ -231,3 +170,125 @@ The V1 pin definitions shown below, with documentation [here](https://github.com
 [LoLin](http://www.wemos.cc/wiki/) is based on nodeMCU. It has software support for the embedded lua language, with built-in json, file, timer, pwm, i2c, spi, 1-wire, net, mqtt, coap, gpio, wifi, adc, uart and system api. Both Integer version(less memory usage) and Float version(Default) firmware provided. The pin definition for the LoLin board is given [here](http://www.wemos.cc/wiki/Hardware/Pin), with additional information on the [wemos D1 here](http://www.wemos.cc/d1/Hardware).
 
 ![''](images/nodeMCU-lolin.jpg)
+
+
+
+
+## Operating modes
+
+ESP8266 WIFI module can operate in three modes:
+
+- ST  – Station mode in which ESP acts as a device & connects to an existing Access point.
+
+- AP – Access Point mode where the ESP itself acts as AP & other devices like Mobile can connect to it.
+
+- Both – ST & AP both mode is allowed in ESP.The mode of operation is set by the AT command
+
+Remember to secure the ESP8266 if used in access point mode to prevent hacking into your network.
+
+## Flash GPIO pins – GPIO6 to GPIO11
+http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
+
+Most ESP8266 boards have a flash chip connected to some or all of GPIO6-GPIO11. Most programs use flash memory, as well as RAM, so unless you specifically make sure your code only runs from RAM, you can't use these pins for other purposes.
+
+The exact number of pins used in the range GPIO6 to GPIO11 depends on the type of flash hardware used on your module. Quad IO uses 4 lines for data (6 pins total) for up to 4 times the speed of standard. Dual IO uses 2 lines for data (4 pins total) Standard uses a single line for data ( 3 pins total).
+
+Unless you know exactly what your board requires, you are best to just ignore GPIO6 to GPIO11 and do not refer to them from your code.
+
+## ESP8266 boot up modes
+See [here](https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process# esp-boot-modes) and [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html).  The Espressif code can boot in different modes, selected on power-up based on GPIO pin levels. (MTDO is equivalent to GPIO15).  
+
+|GPIO15 / MTDO 	|GPIO0 	|GPIO2 	|Mode 	Description|
+|--|--|--|--|
+|L 	|L 	|H |Programming download via UART|
+|L |H 	|H 	|Normal operation, boot from SPI Flash|
+|H 	|x 	|x 	|SDIO 	Boot from SD-card|
+
+The settings of these inputs is only checked during the power up (or reset) of the chip. After that the pins are available for general use, but  restricted by these external pull up/down resistors.
+
+Pull-up and pull-down resistors can be in the range 2k to 10k. A 2k resistor gives better noise immunity.
+
+## Upsing GPIO0, GPIO2 and GPIO16
+
+See [here](http://www.forward.com.au/pfod/ESP8266/GPIOpins/index.html
+) for a detailed description.
+
+For normal boot-up the GPIO0, GPIO2 and GPIO16 pins will already have a resistor connected to either VCC (GPIO0 and GPIO2) or GND for GPIO15. This determines how any external device, like a relay or led+resistor, must be connected.  In general, you cannot just attach an external switch to the these pins because at power up you usually cannot guarantee the switch will not be pulling the input to ground and so prevent the module from starting correctly.
+
+
+## Flash quality
+[Flash memory problems](http://internetofhomethings.com/homethings/?p=396):  "we know the flash chip (25Q40) used with many of these ESP8266 module is of low quality and fails after only a few flash cycles. Perhaps sending the code somewhere that it never returns from. Triggering the watchdog timer to reset the unit."
+
+## Power supply issues:
+1.  The general advice is that the ESP8266 must be run of a power supply with at least 300 to 500 mA  capacity.  Furthermore, decoupling and supply capacitors are advised.  
+
+2.  Put a large electrolytic capacitor on the power supply near the ESP, recommended values range from 10 uF to 470 uF depending on where you read.
+
+3. Put a decoupling capacitor across the Vcc to Gnd pins, within 10 mm from the pins. Recommended values are 100 nF.
+
+![ESP_improved_stability.png](images/ESP_improved_stability.png)
+
+See the following websites:  
+http://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf  
+http://www.esp8266.com/viewtopic.php?f=6&t=497  
+http://internetofhomethings.com/homethings/?p=605  
+http://internetofhomethings.com/homethings/?p=396  
+https://www.reddit.com/r/esp8266/comments/31gfre/just_me_or_are_the_esp8266s_flakey_as_fck/  
+http://bbs.espressif.com/viewtopic.php?t=1078  
+
+## Supply current
+
+There is a general warning out that a sufficiently large power supply must be used (500 mA plus) because the ESP is quite hungry when transmitting. The ESP also has low power sleep mode operation but most boards do not implement this currently.
+
+Measured the positive supply voltage showed the following 280 mV spikes on the nodeMCU board, after it has been down regulated to 3.3 volt:
+
+![charger-supply-voltage02.JPG](images/charger-supply-voltage02.JPG)
+
+It is not easy to filter the supply voltage on the 5V side of the regulator because the power is fed in on a USB connector and the 5V line is not easily accessible.  The two 3.3 V rails on the breadboard were both decoupled with a 150 nF and 100 uF capacitors (which is not the ideal location, you want to do this on the 5V supply before the regulator).  This dropped the spikes to around 40 mV, still causing the occasional false alarm - too many false alarms in fact.
+
+![charger-supply-voltage01.JPG](images/charger-supply-voltage01.JPG)
+
+When the decoupled circuit is powered from my laptop, the spikes are of the order of 14 mV, and then the alarm is quite quiet.
+
+Study the PIR schematic diagram and you will note two high capacity filtering capacitors: one at the output of the regulator and another near the detector.   The capacitor near the detector is in fact in a low-pass filter configuration with the voltage divider.  This should tell us that the device is sensitive to supply voltage noise.
+
+The nature of the spikes are quite interesting.  The same pattern appears on both the Samsung supply and the laptop supply (but to a far lesser extend on the laptop).  We can therefore conclude that it is caused by the nodeMCU board.  The deep spikes occurs every 20 seconds or so. Perhaps there is some process taking place at this interval that sinks a significant current in the ESP8266?
+
+I measured the current consumption of a nodeMCU board by placing a 1.5 Ohm series resistor in the supply line.  The power supply used was a very small footprint AC/DC 5V 700mA board bought on EBay.  The no-load supply voltage was within spec and the ripple was reasonably small (less than 20 mV), but with occasional very short spikes.
+
+Driving the nodeMCU the power supply performance was quite poor, even after decoupling with 100 nF and 75 uF capacitors.   The following graph shows a time recording of the current: average value around 271mV/1.5 Ohm=180 mA, which is in agreement with what I read elsewhere. However, there were spikes of 100mW/1.5Ohm=65mA peak-to-peak.  Clearly the PIR might be triggered by these large peaks!
+
+![charger-supply-current-1_5ohm.JPG](images/charger-supply-current-1_5ohm.JPG)
+
+See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/701-PIR-sensors.md) for more detail on the use of a linear regulator to filter out the ESP-induced noise.
+
+## Deep sleep
+https://github.com/z2amiller/sensorboard/blob/master/PowerSaving.md
+
+## Introduction - other links
+
+
+### AT commands
+
+I don't recommend you use AT commands, it is too limiting.
+
+[Getting started with the ESP8266: AT commands only](http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266)
+
+[Update the Firmware in Your ESP8266 Wi-Fi Module AT commands](http://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/)
+
+
+## Diverse links
+
+[ESP8266 Wemos D1 mini](https://primalcortex.wordpress.com/tag/sming/)
+
+
+[ESP8266 Programming Jig (for ESP-01) ](https://www.hackster.io/glowascii/esp8266-programming-jig-5afd03)
+
+[DIT ESP01 motherboard](http://www.nfriedly.com/techblog/2015/07/build-a-diy-esp8266ex-esp-01-dev-test-programming-board/)
+
+[Esp8266 firmware update](http://www.instructables.com/id/Intro-Esp-8266-firmware-update/)
+
+
+[Building a battery powered ESP8266](https://www.agocontrol.com/2015/03/building-a-battery-powered-wifi-iot-sensor-with-esp8266-ms-5611-gy-63-nodemcu-and-mqtt/)
+
+[Low Power ESP8266 – Sleeping at 78 micro Amps](http://tim.jagenberg.info/2015/01/18/low-power-esp8266/)
