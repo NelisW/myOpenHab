@@ -37,7 +37,7 @@ Towards the bottom of this file is written
 	[include]
 	files = /etc/supervisor/conf.d/*.conf
 
-which implies that process configuration files can be placed in `/etc/supervisor/conf.d/`, because these file will be included in the main config file.
+which implies that process configuration files can be placed in `/etc/supervisor/conf.d/`, because these files will be included in the main config file.
 
 <http://supervisord.org/configuration.html>
 
@@ -47,7 +47,7 @@ Save the following lines to a file as `/etc/supervisor/conf.d/mqttwarn.conf`
 
     [program:mqttwarn]
     directory = /home/pi/mqttwarn
-    command = /home/pi//mqttwarn/mqttwarn.py
+    command = /home/pi/mqttwarn/mqttwarn.py
     autostart=true
     autorestart=true
     ;startretries=1000
