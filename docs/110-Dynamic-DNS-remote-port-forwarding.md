@@ -12,11 +12,16 @@
 
 5. For the purpose of this document we assume you want to make an HTTP server on your Raspbwrry Pi visible on the internet.  This server could serve blog pages or provide control of some service (via HTTP) on your internal network.
 
+Note that in all of the work below remember that the changes are not instantaneous, you may have to wait a short time for all the setting values to propagate to the appriopriate servers.
+
 ## Set up an HTTP server on the Raspberry Pi
+
+The Raspberry Pi server must be setup on a fixed IP address in order to use port forwarding. See [here](https://github.com/NelisW/myOpenHab/blob/master/docs/102-Setup-Raspbian-RPi.md) for instructions.
 
 Setting up a Python Flask server on the Raspberry Pi is documented [here](https://github.com/NelisW/myOpenHab/blob/master/docs/113-Webserver-with-Flask.md).
 
-By default a Flask server runs on port 5000.  Test the webserver to ensure that it runs on the port you want to expose to the internet. Suppose that your Pi is running on ip `10.0.0.100` and the Flask server is running. Access the Pi from within your nerwork with `10.0.0.100:port` where `port` is the port number you selected.  HTTP ports are usually 80, but you can use any port number (if not already used by some other server).
+By default a Flask server runs on port 5000.  Test the webserver to ensure that it runs on the port you want to expose to the internet. Suppose that your Pi is running on ip `10.0.0.100` and the Flask server is running. Access the Pi from within your nerwork with `10.0.0.100:port` where `port` is the port number you selected (`888` in the example below).  HTTP ports are usually 80, but you can use any port number (if not already used by some other server).
+
 
 ## DynDNS
 
@@ -30,7 +35,7 @@ The procedure documented here worked in my instance:
 
 	1. Type in your prefered name. For example `savvyPetesBlog` and select the rest of the domainname from the dropout box, e.g., `is-lost.org`.  This means that your internet-visible address will be `savvyPetesBlog.is-lost.org`
 	2. Select the service type to be `Host with IP address`.  This means that your router's IP address will be looked up in the DNS servers against `savvyPetesBlog.is-lost.org`
-	3. Next enter the IP address you want to use, or click on the link that is shown in the page (your router's current IP address). 
+	3. Next enter the IP address you want to use, or click on the link that is shown in the page (your router's current IP address). You can see the current router IP address by opening the web page `www.checkIP.com`.
 	4. Change the DNS update time if you want to change the default value.
 	5. Click on `Add to Cart`. This should add your new hostname againt the currently indicated IP address (which may change in future).
 
@@ -52,14 +57,59 @@ The procedure documented here worked in my instance:
 	5. Enter your DynDNS user name and passwords that you used when registering with DynDNS in the first item above.
 	6. Click on `Apply`.  This will cause the router to notify DynDNS of any IP changes.
 
+## Setting up ddclient updater on the Raspberry Pi
 
+Install the `ddclient` dynamic updater
+
+	sudo apt-get update
+	sudo apt-get install ddclient
+
+Open the `ddclient` configuration file and edit with your DynDNS data
+	sudo nano /etc/ddclient.conf
+
+Edit the file to contain at least the following (if you are using a DynDNS service):
+ 
+	#update every so many seconds
+	daemon=600
+	#wite a log
+	syslog=yes
+	#use ssl encryption for updae requests
+	ssl=yes
+	
+	protocol=dyndns2
+	use=web, web=checkip.dyndns.com, web-skip='IP Address'
+	server=members.dyndns.org
+	login=your-dynDNS-login-name
+	password=your-dynDNS-login-password
+	your-dynDNS-hostname
+
+Replace the `your-dynDNS-*` fields with your own equivalents. After saving the file, restart the daemon with 
+
+	sudo /etc/init.d/ddclient restart
+
+
+The `ddclient` service must start automatically on reboot:
+
+	sudo nano /etc/rc.local
+
+Add the following command before exit 0 (which is the last line)
+
+	sudo /usr/sbin/ddclient -daemon 600 -syslog
+
+Save the file.
+
+https://hexaju.wordpress.com/2013/03/20/raspberry-pi-as-dyndns-client-with-ssl/  
+https://help.dyn.com/ddclient/  
+https://samhobbs.co.uk/2015/01/dynamic-dns-ddclient-raspberry-pi-and-ubuntu   
+http://raspberrypi.tomasgreno.cz/dyndns-client.html  
+http://raspberrypi.stackexchange.com/questions/6757/how-to-use-ssh-out-of-home-network  
 
 ## Firewall and port forwarding
 
 On my Netgear N300/DGN2200Mv2 router the port forwarding and firewall rules are combined as set out here below.  In the example below we set up the Raspberry HTTP server to run on port 888 (replace with your own port number).
 
 1. Open the router management console and click on the `Services` link to open up the `Services` page. 
-2. Click on `Add` and then enter the following details into the fields and click on `Add` when done:
+2. Click on `Add` and then enter the following details into the fields (replace with your own service name and the port number where your Raspberry Pi serves the HTTP pages) and click on `Add` when done:
 
 
   |Field | Enter|
@@ -68,15 +118,20 @@ On my Netgear N300/DGN2200Mv2 router the port forwarding and firewall rules are 
   |Type  | TCP | 
   |Start port  | 888 | 
   |End port  |888  | 
+  
+  The page should now show your new service with the appropriate name and port number.
+
+3. Click on the Firewall Rules link, which should open the page with the same name.  Keep the two default settings for inbound and outbound services. Under `Inbound Services` click on `Add`. Select the newly added service and select the `Allow always` action. Then add the internal wifi IP address of your Raspberry Pi (`10.0.0.100` in the example above). Keep the `Wan Servers` dropdown as `Any`. Set your log preference. Click on `Apply`.
+
+## Outcome
+
+At this point, using the example details above, if you access `savvyPetesBlog.is-lost.org:888` from outside of your wifi LAN, the web page from the Raspberry Pi should be served (if the server is running of course).
 
 
+## References
 
-
-
-
-https://alselectro.wordpress.com/2015/07/03/port-forwarding-part-1-tips-troubleshooting/
-
-https://alselectro.wordpress.com/2015/07/04/port-forwarding-part-2-solution/
-
-http://portforward.com/
+http://portforward.com/english/routers/port_forwarding/Netgear/DGN2200v2/Tunngle.htm  
+https://alselectro.wordpress.com/2015/07/03/port-forwarding-part-1-tips-troubleshooting/  
+https://alselectro.wordpress.com/2015/07/04/port-forwarding-part-2-solution/  
+http://portforward.com/  
 
