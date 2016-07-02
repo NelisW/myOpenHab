@@ -6,6 +6,12 @@
 
 To follow
 
+## Set up a fixed IP address for the Raspberry Pi
+
+Set up the Raspberry Pi server to run on a fixed IP address. The fixed IP is necessary when the port forwarding is set up.
+
+
+
 
 ## Make a backup of your SD card
 
