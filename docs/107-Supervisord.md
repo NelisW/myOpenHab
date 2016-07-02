@@ -57,6 +57,7 @@ Save the following lines to a file as `/etc/supervisor/conf.d/mqttwarn.conf`
     environment= MQTTWARNINI="/home/pi/mqttwarn/mqttwarn.ini"
 
 Save the following lines to a file as `/etc/supervisor/conf.d/mqttPubDS18B20.conf`
+
     [program:mqttPubDS18B20]
     directory = /home/pi/myOpenHab/openhabfiles
     command = /home/pi/myOpenHab/openhabfiles/mqttPubDS18B20.py
@@ -68,6 +69,7 @@ Save the following lines to a file as `/etc/supervisor/conf.d/mqttPubDS18B20.con
     user = pi
 
 Save the following lines to a file as `/etc/supervisor/conf.d/mqttPubPiLED.conf`
+
     [program:mqttPubPiLED]
     directory=/home/pi/myOpenHab/openhabfiles
     command=/home/pi/myOpenHab/openhabfiles/mqttPubPiLED.py
