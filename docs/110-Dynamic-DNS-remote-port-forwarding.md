@@ -8,7 +8,7 @@
 
 3.  A key issue here is that on some internet connections (e.g., ADSL) the service provides gives the router a different IP address every time that it connects (or even more frequently).  The local ADSL network does not have a fixed and constant IP address. So it is impossible to access your server on the local network from the internet, by using the service provider's IP address. Furthermore there is no DNS server that knows your ADSL router's IP address.
 
-4. There are several suppliers on the internet that provides a dynamic IP address lookup for your router.  Some are paid services and some are free.  Your router (or some server on the local network) publishes its own  router public (temporary) internet IP address together with some identifier (typically a host name of your choice) to the service provider.  The service provider then links the hostname/identifier and pushes this to the network on DNS servers.  There is normally a mechanism that detects changes to the local router IP address and then updates the service provider's records, who in turn then pushes a new IP/hostname pair to the DNS servers.
+4. There are several suppliers on the internet ([dynDNS](http://dyn.com/dns/), [noip](http://www.noip.com), [zoneedit](https://www.zoneedit.com/) and [freedns](http://freedns.afraid.org/)) that provides a dynamic IP address lookup for your router.  Some are paid services and some are free.  Your router (or some server on the local network) publishes its own  router public (temporary) internet IP address together with some identifier (typically a host name of your choice) to the service provider.  The service provider then links the hostname/identifier and pushes this to the network on DNS servers.  There is normally a mechanism that detects changes to the local router IP address and then updates the service provider's records, who in turn then pushes a new IP/hostname pair to the DNS servers.
 
 5. For the purpose of this document we assume you want to make an HTTP server on your Raspbwrry Pi visible on the internet.  This server could serve blog pages or provide control of some service (via HTTP) on your internal network.
 
@@ -25,7 +25,7 @@ By default a Flask server runs on port 5000.  Test the webserver to ensure that 
 
 ## DynDNS
 
-[DynDNS Pro](http://dyn.com/dns/) provides a paid dynamic IP lookup service (in July 2016 it costs USD40 per year) and provides up to 30 dedicated hostnames on the Pro account.  You can connect any IP device such as IP cameras or computers to the internet via DynNDS.  The instructions to subscribe and set up the service is provided [here](http://dyn.com/remote-access-6-16/).  The instructions are very generic in nature and probably does not cover your specific hardware.  
+[DynDNS Pro](http://dyn.com/dns/) provides a paid dynamic IP lookup service (in July 2016 it costs USD40 per year) and provides up to 30 dedicated hostnames on the Pro account.  You can connect any IP device such as IP cameras or computers to the internet via DynNDS.  The instructions to subscribe and set up the service is provided [here](http://dyn.com/remote-access-6-16/) and [here](https://help.dyn.com/remote-access/getting-started-with-remote-access/).  The instructions are very generic in nature and probably does not cover your specific hardware.  
 
 The procedure documented here worked in my instance:
 
@@ -104,9 +104,9 @@ https://samhobbs.co.uk/2015/01/dynamic-dns-ddclient-raspberry-pi-and-ubuntu
 http://raspberrypi.tomasgreno.cz/dyndns-client.html  
 http://raspberrypi.stackexchange.com/questions/6757/how-to-use-ssh-out-of-home-network  
 
-## Firewall and port forwarding
+## Netgear services, firewall and port forwarding
 
-On my Netgear N300/DGN2200Mv2 router the port forwarding and firewall rules are combined as set out here below.  In the example below we set up the Raspberry HTTP server to run on port 888 (replace with your own port number).
+On my Netgear N300/DGN2200Mv2 router there is no explicit port forwarding funtionality.  There are services and and firewall rules working together as set out here below.  In the example below we set up the Raspberry HTTP server to run on port 888 (replace with your own port number). This is not traditional port forwarding.
 
 1. Open the router management console and click on the `Services` link to open up the `Services` page. 
 2. Click on `Add` and then enter the following details into the fields (replace with your own service name and the port number where your Raspberry Pi serves the HTTP pages) and click on `Add` when done:
@@ -126,6 +126,19 @@ On my Netgear N300/DGN2200Mv2 router the port forwarding and firewall rules are 
 ## Outcome
 
 At this point, using the example details above, if you access `savvyPetesBlog.is-lost.org:888` from outside of your wifi LAN, the web page from the Raspberry Pi should be served (if the server is running of course).
+
+## SSH
+http://chrisjrob.com/2011/04/05/dynamic-dns-and-remote-ssh-and-vnc/  
+https://chrisjean.com/accessing-your-home-network-away-from-home/  
+http://raspberrypi.stackexchange.com/questions/13861/setting-up-ssh-over-internet-on-my-pi   
+http://www.tunnelsup.com/raspberry-pi-phoning-home-using-a-reverse-remote-ssh-tunnel  
+https://www.raspberrypi.org/forums/viewtopic.php?t=11002&p=160309  
+
+## UPnP
+
+https://pavelfatin.com/access-your-raspberry-pi-from-anywhere/  
+http://miniupnp.tuxfamily.org/
+
 
 
 ## References
