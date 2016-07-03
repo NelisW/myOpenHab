@@ -28,12 +28,17 @@ http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-pl
 
 http://blog.squix.ch/2016/01/esp8266-arduino-ide-alternative.html
 
-
 https://electronicsworkbench.io/blog/platformio
 
 
-## Installing
+## PlatformIO in Visual Studio
 
+http://docs.platformio.org/en/latest/ide/visualstudio.html
+
+
+## PlatformIO in Atom
+
+### Atom: Installation
 There are several different options to install and use PlatformIO: as a commandline tool, as a package in Atom or integrated into your own favourite IDE.  See the install website:  http://platformio.org/# !/get-started
 
 PlatformIO by itself is a Python-based library manager and project builder.  The core commandline (CLI)functionality can be installed like any other PYthon package:
@@ -64,8 +69,7 @@ Some packages are loaded by default, such as `markdown-preview`.
 After PlatformIO-IDE package in Atom, it adds a new menu (PlatformIO) and a toolbar.  You can switch off the toolbar in the menu.
 
 
-
-## Arduino and local libraries
+### Atom: Arduino and local libraries
 
 <http://docs.platformio.org/en/latest/ide/atom.html# atom-ide-quickstart>  
 <http://docs.platformio.org/en/latest/quickstart.html>  
@@ -90,6 +94,16 @@ The directory structure is shown above, explained as follows:
 -  `src` directory where you should place source code (`*.h, *.c, *.cpp, *.S, *.ino,` etc.).  Your project code comes here.
 -  `lib` directory can be used for the project specific (private) libraries. This means that dedicated libraries can be used.  The directory and file structure details are located in `lib/readme.txt` file.  In the example directory shown above the `PubSubClient` library was downloaded as a project-specific local library (note that is is available in the platformio library set, and should rather be installed from there).
 -  Miscellaneous files for CVS and Continuous Integration support.
+
+## PlatformIO in Sublime Text
+Sublime Text is available [here](https://www.sublimetext.com/) with somewhat old documentation [here](http://docs.sublimetext.info/en/latest/)
+
+Install deviot package, using STs package control.  Instructions for installation and use are given [on the dev's github page](https://github.com/gepd/Deviot) and on the [PlatformIO website](http://docs.platformio.org/en/latest/ide/sublimetext.html).
+
+
+
+
+
 
 ## Installing platformio libraries
 
