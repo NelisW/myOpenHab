@@ -28,6 +28,10 @@ http://www.penninkhof.com/2015/12/1610-over-the-air-esp8266-programming-using-pl
 
 http://blog.squix.ch/2016/01/esp8266-arduino-ide-alternative.html
 
+
+https://electronicsworkbench.io/blog/platformio
+
+
 ## Installing
 
 There are several different options to install and use PlatformIO: as a commandline tool, as a package in Atom or integrated into your own favourite IDE.  See the install website:  http://platformio.org/# !/get-started
