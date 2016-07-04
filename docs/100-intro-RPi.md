@@ -1,4 +1,10 @@
+
 # Introduction to RPi
+
+## Kolban's Pi Book
+
+For probably one of the most complete soures of information see Neil Kolban's [Pi book](https://leanpub.com/pi). It is free (with a suggested contribution), but really complete.
+
 
 ## Adafruit's RPi Lessons
 Some of these lessons are relevant to home automation, such as setting up the RPi (first few lessons), and then the sensing lessions (Lessons 11 to 13).
