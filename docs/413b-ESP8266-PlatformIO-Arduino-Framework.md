@@ -140,3 +140,22 @@ The `Serial.Print` output appears in the serial monitor, which can be opened fro
 
 PlatformIO supports OTA on the Expressif platform.  It appears intimidating at first look, but actually is quite simple.
 For more details see here: <https://github.com/NelisW/myOpenHab/blob/master/docs/417-ESP8266-over-the-air-OTA.md>
+
+## Path to include files is lost
+
+If, after upgrading, you get an error such as that `Arduino.h` is not found, the path to the include files is broken.  
+
+https://github.com/platformio/platformio-atom-ide/issues/77
+
+Please run `pio platforms list` and then delete all platforms listed in this command. For example (real), `pio platforms uninstall atmelavr`. Then try to build project.  This removes the platform installation in totality and then later reinstall the platform installation when building again.
+
+See also here if linter complains:  
+https://github.com/platformio/platformio/issues/621
+
+
+
+    The libraries which are added/installed after initializing process will 
+	not be reflected in code linter. You need Menu: 
+	PlatformIO > Rebuild C/C++ Project Index (Autocomplete, Linter).
+
+This is happening when you are installing libraries while project is not open in the IDE. Then project configuration does not contain those libraries and linter shows the "No such file or directory" error. A project configuration will be updated automatically when you are installing a library and a project is opened (unless you explicitly disable this feature in the IDE settings). If you still see the message for some reason, just click PlatformIO > Rebuild C/C++ Project Index (Autocomplete, Linter) and the message will go away.
