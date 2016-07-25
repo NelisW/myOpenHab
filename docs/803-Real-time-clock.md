@@ -44,3 +44,14 @@ https://www.pjrc.com/teensy/td_libs_Time.html
 http://www.makeuseof.com/tag/how-and-why-to-add-a-real-time-clock-to-arduino/
 
 http://www.pjrc.com/teensy/td_libs_Time.html
+
+## Adding TC to Raspberry Pi
+
+http://www.raspberrypi-spy.co.uk/2015/05/adding-a-ds3231-real-time-clock-to-the-raspberry-pi/
+
+http://www.raspberrypi-spy.co.uk/2014/11/enabling-the-i2c-interface-on-the-raspberry-pi/
+
+https://nicegear.co.nz/blog/using-an-i2c-real-time-clock-rtc-with-a-raspberry-pi/
+
+http://www.sunfounder.com/wiki/index.php?title=DS3231_Real_Time_Clock_Module_for_Raspberry_Pi
+
