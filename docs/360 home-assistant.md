@@ -76,8 +76,10 @@ https://home-assistant.io/getting-started/configuration/
 https://home-assistant.io/docs/configuration/  
 https://home-assistant.io/docs/configuration/yaml/  
 http://www.yaml.org/spec/1.2/spec.html  
+https://docs.saltstack.com/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html  
 https://home-assistant.io/docs/configuration/splitting_configuration/  
 https://home-assistant.io/docs/configuration/secrets/  
+https://home-assistant.io/docs/configuration/troubleshooting/
 
 At some point all the information in the yaml config file becomes just too much.
 The configuration details can be split over many files all, to be `!include`d in
@@ -90,15 +92,37 @@ Here are my key observations so far:
 
 - yaml is indent sensitive so be careful with the spaces.
 - the `customize` keyword must fall under the main `homeassistant` keyword.
-- some keywords such as `sensor` or `switch` can appear only once in the entire set of files.
-- use the `!secret` keyword to keep al the sensitive informatio in one file (and protect it well).
+- some keywords such as `sensor` or `switch` can appear only once in the entire set of files. So
+  group items together under one heading, either in included files the heading.
+- use the `!secret` keyword to keep al the sensitive information in one file (and protect it well).
 - the naming convention is quite weird and requires special care, see below
 
 
-Naming convention:  I am still figuring this out
+Naming convention:  I am still figuring this out. Variants of the same name will be used
+in different places with underscores removed and capitalisation to lower case, but these
+are all the same name.
 
 
-### Sensors
+### Sensors and Switches
+
+See here:  
+https://github.com/NelisW/myOpenHab/blob/master/docs/361%20home-assistant-sensors.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/362%20home-assistant-switches.md  
+
+
+### MQTT
+
+https://home-assistant.io/docs/mqtt/broker/  
+https://home-assistant.io/components/mqtt/  
+
+I make extensive use of MQTT in my ESP8266-based sensors and switches. For more detail see here:  
+https://github.com/NelisW/myOpenHab/blob/master/docs/201-mqtt-install-mosquitto.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/202-mqtt-tips.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/204-mqtt-c.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/205-mqttwarn.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/206-mqtt-python.md  
+https://github.com/NelisW/myOpenHab/blob/master/docs/206-mqtt-python.md  
+
 
 
 ### Customise 
