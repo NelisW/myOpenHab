@@ -25,9 +25,9 @@ Depending on the services you want select the `weavedssh22` service and/or selec
 https://developer.weaved.com/portal/login.php
 
 ### SSH
-You can access the RPi on SSH via a web browser or an Andoid app. There are many to choose from (I played with ConnectBot and JuiceSSH, but there are many more).
+You can access the RPi on SSH via a web browser or an Android app. There are many to choose from (I played with ConnectBot and JuiceSSH, but there are many more).
 
-Login to https://developer.weaved.com/portal/login.php and select the SSH service to get an IP address:port combination that you can copy and paste to your SSH client to connect. When prompted for a password, use your RPi loging user password to authenticate.
+Login to https://developer.weaved.com/portal/login.php and select the SSH service to get an IP address:port combination that you can copy and paste to your SSH client to connect. When prompted for a password, use your RPi login user password to authenticate.
 
 
 
@@ -36,5 +36,8 @@ Login to https://developer.weaved.com/portal/login.php and select the SSH servic
 This option is pre-configured for port 80, but don’t worry, all Weaved based connections are secure even if not using SSL. The free iOS app also includes a built in web browser, so you can use that to connect as well.
 
 
+# Access via SSH
 
+Change the port so some other lesser used port.
+You need to change /etc/ssh/sshd_config which is the config file for the ssh server, not /etc/ssh_config which is the client config. Then restart ssh.
 
